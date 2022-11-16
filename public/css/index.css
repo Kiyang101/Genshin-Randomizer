@@ -1,8 +1,38 @@
 body{
     font-family: 'Courier New', Courier, monospace;
-    background: #B9B3B2;
+    background: #083773;
 }
-h1{
+main{
+    padding-top: 7px;
+    padding-bottom: 7px;
+    margin-top: 3%;
+    margin-left: 7%;
+    margin-right: 7%;
+    height: 100%;
+    background-color: #ffffff;
+    border: #ffffff;
+    border-radius: 10px;
+}
+.head h1{
     text-align: center;
-    color: aqua;
+    color: rgb(0, 0, 0);
+    font-size: 35px;
+    margin-top: 20px;
+}
+#title{
+    text-align: center;
+    font-size: 22px;
+}
+.menu div#select{
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 10px;
+    background-color: rgb(241, 241, 241);
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-top: 2%;
+}
+.menu div h1{
+    font-size: 20px;
+    margin-left: 25px;
+    
 }
