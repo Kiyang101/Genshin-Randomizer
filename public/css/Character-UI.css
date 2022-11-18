@@ -1,25 +1,79 @@
 .char{
     margin-top: 20px;
-    margin-left: 20px;
-
+    margin-left: 1%;
+    margin-right: 1%;
 }
-.char .box#five-star #color{
-
+.char span#color img#element {
+    width: 32px;
+    height: 32px;
+    float: left ;
+    position: absolute ;
+    top: 3px;
+    left: 3px;
+    z-index: 2;
 }
-.char .box#five-star{
+
+.char span#color img{
+    height: 130px;
+    width: 133px;
+    /*border: 1px solid red;*/
+    position: relative;
+    z-index: 1;
+}
+
+.char span#color img#five-star{
+    background-color: rgb(162, 143, 0);
+    border-radius: 16px 16px 0px 0px;
+}
+.char span#color img#four-star{
+    background-color: rgba(125, 0, 179, 0.737);
+    border-radius: 16px 16px 0px 0px;
+}
+
+.char .box span#color{
+    padding-top: 95%;
+    padding-bottom: 0px;    
+    border-radius: 16px 16px 0px 0px;
+    /*border: 1px solid red;*/
+    margin-bottom: 0;
+}
+.char .box{ 
     display: grid;
     display: inline-table;
-    border: 2px solid rgb(241, 241, 241);
-    background-color: rgb(185, 157, 0); 
-    border-radius: 15px;
-    grid-template-rows: 70px ;   /*ตั้ง*/
-    grid-template-columns: 70px 100px;      /*นอน*/
-    margin-right: 20px;
-    margin-left: 20px;
-    margin-bottom: 20px;
-    border: 1px solid red;    
-}
-.char .box#five-star h1{
+    padding-top: -5%;
+    margin-top: 1%;
+    background-color: rgb(182, 182, 182);
+    cursor: pointer;
+    scale: 100%;
+    border-radius: 16px;
+    /*grid-template-rows: 1% ;   /*ตั้ง*/
+    /*grid-template-columns: 1% 1.5%;      /*นอน*/
+    
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 15px;
     
 }
+.char .box:hover{
+    scale: 105%;
+}
+
+.char .box{
+    border: 0px solid rgb(0, 255, 47) hidden;
     
+}
+.char .box:hover{
+    border: 0px solid rgb(0, 255, 47) ;
+    
+}
+.char .box h1{
+    color: #000;
+    font-size: 17px;
+    margin-left: 0px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    text-align: center;
+    height: 10px;
+
+    /*border: 1px solid red;*/
+ }
