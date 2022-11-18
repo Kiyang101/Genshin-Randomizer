@@ -3,6 +3,9 @@
     margin-left: 1%;
     margin-right: 1%;
 }
+.char .box#element-none{
+    visibility:visible;
+}
 .char span#color img#element {
     width: 32px;
     height: 32px;
