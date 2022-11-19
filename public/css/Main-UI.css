@@ -5,7 +5,7 @@ body{
 main{
     padding-top: 7px;
     padding-bottom: 7px;
-    margin-top: 7%;
+    margin-top: 4%;
     margin-left: 7%;
     margin-right: 7%;
     height: 100%;
@@ -31,11 +31,73 @@ main{
     margin-right: 2%;
     margin-top: 2%;
     padding-bottom: 1%;
-    padding-right: 1%;
-    padding-left: 1%;
+    padding-right: 0;
+    padding-left: 0;
 }
-.menu div h1{
-    font-size: 20px;
-    margin-left: 25px;
+.menu div#select header h1{
+    font-size: 25px;
+    margin-top: px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-bottom: 10px;
+    list-style: none;
+    /*border: 1px solid red;*/
+    cursor: default;
+}
+.menu div#select header h1#h1{
+    margin-top: 10px;
+    text-align: center;
+}
+.menu div#select header h1#char{
+    display: inline-block;
+    border: 1.3px solid black;
+    border-radius: 10px;
+    padding: 5px;
+    margin-left: 5%;
+    margin-top: 0;
+    text-align: left;
+    cursor: pointer;
+    background-color: rgb(106, 255, 106);
+
+}
+.menu div#select header h1#boss{
+    display: inline-block;
+    border: 1.3px solid black;
+    border-radius: 10px;
+    padding: 5px;
+    margin-left: 5%;
+    margin-top: 0;
+    text-align: left;
+    cursor: pointer;
+    /*background-color: rgb(106, 255, 106) ;*/
+
+}
+
+.menu div ul li{
+    font-size: 25px;
+    margin-left: 0px;
+    margin-right: 0px;
+    list-style: none;
+    /*border: 1px solid red;*/
+    cursor: default;
+}
+.menu div#select header{
+    border-bottom: 1px solid rgb(0, 0, 0);
+    border-radius: 0px;
+    padding-top: 0;
+    padding-right: 0;
+    padding-left: 0;
+} 
+.menu div#select header ul.element img{
     
+    width: 40px;
+    height: 40px;
+    border: 1px solid red;
+    margin-left: 0;
+    margin-top: px;
+}
+
+.menu div#select header ul.element{
+    display:inline-flex;
+
 }

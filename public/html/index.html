@@ -7,6 +7,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/Main-UI.css">
     <link rel="stylesheet" href="../css/Character-UI.css">
+
   </head>
   <body>
     <main class="main">
@@ -18,9 +19,23 @@
         เราขอเสนอเว็ปสุ่มตัวละครและบอส เพื่อให้มีความน่าตื่นเต้นในการเล่นเกมมากขึ้น</p>
       <section class="menu">
         <div id="select">
-          <h1>เลือกตัวละคร</h1>
-          <hr>
-          <div class="char">
+          <header>
+            <h1 id="h1">เลือกตัวละคร</h1>
+            <h1 id="char" onclick="char()">Character</h1>
+
+            <ul class="element" style="display: none;">
+              <li id="pyro"><img src="../image/Element/Pyro.png" alt=""></li>
+            </ul>
+
+            <h1 id="boss" onclick="boss()">Boss</h1>
+
+
+            
+
+          </header>
+          
+
+          <div class="char" style="display: block;">
 
             <span class="box" id="element-none">
               <span id="color">
@@ -606,6 +621,6 @@
       </section>
     </main>
     
-
+    <script src="../js/Char-add-del.js"></script>
   </body>
 </html>
