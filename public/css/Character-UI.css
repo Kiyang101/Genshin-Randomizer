@@ -26,7 +26,7 @@
 
 .char span#color img#five-star{
     background-color: rgb(162, 143, 0);
-    border-radius: 16px 16px 0px 0px;
+    border-radius: 16px 16px 28px 0px;
 }
 .char span#color img#four-star{
     background-color: rgba(125, 0, 179, 0.737);
@@ -49,7 +49,7 @@
     display: inline-table;
     padding-top: -5%;
     margin-top: 1%;
-    background-color: rgb(182, 182, 182);
+    background-color: rgb(209, 209, 209);
     cursor: pointer;
     scale: 100%;
     border-radius: 16px;
@@ -61,16 +61,15 @@
     margin-bottom: 15px;
     
 }
-.char span.box#Character{
+/*
+.char span.box.Character{
     display: ;
 }
 
-/*Boss*/
-.char span.box#boss{
-    display:;
-}
+.char span.box.boss{
+    display: ;
+}*/
 
-/*-----*/
 .char .box:hover{
     scale: 105%;
 }
@@ -94,4 +93,7 @@
     height: 10px;
 
     /*border: 1px solid red;*/
+ }
+
+ .char #Character{
  }

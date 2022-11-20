@@ -44,6 +44,9 @@ main{
     /*border: 1px solid red;*/
     cursor: default;
 }
+.menu div#select header h1.menu{
+    display: inline-block;
+}
 .menu div#select header h1#h1{
     margin-top: 10px;
     text-align: center;

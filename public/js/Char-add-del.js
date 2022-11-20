@@ -8,24 +8,27 @@ function myFunction() {
     }
   }
 */
-var character = document.getElementById("Character")
-var boss = document.getElementById("boss")
+const character = document.getElementById("Character")
+const boss = document.getElementById("boss")
+const char5 = document.getElementById("5-star")
 
 function Char() {
-  if (character.style.display === "none") {
+  if (character.style.display == "none") {
     character.style.display = "";
   } else{
-    character.style.display
+    character.style.display = "none";
   }
 }
+function fivestar() {
+  
+}
+
+
 
 function Boss() {
     if (boss.style.display === "none"){
       boss.style.display = "";
-      console.log(boss.style.display);
     } else{
-      boss.style.display = "none"
-      console.log(boss.style.display);
-
+      boss.style.display = "none";
     }
 }
