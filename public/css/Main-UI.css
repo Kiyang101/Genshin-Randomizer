@@ -60,7 +60,7 @@ main{
     background-color: rgb(106, 255, 106);
 
 }
-.menu div#select header h1#boss{
+.menu div#select header h1#button-boss{
     display: inline-block;
     border: 1.3px solid black;
     border-radius: 10px;

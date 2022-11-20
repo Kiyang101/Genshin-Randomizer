@@ -8,17 +8,24 @@ function myFunction() {
     }
   }
 */
-var allchar = document.getElementsByClassName("char")
-var boss 
+var character = document.getElementById("Character")
+var boss = document.getElementById("boss")
 
-function char(){
-    if (allchar.style.display === "none") {
-        allchar.style.display = "block";
-      }
+function Char() {
+  if (character.style.display === "none") {
+    character.style.display = "";
+  } else{
+    character.style.display
+  }
 }
 
-function boss() {
-    if (allchar.style.display === "block"){
-        allchar.style.display = "none";
-    } 
+function Boss() {
+    if (boss.style.display === "none"){
+      boss.style.display = "";
+      console.log(boss.style.display);
+    } else{
+      boss.style.display = "none"
+      console.log(boss.style.display);
+
+    }
 }

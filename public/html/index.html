@@ -20,21 +20,22 @@
       <section class="menu">
         <div id="select">
           <header>
-            <h1 id="h1">เลือกตัวละคร</h1>
-            <h1 id="char" onclick="char()">Character</h1>
+            <h1 id="h1">เลือกตัวละคร&บอส</h1>
+            <h1 id="char" onclick="Char()">Character</h1>
 
             <ul class="element" style="display: none;">
               <li id="pyro"><img src="../image/Element/Pyro.png" alt=""></li>
             </ul>
 
-            <h1 id="boss" onclick="boss()">Boss</h1>
+            <h1 id="button-boss" onclick="Boss()">Boss</h1>
 
           </header>
           
 
-          <div class="char" style="display: block;">
+          <div class="char">
 
-            <span class="box" id="element-none">
+            <!--Character-->
+            <span class="box" id="element-none Character" >
               <span id="color">
                 <img src="../image/Character/all/Aether.png" alt="" id="five-star">
               </span>
@@ -43,17 +44,17 @@
               </span>
             </span>
             
-            <span class="box" id="element-cryo">
+            <span class="box" id="element-cryo Character" style="display: ">
               <span id="color">
                 <img src="../image/Element/Cryo.png" alt="" id="element">  
                 <img src="../image/Character/all/Aloy.png" alt="" id="five-star">
               </span>
               <span id="text">
-                <h1>Amber</h1>
+                <h1>Aloy</h1>
               </span>
             </span>
 
-            <span class="box" id="element-pyro">
+            <span class="box" id="element-pyro Character">
               <span id="color">
                 <img src="../image/Element/Pyro.png" alt="" id="element">  
                 <img src="../image/Character/all/Amber.png" alt="" id="four-star">
@@ -63,7 +64,7 @@
               </span>
             </span>
 
-            <span class="box" id="element-cryo">
+            <span class="box" id="element-cryo Character">
               <span id="color">
                 <img src="../image/Element/Cryo.png" alt="" id="element">  
                 <img src="../image/Character/all/Ayaka.png" alt="" id="five-star">
@@ -73,7 +74,7 @@
               </span>
             </span>
 
-            <span class="box" id="element-hydro">
+            <span class="box" id="element-hydro Character" >
               <span id="color">
                 <img src="../image/Element/Hydro.png" alt="" id="element">  
                 <img src="../image/Character/all/Ayato.png" alt="" id="five-star">
@@ -83,7 +84,7 @@
               </span>
             </span>
 
-            <span class="box" id="element-hydro">
+            <span class="box" id="element-hydro Character">
               <span id="color">
                 <img src="../image/Element/Hydro.png" alt="" id="element">  
                 <img src="../image/Character/all/Barbara.png" alt="" id="four-star">
@@ -93,7 +94,7 @@
               </span>
             </span>
 
-            <span class="box" id="element-electro">
+            <span class="box" id="element-electro Character">
               <span id="color">
                 <img src="../image/Element/Electro.png" alt="" id="element">  
                 <img src="../image/Character/all/Beidou.png" alt="" id="four-star">
@@ -103,7 +104,7 @@
               </span>
             </span>
 
-            <span class="box" id="element-pyro">
+            <span class="box" id="element-pyro Character">
               <span id="color">
                 <img src="../image/Element/Pyro.png" alt="" id="element">  
                 <img src="../image/Character/all/Bennett.png" alt="" id="four-star">
@@ -113,7 +114,7 @@
               </span>
             </span>
 
-            <span class="box" id="element-hydro">
+            <span class="box" id="element-hydro Character">
               <span id="color">
                 <img src="../image/Element/Hydro.png" alt="" id="element">  
                 <img src="../image/Character/all/Candace.png" alt="" id="four-star">
@@ -123,7 +124,7 @@
               </span>
             </span>
 
-            <span class="box" id="element-cryo">
+            <span class="box" id="element-cryo Character">
               <span id="color">
                 <img src="../image/Element/Cryo.png" alt="" id="element">  
                 <img src="../image/Character/all/Chongyun.png" alt="" id="four-star">
@@ -133,7 +134,7 @@
               </span>
             </span>
 
-            <span class="box" id="element-dendro">
+            <span class="box" id="element-dendro Character">
               <span id="color">
                 <img src="../image/Element/Dendro.png" alt="" id="element">  
                 <img src="../image/Character/all/Collei.png" alt="" id="four-star">
@@ -143,7 +144,7 @@
               </span>
             </span>
 
-            <span class="box" id="element-electro">
+            <span class="box" id="element-electro Character">
               <span id="color">
                 <img src="../image/Element/Electro.png" alt="" id="element">  
                 <img src="../image/Character/all/Cyno.png" alt="" id="five-star">
@@ -153,7 +154,7 @@
               </span>
             </span>
 
-            <span class="box" id="element-pyro">
+            <span class="box" id="element-pyro Character">
               <span id="color">
                 <img src="../image/Element/Pyro.png" alt="" id="element">  
                 <img src="../image/Character/all/Diluc.png" alt="" id="five-star">
@@ -163,7 +164,7 @@
               </span>
             </span>
 
-            <span class="box" id="element-cryo">
+            <span class="box" id="element-cryo Character">
               <span id="color">
                 <img src="../image/Element/Cryo.png" alt="" id="element">  
                 <img src="../image/Character/all/Diona.png" alt="" id="four-star">
@@ -173,443 +174,13 @@
               </span>
             </span>
 
-            <span class="box" id="element-">
+            <!--Boss-->
+            <span class="box" id="boss">
               <span id="color">
-                <img src="../image/Element/" alt="" id="element">  
-                <img src="../image/Character/all/" alt="" id="-star">
+                <img src="../image/Boss/Maguu-Kenki.png" alt="" id="boss">
               </span>
               <span id="text">
-                <h1></h1>
-              </span>
-            </span>
-
-            <span class="box" id="element-">
-              <span id="color">
-                <img src="../image/Element/" alt="" id="element">  
-                <img src="../image/Character/all/" alt="" id="-star">
-              </span>
-              <span id="text">
-                <h1></h1>
-              </span>
-            </span>
-
-            <span class="box" id="element-">
-              <span id="color">
-                <img src="../image/Element/" alt="" id="element">  
-                <img src="../image/Character/all/" alt="" id="-star">
-              </span>
-              <span id="text">
-                <h1></h1>
-              </span>
-            </span>
-
-            <span class="box" id="element-">
-              <span id="color">
-                <img src="../image/Element/" alt="" id="element">  
-                <img src="../image/Character/all/" alt="" id="-star">
-              </span>
-              <span id="text">
-                <h1></h1>
-              </span>
-            </span>
-
-            <span class="box" id="element-">
-              <span id="color">
-                <img src="../image/Element/" alt="" id="element">  
-                <img src="../image/Character/all/" alt="" id="-star">
-              </span>
-              <span id="text">
-                <h1></h1>
-              </span>
-            </span>
-
-            <span class="box" id="element-">
-              <span id="color">
-                <img src="../image/Element/" alt="" id="element">  
-                <img src="../image/Character/all/" alt="" id="-star">
-              </span>
-              <span id="text">
-                <h1></h1>
-              </span>
-            </span>
-
-            <span class="box" id="element-">
-              <span id="color">
-                <img src="../image/Element/" alt="" id="element">  
-                <img src="../image/Character/all/" alt="" id="-star">
-              </span>
-              <span id="text">
-                <h1></h1>
-              </span>
-            </span>
-
-            <span class="box" id="element-">
-              <span id="color">
-                <img src="../image/Element/" alt="" id="element">  
-                <img src="../image/Character/all/" alt="" id="-star">
-              </span>
-              <span id="text">
-                <h1></h1>
-              </span>
-            </span>
-
-            <span class="box" id="element-">
-              <span id="color">
-                <img src="../image/Element/" alt="" id="element">  
-                <img src="../image/Character/all/" alt="" id="-star">
-              </span>
-              <span id="text">
-                <h1></h1>
-              </span>
-            </span>
-
-            <span class="box" id="element-">
-              <span id="color">
-                <img src="../image/Element/" alt="" id="element">  
-                <img src="../image/Character/all/" alt="" id="-star">
-              </span>
-              <span id="text">
-                <h1></h1>
-              </span>
-            </span>
-
-            <span class="box" id="element-">
-              <span id="color">
-                <img src="../image/Element/" alt="" id="element">  
-                <img src="../image/Character/all/" alt="" id="-star">
-              </span>
-              <span id="text">
-                <h1></h1>
-              </span>
-            </span>
-
-            <span class="box" id="element-">
-              <span id="color">
-                <img src="../image/Element/" alt="" id="element">  
-                <img src="../image/Character/all/" alt="" id="-star">
-              </span>
-              <span id="text">
-                <h1></h1>
-              </span>
-            </span>
-
-            <span class="box" id="element-">
-              <span id="color">
-                <img src="../image/Element/" alt="" id="element">  
-                <img src="../image/Character/all/" alt="" id="-star">
-              </span>
-              <span id="text">
-                <h1></h1>
-              </span>
-            </span>
-
-            <span class="box" id="element-">
-              <span id="color">
-                <img src="../image/Element/" alt="" id="element">  
-                <img src="../image/Character/all/" alt="" id="-star">
-              </span>
-              <span id="text">
-                <h1></h1>
-              </span>
-            </span>
-
-            <span class="box" id="element-">
-              <span id="color">
-                <img src="../image/Element/" alt="" id="element">  
-                <img src="../image/Character/all/" alt="" id="-star">
-              </span>
-              <span id="text">
-                <h1></h1>
-              </span>
-            </span>
-
-            <span class="box" id="element-">
-              <span id="color">
-                <img src="../image/Element/" alt="" id="element">  
-                <img src="../image/Character/all/" alt="" id="-star">
-              </span>
-              <span id="text">
-                <h1></h1>
-              </span>
-            </span>
-
-            <span class="box" id="element-">
-              <span id="color">
-                <img src="../image/Element/" alt="" id="element">  
-                <img src="../image/Character/all/" alt="" id="-star">
-              </span>
-              <span id="text">
-                <h1></h1>
-              </span>
-            </span>
-
-            <span class="box" id="element-">
-              <span id="color">
-                <img src="../image/Element/" alt="" id="element">  
-                <img src="../image/Character/all/" alt="" id="-star">
-              </span>
-              <span id="text">
-                <h1></h1>
-              </span>
-            </span>
-
-            <span class="box" id="element-">
-              <span id="color">
-                <img src="../image/Element/" alt="" id="element">  
-                <img src="../image/Character/all/" alt="" id="-star">
-              </span>
-              <span id="text">
-                <h1></h1>
-              </span>
-            </span>
-
-            <span class="box" id="element-">
-              <span id="color">
-                <img src="../image/Element/" alt="" id="element">  
-                <img src="../image/Character/all/" alt="" id="-star">
-              </span>
-              <span id="text">
-                <h1></h1>
-              </span>
-            </span>
-
-            <span class="box" id="element-">
-              <span id="color">
-                <img src="../image/Element/" alt="" id="element">  
-                <img src="../image/Character/all/" alt="" id="-star">
-              </span>
-              <span id="text">
-                <h1></h1>
-              </span>
-            </span>
-
-            <span class="box" id="element-">
-              <span id="color">
-                <img src="../image/Element/" alt="" id="element">  
-                <img src="../image/Character/all/" alt="" id="-star">
-              </span>
-              <span id="text">
-                <h1></h1>
-              </span>
-            </span>
-
-            <span class="box" id="element-">
-              <span id="color">
-                <img src="../image/Element/" alt="" id="element">  
-                <img src="../image/Character/all/" alt="" id="-star">
-              </span>
-              <span id="text">
-                <h1></h1>
-              </span>
-            </span>
-
-            <span class="box" id="element-">
-              <span id="color">
-                <img src="../image/Element/" alt="" id="element">  
-                <img src="../image/Character/all/" alt="" id="-star">
-              </span>
-              <span id="text">
-                <h1></h1>
-              </span>
-            </span>
-
-            <span class="box" id="element-">
-              <span id="color">
-                <img src="../image/Element/" alt="" id="element">  
-                <img src="../image/Character/all/" alt="" id="-star">
-              </span>
-              <span id="text">
-                <h1></h1>
-              </span>
-            </span>
-
-            <span class="box" id="element-">
-              <span id="color">
-                <img src="../image/Element/" alt="" id="element">  
-                <img src="../image/Character/all/" alt="" id="-star">
-              </span>
-              <span id="text">
-                <h1></h1>
-              </span>
-            </span>
-
-            <span class="box" id="element-">
-              <span id="color">
-                <img src="../image/Element/" alt="" id="element">  
-                <img src="../image/Character/all/" alt="" id="-star">
-              </span>
-              <span id="text">
-                <h1></h1>
-              </span>
-            </span>
-
-            <span class="box" id="element-">
-              <span id="color">
-                <img src="../image/Element/" alt="" id="element">  
-                <img src="../image/Character/all/" alt="" id="-star">
-              </span>
-              <span id="text">
-                <h1></h1>
-              </span>
-            </span>
-
-            <span class="box" id="element-">
-              <span id="color">
-                <img src="../image/Element/" alt="" id="element">  
-                <img src="../image/Character/all/" alt="" id="-star">
-              </span>
-              <span id="text">
-                <h1></h1>
-              </span>
-            </span>
-
-            <span class="box" id="element-">
-              <span id="color">
-                <img src="../image/Element/" alt="" id="element">  
-                <img src="../image/Character/all/" alt="" id="-star">
-              </span>
-              <span id="text">
-                <h1></h1>
-              </span>
-            </span>
-
-            <span class="box" id="element-">
-              <span id="color">
-                <img src="../image/Element/" alt="" id="element">  
-                <img src="../image/Character/all/" alt="" id="-star">
-              </span>
-              <span id="text">
-                <h1></h1>
-              </span>
-            </span>
-
-            <span class="box" id="element-">
-              <span id="color">
-                <img src="../image/Element/" alt="" id="element">  
-                <img src="../image/Character/all/" alt="" id="-star">
-              </span>
-              <span id="text">
-                <h1></h1>
-              </span>
-            </span>
-
-            <span class="box" id="element-">
-              <span id="color">
-                <img src="../image/Element/" alt="" id="element">  
-                <img src="../image/Character/all/" alt="" id="-star">
-              </span>
-              <span id="text">
-                <h1></h1>
-              </span>
-            </span>
-
-            <span class="box" id="element-">
-              <span id="color">
-                <img src="../image/Element/" alt="" id="element">  
-                <img src="../image/Character/all/" alt="" id="-star">
-              </span>
-              <span id="text">
-                <h1></h1>
-              </span>
-            </span>
-
-            <span class="box" id="element-">
-              <span id="color">
-                <img src="../image/Element/" alt="" id="element">  
-                <img src="../image/Character/all/" alt="" id="-star">
-              </span>
-              <span id="text">
-                <h1></h1>
-              </span>
-            </span>
-
-            <span class="box" id="element-">
-              <span id="color">
-                <img src="../image/Element/" alt="" id="element">  
-                <img src="../image/Character/all/" alt="" id="-star">
-              </span>
-              <span id="text">
-                <h1></h1>
-              </span>
-            </span>
-
-            <span class="box" id="element-">
-              <span id="color">
-                <img src="../image/Element/" alt="" id="element">  
-                <img src="../image/Character/all/" alt="" id="-star">
-              </span>
-              <span id="text">
-                <h1></h1>
-              </span>
-            </span>
-
-            <span class="box" id="element-">
-              <span id="color">
-                <img src="../image/Element/" alt="" id="element">  
-                <img src="../image/Character/all/" alt="" id="-star">
-              </span>
-              <span id="text">
-                <h1></h1>
-              </span>
-            </span>
-
-            <span class="box" id="element-">
-              <span id="color">
-                <img src="../image/Element/" alt="" id="element">  
-                <img src="../image/Character/all/" alt="" id="-star">
-              </span>
-              <span id="text">
-                <h1></h1>
-              </span>
-            </span>
-
-            <span class="box" id="element-">
-              <span id="color">
-                <img src="../image/Element/" alt="" id="element">  
-                <img src="../image/Character/all/" alt="" id="-star">
-              </span>
-              <span id="text">
-                <h1></h1>
-              </span>
-            </span>
-
-            <span class="box" id="element-">
-              <span id="color">
-                <img src="../image/Element/" alt="" id="element">  
-                <img src="../image/Character/all/" alt="" id="-star">
-              </span>
-              <span id="text">
-                <h1></h1>
-              </span>
-            </span>
-
-            <span class="box" id="element-">
-              <span id="color">
-                <img src="../image/Element/" alt="" id="element">  
-                <img src="../image/Character/all/" alt="" id="-star">
-              </span>
-              <span id="text">
-                <h1></h1>
-              </span>
-            </span>
-
-            <span class="box" id="element-">
-              <span id="color">
-                <img src="../image/Element/" alt="" id="element">  
-                <img src="../image/Character/all/" alt="" id="-star">
-              </span>
-              <span id="text">
-                <h1></h1>
-              </span>
-            </span>
-
-            <span class="box" id="element-">
-              <span id="color">
-                <img src="../image/Element/" alt="" id="element">  
-                <img src="../image/Character/all/" alt="" id="-star">
-              </span>
-              <span id="text">
-                <h1></h1>
+                <h1>Maguu Kenki</h1>
               </span>
             </span>
 

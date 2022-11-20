@@ -5,7 +5,6 @@
     text-align: center;
 }
 .char .box#element-none{
-    visibility:visible;
 }
 .char span#color img#element {
     width: 32px;
@@ -33,6 +32,10 @@
     background-color: rgba(125, 0, 179, 0.737);
     border-radius: 16px 16px 0px 0px;
 }
+.char span#color img#boss{
+    background-color: rgb(40, 25, 255);
+    border-radius: 16px 16px 0px 0px;
+}
 
 .char .box span#color{
     padding-top: 95%;
@@ -58,6 +61,16 @@
     margin-bottom: 15px;
     
 }
+.char span.box#Character{
+    display: ;
+}
+
+/*Boss*/
+.char span.box#boss{
+    display:;
+}
+
+/*-----*/
 .char .box:hover{
     scale: 105%;
 }
