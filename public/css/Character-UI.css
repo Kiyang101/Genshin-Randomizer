@@ -30,7 +30,7 @@
 }
 .char span#color img#four-star{
     background-color: rgba(125, 0, 179, 0.737);
-    border-radius: 16px 16px 0px 0px;
+    border-radius: 16px 16px 28px 0px;
 }
 .char span#color img#boss{
     background-color: rgb(40, 25, 255);
