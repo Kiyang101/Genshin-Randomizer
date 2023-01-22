@@ -51,7 +51,7 @@ main{
     margin-top: 10px;
     text-align: center;
 }
-.menu div#select header h1#char{
+.menu div#select header h1#buttonchar{
     display: inline-block;
     border: 1.3px solid black;
     border-radius: 10px;
@@ -60,10 +60,11 @@ main{
     margin-top: 0;
     text-align: left;
     cursor: pointer;
-    background-color: rgb(106, 255, 106);
+    color: white;
+    background-color: DodgerBlue ;
 
 }
-.menu div#select header h1#button-boss{
+.menu div#select header h1#buttonboss{
     display: inline-block;
     border: 1.3px solid black;
     border-radius: 10px;
@@ -72,7 +73,8 @@ main{
     margin-top: 0;
     text-align: left;
     cursor: pointer;
-    /*background-color: rgb(106, 255, 106) ;*/
+    color: white;
+    background-color: DodgerBlue ;
 
 }
 

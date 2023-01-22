@@ -8,27 +8,43 @@ function myFunction() {
     }
   }
 */
+/*
 const character = document.getElementById("Character")
 const boss = document.getElementById("boss")
 const char5 = document.getElementById("5-star")
+const charbutton = document.getElementById("buttonchar")
+const bossbutton = document.getElementById("buttonboss")*/
 
 function Char() {
-  if (character.style.display == "none") {
-    character.style.display = "";
+
+
+  if (document.getElementById("Character").style.display == "none") {
+    
+    document.getElementById("Character").style.display = "";
+    document.getElementById("buttonchar").style.background = "DodgerBlue";
+    document.getElementById("buttonchar").style.color = "white";
+
+
   } else{
-    character.style.display = "none";
+    document.getElementById("Character").style.display = "none";
+    document.getElementById("buttonchar").style.background = "white";
+    document.getElementById("buttonchar").style.color = "black";
+
   }
-}
-function fivestar() {
-  
-}
 
-
+}
 
 function Boss() {
-    if (boss.style.display === "none"){
-      boss.style.display = "";
+    if (document.getElementById("boss").style.display == "none"){
+      document.getElementById("boss").style.display = "";
+      document.getElementById("buttonboss").style.background = "DodgerBlue";
+      document.getElementById("buttonboss").style.color = "white";
+
+
     } else{
-      boss.style.display = "none";
+      document.getElementById("boss").style.display = "none";
+      document.getElementById("buttonboss").style.background = "white";
+      document.getElementById("buttonboss").style.color = "black";
+
     }
 }
