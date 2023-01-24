@@ -46,7 +46,7 @@ let bossswitch = true;
 
 
 function Char() {
-  if (bossswitch == true){
+  if (Charswitch == true){
     document.querySelector(".Aether").style.cssText = "display: none;"
     document.querySelector(".Albedo").style.cssText = "display: none;"
     document.querySelector(".Alhatham").style.cssText = "display: none;"
@@ -112,10 +112,10 @@ function Char() {
     document.querySelector(".Zhongli").style.cssText = "display: none;"
     document.getElementById("buttonchar").style.background = "white";
     document.getElementById("buttonchar").style.color = "black";
-    bossswitch = false;
+    Charswitch = false;
     return
   }
-  if (bossswitch == false){
+  if (Charswitch == false){
     document.querySelector(".Aether").style.cssText = "display: ;"
     document.querySelector(".Albedo").style.cssText = "display: ;"
     document.querySelector(".Alhatham").style.cssText = "display: ;"
@@ -181,25 +181,25 @@ function Char() {
     document.querySelector(".Zhongli").style.cssText = "display: ;"
     document.getElementById("buttonchar").style.background = "DodgerBlue";
     document.getElementById("buttonchar").style.color = "white";
-    bossswitch = true;
+    Charswitch = true;
     }
 }
 
 
 
 function Boss() {
-  if (Charswitch == true){
+  if (bossswitch == true){
     document.querySelector(".Maguu_Kenki").style.cssText = "display: none;"
     document.getElementById("buttonboss").style.background = "white";
     document.getElementById("buttonboss").style.color = "black";
-    Charswitch = false;
+    bossswitch = false;
     return
   }
-  if (Charswitch == false){
+  if (bossswitch == false){
     document.querySelector(".Maguu_Kenki").style.cssText = "display: ;"
       document.getElementById("buttonboss").style.background = "DodgerBlue";
       document.getElementById("buttonboss").style.color = "white";
-      Charswitch = true;
+      bossswitch = true;
     }
 }
 
