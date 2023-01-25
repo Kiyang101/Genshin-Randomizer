@@ -21,16 +21,53 @@
         <div id="select">
           <header>
             <h1 id="h1">เลือกตัวละคร&บอส</h1>
-            <h1 id="buttonchar" onclick="Char()">Character</h1>
-            <ul class="element" style="display: none;">
-              <li id="pyro"><img src="../image/Element/Pyro.png" alt=""></li>
-            </ul>
-
-            <h1 id="buttonboss" onclick="Boss()">Boss</h1>
-            
-
+            <button id="buttonchar" onclick="Char()">Character</button>
+            <button class="filter" onclick="Filter()">filter</button>
+            <button id="buttonboss" onclick="Boss()">Boss</button>
+          
           </header>
           
+          <section Class="filter">
+            <header>
+              <h1>Filter</h1>
+              <button>X</button>
+            </header>
+            <body>
+              <ul>
+                <li>Rarity
+                  <Button>all</Button>
+                </li>
+                <li>
+                  <Button>4</Button>
+                  <Button>5</Button>
+                </li>
+                <li>Type
+                  <button>all</button>
+                </li>
+                <li>
+                  <button>Sword</button>
+                  <button>Claymore</button>
+                  <button>Polearm</button>
+                  <button>Bow</button>
+                  <button>Catalyst</button>
+                </li>
+                <li>Element
+                  <button>All</button>
+                </li>
+                <li>
+                  <button><img src="/public/image/Element/Anemo.png" alt=""></button>
+                  <button><img src="/public/image/Element/Cryo.png" alt=""></button>
+                  <button><img src="/public/image/Element/Dendro.png" alt=""></button>
+                  <button><img src="/public/image/Element/Electro.png" alt=""></button>
+                  <button><img src="/public/image/Element/Geo.png" alt=""></button>
+                  <button><img src="/public/image/Element/Hydro.png" alt=""></button>
+                  <button><img src="/public/image/Element/Pyro.png" alt=""></button>
+                </li>
+              </ul>
+            </body>
+          </section>
+
+
 
           <div class="char">
 
@@ -935,5 +972,7 @@
     
     <script src="../js/Char-add-del.js"></script>
     <script src="../js/Select_Character.js"></script>
+    <script src="../js/Filter.js"></script>
+
   </body>
 </html>
