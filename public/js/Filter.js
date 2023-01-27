@@ -1,4 +1,4 @@
-let filter_count = true;
+let filter_count = false;
 function Filter(){
 
     if (filter_count == true){

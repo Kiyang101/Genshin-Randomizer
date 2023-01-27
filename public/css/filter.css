@@ -58,3 +58,8 @@ section.filter div.header{
     padding-right: 0;
     padding-left: 0;
 }
+
+section.filter body ul li.weapon_type button img{
+    height: 10px;
+    width: 10px;
+}

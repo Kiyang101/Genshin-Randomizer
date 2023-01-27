@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../css/Main-UI.css">
     <link rel="stylesheet" href="../css/Character-UI.css">
     <link rel="stylesheet" href="../css/filter.css">
+    <link rel="stylesheet" href="https://kit.fontawesome.com/0b7f1a7922.css" crossorigin="anonymous">
   </head>
 
   <body>
@@ -37,27 +38,41 @@
             </div>
             <body>
               <ul>
-                <li>Rarity
+                <li class="rarity">Rarity
                   <Button>all</Button>
                 </li>
-                <li>
-                  <Button>4</Button>
-                  <Button>5</Button>
+                <li class="rarity_star">
+                  <Button>4
+                    <i class="fa-solid fa-star"></i>
+                  </Button>
+                  <Button>5
+                    <i class="fa-solid fa-star"></i>
+                  </Button>
                 </li>
-                <li>Type
+                <li class="type">Type
                   <button>all</button>
                 </li>
-                <li>
-                  <button>Sword</button>
-                  <button>Claymore</button>
-                  <button>Polearm</button>
-                  <button>Bow</button>
-                  <button>Catalyst</button>
+                <li class="type_weapon">
+                  <button>Sword
+                    <img src="../image/Icon_weapon/Sword.png" alt="">
+                  </button>
+                  <button>Claymore
+                    <img src="../image/Icon_weapon/Claymore.png" alt="">
+                  </button>
+                  <button>Polearm
+                    <img src="../image/Icon_weapon/Pole.png" alt="">
+                  </button>
+                  <button>Bow
+                    <img src="../image/Icon_weapon/Bow.png" alt="">
+                  </button>
+                  <button>Catalyst
+                    <img src="../image/Icon_weapon/Catalyst.png" alt="">
+                  </button>
                 </li>
-                <li>Element
+                <li class="element">Element
                   <button>All</button>
                 </li>
-                <li>
+                <li class="element_img">
                   <button><img src="../image/Element/Anemo.png" alt=""></button>
                   <button><img src="../image/Element/Cryo.png" alt=""></button>
                   <button><img src="../image/Element/Dendro.png" alt=""></button>
@@ -974,6 +989,7 @@
     <script src="../js/Char-add-del.js"></script>
     <script src="../js/Select_Character.js"></script>
     <script src="../js/Filter.js"></script>
+    <script src="https://kit.fontawesome.com/0b7f1a7922.js" crossorigin="anonymous"></script>
 
   </body>
 </html>
