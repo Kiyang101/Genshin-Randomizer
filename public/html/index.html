@@ -8,31 +8,33 @@
     <link rel="stylesheet" href="../css/Main-UI.css">
     <link rel="stylesheet" href="../css/Character-UI.css">
     <link rel="stylesheet" href="../css/filter.css">
-
   </head>
+
   <body>
     <main class="main">
       <div class="head">
         <h1>Kiyang Impact</h1>
       </div>
       
-      <p id="title">ถ้าคุณเบื่อไม่รู้จะเล่นตัวละครอะไรดี<br />
+      <p id="title">ถ้าคุณเบื่อไม่รู้จะเล่นตัวละครอะไรดี<br/>
         เราขอเสนอเว็ปสุ่มตัวละครและบอส เพื่อให้มีความน่าตื่นเต้นในการเล่นเกมมากขึ้น</p>
+
       <section class="menu">
         <div id="select">
           <header>
             <h1 id="h1">เลือกตัวละคร&บอส</h1>
             <button id="buttonchar" onclick="Char()">Character</button>
             <button class="filter" onclick="Filter()">filter</button>
-            <button id="buttonboss" onclick="Boss()">Boss</button>
-          
+            <button id="buttonboss" onclick="Boss()">Boss</button>         
           </header>
           
           <section Class="filter">
-            <header>
-              <h1>Filter</h1>
-              <button>X</button>
-            </header>
+            <div class="header">
+              <header id="filter">
+                <h1>Filter</h1>
+              </header>
+              <button class="close" onclick="Close()">X</button>
+            </div>
             <body>
               <ul>
                 <li>Rarity
@@ -67,8 +69,6 @@
               </ul>
             </body>
           </section>
-
-
 
           <div class="char">
 

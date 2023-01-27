@@ -1,3 +1,60 @@
 section.filter{
-    border: 2px solid red;
+    border: 1.5px solid Black;
+    text-align: center;
+    margin-left: 20%;
+    margin-right: 20%;
+    background-color: burlywood;
+    border-radius: 10px;
+    margin-top: 20px;
+    padding-bottom: 10px;
+}
+
+section.filter button{
+    cursor: pointer;
+}
+
+section.filter header#filter{
+    display: inline-flex;
+    border: 0px;
+}
+
+section.filter header#filter{
+    text-align: center;
+    cursor:default;
+}
+
+section.filter body ul{
+    left: 50%;
+}
+
+section.filter header#filter h1{
+    font-size: 30px;
+    margin-left: 20%;
+    margin-top: 15px;
+    margin-bottom: 0px;
+    padding-bottom: 10px;
+    display: block;
+    justify-content: center;
+}
+
+section.filter button.close{
+    border-top: 0px;
+    border-right: 0px;
+    border-left: 1px solid black;
+    border-bottom: 1px solid black;
+    color: white;
+    background-color: dodgerblue;
+    cursor: pointer;
+    justify-content: center;
+    float: right;
+    font-size: 30px;
+    border-radius: 10px;
+}
+
+section.filter div.header{
+    border-bottom: 1.5px solid Black;
+    border-radius: 0px;
+    padding-top: 0;
+    padding-right: 0;
+    padding-left: 0;
 }
