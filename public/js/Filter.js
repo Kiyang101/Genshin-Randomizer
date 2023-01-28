@@ -18,4 +18,3 @@ function Close(){
     filter_count = false
 }
 
-/*Why do not deploy ?? Firebase !?. */

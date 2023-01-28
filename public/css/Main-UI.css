@@ -13,11 +13,17 @@ main{
     border: #ffffff;
     border-radius: 10px;
 }
+
+main p{
+    cursor: default;
+}
+
 .head h1{
     text-align: center;
     color: rgb(0, 0, 0);
     font-size: 35px;
     margin-top: 20px;
+    cursor: default;
 }
 #title{
     text-align: center;
@@ -34,6 +40,11 @@ main{
     padding-right: 0;
     padding-left: 0;
 }
+
+.menu div#select header h1#h1{
+    cursor: default;
+}
+
 .menu div#select header button{
     font-size: 25px;
     margin-top: px;
