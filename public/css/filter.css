@@ -2,7 +2,11 @@ section.filter{
     border: 1.5px solid Black;
     margin-left: 20%;
     margin-right: 20%;
-    background-color: burlywood;
+    background: LightSkyBlue; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(DodgerBlue, LightSkyBlue,LightCyan); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(DodgerBlue, LightSkyBlue,LightCyan); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(DodgerBlue, LightSkyBlue,LightCyan); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(DodgerBlue, LightSkyBlue,LightCyan); /* Standard syntax */
     border-radius: 10px;
     margin-top: 20px;
     padding-bottom: 10px;
@@ -30,7 +34,6 @@ section.filter header#filter h1{
     margin-top: 10px;
     margin-bottom: 10px;
     padding-bottom: 0px;
-    border: 1px solid red;
 }
 
 section.filter button.close{
@@ -42,7 +45,7 @@ section.filter button.close{
     font-size: 30px;
     border-radius: 10px;
     margin-right: 10px;
-    margin-top: 10px;
+    margin-top: 8.5px;
 }
 
 section.filter div.header{
@@ -75,3 +78,49 @@ img#weapon_type{
     background-color: aqua;
     border-radius: 5px;
 }
+
+li.rarity h1,
+li.type h1,
+li.element h1
+{
+    display: inline-block;
+    margin-top: 0px;
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+}
+
+li.rarity button,
+li.rarity_star button,
+li.type button,
+li.element button
+{
+    border-radius: 5px;
+    font-size: 1rem;
+    border: 0px;
+}
+
+li.rarity_star button{
+    margin-top: 0px;
+    margin-bottom: 10px;
+}
+
+li.element_img button{
+    border: 0px;
+    border-radius: 10px;
+}
+
+/*Color Button*/
+.rarity_all,
+.rarity_4,.rarity_5,
+.type_all,
+.type_sword,.type_Claymore,.type_Pole,.type_Bow,.type_Catalyst,
+.element_all,
+.E_Anemo,.E_Cryo,.E_Dendro,.E_Electro,.E_Geo,.E_Hydro,.E_Pyro
+{
+    background-color: Aquamarine;
+    background: -webkit-linear-gradient(Aquamarine,PaleTurquoise); 
+    background: -o-linear-gradient(Aquamarine,PaleTurquoise); 
+    background: -moz-linear-gradient(Aquamarine,PaleTurquoise); 
+    background: linear-gradient(Aquamarine,PaleTurquoise); 
+}
+

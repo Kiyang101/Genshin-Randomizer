@@ -34,57 +34,67 @@
               <header id="filter">
                 <h1>Filter</h1>
               </header>
-              <button class="close" onclick="Close()">X</button>
+              <button class="close" onclick="Close()">
+                <i class="fa-solid fa-xmark"></i>
+              </button>
             </div>
             <body>
               <ul id="center">
-                <li class="rarity">Rarity
-                  <Button>all</Button>
+                <li class="rarity">
+                  <h1>Rarity</h1>
+                  <Button class="rarity_all" onclick="rarity_all()">all</Button>
                 </li>
                 <li class="rarity_star">
-                  <Button>4
-                    <i class="fa-solid fa-star"></i>
+                  <Button class="rarity_4" onclick="rarity_4()">4
+                    <span style="color: Gold">
+                      <i class="fa-solid fa-star"></i>
+                    </span>
                   </Button>
-                  <Button>5
-                    <i class="fa-solid fa-star"></i>
+                  <Button class="rarity_5" onclick="rarity_5()">5
+                    <span style="color: Gold">
+                      <i class="fa-solid fa-star"></i>
+                    </span>
+
                   </Button>
                 </li>
-                <li class="type">Type
-                  <button>all</button>
+                <li class="type">
+                  <h1>Type</h1>
+                  <button class="type_all" onclick="type_all()">all</button>
                 </li>
                 <li class="type_weapon">
-                  <button id="weapon_type">
+                  <button id="weapon_type" class="type_sword" onclick="type_sword()">
                     <img src="../image/Icon_weapon/Sword.png" alt="" id="weapon_type">
                     <h1>Sword</h1>
                   </button>
-                  <button id="weapon_type">
+                  <button id="weapon_type" class="type_Claymore" onclick="type_Claymore()">
                     <img src="../image/Icon_weapon/Claymore.png" alt="" id="weapon_type">
                     <h1>Claymore</h1>
                   </button>
-                  <button id="weapon_type">
+                  <button id="weapon_type" class="type_Pole" onclick="type_Pole()">
                     <img src="../image/Icon_weapon/Pole.png" alt="" id="weapon_type">
                     <h1>Polearm</h1>
                   </button>
-                  <button id="weapon_type">
+                  <button id="weapon_type" class="type_Bow" onclick="type_Bow()">
                     <img src="../image/Icon_weapon/Bow.png" alt="" id="weapon_type">
                     <h1>Bow</h1>
-                  </button id="weapon_type">
-                  <button id="weapon_type">
+                  </button>
+                  <button id="weapon_type" class="type_Catalyst" onclick="type_Catalyst()">
                     <img src="../image/Icon_weapon/Catalyst.png" alt="" id="weapon_type">
                     <h1>Catalyst</h1>
                   </button>
                 </li>
-                <li class="element">Element
-                  <button>All</button>
+                <li class="element">
+                  <h1>Element</h1>
+                  <button class="element_all" onclick="element_all()">All</button>
                 </li>
                 <li class="element_img">
-                  <button><img src="../image/Element/Anemo.png" alt=""></button>
-                  <button><img src="../image/Element/Cryo.png" alt=""></button>
-                  <button><img src="../image/Element/Dendro.png" alt=""></button>
-                  <button><img src="../image/Element/Electro.png" alt=""></button>
-                  <button><img src="../image/Element/Geo.png" alt=""></button>
-                  <button><img src="../image/Element/Hydro.png" alt=""></button>
-                  <button><img src="../image/Element/Pyro.png" alt=""></button>
+                  <button class="E_Anemo" onclick="E_Anemo()"><img src="../image/Element/Anemo.png" alt=""></button>
+                  <button class="E_Cryo" onclick="E_Cryo()"><img src="../image/Element/Cryo.png" alt=""></button>
+                  <button class="E_Dendro" onclick="E_Dendro()"><img src="../image/Element/Dendro.png" alt=""></button>
+                  <button class="E_Electro" onclick="E_Electro()"><img src="../image/Element/Electro.png" alt=""></button>
+                  <button class="E_Geo" onclick="E_Geo()"><img src="../image/Element/Geo.png" alt=""></button>
+                  <button class="E_Hydro" onclick="E_Hydro()"><img src="../image/Element/Hydro.png" alt=""></button>
+                  <button class="E_Pyro" onclick="E_Pyro()"><img src="../image/Element/Pyro.png" alt=""></button>
                 </li>
               </ul>
             </body>

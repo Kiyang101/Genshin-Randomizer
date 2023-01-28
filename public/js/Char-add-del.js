@@ -42,7 +42,9 @@ function Boss() {
 let Charswitch = true;
 let bossswitch = true;
 
-
+function rarity_all(){
+  
+}
 
 
 function Char() {
