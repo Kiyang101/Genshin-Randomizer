@@ -1,833 +1,821 @@
 const Borders = "border-top: 5px solid MediumSpringGreen; border-bottom: 5px solid SpringGreen;";
-let count_Aether = true;
-let count_Albedo = true;
-let count_Alhatham = true;
-let count_Aloy = true;
-let count_Amber = true;
-let count_Arataki_Itto = true;
-let count_Barbara = true;
-let count_Beidou = true;
-let count_Bennett = true;
-let count_Candace = true;
-let count_Chongyun = true;
-let count_Collei = true;
-let count_Cyno = true;
-let count_Diluc = true;
-let count_Diona = true;
-let count_Dori = true;
-let count_Eula = true;
-let count_Faruzan = true;
-let count_Fischl = true;
-let count_Ganyu = true;
-let count_Gorou = true;
-let count_Hutao = true;
-let count_Jean = true;
-let count_Kaeya = true;
-let count_Ayaka = true;
-let count_Ayato = true;
-let count_Kazuha = true;
-let count_Keqing = true;
-let count_Klee = true;
-let count_Kujou_Sara = true;
-let count_Kuki_Shinobu = true;
-let count_Layla = true;
-let count_Lisa = true;
-let count_Mona = true;
-let count_Nahida = true;
-let count_Nilou = true;
-let count_Ningguang = true;
-let count_Noel = true;
-let count_Qiqi = true;
-let count_Raiden = true;
-let count_Razor = true;
-let count_Rosaria = true;
-let count_Kokomi = true;
-let count_Sayu = true;
-let count_Shenhe = true;
-let count_Heizou = true;
-let count_Sucrose = true;
-let count_Tartaglia = true;
-let count_Thoma = true;
-let count_Tighnari = true;
-let count_Venti = true;
-let count_Wanderer = true;
-let count_Xiangling = true;
-let count_Xiao = true;
-let count_Xingqiu = true;
-let count_Xinyan = true;
-let count_Yae_miko = true;
-let count_Yanfei = true;
-let count_Yaoyao = true;
-let count_Yelan = true;
-let count_Yoimiya = true;
-let count_Yunjin = true;
-let count_Zhongli = true;
+let count_Aether = false;
+let count_Albedo = false;
+let count_Alhatham = false;
+let count_Aloy = false;
+let count_Amber = false;
+let count_Arataki_Itto = false;
+let count_Barbara = false;
+let count_Beidou = false;
+let count_Bennett = false;
+let count_Candace = false;
+let count_Chongyun = false;
+let count_Collei = false;
+let count_Cyno = false;
+let count_Diluc = false;
+let count_Diona = false;
+let count_Dori = false;
+let count_Eula = false;
+let count_Faruzan = false;
+let count_Fischl = false;
+let count_Ganyu = false;
+let count_Gorou = false;
+let count_Hutao = false;
+let count_Jean = false;
+let count_Kaeya = false;
+let count_Ayaka = false;
+let count_Ayato = false;
+let count_Kazuha = false;
+let count_Keqing = false;
+let count_Klee = false;
+let count_Kujou_Sara = false;
+let count_Kuki_Shinobu = false;
+let count_Layla = false;
+let count_Lisa = false;
+let count_Mona = false;
+let count_Nahida = false;
+let count_Nilou = false;
+let count_Ningguang = false;
+let count_Noel = false;
+let count_Qiqi = false;
+let count_Raiden = false;
+let count_Razor = false;
+let count_Rosaria = false;
+let count_Kokomi = false;
+let count_Sayu = false;
+let count_Shenhe = false;
+let count_Heizou = false;
+let count_Sucrose = false;
+let count_Tartaglia = false;
+let count_Thoma = false;
+let count_Tighnari = false;
+let count_Venti = false;
+let count_Wanderer = false;
+let count_Xiangling = false;
+let count_Xiao = false;
+let count_Xingqiu = false;
+let count_Xinyan = false;
+let count_Yae_miko = false;
+let count_Yanfei = false;
+let count_Yaoyao = false;
+let count_Yelan = false;
+let count_Yoimiya = false;
+let count_Yunjin = false;
+let count_Zhongli = false;
 
 
 function select_Aether() {
-  if (count_Aether == true){
+  if (count_Aether == false){
     document.querySelector(".char .Aether .box").style.cssText = Borders
-    count_Aether = false;
+    count_Aether = true;
     return
   }
-  if (count_Aether == false){
+  if (count_Aether == true){
     document.querySelector(".char .Aether .box").style.border="";
-    count_Aether = true;
+    count_Aether = false;
   }
 }
 
 function select_Albedo() {
-    if (count_Albedo == true){
+    if (count_Albedo == false){
       document.querySelector(".char .Albedo .box").style.cssText = Borders
-      count_Albedo = false;
+      count_Albedo = true;
       return
     }
-    if (count_Albedo == false){
+    if (count_Albedo == true){
       document.querySelector(".char .Albedo .box").style.border="";
-      count_Albedo = true;
+      count_Albedo = false;
     }
 }
 
 function select_Alhatham() {
-  if (count_Alhatham == true){
+  if (count_Alhatham == false){
     document.querySelector(".char .Alhatham .box").style.cssText = Borders
-    count_Alhatham = false;
+    count_Alhatham = true;
     return
   }
-  if (count_Alhatham == false){
+  if (count_Alhatham == true){
     document.querySelector(".char .Alhatham .box").style.border="";
-    count_Alhatham = true;
+    count_Alhatham = false;
   }
 }
 
 function select_Aloy() {
-  if (count_Aloy == true){
+  if (count_Aloy == false){
     document.querySelector(".char .Aloy .box").style.cssText = Borders
-    count_Aloy = false;
+    count_Aloy = true;
     return
   }
-  if (count_Aloy == false){
+  if (count_Aloy == true){
     document.querySelector(".char .Aloy .box").style.border="";
-    count_Aloy = true;
+    count_Aloy = false;
   }
 }
 
 function select_Amber() {
-  if (count_Amber == true){
+  if (count_Amber == false){
     document.querySelector(".char .Amber .box").style.cssText = Borders
-    count_Amber = false;
+    count_Amber = true;
     return
   }
-  if (count_Amber == false){
+  if (count_Amber == true){
     document.querySelector(".char .Amber .box").style.border="";
-    count_Amber = true;
+    count_Amber = false;
   }
 }
 
 function select_Arataki_Itto() {
-  if (count_Arataki_Itto == true){
+  if (count_Arataki_Itto == false){
     document.querySelector(".char .Arataki_Itto .box").style.cssText = Borders
-    count_Arataki_Itto = false;
+    count_Arataki_Itto = true;
     return
   }
-  if (count_Arataki_Itto == false){
+  if (count_Arataki_Itto == true){
     document.querySelector(".char .Arataki_Itto .box").style.border="";
-    count_Arataki_Itto = true;
+    count_Arataki_Itto = false;
   }
 }
 
 function select_Barbara() {
-  if (count_Barbara == true){
+  if (count_Barbara == false){
     document.querySelector(".char .Barbara .box").style.cssText = Borders
-    count_Barbara = false;
+    count_Barbara = true;
     return
   }
-  if (count_Barbara == false){
+  if (count_Barbara == true){
     document.querySelector(".char .Barbara .box").style.border="";
-    count_Barbara = true;
+    count_Barbara = false;
   }
 }
 
 function select_Beidou() {
-  if (count_Beidou == true){
+  if (count_Beidou == false){
     document.querySelector(".char .Beidou .box").style.cssText = Borders
-    count_Beidou = false;
+    count_Beidou = true;
     return
   }
-  if (count_Beidou == false){
+  if (count_Beidou == true){
     document.querySelector(".char .Beidou .box").style.border="";
-    count_Beidou = true;
+    count_Beidou = false;
   }
 }
 
 function select_Bennett() {
-  if (count_Bennett == true){
+  if (count_Bennett == false){
     document.querySelector(".char .Bennett .box").style.cssText = Borders
-    count_Bennett = false;
+    count_Bennett = true;
     return
   }
-  if (count_Bennett == false){
+  if (count_Bennett == true){
     document.querySelector(".char .Bennett .box").style.border="";
-    count_Bennett = true;
+    count_Bennett = false;
   }
 }
 
 function select_Candace() {
-  if (count_Candace == true){
+  if (count_Candace == false){
     document.querySelector(".char .Candace .box").style.cssText = Borders
-    count_Candace = false;
+    count_Candace = true;
     return
   }
-  if (count_Candace == false){
+  if (count_Candace == true){
     document.querySelector(".char .Candace .box").style.border="";
-    count_Candace = true;
+    count_Candace = false;
   }
 }
 
 function select_Chongyun() {
-  if (count_Chongyun == true){
+  if (count_Chongyun == false){
     document.querySelector(".char .Chongyun .box").style.cssText = Borders
-    count_Chongyun = false;
+    count_Chongyun = true;
     return
   }
-  if (count_Chongyun == false){
+  if (count_Chongyun == true){
     document.querySelector(".char .Chongyun .box").style.border="";
-    count_Chongyun = true;
+    count_Chongyun = false;
   }
 }
 
 function select_Collei() {
-  if (count_Collei == true){
+  if (count_Collei == false){
     document.querySelector(".char .Collei .box").style.cssText = Borders
-    count_Collei = false;
+    count_Collei = true;
     return
   }
-  if (count_Collei == false){
+  if (count_Collei == true){
     document.querySelector(".char .Collei .box").style.border="";
-    count_Collei = true;
+    count_Collei = false;
   }
 }
 
 function select_Cyno() {
-  if (count_Cyno == true){
+  if (count_Cyno == false){
     document.querySelector(".char .Cyno .box").style.cssText = Borders
-    count_Cyno = false;
+    count_Cyno = true;
     return
   }
-  if (count_Cyno == false){
+  if (count_Cyno == true){
     document.querySelector(".char .Cyno .box").style.border="";
-    count_Cyno = true;
+    count_Cyno = false;
   }
 }
 
 function select_Diluc() {
-  if (count_Diluc == true){
+  if (count_Diluc == false){
     document.querySelector(".char .Diluc .box").style.cssText = Borders
-    count_Diluc = false;
+    count_Diluc = true;
     return
   }
-  if (count_Diluc == false){
+  if (count_Diluc == true){
     document.querySelector(".char .Diluc .box").style.border="";
-    count_Diluc = true;
+    count_Diluc = false;
   }
 }
 
 function select_Diona() {
-  if (count_Diona == true){
+  if (count_Diona == false){
     document.querySelector(".char .Diona .box").style.cssText = Borders
-    count_Diona = false;
+    count_Diona = true;
     return
   }
-  if (count_Diona == false){
+  if (count_Diona == true){
     document.querySelector(".char .Diona .box").style.border="";
-    count_Diona = true;
+    count_Diona = false;
   }
 }
 
 function select_Dori() {
-  if (count_Dori == true){
+  if (count_Dori == false){
     document.querySelector(".char .Dori .box").style.cssText = Borders
-    count_Dori = false;
+    count_Dori = true;
     return
   }
-  if (count_Dori == false){
+  if (count_Dori == true){
     document.querySelector(".char .Dori .box").style.border="";
-    count_Dori = true;
+    count_Dori = false;
   }
 }
 
 function select_Eula() {
-  if (count_Eula == true){
+  if (count_Eula == false){
     document.querySelector(".char .Eula .box").style.cssText = Borders
-    count_Eula = false;
+    count_Eula = true;
     return
   }
-  if (count_Eula == false){
+  if (count_Eula == true){
     document.querySelector(".char .Eula .box").style.border="";
-    count_Eula = true;
+    count_Eula = false;
   }
 }
 
 function select_Faruzan() {
-  if (count_Faruzan == true){
+  if (count_Faruzan == false){
     document.querySelector(".char .Faruzan .box").style.cssText = Borders
-    count_Faruzan = false;
+    count_Faruzan = true;
     return
   }
-  if (count_Faruzan == false){
+  if (count_Faruzan == true){
     document.querySelector(".char .Faruzan .box").style.border="";
-    count_Faruzan = true;
+    count_Faruzan = false;
   }
 }
 
 function select_Fischl() {
-  if (count_Fischl == true){
-    document.querySelector(".char .Fischl .box").style.cssText = Borders
-    count_Fischl = false;
-    return
-  }
   if (count_Fischl == false){
-    document.querySelector(".char .Fischl .box").style.border="";
+    document.querySelector(".char .Fischl .box").style.cssText = Borders
     count_Fischl = true;
+    return
+  }
+  if (count_Fischl == true){
+    document.querySelector(".char .Fischl .box").style.border="";
+    count_Fischl = false;
   }
 }
 
 function select_Ganyu() {
-  if (count_Ganyu == true){
+  if (count_Ganyu == false){
     document.querySelector(".char .Ganyu .box").style.cssText = Borders
-    count_Ganyu = false;
+    count_Ganyu = true;
     return
   }
-  if (count_Ganyu == false){
-    document.querySelector(".char .Ganyu .box").style.border="";
-    count_Ganyu = true;
-  }
-}
-
-function select_Ganyu() {
   if (count_Ganyu == true){
-    document.querySelector(".char .Ganyu .box").style.cssText = Borders
-    count_Ganyu = false;
-    return
-  }
-  if (count_Ganyu == false){
     document.querySelector(".char .Ganyu .box").style.border="";
-    count_Ganyu = true;
+    count_Ganyu = false;
   }
 }
 
 function select_Gorou() {
-  if (count_Gorou == true){
+  if (count_Gorou == false){
     document.querySelector(".char .Gorou .box").style.cssText = Borders
-    count_Gorou = false;
+    count_Gorou = true;
     return
   }
-  if (count_Gorou == false){
+  if (count_Gorou == true){
     document.querySelector(".char .Gorou .box").style.border="";
-    count_Gorou = true;
+    count_Gorou = false;
   }
 }
 
 function select_Hutao() {
-  if (count_Hutao == true){
+  if (count_Hutao == false){
     document.querySelector(".char .Hutao .box").style.cssText = Borders
-    count_Hutao = false;
+    count_Hutao = true;
     return
   }
-  if (count_Hutao == false){
+  if (count_Hutao == true){
     document.querySelector(".char .Hutao .box").style.border="";
-    count_Hutao = true;
+    count_Hutao = false;
   }
 }
 
 function select_Jean() {
-  if (count_Jean == true){
+  if (count_Jean == false){
     document.querySelector(".char .Jean .box").style.cssText = Borders
-    count_Jean = false;
+    count_Jean = true;
     return
   }
-  if (count_Jean == false){
+  if (count_Jean == true){
     document.querySelector(".char .Jean .box").style.border="";
-    count_Jean = true;
+    count_Jean = false;
   }
 }
 
 function select_Kaeya() {
-  if (count_Kaeya == true){
+  if (count_Kaeya == false){
     document.querySelector(".char .Kaeya .box").style.cssText = Borders
-    count_Kaeya = false;
+    count_Kaeya = true;
     return
   }
-  if (count_Kaeya == false){
+  if (count_Kaeya == true){
     document.querySelector(".char .Kaeya .box").style.border="";
-    count_Kaeya = true;
+    count_Kaeya = false;
   }
 }
 
 function select_Ayaka() {
-  if (count_Ayaka == true){
+  if (count_Ayaka == false){
     document.querySelector(".char .Ayaka .box").style.cssText = Borders
-    count_Ayaka = false;
+    count_Ayaka = true;
     return
   }
-  if (count_Ayaka == false){
+  if (count_Ayaka == true){
     document.querySelector(".char .Ayaka .box").style.border="";
-    count_Ayaka = true;
+    count_Ayaka = false;
   }
 }
 
 function select_Ayato() {
-  if (count_Ayato == true){
+  if (count_Ayato == false){
     document.querySelector(".char .Ayato .box").style.cssText = Borders
-    count_Ayato = false;
+    count_Ayato = true;
     return
   }
-  if (count_Ayato == false){
+  if (count_Ayato == true){
     document.querySelector(".char .Ayato .box").style.border="";
-    count_Ayato = true;
+    count_Ayato = false;
   }
 }
 
 function select_Kazuha() {
-  if (count_Kazuha == true){
+  if (count_Kazuha == false){
     document.querySelector(".char .Kazuha .box").style.cssText = Borders
-    count_Kazuha = false;
+    count_Kazuha = true;
     return
   }
-  if (count_Kazuha == false){
+  if (count_Kazuha == true){
     document.querySelector(".char .Kazuha .box").style.border="";
-    count_Kazuha = true;
+    count_Kazuha = false;
   }
 }
 
 function select_Keqing() {
-  if (count_Keqing == true){
+  if (count_Keqing == false){
     document.querySelector(".char .Keqing .box").style.cssText = Borders
-    count_Keqing = false;
+    count_Keqing = true;
     return
   }
-  if (count_Keqing == false){
+  if (count_Keqing == true){
     document.querySelector(".char .Keqing .box").style.border="";
-    count_Keqing = true;
+    count_Keqing = false;
   }
 }
 
 function select_Klee() {
-  if (count_Klee == true){
+  if (count_Klee == false){
     document.querySelector(".char .Klee .box").style.cssText = Borders
-    count_Klee = false;
+    count_Klee = true;
     return
   }
-  if (count_Klee == false){
+  if (count_Klee == true){
     document.querySelector(".char .Klee .box").style.border="";
-    count_Klee = true;
+    count_Klee = false;
   }
 }
 
 function select_Kujou_Sara() {
-  if (count_Kujou_Sara == true){
+  if (count_Kujou_Sara == false){
     document.querySelector(".char .Kujou_Sara .box").style.cssText = Borders
-    count_Kujou_Sara = false;
+    count_Kujou_Sara = true;
     return
   }
-  if (count_Kujou_Sara == false){
+  if (count_Kujou_Sara == true){
     document.querySelector(".char .Kujou_Sara .box").style.border="";
-    count_Kujou_Sara = true;
+    count_Kujou_Sara = false;
   }
 }
 
 function select_Kuki_Shinobu() {
-  if (count_Kuki_Shinobu == true){
+  if (count_Kuki_Shinobu == false){
     document.querySelector(".char .Kuki_Shinobu .box").style.cssText = Borders
-    count_Kuki_Shinobu = false;
+    count_Kuki_Shinobu = true;
     return
   }
-  if (count_Kuki_Shinobu == false){
+  if (count_Kuki_Shinobu == true){
     document.querySelector(".char .Kuki_Shinobu .box").style.border="";
-    count_Kuki_Shinobu = true;
+    count_Kuki_Shinobu = false;
   }
 }
 
 function select_Layla() {
-  if (count_Layla == true){
+  if (count_Layla == false){
     document.querySelector(".char .Layla .box").style.cssText = Borders
-    count_Layla = false;
+    count_Layla = true;
     return
   }
-  if (count_Layla == false){
+  if (count_Layla == true){
     document.querySelector(".char .Layla .box").style.border="";
-    count_Layla = true;
+    count_Layla = false;
   }
 }
 
 function select_Lisa() {
-  if (count_Lisa == true){
+  if (count_Lisa == false){
     document.querySelector(".char .Lisa .box").style.cssText = Borders
-    count_Lisa = false;
+    count_Lisa = true;
     return
   }
-  if (count_Lisa == false){
+  if (count_Lisa == true){
     document.querySelector(".char .Lisa .box").style.border="";
-    count_Lisa = true;
+    count_Lisa = false;
   }
 }
 
 function select_Mona() {
-  if (count_Mona == true){
+  if (count_Mona == false){
     document.querySelector(".char .Mona .box").style.cssText = Borders
-    count_Mona = false;
+    count_Mona = true;
     return
   }
-  if (count_Mona == false){
+  if (count_Mona == true){
     document.querySelector(".char .Mona .box").style.border="";
-    count_Mona = true;
+    count_Mona = false;
   }
 }
 
 function select_Nahida() {
-  if (count_Nahida == true){
+  if (count_Nahida == false){
     document.querySelector(".char .Nahida .box").style.cssText = Borders
-    count_Nahida = false;
+    count_Nahida = true;
     return
   }
-  if (count_Nahida == false){
+  if (count_Nahida == true){
     document.querySelector(".char .Nahida .box").style.border="";
-    count_Nahida = true;
+    count_Nahida = false;
   }
 }
 
 function select_Nilou() {
-  if (count_Nilou == true){
+  if (count_Nilou == false){
     document.querySelector(".char .Nilou .box").style.cssText = Borders
-    count_Nilou = false;
+    count_Nilou = true;
     return
   }
-  if (count_Nilou == false){
+  if (count_Nilou == true){
     document.querySelector(".char .Nilou .box").style.border="";
-    count_Nilou = true;
+    count_Nilou = false;
   }
 }
 
 function select_Ningguang() {
-  if (count_Ningguang == true){
+  if (count_Ningguang == false){
     document.querySelector(".char .Ningguang .box").style.cssText = Borders
-    count_Ningguang = false;
+    count_Ningguang = true;
     return
   }
-  if (count_Ningguang == false){
+  if (count_Ningguang == true){
     document.querySelector(".char .Ningguang .box").style.border="";
-    count_Ningguang = true;
+    count_Ningguang = false;
   }
 }
 
 function select_Noel() {
-  if (count_Noel == true){
+  if (count_Noel == false){
     document.querySelector(".char .Noel .box").style.cssText = Borders
-    count_Noel = false;
+    count_Noel = true;
     return
   }
-  if (count_Noel == false){
+  if (count_Noel == true){
     document.querySelector(".char .Noel .box").style.border="";
-    count_Noel = true;
+    count_Noel = false;
   }
 }
 
 function select_Qiqi() {
-  if (count_Qiqi == true){
+  if (count_Qiqi == false){
     document.querySelector(".char .Qiqi .box").style.cssText = Borders
-    count_Qiqi = false;
+    count_Qiqi = true;
     return
   }
-  if (count_Qiqi == false){
+  if (count_Qiqi == true){
     document.querySelector(".char .Qiqi .box").style.border="";
-    count_Qiqi = true;
+    count_Qiqi = false;
   }
 }
 
 function select_Raiden() {
-  if (count_Raiden == true){
+  if (count_Raiden == false){
     document.querySelector(".char .Raiden .box").style.cssText = Borders
-    count_Raiden = false;
+    count_Raiden = true;
     return
   }
-  if (count_Raiden == false){
+  if (count_Raiden == true){
     document.querySelector(".char .Raiden .box").style.border="";
-    count_Raiden = true;
+    count_Raiden = false;
   }
 }
 
 function select_Razor() {
-  if (count_Razor == true){
+  if (count_Razor == false){
     document.querySelector(".char .Razor .box").style.cssText = Borders
-    count_Razor = false;
+    count_Razor = true;
     return
   }
-  if (count_Razor == false){
+  if (count_Razor == true){
     document.querySelector(".char .Razor .box").style.border="";
-    count_Razor = true;
+    count_Razor = false;
   }
 }
 
 function select_Rosaria() {
-  if (count_Rosaria == true){
+  if (count_Rosaria == false){
     document.querySelector(".char .Rosaria .box").style.cssText = Borders
-    count_Rosaria = false;
+    count_Rosaria = true;
     return
   }
-  if (count_Rosaria == false){
+  if (count_Rosaria == true){
     document.querySelector(".char .Rosaria .box").style.border="";
-    count_Rosaria = true;
+    count_Rosaria = false;
   }
 }
 
 function select_Kokomi() {
-  if (count_Kokomi == true){
+  if (count_Kokomi == false){
     document.querySelector(".char .Kokomi .box").style.cssText = Borders
-    count_Kokomi = false;
+    count_Kokomi = true;
     return
   }
-  if (count_Kokomi == false){
+  if (count_Kokomi == true){
     document.querySelector(".char .Kokomi .box").style.border="";
-    count_Kokomi = true;
+    count_Kokomi = false;
   }
 }
 
 function select_Sayu() {
-  if (count_Sayu == true){
+  if (count_Sayu == false){
     document.querySelector(".char .Sayu .box").style.cssText = Borders
-    count_Sayu = false;
+    count_Sayu = true;
     return
   }
-  if (count_Sayu == false){
+  if (count_Sayu == true){
     document.querySelector(".char .Sayu .box").style.border="";
-    count_Sayu = true;
+    count_Sayu = false;
   }
 }
 
 function select_Shenhe() {
-  if (count_Shenhe == true){
+  if (count_Shenhe == false){
     document.querySelector(".char .Shenhe .box").style.cssText = Borders
-    count_Shenhe = false;
+    count_Shenhe = true;
     return
   }
-  if (count_Shenhe == false){
+  if (count_Shenhe == true){
     document.querySelector(".char .Shenhe .box").style.border="";
-    count_Shenhe = true;
+    count_Shenhe = false;
   }
 }
 
 function select_Heizou() {
-  if (count_Heizou == true){
+  if (count_Heizou == false){
     document.querySelector(".char .Heizou .box").style.cssText = Borders
-    count_Heizou = false;
+    count_Heizou = true;
     return
   }
-  if (count_Heizou == false){
+  if (count_Heizou == true){
     document.querySelector(".char .Heizou .box").style.border="";
-    count_Heizou = true;
+    count_Heizou = false;
   }
 }
 
 function select_Sucrose() {
-  if (count_Sucrose == true){
+  if (count_Sucrose == false){
     document.querySelector(".char .Sucrose .box").style.cssText = Borders
-    count_Sucrose = false;
+    count_Sucrose = true;
     return
   }
-  if (count_Sucrose == false){
+  if (count_Sucrose == true){
     document.querySelector(".char .Sucrose .box").style.border="";
-    count_Sucrose = true;
+    count_Sucrose = false;
   }
 }
 
 function select_Tartaglia() {
-  if (count_Tartaglia == true){
+  if (count_Tartaglia == false){
     document.querySelector(".char .Tartaglia .box").style.cssText = Borders
-    count_Tartaglia = false;
+    count_Tartaglia = true;
     return
   }
-  if (count_Tartaglia == false){
+  if (count_Tartaglia == true){
     document.querySelector(".char .Tartaglia .box").style.border="";
-    count_Tartaglia = true;
+    count_Tartaglia = false;
   }
 }
 
 function select_Thoma() {
-  if (count_Thoma == true){
+  if (count_Thoma == false){
     document.querySelector(".char .Thoma .box").style.cssText = Borders
-    count_Thoma = false;
+    count_Thoma = true;
     return
   }
-  if (count_Thoma == false){
+  if (count_Thoma == true){
     document.querySelector(".char .Thoma .box").style.border="";
-    count_Thoma = true;
+    count_Thoma = false;
   }
 }
 
 function select_Tighnari() {
-  if (count_Tighnari == true){
+  if (count_Tighnari == false){
     document.querySelector(".char .Tighnari .box").style.cssText = Borders
-    count_Tighnari = false;
+    count_Tighnari = true;
     return
   }
-  if (count_Tighnari == false){
+  if (count_Tighnari == true){
     document.querySelector(".char .Tighnari .box").style.border="";
-    count_Tighnari = true;
+    count_Tighnari = false;
   }
 }
 
 function select_Venti() {
-  if (count_Venti == true){
+  if (count_Venti == false){
     document.querySelector(".char .Venti .box").style.cssText = Borders
-    count_Venti = false;
+    count_Venti = true;
     return
   }
-  if (count_Venti == false){
+  if (count_Venti == true){
     document.querySelector(".char .Venti .box").style.border="";
-    count_Venti = true;
+    count_Venti = false;
   }
 }
 
 function select_Wanderer() {
-  if (count_Wanderer == true){
+  if (count_Wanderer == false){
     document.querySelector(".char .Wanderer .box").style.cssText = Borders
-    count_Wanderer = false;
+    count_Wanderer = true;
     return
   }
-  if (count_Wanderer == false){
+  if (count_Wanderer == true){
     document.querySelector(".char .Wanderer .box").style.border="";
-    count_Wanderer = true;
+    count_Wanderer = false;
   }
 }
 
 function select_Xiangling() {
-  if (count_Xiangling == true){
+  if (count_Xiangling == false){
     document.querySelector(".char .Xiangling .box").style.cssText = Borders
-    count_Xiangling = false;
+    count_Xiangling = true;
     return
   }
-  if (count_Xiangling == false){
+  if (count_Xiangling == true){
     document.querySelector(".char .Xiangling .box").style.border="";
-    count_Xiangling = true;
+    count_Xiangling = false;
   }
 }
 
 function select_Xiao() {
-  if (count_Xiao == true){
+  if (count_Xiao == false){
     document.querySelector(".char .Xiao .box").style.cssText = Borders
-    count_Xiao = false;
+    count_Xiao = true;
     return
   }
-  if (count_Xiao == false){
+  if (count_Xiao == true){
     document.querySelector(".char .Xiao .box").style.border="";
-    count_Xiao = true;
+    count_Xiao = false;
   }
 }
 
 function select_Xingqiu() {
-  if (count_Xingqiu == true){
+  if (count_Xingqiu == false){
     document.querySelector(".char .Xingqiu .box").style.cssText = Borders
-    count_Xingqiu = false;
+    count_Xingqiu = true;
     return
   }
-  if (count_Xingqiu == false){
+  if (count_Xingqiu == true){
     document.querySelector(".char .Xingqiu .box").style.border="";
-    count_Xingqiu = true;
+    count_Xingqiu = false;
   }
 }
 
 function select_Xinyan() {
-  if (count_Xinyan == true){
+  if (count_Xinyan == false){
     document.querySelector(".char .Xinyan .box").style.cssText = Borders
-    count_Xinyan = false;
+    count_Xinyan = true;
     return
   }
-  if (count_Xinyan == false){
+  if (count_Xinyan == true){
     document.querySelector(".char .Xinyan .box").style.border="";
-    count_Xinyan = true;
+    count_Xinyan = false;
   }
 }
 
 function select_Yae_miko() {
-  if (count_Yae_miko == true){
+  if (count_Yae_miko == false){
     document.querySelector(".char .Yae_miko .box").style.cssText = Borders
-    count_Yae_miko = false;
+    count_Yae_miko = true;
     return
   }
-  if (count_Yae_miko == false){
+  if (count_Yae_miko == true){
     document.querySelector(".char .Yae_miko .box").style.border="";
-    count_Yae_miko = true;
+    count_Yae_miko = false;
   }
 }
 
 function select_Yanfei() {
-  if (count_Yanfei == true){
+  if (count_Yanfei == false){
     document.querySelector(".char .Yanfei .box").style.cssText = Borders
-    count_Yanfei = false;
+    count_Yanfei = true;
     return
   }
-  if (count_Yanfei == false){
+  if (count_Yanfei == true){
     document.querySelector(".char .Yanfei .box").style.border="";
-    count_Yanfei = true;
+    count_Yanfei = false;
   }
 }
 
 function select_Yaoyao() {
-  if (count_Yaoyao == true){
+  if (count_Yaoyao == false){
     document.querySelector(".char .Yaoyao .box").style.cssText = Borders
-    count_Yaoyao = false;
+    count_Yaoyao = true;
     return
   }
-  if (count_Yaoyao == false){
+  if (count_Yaoyao == true){
     document.querySelector(".char .Yaoyao .box").style.border="";
-    count_Yaoyao = true;
+    count_Yaoyao = false;
   }
 }
 
 function select_Yelan() {
-  if (count_Yelan == true){
+  if (count_Yelan == false){
     document.querySelector(".char .Yelan .box").style.cssText = Borders
-    count_Yelan = false;
+    count_Yelan = true;
     return
   }
-  if (count_Yelan == false){
+  if (count_Yelan == true){
     document.querySelector(".char .Yelan .box").style.border="";
-    count_Yelan = true;
+    count_Yelan = false;
   }
 }
 
 function select_Yoimiya() {
-  if (count_Yoimiya == true){
+  if (count_Yoimiya == false){
     document.querySelector(".char .Yoimiya .box").style.cssText = Borders
-    count_Yoimiya = false;
+    count_Yoimiya = true;
     return
   }
-  if (count_Yoimiya == false){
+  if (count_Yoimiya == true){
     document.querySelector(".char .Yoimiya .box").style.border="";
-    count_Yoimiya = true;
+    count_Yoimiya = false;
   }
 }
 
 function select_Yunjin() {
-  if (count_Yunjin == true){
+  if (count_Yunjin == false){
     document.querySelector(".char .Yunjin .box").style.cssText = Borders
-    count_Yunjin = false;
+    count_Yunjin = true;
     return
   }
-  if (count_Yunjin == false){
+  if (count_Yunjin == true){
     document.querySelector(".char .Yunjin .box").style.border="";
-    count_Yunjin = true;
+    count_Yunjin = false;
   }
 }
 
 function select_Zhongli() {
-  if (count_Zhongli == true){
+  if (count_Zhongli == false){
     document.querySelector(".char .Zhongli .box").style.cssText = Borders
-    count_Zhongli = false;
+    count_Zhongli = true;
     return
   }
-  if (count_Zhongli == false){
+  if (count_Zhongli == true){
     document.querySelector(".char .Zhongli .box").style.border="";
-    count_Zhongli = true;
+    count_Zhongli = false;
   }
 }
