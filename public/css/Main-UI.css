@@ -1,13 +1,14 @@
 body{
     font-family: 'Courier New', Courier, monospace;
     background: #083773;
+    margin: 0 2% 2% 2%;
 }
-main{
-    padding-top: 7px;
+main.main{
+    /*padding-top: 7px;
     padding-bottom: 7px;
     margin-top: 4%;
     margin-left: 4%;
-    margin-right: 4%;
+    margin-right: 4%;*/
     height: 100%;
     background-color: #ffffff;
     border: #ffffff;
@@ -77,11 +78,13 @@ main p{
 }
 .menu div#select header button#buttonboss{
     display: inline-block;
-    border: 1.3px solid black;
-    border-radius: 10px;
+    border: 0px;
+    border-radius: 20px;
     padding: 5px;
-    margin-left: 5%;
+    margin-left: 2%;
     margin-top: 0;
+    padding-left: 20px;
+    padding-right: 20px;
     text-align: left;
     cursor: pointer;
     color: white;
@@ -119,17 +122,22 @@ main p{
 }
 
 .menu div#select header button.filter{
-    font-size: 1.25rem;
     display: inline-block;
-    border: 1.3px solid black;
-    border-radius: 10px;
+    border: 0px;
+    border-radius: 30px;
     padding: 5px;
-    margin-left: 1%;
+    margin-left: 5%;
     margin-top: 0;
     text-align: left;
     cursor: pointer;
     color: white;
     background-color: DodgerBlue ;
-    border-radius: 30px;
+    padding-right: 50px;
+    margin-right: 0px;
+}
+
+button.filter span{
+    font-size: 1.25rem;
+    margin-left: 30px;
 }
 

@@ -43,11 +43,11 @@ let Charswitch = true;
 let bossswitch = true;
 
 function rarity_all(){
-  
+
 }
 
 
-function Char() {
+function rarity_all() {
   if (Charswitch == true){
     document.querySelector(".Aether").style.cssText = "display: none;"
     document.querySelector(".Albedo").style.cssText = "display: none;"
@@ -112,8 +112,11 @@ function Char() {
     document.querySelector(".Yoimiya").style.cssText = "display: none;"
     document.querySelector(".Yunjin").style.cssText = "display: none;"
     document.querySelector(".Zhongli").style.cssText = "display: none;"
-    document.getElementById("buttonchar").style.background = "white";
-    document.getElementById("buttonchar").style.color = "black";
+    document.querySelector(".rarity_all").style.cssText = "background-color: white;"
+    document.querySelector(".rarity_all").style.cssText = "background: -webkit-linear-gradient(,);"
+    document.querySelector(".rarity_all").style.cssText = "background: -o-linear-gradient(,); "
+    document.querySelector(".rarity_all").style.cssText = "background: -moz-linear-gradient(,);"
+    document.querySelector(".rarity_all").style.cssText = "background: linear-gradient(,);"
     Charswitch = false;
     return
   }
