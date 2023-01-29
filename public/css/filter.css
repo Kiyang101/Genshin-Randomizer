@@ -18,9 +18,15 @@ section div.modal-box{
     margin: auto;
     transition: all 0.3s ease;
     position: fixed;
-    transform: translate(50%,-50%) scale(.5);
+    /*transform: translate(50%,-50%) scale(1.5);
     transform: translateY(-50%);
+    transform: translateX(10%);
     -ms-transform: translateY(-50%);
+    -ms-transform:translateX(20%);*/
+    top: 15%;
+    right: 10%;
+    left: 10%;
+    bottom: auto;
     z-index: 100;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 }
@@ -156,12 +162,11 @@ li.element_img button img{
 .E_Anemo,.E_Cryo,.E_Dendro,.E_Electro,.E_Geo,.E_Hydro,.E_Pyro
 {
     background-color: Aquamarine;
-    background: -webkit-linear-gradient(Aquamarine,PaleTurquoise); 
+    /*background: -webkit-linear-gradient(Aquamarine,PaleTurquoise); 
     background: -o-linear-gradient(Aquamarine,PaleTurquoise); 
     background: -moz-linear-gradient(Aquamarine,PaleTurquoise); 
-    background: linear-gradient(Aquamarine,PaleTurquoise); 
+    background: linear-gradient(Aquamarine,PaleTurquoise); */
 }
-
 
 .overlay{
     position: fixed;
@@ -175,4 +180,3 @@ li.element_img button img{
     padding: 0;
     size: 200%;
 }
-

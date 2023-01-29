@@ -1,5 +1,3 @@
-
-
 function Filter(){
     /*
     if (filter_count == true){
@@ -26,6 +24,5 @@ function Close(){
     document.querySelector("div.modal-box").style.cssText = "transition: all 1s ease;"
     document.querySelector("div.modal-box").style.cssText = "opacity: 0;"
     document.querySelector(".overlay").style.cssText = "opacity: 0;"
-
 }
 

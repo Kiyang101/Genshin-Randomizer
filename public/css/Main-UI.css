@@ -1,7 +1,7 @@
 body{
     font-family: 'Courier New', Courier, monospace;
     background: #083773;
-    margin: 0 2% 2% 2%;
+    margin: 0 2% 0 2%;
 }
 main.main{
     /*padding-top: 7px;
@@ -23,7 +23,8 @@ main p{
     text-align: center;
     color: rgb(0, 0, 0);
     font-size: 35px;
-    margin-top: 20px;
+    margin-top: 0px;
+    padding-top: 20px;
     cursor: default;
 }
 #title{

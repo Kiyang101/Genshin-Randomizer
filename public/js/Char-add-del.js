@@ -39,16 +39,15 @@ function Boss() {
     }
 }
 */
-let Charswitch = true;
+
+let Char_all = true;
+let Char_4 = true;
+let Char_5 = true;
 let bossswitch = true;
-
-function rarity_all(){
-
-}
 
 
 function rarity_all() {
-  if (Charswitch == true){
+  if (Char_all == true){
     document.querySelector(".Aether").style.cssText = "display: none;"
     document.querySelector(".Albedo").style.cssText = "display: none;"
     document.querySelector(".Alhatham").style.cssText = "display: none;"
@@ -113,14 +112,12 @@ function rarity_all() {
     document.querySelector(".Yunjin").style.cssText = "display: none;"
     document.querySelector(".Zhongli").style.cssText = "display: none;"
     document.querySelector(".rarity_all").style.cssText = "background-color: white;"
-    document.querySelector(".rarity_all").style.cssText = "background: -webkit-linear-gradient(,);"
-    document.querySelector(".rarity_all").style.cssText = "background: -o-linear-gradient(,); "
-    document.querySelector(".rarity_all").style.cssText = "background: -moz-linear-gradient(,);"
-    document.querySelector(".rarity_all").style.cssText = "background: linear-gradient(,);"
-    Charswitch = false;
+    document.querySelector(".rarity_4").style.cssText = "background-color: white;"
+    document.querySelector(".rarity_5").style.cssText = "background-color: white;"
+    Char_all = false;
     return
   }
-  if (Charswitch == false){
+  if (Char_all == false){
     document.querySelector(".Aether").style.cssText = "display: ;"
     document.querySelector(".Albedo").style.cssText = "display: ;"
     document.querySelector(".Alhatham").style.cssText = "display: ;"
@@ -184,11 +181,14 @@ function rarity_all() {
     document.querySelector(".Yoimiya").style.cssText = "display: ;"
     document.querySelector(".Yunjin").style.cssText = "display: ;"
     document.querySelector(".Zhongli").style.cssText = "display: ;"
-    document.getElementById("buttonchar").style.background = "DodgerBlue";
-    document.getElementById("buttonchar").style.color = "white";
-    Charswitch = true;
+    document.querySelector(".rarity_all").style.cssText = "background-color: Aquamarine;"
+    document.querySelector(".rarity_4").style.cssText = "background-color: Aquamarine;"
+    document.querySelector(".rarity_5").style.cssText = "background-color: Aquamarine;"
+    Char_all = true;
     }
 }
+
+
 
 
 
