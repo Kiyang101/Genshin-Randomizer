@@ -189,6 +189,7 @@ function rarity_all() {
     Char_all = true;
     Char_4 = true;
     Char_5 = true;
+    return
   }
 
 }
@@ -410,7 +411,81 @@ function rarity_4(){
     Char_all = true;
     Char_4 = true;
     Char_5 = true;
+    return
   }
+
+  if (Char_4 == true && Char_5 == false && Char_all == false){
+    document.querySelector(".Aether").style.cssText = "display: ;"
+    document.querySelector(".Albedo").style.cssText = "display: ;"
+    document.querySelector(".Alhatham").style.cssText = "display: ;"
+    document.querySelector(".Aloy").style.cssText = "display: ;"
+    document.querySelector(".Amber").style.cssText = "display: ;"
+    document.querySelector(".Arataki_Itto").style.cssText = "display: ;"
+    document.querySelector(".Barbara").style.cssText = "display: ;"
+    document.querySelector(".Beidou").style.cssText = "display: ;"
+    document.querySelector(".Bennett").style.cssText = "display: ;"
+    document.querySelector(".Candace").style.cssText = "display: ;"
+    document.querySelector(".Chongyun").style.cssText = "display: ;"
+    document.querySelector(".Collei").style.cssText = "display: ;"
+    document.querySelector(".Cyno").style.cssText = "display: ;"
+    document.querySelector(".Diluc").style.cssText = "display: ;"
+    document.querySelector(".Diona").style.cssText = "display: ;"
+    document.querySelector(".Dori").style.cssText = "display: ;"
+    document.querySelector(".Eula").style.cssText = "display: ;"
+    document.querySelector(".Faruzan").style.cssText = "display: ;"
+    document.querySelector(".Fischl").style.cssText = "display: ;"
+    document.querySelector(".Ganyu").style.cssText = "display: ;"
+    document.querySelector(".Gorou").style.cssText = "display: ;"
+    document.querySelector(".Hutao").style.cssText = "display: ;"
+    document.querySelector(".Jean").style.cssText = "display: ;"
+    document.querySelector(".Kaeya").style.cssText = "display: ;"
+    document.querySelector(".Ayaka").style.cssText = "display: ;"
+    document.querySelector(".Ayato").style.cssText = "display: ;"
+    document.querySelector(".Kazuha").style.cssText = "display: ;"
+    document.querySelector(".Keqing").style.cssText = "display: ;"
+    document.querySelector(".Klee").style.cssText = "display: ;"
+    document.querySelector(".Kujou_Sara").style.cssText = "display: ;"
+    document.querySelector(".Kuki_Shinobu").style.cssText = "display: ;"
+    document.querySelector(".Layla").style.cssText = "display: ;"
+    document.querySelector(".Lisa").style.cssText = "display: ;"
+    document.querySelector(".Mona").style.cssText = "display: ;"
+    document.querySelector(".Nahida").style.cssText = "display: ;"
+    document.querySelector(".Nilou").style.cssText = "display: ;"
+    document.querySelector(".Ningguang").style.cssText = "display: ;"
+    document.querySelector(".Noel").style.cssText = "display: ;"
+    document.querySelector(".Qiqi").style.cssText = "display: ;"
+    document.querySelector(".Raiden").style.cssText = "display: ;"
+    document.querySelector(".Razor").style.cssText = "display: ;"
+    document.querySelector(".Rosaria").style.cssText = "display: ;"
+    document.querySelector(".Kokomi").style.cssText = "display: ;"
+    document.querySelector(".Sayu").style.cssText = "display: ;"
+    document.querySelector(".Shenhe").style.cssText = "display: ;"
+    document.querySelector(".Heizou").style.cssText = "display: ;"
+    document.querySelector(".Sucrose").style.cssText = "display: ;"
+    document.querySelector(".Tartaglia").style.cssText = "display: ;"
+    document.querySelector(".Thoma").style.cssText = "display: ;"
+    document.querySelector(".Tighnari").style.cssText = "display: ;"
+    document.querySelector(".Venti").style.cssText = "display: ;"
+    document.querySelector(".Wanderer").style.cssText = "display: ;"
+    document.querySelector(".Xiangling").style.cssText = "display: ;"
+    document.querySelector(".Xiao").style.cssText = "display: ;"
+    document.querySelector(".Xingqiu").style.cssText = "display: ;"
+    document.querySelector(".Xinyan").style.cssText = "display: ;"
+    document.querySelector(".Yae_miko").style.cssText = "display: ;"
+    document.querySelector(".Yanfei").style.cssText = "display: ;"
+    document.querySelector(".Yaoyao").style.cssText = "display: ;"
+    document.querySelector(".Yelan").style.cssText = "display: ;"
+    document.querySelector(".Yoimiya").style.cssText = "display: ;"
+    document.querySelector(".Yunjin").style.cssText = "display: ;"
+    document.querySelector(".Zhongli").style.cssText = "display: ;"
+    document.querySelector(".rarity_all").style.cssText = "background-color: Aquamarine;"
+    document.querySelector(".rarity_4").style.cssText = "background-color: Aquamarine;"
+    document.querySelector(".rarity_5").style.cssText = "background-color: Aquamarine;"
+    Char_all = true;
+    Char_4 = true;
+    Char_5 = true;
+    return
+  } 
 
 }
 
@@ -632,6 +707,80 @@ function rarity_5(){
     Char_all = true;
     Char_4 = true;
     Char_5 = true;
+    return
+  }
+
+  if (Char_5 == true && Char_4 == false && Char_all == false){
+    document.querySelector(".Aether").style.cssText = "display: ;"
+    document.querySelector(".Albedo").style.cssText = "display: ;"
+    document.querySelector(".Alhatham").style.cssText = "display: ;"
+    document.querySelector(".Aloy").style.cssText = "display: ;"
+    document.querySelector(".Amber").style.cssText = "display: ;"
+    document.querySelector(".Arataki_Itto").style.cssText = "display: ;"
+    document.querySelector(".Barbara").style.cssText = "display: ;"
+    document.querySelector(".Beidou").style.cssText = "display: ;"
+    document.querySelector(".Bennett").style.cssText = "display: ;"
+    document.querySelector(".Candace").style.cssText = "display: ;"
+    document.querySelector(".Chongyun").style.cssText = "display: ;"
+    document.querySelector(".Collei").style.cssText = "display: ;"
+    document.querySelector(".Cyno").style.cssText = "display: ;"
+    document.querySelector(".Diluc").style.cssText = "display: ;"
+    document.querySelector(".Diona").style.cssText = "display: ;"
+    document.querySelector(".Dori").style.cssText = "display: ;"
+    document.querySelector(".Eula").style.cssText = "display: ;"
+    document.querySelector(".Faruzan").style.cssText = "display: ;"
+    document.querySelector(".Fischl").style.cssText = "display: ;"
+    document.querySelector(".Ganyu").style.cssText = "display: ;"
+    document.querySelector(".Gorou").style.cssText = "display: ;"
+    document.querySelector(".Hutao").style.cssText = "display: ;"
+    document.querySelector(".Jean").style.cssText = "display: ;"
+    document.querySelector(".Kaeya").style.cssText = "display: ;"
+    document.querySelector(".Ayaka").style.cssText = "display: ;"
+    document.querySelector(".Ayato").style.cssText = "display: ;"
+    document.querySelector(".Kazuha").style.cssText = "display: ;"
+    document.querySelector(".Keqing").style.cssText = "display: ;"
+    document.querySelector(".Klee").style.cssText = "display: ;"
+    document.querySelector(".Kujou_Sara").style.cssText = "display: ;"
+    document.querySelector(".Kuki_Shinobu").style.cssText = "display: ;"
+    document.querySelector(".Layla").style.cssText = "display: ;"
+    document.querySelector(".Lisa").style.cssText = "display: ;"
+    document.querySelector(".Mona").style.cssText = "display: ;"
+    document.querySelector(".Nahida").style.cssText = "display: ;"
+    document.querySelector(".Nilou").style.cssText = "display: ;"
+    document.querySelector(".Ningguang").style.cssText = "display: ;"
+    document.querySelector(".Noel").style.cssText = "display: ;"
+    document.querySelector(".Qiqi").style.cssText = "display: ;"
+    document.querySelector(".Raiden").style.cssText = "display: ;"
+    document.querySelector(".Razor").style.cssText = "display: ;"
+    document.querySelector(".Rosaria").style.cssText = "display: ;"
+    document.querySelector(".Kokomi").style.cssText = "display: ;"
+    document.querySelector(".Sayu").style.cssText = "display: ;"
+    document.querySelector(".Shenhe").style.cssText = "display: ;"
+    document.querySelector(".Heizou").style.cssText = "display: ;"
+    document.querySelector(".Sucrose").style.cssText = "display: ;"
+    document.querySelector(".Tartaglia").style.cssText = "display: ;"
+    document.querySelector(".Thoma").style.cssText = "display: ;"
+    document.querySelector(".Tighnari").style.cssText = "display: ;"
+    document.querySelector(".Venti").style.cssText = "display: ;"
+    document.querySelector(".Wanderer").style.cssText = "display: ;"
+    document.querySelector(".Xiangling").style.cssText = "display: ;"
+    document.querySelector(".Xiao").style.cssText = "display: ;"
+    document.querySelector(".Xingqiu").style.cssText = "display: ;"
+    document.querySelector(".Xinyan").style.cssText = "display: ;"
+    document.querySelector(".Yae_miko").style.cssText = "display: ;"
+    document.querySelector(".Yanfei").style.cssText = "display: ;"
+    document.querySelector(".Yaoyao").style.cssText = "display: ;"
+    document.querySelector(".Yelan").style.cssText = "display: ;"
+    document.querySelector(".Yoimiya").style.cssText = "display: ;"
+    document.querySelector(".Yunjin").style.cssText = "display: ;"
+    document.querySelector(".Zhongli").style.cssText = "display: ;"
+    document.querySelector(".rarity_all").style.cssText = "background-color: Aquamarine;"
+    document.querySelector(".rarity_4").style.cssText = "background-color: Aquamarine;"
+    document.querySelector(".rarity_5").style.cssText = "background-color: Aquamarine;"
+    Char_all = true;
+    Char_4 = true;
+    Char_5 = true;
+    return
   }
 } 
 
@@ -649,6 +798,7 @@ function Boss() {
       document.getElementById("buttonboss").style.background = "DodgerBlue";
       document.getElementById("buttonboss").style.color = "white";
       bossswitch = true;
+      return
     }
 }
 
