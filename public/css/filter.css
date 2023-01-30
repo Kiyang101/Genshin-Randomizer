@@ -87,7 +87,7 @@ ul#center{
 }
 
 li.type_weapon button{
-    border: 0px;
+    border: 1.5px solid CornflowerBlue;
     border-radius: 10px;
     margin-top: 5px;
     margin-bottom: 5px;
@@ -125,12 +125,15 @@ li.element button
 {
     border-radius: 5px;
     font-size: 1rem;
-    border: 0px;
+    border: 1.5px solid CornflowerBlue;
+
 }
 
 li.rarity_star button{
     margin-top: 0px;
     margin-bottom: 10px;
+    border: 1.5px solid CornflowerBlue;
+
 }
 
 li.type_weapon button.type_Catalyst{
@@ -147,6 +150,8 @@ li.element_img button{
     border-radius: 10px;
     margin-right: 10px;
     margin-top: 5px;
+    border: 1.5px solid CornflowerBlue;
+
 }
 
 li.element_img button img{
@@ -162,6 +167,7 @@ li.element_img button img{
 .E_Anemo,.E_Cryo,.E_Dendro,.E_Electro,.E_Geo,.E_Hydro,.E_Pyro
 {
     background-color: Aquamarine;
+
     /*background: -webkit-linear-gradient(Aquamarine,PaleTurquoise); 
     background: -o-linear-gradient(Aquamarine,PaleTurquoise); 
     background: -moz-linear-gradient(Aquamarine,PaleTurquoise); 

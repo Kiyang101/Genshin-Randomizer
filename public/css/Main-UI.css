@@ -79,7 +79,7 @@ main p{
 }
 .menu div#select header button#buttonboss{
     display: inline-block;
-    border: 0px;
+    border: 2px solid CornflowerBlue;
     border-radius: 20px;
     padding: 5px;
     margin-left: 2%;
@@ -124,7 +124,7 @@ main p{
 
 .menu div#select header button.filter{
     display: inline-block;
-    border: 0px;
+    border: 2px solid CornflowerBlue;
     border-radius: 30px;
     padding: 5px;
     margin-left: 5%;
