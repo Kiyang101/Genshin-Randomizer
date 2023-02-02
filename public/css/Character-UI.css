@@ -3,6 +3,8 @@
     margin-left: 1%;
     margin-right: 1%;
     text-align: center;
+    border: 1px solid black;
+    border-radius: 10px;
 }
 
 .char span#color img#element {
