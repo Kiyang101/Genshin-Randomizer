@@ -1,40 +1,25 @@
 section.filter{
     pointer-events: none;
-
 }
 
 section div.modal-box{
     border: 1.5px solid Black;
-    /*margin-left: 20%;
-    margin-right: 20%;*/
     background: LightSkyBlue;
     background: -webkit-linear-gradient(DodgerBlue, LightSkyBlue,LightCyan); 
     background: -o-linear-gradient(DodgerBlue, LightSkyBlue,LightCyan); 
     background: -moz-linear-gradient(DodgerBlue, LightSkyBlue,LightCyan); 
     background: linear-gradient(DodgerBlue, LightSkyBlue,LightCyan); 
     border-radius: 10px;
-    /*margin-right: 10%;*/
     opacity: 0;
     margin: auto;
     transition: all 0.3s ease;
     position: fixed;
-    /*transform: translate(50%,-50%) scale(1.5);
-    transform: translateY(-50%);
-    transform: translateX(10%);
-    -ms-transform: translateY(-50%);
-    -ms-transform:translateX(20%);*/
     top: 15%;
     right: 10%;
     left: 10%;
     bottom: auto;
     z-index: 100;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-}
-
-section.active .modal-box {
-    opacity: 1;
-    pointer-events: auto;
-    transform: translate(-50%, -50%) scale(1);
 }
 
 section.filter button{
@@ -118,7 +103,6 @@ li.element h1
     font-size: 1.5rem;
 }
 
-li.rarity button,
 li.rarity_star button,
 li.type button,
 li.element button
@@ -126,14 +110,12 @@ li.element button
     border-radius: 5px;
     font-size: 1rem;
     border: 1.5px solid CornflowerBlue;
-
 }
 
 li.rarity_star button{
     margin-top: 0px;
     margin-bottom: 10px;
     border: 1.5px solid CornflowerBlue;
-
 }
 
 li.type_weapon button.type_Catalyst{
@@ -151,7 +133,6 @@ li.element_img button{
     margin-right: 10px;
     margin-top: 5px;
     border: 1.5px solid CornflowerBlue;
-
 }
 
 li.element_img button img{
@@ -159,7 +140,6 @@ li.element_img button img{
 }
 
 /*Color Button*/
-.rarity_all,
 .rarity_4,.rarity_5,
 .type_all,
 .type_sword,.type_Claymore,.type_Pole,.type_Bow,.type_Catalyst,
@@ -167,11 +147,6 @@ li.element_img button img{
 .E_Anemo,.E_Cryo,.E_Dendro,.E_Electro,.E_Geo,.E_Hydro,.E_Pyro
 {
     background-color: Aquamarine;
-
-    /*background: -webkit-linear-gradient(Aquamarine,PaleTurquoise); 
-    background: -o-linear-gradient(Aquamarine,PaleTurquoise); 
-    background: -moz-linear-gradient(Aquamarine,PaleTurquoise); 
-    background: linear-gradient(Aquamarine,PaleTurquoise); */
 }
 
 .overlay{
@@ -184,5 +159,4 @@ li.element_img button img{
     z-index: 90;
     margin: 0;
     padding: 0;
-    size: 200%;
 }

@@ -39,7 +39,7 @@ function Boss() {
     }
 }
 */
-
+/*
 let Char_all = true;
 let Char_4 = true;
 let Char_5 = true;
@@ -785,21 +785,4 @@ function rarity_5(){
 } 
 
 
-function Boss() {
-  if (bossswitch == true){
-    document.querySelector(".Maguu_Kenki").style.cssText = "display: none;"
-    document.getElementById("buttonboss").style.background = "white";
-    document.getElementById("buttonboss").style.color = "black";
-    bossswitch = false;
-    return
-  }
-  if (bossswitch == false){
-    document.querySelector(".Maguu_Kenki").style.cssText = "display: ;"
-      document.getElementById("buttonboss").style.background = "DodgerBlue";
-      document.getElementById("buttonboss").style.color = "white";
-      bossswitch = true;
-      return
-    }
-}
-
-
+*/
