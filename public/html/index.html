@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Kiyang Impact | Random Team and Boss</title>
     <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300&display=swap" rel="stylesheet">
+    <link rel="icon" href="../image/icon_web/icon.png" type="image/icon type">
     <link rel="stylesheet" href="../css/Main-UI.css">
     <link rel="stylesheet" href="../css/Character-UI.css">
     <link rel="stylesheet" href="../css/filter.css">
@@ -30,7 +31,7 @@
               <span><i class="fa-solid fa-filter"></i></span>
               filter
             </button>
-            <button id="buttonboss" onclick="Boss()">Boss</button>         
+            <button id="buttonboss" onclick="Boss()" style="display: none;">Boss</button>         
           </header>
           
           <section Class="filter">
@@ -48,7 +49,7 @@
                 <ul id="center">
                   <li class="rarity">
                     <h1>Rarity</h1>
-                    <Button class="rarity_all" onclick="rarity_all()">all</Button>
+                    <Button class="rarity_all" onclick="rarity_all()" style="display: none;">all</Button>
                   </li>
                   <li class="rarity_star">
                     <Button class="rarity_4" onclick="rarity_4()">4
@@ -113,8 +114,15 @@
               
           </section>
 
-
+          <span class="displaycharacter">
+            <button onclick="dischar()">
+              <h1>Character</h1>
+              <span class="char-caret-right" style="display: none;"><i class="fa-solid fa-caret-right"></i></span>
+              <span class="char-caret-down"><i class="fa-sharp fa-solid fa-caret-down"></i></span>
+            </button>
+          </span>
           
+
           <div class="char">
 
             <!--Character-->
@@ -999,24 +1007,32 @@
               </span>
             </span>
 
-            <!--Boss-->
-            <span id="boss" class="Maguu_Kenki">
-              <span class="box boss" >
-                <span id="color">
-                  <img src="../image/Boss/Maguu_Kenki.png" alt="" id="boss">
-                </span>
-                <span id="text">
-                  <h1>Maguu Kenki</h1>
-                </span>
-              </span>
-            </span>
-
           </div>
+
+          <span class="displayboss">
+            <button onclick="disboss()">
+              <h1>Boss</h1>
+              <span class="boss-caret-right" style="display: none;"><i class="fa-solid fa-caret-right"></i></span>
+              <span class="boss-caret-down"><i class="fa-sharp fa-solid fa-caret-down"></i></span>
+            </button>
+          </span>
+
+          <div class="Boss">
+            <!--Boss-->
+            <span class="boss Maguu_Kenki box color">
+                  <img src="../image/Boss/Maguu_Kenki.png" alt="">
+                  <h1 class="text">Maguu Kenki</h1>
+            </span>
+          </div>
+            
+
+          
         </div>
       </section>
     </main>
     
     <script src="../js/Char-add-del.js"></script>
+    <script src="../js/display.js"></script>
     <script src="../js/Select_Character.js"></script>
     <script src="../js/Filter.js"></script>
     <script src="https://kit.fontawesome.com/0b7f1a7922.js" crossorigin="anonymous"></script>
