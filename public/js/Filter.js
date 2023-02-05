@@ -321,3 +321,115 @@ function E_Dendro(){
   }
 
 }
+
+function E_Electro(){
+
+  if (elt == true){
+
+    for(Electro of electro) {
+      Electro.style.display = "none";
+    }
+    
+    document.querySelector(".E_Electro").style.cssText = "background-color: white;"
+
+    elt = false;
+    return
+  }
+
+  if (elt == false){
+    for(Electro of electro) {
+      Electro.style.display = "";
+    }
+
+    document.querySelector(".E_Electro").style.cssText = "background-color: Aquamarine;"
+
+    elt = true;
+    return
+  }
+
+}
+
+function E_Geo(){
+
+  if (go == true){
+
+    for(Geo of geo) {
+      Geo.style.display = "none";
+    }
+    
+    document.querySelector(".E_Geo").style.cssText = "background-color: white;"
+
+    go = false;
+    return
+  }
+
+  if (go == false){
+    for(Geo of geo) {
+      Geo.style.display = "";
+    }
+
+    document.querySelector(".E_Geo").style.cssText = "background-color: Aquamarine;"
+
+    go = true;
+    return
+  }
+
+}
+
+function E_Hydro(){
+
+  if (hd == true){
+
+    for(Hydro of hydro) {
+      Hydro.style.display = "none";
+    }
+    
+    document.querySelector(".E_Hydro").style.cssText = "background-color: white;"
+
+    hd = false;
+    return
+  }
+
+  if (hd == false){
+    for(Hydro of hydro) {
+      Hydro.style.display = "";
+    }
+
+    document.querySelector(".E_Hydro").style.cssText = "background-color: Aquamarine;"
+
+    hd = true;
+    return
+  }
+
+}
+
+function E_Pyro(){
+
+  if (po == true){
+
+    for(Pyro of pyro) {
+      Pyro.style.display = "none";
+    }
+    
+    document.querySelector(".E_Pyro").style.cssText = "background-color: white;"
+
+    po = false;
+    return
+  }
+
+  if (po == false){
+    for(Pyro of pyro) {
+      Pyro.style.display = "";
+    }
+
+    document.querySelector(".E_Pyro").style.cssText = "background-color: Aquamarine;"
+
+    po = true;
+    return
+  }
+
+}
+
+
+
+

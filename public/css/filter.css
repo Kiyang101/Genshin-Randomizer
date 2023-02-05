@@ -141,9 +141,7 @@ li.element_img button img{
 
 /*Color Button*/
 .rarity_4,.rarity_5,
-.type_all,
 .type_sword,.type_Claymore,.type_Pole,.type_Bow,.type_Catalyst,
-.element_all,
 .E_Anemo,.E_Cryo,.E_Dendro,.E_Electro,.E_Geo,.E_Hydro,.E_Pyro
 {
     background-color: Aquamarine;
