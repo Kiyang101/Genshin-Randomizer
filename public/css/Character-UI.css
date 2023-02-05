@@ -8,7 +8,7 @@
     background-color: Gainsboro;
 }
 
-.char span#color img#element {
+.char span#color img#element{
     width: 32px;
     height: 32px;
     float: left ;
@@ -35,16 +35,15 @@
     background-color: rgba(125, 0, 179, 0.737);
     border-radius: 16px 16px 28px 0px;
 }
-.boss.color img{
+.boss img{
     background-color: rgb(40, 25, 255);
-    border-radius: 16px 16px 0px 0px;
+    border-radius: 16px 16px 28px 0px;
 }
 
 .char .box span#color{
     padding-top: 95%;
     padding-bottom: 0px;    
     border-radius: 16px 16px 0px 0px;
-    /*border: 1px solid red;*/
     margin-bottom: 0;
 }
 .char .box,
@@ -57,22 +56,10 @@
     cursor: pointer;
     scale: 100%;
     border-radius: 16px;
-    /*grid-template-rows: 1% ;   /*ตั้ง*/
-    /*grid-template-columns: 1% 1.5%;      /*นอน*/
-    
     margin-right: auto;
     margin-left: auto;
     margin-bottom: 15px;
-    
 }
-/*
-.char span.box.Character{
-    display: ;
-}
-
-.char span.box.boss{
-    display: ;
-}*/
 
 .char .box:hover,
 .boss.box:hover{
@@ -93,7 +80,8 @@
  }
 
 .displaycharacter button,
-.displayboss button
+.displayboss button,
+.return button
 {
     border-radius: 10px;
     border: 1px solid black;
@@ -104,7 +92,8 @@
 }
 
 .displaycharacter h1,
-.displayboss h1
+.displayboss h1,
+.return h1
 {
     display: inline-block;
     margin: 0px;
