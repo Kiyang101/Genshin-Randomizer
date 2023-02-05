@@ -99,5 +99,6 @@ function Return(){
     document.querySelector(".return").style.cssText = "display: none;"
 
     ransw = false;
-
+    csw = true;
+    bsw = true;
 }
