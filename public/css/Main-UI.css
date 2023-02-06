@@ -53,13 +53,16 @@ main p{
     list-style: none;
     cursor: default;
 }
+
 .menu div#select header button.menu{
     display: inline-block;
 }
+
 .menu div#select header h1#h1{
     margin-top: 10px;
     text-align: center;
 }
+
 .menu div#select header button#buttonchar{
     display: inline-block;
     border: 1.3px solid black;
@@ -71,8 +74,8 @@ main p{
     cursor: pointer;
     color: white;
     background-color: DodgerBlue ;
-
 }
+
 .menu div#select header button#buttonboss{
     display: inline-block;
     border: 2px solid CornflowerBlue;
@@ -86,7 +89,6 @@ main p{
     cursor: pointer;
     color: white;
     background-color: DodgerBlue ;
-
 }
 
 .menu div ul li{
@@ -96,6 +98,7 @@ main p{
     list-style: none;
     cursor: default;
 }
+
 .menu div#select header{
     border-bottom: 1px solid rgb(0, 0, 0);
     border-radius: 0px;
@@ -103,6 +106,7 @@ main p{
     padding-right: 0;
     padding-left: 0;
 } 
+
 .menu div#select header ul.element img{
     
     width: 40px;

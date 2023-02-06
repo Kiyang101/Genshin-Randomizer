@@ -3,7 +3,7 @@ let bsw = true;
 let ransw = false;
 
 function dischar(){
-
+    
     if (csw==true){
         document.querySelector(".char-caret-right").style.cssText = "display: ;"
         document.querySelector(".char-caret-down").style.cssText = "display: none;"

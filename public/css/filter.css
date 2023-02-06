@@ -95,8 +95,7 @@ img#weapon_type{
 
 li.rarity h1,
 li.type h1,
-li.element h1
-{
+li.element h1{
     display: inline-block;
     margin-top: 0px;
     margin-bottom: 10px;
@@ -105,8 +104,7 @@ li.element h1
 
 li.rarity_star button,
 li.type button,
-li.element button
-{
+li.element button{
     border-radius: 5px;
     font-size: 1rem;
     border: 1.5px solid CornflowerBlue;
@@ -142,8 +140,7 @@ li.element_img button img{
 /*Color Button*/
 .rarity_4,.rarity_5,
 .type_sword,.type_Claymore,.type_Pole,.type_Bow,.type_Catalyst,
-.E_Anemo,.E_Cryo,.E_Dendro,.E_Electro,.E_Geo,.E_Hydro,.E_Pyro
-{
+.E_Anemo,.E_Cryo,.E_Dendro,.E_Electro,.E_Geo,.E_Hydro,.E_Pyro{
     background-color: Aquamarine;
 }
 

@@ -1,21 +1,20 @@
 function Filter(){
-    document.querySelector("section.filter").style.cssText = "pointer-events: visible;"
-    document.querySelector("div.char").style.cssText = "pointer-events: none;"
-    document.querySelector("button.filter").style.cssText = "pointer-events: none;"
-    document.querySelector("div.modal-box").style.cssText = "transition: all 1s ease;"
-    document.querySelector("div.modal-box").style.cssText = "opacity: 1;"
-    document.querySelector(".overlay").style.cssText = "opacity: 1;" 
+  document.querySelector("section.filter").style.cssText = "pointer-events: visible;"
+  document.querySelector("div.char").style.cssText = "pointer-events: none;"
+  document.querySelector("button.filter").style.cssText = "pointer-events: none;"
+  document.querySelector("div.modal-box").style.cssText = "transition: all 1s ease;"
+  document.querySelector("div.modal-box").style.cssText = "opacity: 1;"
+  document.querySelector(".overlay").style.cssText = "opacity: 1;" 
 }
 
 function Close(){
-    document.querySelector("section.filter").style.cssText = "pointer-events: none;"
-    document.querySelector("div.char").style.cssText = "pointer-events: visible;"
-    document.querySelector("button.filter").style.cssText = "pointer-events: visible;"
-    document.querySelector("div.modal-box").style.cssText = "transition: all 1s ease;"
-    document.querySelector("div.modal-box").style.cssText = "opacity: 0;"
-    document.querySelector(".overlay").style.cssText = "opacity: 0;"
+  document.querySelector("section.filter").style.cssText = "pointer-events: none;"
+  document.querySelector("div.char").style.cssText = "pointer-events: visible;"
+  document.querySelector("button.filter").style.cssText = "pointer-events: visible;"
+  document.querySelector("div.modal-box").style.cssText = "transition: all 1s ease;"
+  document.querySelector("div.modal-box").style.cssText = "opacity: 0;"
+  document.querySelector(".overlay").style.cssText = "opacity: 0;"
 }
-
 
 let Char_4 = true;
 let Char_5 = true;
@@ -34,7 +33,6 @@ let go = true;
 let hd = true;
 let po = true;
 
-
 const four = document.getElementsByClassName("four_star");
 const five = document.getElementsByClassName("five_star");
 
@@ -52,10 +50,8 @@ const geo = document.getElementsByClassName("Geo");
 const hydro = document.getElementsByClassName("Hydro");
 const pyro = document.getElementsByClassName("Pyro");
 
-
 function rarity_4(){
   if (Char_4 == true){
-
     for(four_star of four) {
       four_star.style.display = "none";
     }
@@ -66,7 +62,6 @@ function rarity_4(){
   }
 
   if (Char_4 == false){
-    
     for(four_star of four) {
       four_star.style.display = "";
     }
@@ -75,13 +70,11 @@ function rarity_4(){
     Char_4 = true;
     return
   }
-
 }
 
 function rarity_5(){
 
   if (Char_5 == true){
-
     for(five_star of five) {
       five_star.style.display = "none";
     }
@@ -92,7 +85,6 @@ function rarity_5(){
   }
 
   if (Char_5 == false){
-
     for(five_star of five) {
       five_star.style.display = "";
     }
@@ -101,19 +93,16 @@ function rarity_5(){
     document.querySelector(".rarity_5").style.cssText = "background-color: Aquamarine;"
     return
   }
-
 } 
 
 function type_sword(){
 
   if (sw == true){
-
     for(Sword of sword) {
       Sword.style.display = "none";
     }
     
     document.querySelector(".type_sword").style.cssText = "background-color: white;"
-
     sw = false;
     return
   }
@@ -124,23 +113,19 @@ function type_sword(){
     }
 
     document.querySelector(".type_sword").style.cssText = "background-color: Aquamarine;"
-
     sw = true;
     return
   }
-
 }
 
 function type_Claymore(){
 
   if (cm == true){
-
     for(Claymore of claymore) {
       Claymore.style.display = "none";
     }
     
     document.querySelector(".type_Claymore").style.cssText = "background-color: white;"
-
     cm = false;
     return
   }
@@ -151,23 +136,19 @@ function type_Claymore(){
     }
 
     document.querySelector(".type_Claymore").style.cssText = "background-color: Aquamarine;"
-
     cm = true;
     return
   }
-
 }
 
 function type_Pole(){
 
   if (pl == true){
-
     for(Polearm of polearm) {
       Polearm.style.display = "none";
     }
     
     document.querySelector(".type_Pole").style.cssText = "background-color: white;"
-
     pl = false;
     return
   }
@@ -178,23 +159,19 @@ function type_Pole(){
     }
 
     document.querySelector(".type_Pole").style.cssText = "background-color: Aquamarine;"
-
     pl = true;
     return
   }
-
 }
 
 function type_Bow(){
 
   if (b == true){
-
     for(Bow of bow) {
       Bow.style.display = "none";
     }
     
     document.querySelector(".type_Bow").style.cssText = "background-color: white;"
-
     b = false;
     return
   }
@@ -205,23 +182,19 @@ function type_Bow(){
     }
 
     document.querySelector(".type_Bow").style.cssText = "background-color: Aquamarine;"
-
     b = true;
     return
   }
-
 }
 
 function type_Catalyst(){
 
   if (ctl == true){
-
     for(Catalyst of catalyst) {
       Catalyst.style.display = "none";
     }
     
     document.querySelector(".type_Catalyst").style.cssText = "background-color: white;"
-
     ctl = false;
     return
   }
@@ -232,23 +205,19 @@ function type_Catalyst(){
     }
 
     document.querySelector(".type_Catalyst").style.cssText = "background-color: Aquamarine;"
-
     ctl = true;
     return
   }
-
 }
 
 function E_Anemo(){
 
   if (anm == true){
-
     for(Anemo of anemo) {
       Anemo.style.display = "none";
     }
     
     document.querySelector(".E_Anemo").style.cssText = "background-color: white;"
-
     anm = false;
     return
   }
@@ -259,23 +228,19 @@ function E_Anemo(){
     }
 
     document.querySelector(".E_Anemo").style.cssText = "background-color: Aquamarine;"
-
     anm = true;
     return
   }
-
 }
 
 function E_Cryo(){
 
   if (co == true){
-
     for(Cryo of cryo) {
       Cryo.style.display = "none";
     }
     
     document.querySelector(".E_Cryo").style.cssText = "background-color: white;"
-
     co = false;
     return
   }
@@ -286,23 +251,19 @@ function E_Cryo(){
     }
 
     document.querySelector(".E_Cryo").style.cssText = "background-color: Aquamarine;"
-
     co = true;
     return
   }
-
 }
 
 function E_Dendro(){
 
   if (dd == true){
-
     for(Dendro of dendro) {
       Dendro.style.display = "none";
     }
     
     document.querySelector(".E_Dendro").style.cssText = "background-color: white;"
-
     dd = false;
     return
   }
@@ -313,23 +274,19 @@ function E_Dendro(){
     }
 
     document.querySelector(".E_Dendro").style.cssText = "background-color: Aquamarine;"
-
     dd = true;
     return
   }
-
 }
 
 function E_Electro(){
 
   if (elt == true){
-
     for(Electro of electro) {
       Electro.style.display = "none";
     }
     
     document.querySelector(".E_Electro").style.cssText = "background-color: white;"
-
     elt = false;
     return
   }
@@ -340,23 +297,19 @@ function E_Electro(){
     }
 
     document.querySelector(".E_Electro").style.cssText = "background-color: Aquamarine;"
-
     elt = true;
     return
   }
-
 }
 
 function E_Geo(){
 
   if (go == true){
-
     for(Geo of geo) {
       Geo.style.display = "none";
     }
     
     document.querySelector(".E_Geo").style.cssText = "background-color: white;"
-
     go = false;
     return
   }
@@ -367,23 +320,19 @@ function E_Geo(){
     }
 
     document.querySelector(".E_Geo").style.cssText = "background-color: Aquamarine;"
-
     go = true;
     return
   }
-
 }
 
 function E_Hydro(){
 
   if (hd == true){
-
     for(Hydro of hydro) {
       Hydro.style.display = "none";
     }
     
     document.querySelector(".E_Hydro").style.cssText = "background-color: white;"
-
     hd = false;
     return
   }
@@ -394,23 +343,19 @@ function E_Hydro(){
     }
 
     document.querySelector(".E_Hydro").style.cssText = "background-color: Aquamarine;"
-
     hd = true;
     return
   }
-
 }
 
 function E_Pyro(){
 
   if (po == true){
-
     for(Pyro of pyro) {
       Pyro.style.display = "none";
     }
-    
-    document.querySelector(".E_Pyro").style.cssText = "background-color: white;"
 
+    document.querySelector(".E_Pyro").style.cssText = "background-color: white;"
     po = false;
     return
   }
@@ -421,11 +366,9 @@ function E_Pyro(){
     }
 
     document.querySelector(".E_Pyro").style.cssText = "background-color: Aquamarine;"
-
     po = true;
     return
   }
-
 }
 
 

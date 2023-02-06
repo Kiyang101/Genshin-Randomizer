@@ -79,8 +79,7 @@
 
 .displaycharacter button,
 .displayboss button,
-.return button
-{
+.return button{
     border-radius: 10px;
     border: 1px solid black;
     margin-top: 1.5%;
@@ -92,15 +91,13 @@
 
 .displaycharacter h1,
 .displayboss h1,
-.return h1
-{
+.return h1{
     display: inline-block;
     margin: 0px;
 }
 
 .displaycharacter i,
-.displayboss i
-{
+.displayboss i{
     display: inline-block;
     font-size: 1.3rem;
 }

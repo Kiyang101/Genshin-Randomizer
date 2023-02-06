@@ -67,7 +67,7 @@
 }
 
 
-.btn button:hover {
+.btn button:hover{
     color: white;
     transition: .75s;
     background-color: dodgerblue;
