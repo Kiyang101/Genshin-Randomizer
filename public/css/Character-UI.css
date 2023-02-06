@@ -23,7 +23,6 @@
 .boss img{
     height: 130px;
     width: 133px;
-    /*border: 1px solid red;*/
     position: relative;
     z-index: 1;
 }
@@ -76,9 +75,7 @@
     margin-bottom: 15px;
     text-align: center;
     height: 10px;
-
-    /*border: 1px solid red;*/
- }
+}
 
 .displaycharacter button,
 .displayboss button,
