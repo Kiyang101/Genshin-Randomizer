@@ -53,16 +53,14 @@ const hydro = document.getElementsByClassName("Hydro");
 const pyro = document.getElementsByClassName("Pyro");
 
 
-
 function rarity_4(){
   if (Char_4 == true){
 
     for(four_star of four) {
-        four_star.style.display = "none";
+      four_star.style.display = "none";
     }
 
     Char_4 = false;
-    
     document.querySelector(".rarity_4").style.cssText = "background-color: white;"
     return
   }

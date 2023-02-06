@@ -3,6 +3,7 @@ let bsw = true;
 let ransw = false;
 
 function dischar(){
+
     if (csw==true){
         document.querySelector(".char-caret-right").style.cssText = "display: ;"
         document.querySelector(".char-caret-down").style.cssText = "display: none;"
@@ -19,6 +20,7 @@ function dischar(){
 }
 
 function disboss(){
+
     if (bsw==true){
         document.querySelector(".boss-caret-right").style.cssText = "display: ;"
         document.querySelector(".boss-caret-down").style.cssText = "display: none;"
@@ -48,7 +50,6 @@ function Random(){
         document.querySelector(".displayboss").style.cssText = "pointer-events: none;"
         document.querySelector(".filter").style.cssText = "pointer-events: none;"
 
-
         csw = false;
         bsw = false;
         ransw = true;
@@ -66,7 +67,6 @@ function Random(){
         document.querySelector(".displaycharacter").style.cssText = "pointer-events: visible;"
         document.querySelector(".displayboss").style.cssText = "pointer-events: visible;"
         document.querySelector(".filter").style.cssText = "pointer-events: visible;"
-
 
         csw = true;
         bsw = true;
