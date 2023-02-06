@@ -63,7 +63,6 @@ let count_Yoimiya = false;
 let count_Yunjin = false;
 let count_Zhongli = false;
 
-
 function select_Aether() {
   if (count_Aether == false){
     document.querySelector(".char .Aether .box").style.cssText = Borders

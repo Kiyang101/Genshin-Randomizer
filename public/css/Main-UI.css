@@ -1,5 +1,5 @@
 body{
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Bai Jamjuree', sans-serif;
     background: #083773;
     margin: 0 2% 0 2%;
 }
@@ -22,10 +22,12 @@ main p{
     padding-top: 20px;
     cursor: default;
 }
+
 #title{
     text-align: center;
     font-size: 22px;
 }
+
 .menu div#select{
     border: 1px solid rgb(0, 0, 0);
     border-radius: 10px;
@@ -145,7 +147,7 @@ button.filter span{
     border: 2px solid CornflowerBlue;
     border-radius: 30px;
     padding: 5px;
-    margin-left: 5%;
+    margin-left: 1%;
     margin-top: 0;
     text-align: left;
     cursor: pointer;
