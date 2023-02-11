@@ -1077,7 +1077,7 @@ function select_Zhongli() {
 function start_random(){
 
   if (Character.length < 4 ){
-    alert("You'd better choose more than 4");
+    alert("You'd better choose more than 4 character");
     return
   }
 

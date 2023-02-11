@@ -74,14 +74,7 @@ function Random(){
         return
     }
 }
-/*
-function start_random(){
-    document.querySelector(".start_random").style.cssText = "display: none;"
-    document.querySelector(".section_random").style.cssText = "display: ;"
-    document.querySelector(".return").style.cssText = "display: ;"
-    document.querySelector(".random").style.cssText = "pointer-events: none;"
-}
-*/
+
 function Return(){
     document.querySelector("div.Random").style.cssText = "display: none;"
     document.querySelector(".char-caret-right").style.cssText = "display: none;"
