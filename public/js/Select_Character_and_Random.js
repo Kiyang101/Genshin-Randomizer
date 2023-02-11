@@ -63,6 +63,25 @@ let count_Yoimiya = false;
 let count_Yunjin = false;
 let count_Zhongli = false;
 
+const boxfour = document.getElementsByClassName("four_star");
+const boxfive = document.getElementsByClassName("five_star");
+
+function selectall(){
+
+  console.log("click")
+
+  for(box of boxfive) {
+    boxfive.border = Borders;
+
+  }
+
+
+}
+
+
+
+
+
 const Character = [];
 
 function select_Aether() {
@@ -1076,37 +1095,46 @@ function select_Zhongli() {
 
 function start_random(){
 
-  for(var i = 0; i<1; i++){
-    let ran1 = Character.splice(Math.floor(Math.random()*1), 1);
-    console.log(ran1)
-  }
-  for(var i = 0; i<1; i++){
-    let ran2 = Character.splice(Math.floor(Math.random()*1), 1);
-    console.log(ran2)
-  }
-  for(var i = 0; i<1; i++){
-    let ran3 = Character.splice(Math.floor(Math.random()*1), 1);
-    console.log(ran3)
-  }
-  for(var i = 0; i<1; i++){
-    let ran4 = Character.splice(Math.floor(Math.random()*1), 1);
-    console.log(ran4)
+  if (Character.length < 4 ){
+    alert("You must be select 4 or more than 4");
+    return
   }
 
+  for(var i = 0; i<1; i++){
+    var ran1 = Character.splice(Math.floor(Math.random()*Character.length), 1);
+  }
+  for(var i = 0; i<1; i++){
+    var ran2 = Character.splice(Math.floor(Math.random()*Character.length), 1);
+  }
+  for(var i = 0; i<1; i++){
+    var ran3 = Character.splice(Math.floor(Math.random()*Character.length), 1);
+  }
+  for(var i = 0; i<1; i++){
+    var ran4 = Character.splice(Math.floor(Math.random()*Character.length), 1);
+  }
+  
   document.querySelector(".start_random").style.cssText = "display: none;"
   document.querySelector(".section_random").style.cssText = "display: ;"
   document.querySelector(".return").style.cssText = "display: ;"
   document.querySelector(".random").style.cssText = "pointer-events: none;"
 
+  document.getElementById("charf").src = `../image/Character/all/${ran1[0]}.png`;
+  document.getElementById("chars").src = `../image/Character/all/${ran2[0]}.png`;
+  document.getElementById("charth").src = `../image/Character/all/${ran3[0]}.png`;
+  document.getElementById("charfth").src = `../image/Character/all/${ran4[0]}.png`;
 
-  /*Character[Character.length] = ran1;
-  Character[Character.length] = ran2;
-  Character[Character.length] = ran3;
-  Character[Character.length] = ran4;*/
+  document.getElementById("name_text_first").innerHTML = `${ran1[0]}`;
+  document.getElementById("name_text_second").innerHTML = `${ran2[0]}`;
+  document.getElementById("name_text_thrid").innerHTML = `${ran3[0]}`;
+  document.getElementById("name_text_fourth").innerHTML = `${ran4[0]}`;
 
-
-  console.log("------");
-  console.log(Character)
-  console.log("------");
+  Character[Character.length] = ran1[0];
+  Character[Character.length] = ran2[0];
+  Character[Character.length] = ran3[0];
+  Character[Character.length] = ran4[0];
 
 }
+
+
+  
+
