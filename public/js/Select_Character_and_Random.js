@@ -63,25 +63,6 @@ let count_Yoimiya = false;
 let count_Yunjin = false;
 let count_Zhongli = false;
 
-const boxfour = document.getElementsByClassName("four_star");
-const boxfive = document.getElementsByClassName("five_star");
-
-function selectall(){
-
-  console.log("click")
-
-  for(box of boxfive) {
-    boxfive.border = Borders;
-
-  }
-
-
-}
-
-
-
-
-
 const Character = [];
 
 function select_Aether() {
