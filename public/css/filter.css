@@ -148,7 +148,7 @@ li.element_img button img{
     position: fixed;
     height: 100%;
     width: 100%;
-    background: rgba(0, 0, 0, 0.3);
+    background: rgba(0, 0, 0, 0.5);
     opacity: 0;
     pointer-events: none;
     z-index: 90;
