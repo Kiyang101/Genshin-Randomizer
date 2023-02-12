@@ -1426,17 +1426,17 @@ function select_Algorithm() {
   }
 }
 
-function select_Perpetual_Mechanical_Array() {
+function select_Perpetual() {
   if (count_Perpetual_Mechanical_Array == false){
-    document.querySelector(".boss.Perpetual_Mechanical_Array.box").style.cssText = Borders
+    document.querySelector(".boss.Perpetual.box").style.cssText = Borders
     count_Perpetual_Mechanical_Array = true;
-    Boss[Boss.length] = "Perpetual_Mechanical_Array";
+    Boss[Boss.length] = "Perpetual";
     return
   }
   if (count_Perpetual_Mechanical_Array == true){
-    document.querySelector(".boss.Perpetual_Mechanical_Array.box").style.border="";
+    document.querySelector(".boss.Perpetual.box").style.border="";
     count_Perpetual_Mechanical_Array = false;
-    let index = Boss.indexOf("Perpetual_Mechanical_Array");
+    let index = Boss.indexOf("Perpetual");
     Boss.splice(index,1);
     return
   }
@@ -2295,7 +2295,7 @@ function unselectbossall(){
   document.querySelector(".boss.Maguu_Kenki.box").style.border="";
   document.querySelector(".boss.Aeonblight_Drake.box").style.border="";
   document.querySelector(".boss.Algorithm.box").style.border="";
-  document.querySelector(".boss.Perpetual_Mechanical_Array.box").style.border="";
+  document.querySelector(".boss.Perpetual.box").style.border="";
   document.querySelector(".boss.Ruin_Serpent.box").style.border="";
   document.querySelector(".boss.Ruin_Serpent.box").style.border="";
   document.querySelector(".boss.Lupus_Boreas.box").style.border="";
@@ -2362,7 +2362,7 @@ function selectbossall(){
   document.querySelector(".boss.Maguu_Kenki.box").style.cssText = Borders;
   document.querySelector(".boss.Aeonblight_Drake.box").style.cssText = Borders;
   document.querySelector(".boss.Algorithm.box").style.cssText = Borders;
-  document.querySelector(".boss.Perpetual_Mechanical_Array.box").style.cssText = Borders;
+  document.querySelector(".boss.Perpetual.box").style.cssText = Borders;
   document.querySelector(".boss.Ruin_Serpent.box").style.cssText = Borders;
   document.querySelector(".boss.Ruin_Serpent.box").style.cssText = Borders;
   document.querySelector(".boss.Lupus_Boreas.box").style.cssText = Borders;
@@ -2393,7 +2393,7 @@ function selectbossall(){
   Boss[Boss.length] = "Maguu_Kenki";
   Boss[Boss.length] = "Aeonblight_Drake";
   Boss[Boss.length] = "Algorithm";
-  Boss[Boss.length] = "Perpetual_Mechanical_Array";
+  Boss[Boss.length] = "Perpetual";
   Boss[Boss.length] = "Ruin_Serpent";
   Boss[Boss.length] = "Lupus_Boreas";
   Boss[Boss.length] = "Stormterror";
