@@ -1651,7 +1651,6 @@ function start_random(){
 
   //First Random Character
   for(var i = 1 ; i < 8; i++){
-    document.querySelector(".random img.element").style.cssText = "opacity: 1;";
 
     if (i == 1) {
       if (ran1[0] == "Layla" || ran1[0] == "Shenhe" || ran1[0] == "Aloy" || ran1[0] == "Ayaka" || ran1[0] == "Eula" || 
