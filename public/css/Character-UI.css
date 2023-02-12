@@ -28,15 +28,29 @@
 }
 
 .char span#color img#five-star{
-    background-color: rgb(162, 143, 0);
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(../image/Character/bg/Background_Item_5_Star.png);
+    /*background-color: rgb(162, 143, 0);*/
     border-radius: 16px 16px 28px 0px;
 }
 .char span#color img#four-star{
-    background-color: rgba(125, 0, 179, 0.737);
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(../image/Character/bg/Background_Item_4_Star.png);
+    /*background-color: rgba(125, 0, 179, 0.737);*/
     border-radius: 16px 16px 28px 0px;
 }
 .boss img{
-    background-color: rgb(40, 25, 255);
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(../image/Character/bg/Background_Item_5a_Star.webp);
     border-radius: 16px 16px 28px 0px;
 }
 
@@ -77,9 +91,18 @@
     height: 10px;
 }
 
+.boss h1{
+    font-size: 15px;
+}
+
 .displaycharacter button,
 .displayboss button,
-.return button{
+.selectall_char button,
+.unselectall_char button,
+.selectall_boss button,
+.unselectall_boss button,
+.return button,
+.random_again button{
     border-radius: 10px;
     border: 1px solid black;
     margin-top: 1.5%;
@@ -89,11 +112,26 @@
     cursor: pointer;
 }
 
+.random_again button{
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
 .displaycharacter h1,
 .displayboss h1,
-.return h1{
+.selectall_char h1,
+.unselectall_char h1,
+.selectall_boss h1,
+.unselectall_boss h1,
+.return h1,
+.random_again h1{
     display: inline-block;
     margin: 0px;
+}
+
+.random_again h1{
+    margin-top: 2%;
+    margin-bottom: 2%;
 }
 
 .displaycharacter i,
@@ -101,3 +139,4 @@
     display: inline-block;
     font-size: 1.3rem;
 }
+

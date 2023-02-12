@@ -8,6 +8,8 @@ function dischar(){
         document.querySelector(".char-caret-right").style.cssText = "display: ;"
         document.querySelector(".char-caret-down").style.cssText = "display: none;"
         document.querySelector("div.char").style.cssText = "display: none;"
+        document.querySelector(".selectall_char").style.cssText = "display: none;"
+        document.querySelector(".unselectall_char").style.cssText = "display: none;"
         csw = false;
         return
     }
@@ -15,6 +17,8 @@ function dischar(){
         document.querySelector(".char-caret-right").style.cssText = "display: none;"
         document.querySelector(".char-caret-down").style.cssText = "display: ;"
         document.querySelector("div.char").style.cssText = "display: ;"
+        document.querySelector(".selectall_char").style.cssText = "display: ;"
+        document.querySelector(".unselectall_char").style.cssText = "display: ;"
         csw = true;
     }
 }
@@ -25,6 +29,8 @@ function disboss(){
         document.querySelector(".boss-caret-right").style.cssText = "display: ;"
         document.querySelector(".boss-caret-down").style.cssText = "display: none;"
         document.querySelector("div.Boss").style.cssText = "display: none;"
+        document.querySelector(".selectall_boss").style.cssText = "display: none;"
+        document.querySelector(".unselectall_boss").style.cssText = "display: none;"
         bsw = false;
         return
     }
@@ -32,6 +38,8 @@ function disboss(){
         document.querySelector(".boss-caret-right").style.cssText = "display: none;"
         document.querySelector(".boss-caret-down").style.cssText = "display: ;"
         document.querySelector("div.Boss").style.cssText = "display: ;"
+        document.querySelector(".selectall_boss").style.cssText = "display: ;"
+        document.querySelector(".unselectall_boss").style.cssText = "display: ;"
         bsw = true;
     }
 }
@@ -49,6 +57,10 @@ function Random(){
         document.querySelector(".displaycharacter").style.cssText = "pointer-events: none;"
         document.querySelector(".displayboss").style.cssText = "pointer-events: none;"
         document.querySelector(".filter").style.cssText = "pointer-events: none;"
+        document.querySelector(".selectall_char").style.cssText = "display: none;"
+        document.querySelector(".unselectall_char").style.cssText = "display: none;"
+        document.querySelector(".selectall_boss").style.cssText = "display: none;"
+        document.querySelector(".unselectall_boss").style.cssText = "display: none;"
 
         csw = false;
         bsw = false;
@@ -67,6 +79,10 @@ function Random(){
         document.querySelector(".displaycharacter").style.cssText = "pointer-events: visible;"
         document.querySelector(".displayboss").style.cssText = "pointer-events: visible;"
         document.querySelector(".filter").style.cssText = "pointer-events: visible;"
+        document.querySelector(".selectall_char").style.cssText = "display: ;"
+        document.querySelector(".unselectall_char").style.cssText = "display: ;"
+        document.querySelector(".selectall_boss").style.cssText = "display: ;"
+        document.querySelector(".unselectall_boss").style.cssText = "display: ;"
 
         csw = true;
         bsw = true;
@@ -90,6 +106,11 @@ function Return(){
     document.querySelector(".section_random").style.cssText = "display: none;"
     document.querySelector(".start_random").style.cssText = "display: ;"
     document.querySelector(".return").style.cssText = "display: none;"
+    document.querySelector(".selectall_char").style.cssText = "display: ;"
+    document.querySelector(".unselectall_char").style.cssText = "display: ;"
+    document.querySelector(".selectall_boss").style.cssText = "display: ;"
+    document.querySelector(".unselectall_boss").style.cssText = "display: ;"
+    document.querySelector(".random_again").style.cssText = "display: none;"
 
     ransw = false;
     csw = true;

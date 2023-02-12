@@ -126,11 +126,24 @@
             </div>
             
           </section>
+          
           <span class="displaycharacter">
             <button onclick="dischar()">
               <h1>Character</h1>
               <span class="char-caret-right" style="display: none;"><i class="fa-solid fa-caret-right"></i></span>
               <span class="char-caret-down"><i class="fa-sharp fa-solid fa-caret-down"></i></span>
+            </button>
+          </span>
+
+          <span class="selectall_char">
+            <button onclick="selectcharall()">
+              <h1>select all</h1>
+            </button>
+          </span>
+
+          <span class="unselectall_char">
+            <button onclick="unselectcharall()">
+              <h1>unselect all</h1>
             </button>
           </span>
 
@@ -163,15 +176,15 @@
               </span>
             </span>
             
-            <span id="Character" class="Alhatham Sword Dendro five_star" onclick="select_Alhatham()">
+            <span id="Character" class="Alhaitham Sword Dendro five_star" onclick="select_Alhatham()">
               <span id="5-star">
                 <span class="box" id="element-dendro">
                 <span id="color">
                   <img src="../image/Element/Dendro.png" alt="" id="element">  
-                  <img src="../image/Character/all/Alhatham.png" alt="" id="five-star">
+                  <img src="../image/Character/all/Alhaitham.png" alt="" id="five-star">
                 </span>
                 <span id="text">
-                  <h1>Alhatham</h1>
+                  <h1>Alhaitham</h1>
                 </span>
               </span>
               </span>
@@ -653,15 +666,15 @@
               </span>
             </span>
             
-            <span id="Character" class="Noel Claymore Geo four_star" onclick="select_Noel()">
+            <span id="Character" class="Noelle Claymore Geo four_star" onclick="select_Noelle()">
               <span id="4-star">
                 <span class="box" id="element-Geo Character">
                   <span id="color">
                     <img src="../image/Element/Geo.png" alt="" id="element">  
-                    <img src="../image/Character/all/Noel.png" alt="" id="four-star">
+                    <img src="../image/Character/all/Noelle.png" alt="" id="four-star">
                   </span>
                   <span id="text">
-                    <h1>Noel</h1>
+                    <h1>Noelle</h1>
                   </span>
                 </span>
               </span>
@@ -1027,16 +1040,175 @@
             </button>
           </span>
 
+          <span class="selectall_boss">
+            <button onclick="selectbossall()">
+              <h1>select all</h1>
+            </button>
+          </span>
+
+          <span class="unselectall_boss">
+            <button onclick="unselectbossall()">
+              <h1>unselect all</h1>
+            </button>
+          </span>
+
           <div class="Boss">
             <!--Boss-->
-            <span class="boss Maguu_Kenki box color">
+            
+            <span class="boss Anemo_Hypotasis box color" onclick="select_Anemo_Hypotasis()">
+              <img src="../image/Boss/Anemo_Hypotasis.png" alt="">
+              <h1 class="text">Anemo Hypotasis</h1>
+            </span>
+
+            <span class="boss Cryo_Hypotasis box color" onclick="select_Cryo_Hypotasis()">
+              <img src="../image/Boss/Cryo_Hypotasis.png" alt="">
+              <h1 class="text">Cryo Hypotasis</h1>
+            </span>
+
+            <span class="boss Dendro_Hypotasis box color" onclick="select_Dendro_Hypotasis()">
+              <img src="../image/Boss/Dendro_Hypotasis.png" alt="">
+              <h1 class="text">Dendro Hypotasis</h1>
+            </span>
+
+            <span class="boss Electro_Hypotasis box color" onclick="select_Electro_Hypotasis()">
+              <img src="../image/Boss/Electro_Hypotasis.png" alt="">
+              <h1 class="text">Electro Hypotasis</h1>
+            </span>
+
+            <span class="boss Geo_Hypotasis box color" onclick="select_Geo_Hypotasis()">
+              <img src="../image/Boss/Geo_Hypotasis.png" alt="">
+              <h1 class="text">Geo Hypotasis</h1>
+            </span>
+
+            <span class="boss Hydro_Hypotasis box color" onclick="select_Hydro_Hypotasis()">
+              <img src="../image/Boss/Hydro_Hypotasis.png" alt="">
+              <h1 class="text">Hydro Hypotasis</h1>
+            </span>
+
+            <span class="boss Pyro_Hypotasis box color" onclick="select_Pyro_Hypotasis()">
+              <img src="../image/Boss/Pyro_Hypotasis.png" alt="">
+              <h1 class="text">Pyro Hypotasis</h1>
+            </span>
+
+            <span class="boss Cryo_Regisvine box color" onclick="select_Cryo_Regisvine()">
+              <img src="../image/Boss/Cryo_Regisvine.png" alt="">
+              <h1 class="text">Cryo Regisvine</h1>
+            </span>
+
+            <span class="boss Electro_Regisvine box color" onclick="select_Electro_Regisvine()">
+              <img src="../image/Boss/Electro_Regisvine.png" alt="">
+              <h1 class="text">Electro Regisvine</h1>
+            </span>
+
+            <span class="boss Pyro_Regisvine box color" onclick="select_Pyro_Regisvine()">
+              <img src="../image/Boss/Pyro_Regisvine.png" alt="">
+              <h1 class="text">Pyro Regisvine</h1>
+            </span>
+
+            <span class="boss Oceanid box color" onclick="select_Oceanid()">
+              <img src="../image/Boss/Oceanid.png" alt="">
+              <h1 class="text">Oceanid</h1>
+            </span>
+
+            <span class="boss Primo_Geovishap box color" onclick="select_Primo_Geovishap()">
+              <img src="../image/Boss/Primo_Geovishap.png" alt="">
+              <h1 class="text">Primo Geovishap</h1>
+            </span>
+
+            <span class="boss Golden_Wolflord box color" onclick="select_Golden_Wolflord()">
+              <img src="../image/Boss/Golden_Wolflord.png" alt="">
+              <h1 class="text">Golden Wolflord</h1>
+            </span>
+
+            <span class="boss Bathysmal_Vishap box color" onclick="select_Bathysmal_Vishap()">
+              <img src="../image/Boss/Bathysmal_Vishap.png" alt="">
+              <h1 class="text">Bathysmal Vishap</h1>
+            </span>
+
+            <span class="boss Thunder_Manifestation box color" onclick="select_Thunder_Manifestation()">
+              <img src="../image/Boss/Thunder_Manifestation.png" alt="">
+              <h1 class="text">Thunder</h1>
+            </span>
+
+            <span class="boss Jadeplume box color" onclick="select_Jadeplume()">
+              <img src="../image/Boss/Jadeplume.png" alt="">
+              <h1 class="text">Jadeplume</h1>
+            </span>
+
+            <span class="boss Setekh_Wenut box color" onclick="select_Setekh_Wenut()">
+              <img src="../image/Boss/Setekh_Wenut.png" alt="">
+              <h1 class="text">Setekh Wenut</h1>
+            </span>
+
+            <span class="boss Maguu_Kenki box color" onclick="select_Maguu_Kenki()">
               <img src="../image/Boss/Maguu_Kenki.png" alt="">
               <h1 class="text">Maguu Kenki</h1>
             </span>
+
+            <span class="boss Aeonblight_Drake box color" onclick="select_Aeonblight_Drake()">
+              <img src="../image/Boss/Aeonblight_Drake.png" alt="">
+              <h1 class="text">Aeonblight Drake</h1>
+            </span>
+
+            <span class="boss Algorithm box color" onclick="select_Algorithm()">
+              <img src="../image/Boss/Algorithm.png" alt="">
+              <h1 class="text">Algorithm</h1>
+            </span>
+
+            <span class="boss Perpetual_Mechanical_Array box color" onclick="select_Perpetual_Mechanical_Array()">
+              <img src="../image/Boss/Perpetual_Mechanical_Array.png" alt="">
+              <h1 class="text">Perpetual</h1>
+            </span>
+
+            <span class="boss Ruin_Serpent box color" onclick="select_Ruin_Serpent()">
+              <img src="../image/Boss/Ruin_Serpent.png" alt="">
+              <h1 class="text">Ruin Serpent</h1>
+            </span>
+
+            <span class="boss Lupus_Boreas box color" onclick="select_Lupus_Boreas()">
+              <img src="../image/Boss/Lupus_Boreas.png" alt="">
+              <h1 class="text">Lupus Boreas</h1>
+            </span>
+
+            <span class="boss Stormterror box color" onclick="select_Stormterror()">
+              <img src="../image/Boss/Stormterror.png" alt="">
+              <h1 class="text">Stormterror</h1>
+            </span>
+
+            <span class="boss Azhdaha box color" onclick="select_Azhdaha()">
+              <img src="../image/Boss/Azhdaha.png" alt="">
+              <h1 class="text">Azhdaha</h1>
+            </span>
+
+            <span class="boss Childe box color" onclick="select_Childe()">
+              <img src="../image/Boss/Childe.png" alt="">
+              <h1 class="text">Childe</h1>
+            </span>
+
+            <span class="boss La_Signora box color" onclick="select_La_Signora()">
+              <img src="../image/Boss/La_Signora.png" alt="">
+              <h1 class="text">La Signora</h1>
+            </span>
+
+            <span class="boss Magatsu_Mitake box color" onclick="select_Magatsu_Mitake()">
+              <img src="../image/Boss/Magatsu_Mitake.png" alt="">
+              <h1 class="text">Magatsu Mitake</h1>
+            </span>
+
+            <span class="boss Shouki_no_Kami box color" onclick="select_Shouki_no_Kami()">
+              <img src="../image/Boss/Shouki_no_Kami.png" alt="">
+              <h1 class="text">Shouki no Kami</h1>
+            </span>
+
+
           </div>
             
           <span class="return" style="display: none">
             <button onclick="Return()"><h1>Return</h1></button>
+          </span>
+
+          <span class="random_again" style="display: none">
+            <button onclick="start_random()"><h1>Random again</h1></button>
           </span>
 
           <div class="Random" style="display: none;">
@@ -1048,27 +1220,32 @@
 
             <span class="section_random" style="display: none;">
               <span class="random charfist box">
-                <img src="../image/Character/all/black.png" alt="" class="ranchar bg" id="charf">
-                <img src="../image/Element/" alt="" class="element">  
+                <img src="../image/Character/all/black.png" alt="" class="ranchar bg f" id="charf">
+                <img src="../image/Element/" alt="" class="element f" id="elementf">  
                   <h1 id="name_text_first"></h1>
               </span>
 
               <span class="random charsecond box">
-                <img src="../image/Character/all/black.png" alt="" class="ranchar bg" id="chars">
-                <img src="../image/Element/" alt="" class="element">  
+                <img src="../image/Character/all/black.png" alt="" class="ranchar bg s" id="chars">
+                <img src="../image/Element/" alt="" class="element s" id="elements">  
                 <h1 id="name_text_second"></h1>
               </span>
 
               <span class="random charthrid box">
-                <img src="../image/Character/all/black.png" alt="" class="ranchar bg" id="charth">
-                <img src="../image/Element/" alt="" class="element">  
+                <img src="../image/Character/all/black.png" alt="" class="ranchar bg th" id="charth">
+                <img src="../image/Element/" alt="" class="element th" id="elementth">  
                 <h1 id="name_text_thrid"></h1>
               </span>
 
               <span class="random charfourth box">
-                <img src="../image/Character/all/black.png" alt="" class="ranchar bg " id="charfth">
-                <img src="../image/Element/" alt="" class="element">  
+                <img src="../image/Character/all/black.png" alt="" class="ranchar bg fth" id="charfth">
+                <img src="../image/Element/" alt="" class="element fth" id="elementfth">  
                 <h1 id="name_text_fourth"></h1>
+              </span>
+
+              <span class="random ranboss box">
+                <img src="../image/Character/all/black.png" alt="" class="bossbg f" id="bossf">
+                <h1 id="name_text_boss"></h1>
               </span>
 
             </span>
