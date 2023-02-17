@@ -115,8 +115,4 @@ function Return(){
     ransw = false;
     csw = true;
     bsw = true;
-
-
-    //console.log(character)
-
 }
