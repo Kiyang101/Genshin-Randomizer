@@ -1,4 +1,4 @@
-const Borders = "border-top: 5px solid MediumSpringGreen; border-bottom: 5px solid SpringGreen;";
+const Borders = "border-top: 5px solid MediumSpringGreen; border-bottom: 5px solid SpringGreen;transition: .15s;";
 
 let count_Aether = false;
 let count_Albedo = false;

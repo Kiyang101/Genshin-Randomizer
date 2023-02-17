@@ -44,6 +44,8 @@ section.filter header#filter h1{
     margin-top: 10px;
     margin-bottom: 10px;
     padding-bottom: 0px;
+    color: aliceblue;
+    text-shadow: 0 5px 5px #444444,0 -2px 1px #969696;
 }
 
 section.filter button.close{
@@ -100,6 +102,8 @@ li.element h1{
     margin-top: 0px;
     margin-bottom: 10px;
     font-size: 1.5rem;
+    color: aliceblue;
+    text-shadow: 0 5px 5px #444444,0 -2px 1px #969696;
 }
 
 li.rarity_star button,
