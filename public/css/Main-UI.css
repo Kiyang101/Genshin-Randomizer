@@ -1,13 +1,21 @@
+html{
+    height: 100%;
+}
 body{
     font-family: 'Bai Jamjuree', sans-serif;
     background: #083773;
-    margin: 0 2% 0 2%;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    min-height: 100%;
+    padding-bottom: 6.74rem;
 }
 main.main{
     height: 100%;
     background-color: #ffffff;
     border: #ffffff;
     border-radius: 10px;
+    margin: 0 2% 0 2%;
 }
 
 main p{
@@ -38,6 +46,7 @@ main p{
     padding-bottom: 1%;
     padding-right: 0;
     padding-left: 0;
+    box-shadow: rgba(50, 50, 105, 0.15) 0px 2px 5px 0px, rgba(0, 0, 0, 0.05) 0px 1px 1px 0px;
 }
 
 .menu div#select header h1#h1{

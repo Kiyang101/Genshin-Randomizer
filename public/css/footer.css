@@ -1,0 +1,49 @@
+.footer{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    /*height: 50px;*/
+    background-color: Gainsboro;
+    cursor: default;
+    text-align: center;
+}
+.grid-footer{
+    line-height: 30px;
+    display: flex;
+    display: grid;
+    display: inline-block;
+    grid-template-columns: 250px;
+    grid-template-rows: 70px;
+    margin: 0;
+}
+.about ul{
+    list-style: none;
+    margin: 0;
+}
+
+.about ul li{
+    padding: 0;
+    margin: 0;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+.icon_footer{
+    margin-left: 15px;
+}
+
+.discord:hover{
+    background-color: dodgerblue;
+    border-radius: 6px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;}
+.youtube:hover{
+    background-color: red;
+    border-radius: 6px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;}
+.icon_footer a:hover{
+    color: azure;
+}

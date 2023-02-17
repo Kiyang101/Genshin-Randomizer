@@ -1,4 +1,5 @@
 const Borders = "border-top: 5px solid MediumSpringGreen; border-bottom: 5px solid SpringGreen;";
+
 let count_Aether = false;
 let count_Albedo = false;
 let count_Alhatham = false;
