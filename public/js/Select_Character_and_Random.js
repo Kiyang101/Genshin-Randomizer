@@ -6,6 +6,7 @@ let count_Alhatham = false;
 let count_Aloy = false;
 let count_Amber = false;
 let count_Arataki_Itto = false;
+let count_Baizhu = false;
 let count_Barbara = false;
 let count_Beidou = false;
 let count_Bennett = false;
@@ -13,6 +14,7 @@ let count_Candace = false;
 let count_Chongyun = false;
 let count_Collei = false;
 let count_Cyno = false;
+let count_Dehya = false;
 let count_Diluc = false;
 let count_Diona = false;
 let count_Dori = false;
@@ -24,6 +26,7 @@ let count_Gorou = false;
 let count_Hutao = false;
 let count_Jean = false;
 let count_Kaeya = false;
+let count_Kaveh = false;
 let count_Ayaka = false;
 let count_Ayato = false;
 let count_Kazuha = false;
@@ -33,6 +36,7 @@ let count_Kujou_Sara = false;
 let count_Kuki_Shinobu = false;
 let count_Layla = false;
 let count_Lisa = false;
+let count_Mika = false;
 let count_Mona = false;
 let count_Nahida = false;
 let count_Nilou = false;
@@ -194,6 +198,22 @@ function select_Arataki_Itto() {
   }
 }
 
+function select_Baizhu() {
+  if (count_Baizhu == false){
+    document.querySelector(".char .Baizhu .box").style.cssText = Borders
+    count_Baizhuer = true;
+    Character[Character.length] = "Baizhu";
+    return
+  }
+  if (count_Baizhu == true){
+    document.querySelector(".char .Baizhu .box").style.border="";
+    count_Baizhu = false;
+    let index = Character.indexOf("Baizhu");
+    Character.splice(index,1);
+    return
+  }
+}
+
 function select_Barbara() {
   if (count_Barbara == false){
     document.querySelector(".char .Barbara .box").style.cssText = Borders
@@ -301,6 +321,22 @@ function select_Cyno() {
     document.querySelector(".char .Cyno .box").style.border="";
     count_Cyno = false;
     let index = Character.indexOf("Cyno");
+    Character.splice(index,1);
+    return
+  }
+}
+
+function select_Dehya() {
+  if (count_Dehya == false){
+    document.querySelector(".char .Dehya .box").style.cssText = Borders
+    count_Diluc = true;
+    Character[Character.length] = "Dehya";
+    return
+  }
+  if (count_Dehya == true){
+    document.querySelector(".char .Dehya .box").style.border="";
+    count_Dehya = false;
+    let index = Character.indexOf("Dehya");
     Character.splice(index,1);
     return
   }
@@ -482,6 +518,22 @@ function select_Kaeya() {
   }
 }
 
+function select_Kaveh() {
+  if (count_Kaveh == false){
+    document.querySelector(".char .Kaveh .box").style.cssText = Borders
+    count_Kaveh = true;
+    Character[Character.length] = "Kaveh";
+    return
+  }
+  if (count_Kaveh == true){
+    document.querySelector(".char .Kaveh .box").style.border="";
+    count_Kaveh = false;
+    let index = Character.indexOf("Kaveh");
+    Character.splice(index,1);
+    return
+  }
+}
+
 function select_Ayaka() {
   if (count_Ayaka == false){
     document.querySelector(".char .Ayaka .box").style.cssText = Borders
@@ -621,6 +673,22 @@ function select_Lisa() {
     document.querySelector(".char .Lisa .box").style.border="";
     count_Lisa = false;
     let index = Character.indexOf("Lisa");
+    Character.splice(index,1);
+    return
+  }
+}
+
+function select_Mika() {
+  if (count_Mika == false){
+    document.querySelector(".char .Mika .box").style.cssText = Borders
+    count_Mika = true;
+    Character[Character.length] = "Mika";
+    return
+  }
+  if (count_Mika == true){
+    document.querySelector(".char .Mika .box").style.border="";
+    count_Mika = false;
+    let index = Character.indexOf("Mika");
     Character.splice(index,1);
     return
   }
@@ -1663,7 +1731,7 @@ function start_random(){
   for(var i = 1 ; i < 8; i++){
 
     if (i == 1) {
-      if (ran1[0] == "Layla" || ran1[0] == "Shenhe" || ran1[0] == "Aloy" || ran1[0] == "Ayaka" || ran1[0] == "Eula" || 
+      if (ran1[0] == "Layla" || ran1[0] == "Shenhe" || ran1[0] == "Aloy" || ran1[0] == "Ayaka" || ran1[0] == "Eula" || ran1[0] == "Mika" || 
         ran1[0] == "Rosaria" || ran1[0] == "Ganyu" || ran1[0] == "Diona" || ran1[0] == "Kaeya" || ran1[0] == "Qiqi" || ran1[0] == "Chongyun"){
           document.querySelector("img.element.f").style.cssText = "opacity: 1;";
           document.getElementById("elementf").src = "../image/Element/Cryo.png";
@@ -1691,7 +1759,7 @@ function start_random(){
       }
     }
     if (i == 5) {
-      if (ran1[0] == "Amber" || ran1[0] == "Diluc" || ran1[0] == "Klee" || ran1[0] == "Xiangling" || ran1[0] == "Yanfei" ||
+      if (ran1[0] == "Amber" || ran1[0] == "Dehya" || ran1[0] == "Diluc" || ran1[0] == "Klee" || ran1[0] == "Xiangling" || ran1[0] == "Yanfei" ||
         ran1[0] == "Bennett" || ran1[0] == "Hutao" || ran1[0] == "Thoma" || ran1[0] == "Xinyan" || ran1[0] == "Yoimiya"){
           document.querySelector("img.element.f").style.cssText = "opacity: 1;";
           document.getElementById("elementf").src = "../image/Element/Pyro.png";
@@ -1706,7 +1774,7 @@ function start_random(){
     }
     if (i == 7) {
       if (ran1[0] == "Yaoyao" || ran1[0] == "Nahida" || ran1[0] == "Tighnari" || 
-        ran1[0] == "Alhaitham" || ran1[0] == "Collei"){
+        ran1[0] == "Alhaitham" || ran1[0] == "Collei" || ran1[0] == "Baizhu" || ran1[0] == "Kaveh"){
           document.querySelector("img.element.f").style.cssText = "opacity: 1;";
           document.getElementById("elementf").src = "../image/Element/Dendro.png";
       }
@@ -1718,7 +1786,7 @@ function start_random(){
   for(var i = 1 ; i < 8; i++){
     
     if (i == 1) {
-      if (ran2[0] == "Layla" || ran2[0] == "Shenhe" || ran2[0] == "Aloy" || ran2[0] == "Ayaka" || ran2[0] == "Eula" || 
+      if (ran2[0] == "Layla" || ran2[0] == "Shenhe" || ran2[0] == "Aloy" || ran2[0] == "Ayaka" || ran2[0] == "Eula" || ran2[0] == "Mika" ||
       ran2[0] == "Rosaria" || ran2[0] == "Ganyu" || ran2[0] == "Diona" || ran2[0] == "Kaeya" || ran2[0] == "Qiqi" || ran2[0] == "Chongyun"){
         document.querySelector("img.element.s").style.cssText = "opacity: 1;";
         document.getElementById("elements").src = "../image/Element/Cryo.png";
@@ -1746,7 +1814,7 @@ function start_random(){
       }
     }
     if (i == 5) {
-      if (ran2[0] == "Amber" || ran2[0] == "Diluc" || ran2[0] == "Klee" || ran2[0] == "Xiangling" || ran2[0] == "Yanfei" ||
+      if (ran2[0] == "Amber" || ran2[0] == "Dehya" || ran2[0] == "Diluc" || ran2[0] == "Klee" || ran2[0] == "Xiangling" || ran2[0] == "Yanfei" ||
       ran2[0] == "Bennett" || ran2[0] == "Hutao" || ran2[0] == "Thoma" || ran2[0] == "Xinyan" || ran2[0] == "Yoimiya"){
         document.querySelector("img.element.s").style.cssText = "opacity: 1;";
         document.getElementById("elements").src = "../image/Element/Pyro.png";
@@ -1761,7 +1829,7 @@ function start_random(){
     }
     if (i == 7) {
       if (ran2[0] == "Yaoyao" || ran2[0] == "Nahida" || ran2[0] == "Tighnari" || 
-      ran2[0] == "Alhaitham" || ran2[0] == "Collei"){
+      ran2[0] == "Alhaitham" || ran2[0] == "Collei" || ran2[0] == "Baizhu" || ran2[0] == "Kaveh"){
         document.querySelector("img.element.s").style.cssText = "opacity: 1;";
         document.getElementById("elements").src = "../image/Element/Dendro.png";
       }
@@ -1773,7 +1841,7 @@ function start_random(){
   for(var i = 1 ; i < 8; i++){
       
     if (i == 1) {
-      if (ran3[0] == "Layla" || ran3[0] == "Shenhe" || ran3[0] == "Aloy" || ran3[0] == "Ayaka" || ran3[0] == "Eula" || 
+      if (ran3[0] == "Layla" || ran3[0] == "Shenhe" || ran3[0] == "Aloy" || ran3[0] == "Ayaka" || ran3[0] == "Eula" || ran3[0] == "Mika" ||
       ran3[0] == "Rosaria" || ran3[0] == "Ganyu" || ran3[0] == "Diona" || ran3[0] == "Kaeya" || ran3[0] == "Qiqi" || ran3[0] == "Chongyun"){
         document.querySelector("img.element.th").style.cssText = "opacity: 1;";
         document.getElementById("elementth").src = "../image/Element/Cryo.png";
@@ -1801,7 +1869,7 @@ function start_random(){
       }
     }
     if (i == 5) {
-      if (ran3[0] == "Amber" || ran3[0] == "Diluc" || ran3[0] == "Klee" || ran3[0] == "Xiangling" || ran3[0] == "Yanfei" ||
+      if (ran3[0] == "Amber" || ran3[0] == "Dehya" || ran3[0] == "Diluc" || ran3[0] == "Klee" || ran3[0] == "Xiangling" || ran3[0] == "Yanfei" ||
       ran3[0] == "Bennett" || ran3[0] == "Hutao" || ran3[0] == "Thoma" || ran3[0] == "Xinyan" || ran3[0] == "Yoimiya"){
         document.querySelector("img.element.th").style.cssText = "opacity: 1;";
         document.getElementById("elementth").src = "../image/Element/Pyro.png";
@@ -1817,7 +1885,7 @@ function start_random(){
 
     if (i == 7) {
       if (ran3[0] == "Yaoyao" || ran3[0] == "Nahida" || ran3[0] == "Tighnari" || 
-      ran3[0] == "Alhaitham" || ran3[0] == "Collei"){
+      ran3[0] == "Alhaitham" || ran3[0] == "Collei" || ran3[0] == "Baizhu" || ran3[0] == "Kaveh"){
         document.querySelector("img.element.th").style.cssText = "opacity: 1;";
         document.getElementById("elementth").src = "../image/Element/Dendro.png";
       }
@@ -1828,7 +1896,7 @@ function start_random(){
   for(var i = 1 ; i < 8; i++){
       
     if (i == 1) {
-      if (ran4[0] == "Layla" || ran4[0] == "Shenhe" || ran4[0] == "Aloy" || ran4[0] == "Ayaka" || ran4[0] == "Eula" || 
+      if (ran4[0] == "Layla" || ran4[0] == "Shenhe" || ran4[0] == "Aloy" || ran4[0] == "Ayaka" || ran4[0] == "Eula" || ran4[0] == "Mika" ||
       ran4[0] == "Rosaria" || ran4[0] == "Ganyu" || ran4[0] == "Diona" || ran4[0] == "Kaeya" || ran4[0] == "Qiqi" || ran4[0] == "Chongyun"){
         document.querySelector("img.element.fth").style.cssText = "opacity: 1;";
         document.getElementById("elementfth").src = "../image/Element/Cryo.png";
@@ -1856,7 +1924,7 @@ function start_random(){
       }
     }
     if (i == 5) {
-      if (ran4[0] == "Amber" || ran4[0] == "Diluc" || ran4[0] == "Klee" || ran4[0] == "Xiangling" || ran4[0] == "Yanfei" ||
+      if (ran4[0] == "Amber" || ran4[0] == "Dehya" || ran4[0] == "Diluc" || ran4[0] == "Klee" || ran4[0] == "Xiangling" || ran4[0] == "Yanfei" ||
       ran4[0] == "Bennett" || ran4[0] == "Hutao" || ran4[0] == "Thoma" || ran4[0] == "Xinyan" || ran4[0] == "Yoimiya"){
         document.querySelector("img.element.fth").style.cssText = "opacity: 1;";
         document.getElementById("elementfth").src = "../image/Element/Pyro.png";
@@ -1872,7 +1940,7 @@ function start_random(){
 
     if (i == 7) {
       if (ran4[0] == "Yaoyao" || ran4[0] == "Nahida" || ran4[0] == "Tighnari" || 
-      ran4[0] == "Alhaitham" || ran4[0] == "Collei"){
+      ran4[0] == "Alhaitham" || ran4[0] == "Collei" || ran4[0] == "Baizhu" || ran4[0] == "Kaveh"){
         document.querySelector("img.element.fth").style.cssText = "opacity: 1;";
         document.getElementById("elementfth").src = "../image/Element/Dendro.png";
       }
@@ -1884,25 +1952,25 @@ function start_random(){
 
     if (i == 1){
 
-      if(ran1[0] == "Yaoyao" || ran1[0] == "Dori" || ran1[0] == "Heizou" || ran1[0] == "Sayu" || ran1[0] == "Diona" || ran1[0] == "Ningguang" || ran1[0] == "Noelle" || 
+      if(ran1[0] == "Yaoyao" || ran1[0] == "Dori" || ran1[0] == "Heizou" || ran1[0] == "Sayu" || ran1[0] == "Diona" || ran1[0] == "Ningguang" || ran1[0] == "Noelle" || ran1[0] == "Kaveh" || ran1[0] == "Mika" || 
       ran1[0] == "Faruzan" || ran1[0] == "Collei" || ran1[0] == "Thoma" || ran1[0] == "Yanfei" || ran1[0] == "Chongyun" || ran1[0] == "Beidou" || ran1[0] == "Bennett" || ran1[0] == "Kaeya" || 
       ran1[0] == "Layla" || ran1[0] == "Yunjin" || ran1[0] == "Gorou" || ran1[0] == "Rosaria" || ran1[0] == "Xingqiu" || ran1[0] == "Sucrose" || ran1[0] == "Razor" || ran1[0] == "Lisa" || 
       ran1[0] == "Candace" || ran1[0] == "Kuki_Shinobu" || ran1[0] == "Kujou_Sara" || ran1[0] == "Xinyan" || ran1[0] == "Xiangling" || ran1[0] == "Fischl" || ran1[0] == "Barbara" || ran1[0] == "Amber"){
         document.querySelector(".random .bg.f").style.cssText = "background-image: url(../image/Character/bg/Background_Item_4_Star.png);";
       }
-      if(ran2[0] == "Yaoyao" || ran2[0] == "Dori" || ran2[0] == "Heizou" || ran2[0] == "Sayu" || ran2[0] == "Diona" || ran2[0] == "Ningguang" || ran2[0] == "Noelle" || 
+      if(ran2[0] == "Yaoyao" || ran2[0] == "Dori" || ran2[0] == "Heizou" || ran2[0] == "Sayu" || ran2[0] == "Diona" || ran2[0] == "Ningguang" || ran2[0] == "Noelle" || ran2[0] == "Kaveh" || ran2[0] == "Mika" || 
       ran2[0] == "Faruzan" || ran2[0] == "Collei" || ran2[0] == "Thoma" || ran2[0] == "Yanfei" || ran2[0] == "Chongyun" || ran2[0] == "Beidou" || ran2[0] == "Bennett" || ran2[0] == "Kaeya" || 
       ran2[0] == "Layla" || ran2[0] == "Yunjin" || ran2[0] == "Gorou" || ran2[0] == "Rosaria" || ran2[0] == "Xingqiu" || ran2[0] == "Sucrose" || ran2[0] == "Razor" || ran2[0] == "Lisa" || 
       ran2[0] == "Candace" || ran2[0] == "Kuki_Shinobu" || ran2[0] == "Kujou_Sara" || ran2[0] == "Xinyan" || ran2[0] == "Xiangling" || ran2[0] == "Fischl" || ran2[0] == "Barbara" || ran2[0] == "Amber"){
         document.querySelector(".random .bg.s").style.cssText = "background-image: url(../image/Character/bg/Background_Item_4_Star.png);";
       }
-      if(ran3[0] == "Yaoyao" || ran3[0] == "Dori" || ran3[0] == "Heizou" || ran3[0] == "Sayu" || ran3[0] == "Diona" || ran3[0] == "Ningguang" || ran3[0] == "Noelle" || 
+      if(ran3[0] == "Yaoyao" || ran3[0] == "Dori" || ran3[0] == "Heizou" || ran3[0] == "Sayu" || ran3[0] == "Diona" || ran3[0] == "Ningguang" || ran3[0] == "Noelle" || ran3[0] == "Kaveh" || ran3[0] == "Mika" || 
       ran3[0] == "Faruzan" || ran3[0] == "Collei" || ran3[0] == "Thoma" || ran3[0] == "Yanfei" || ran3[0] == "Chongyun" || ran3[0] == "Beidou" || ran3[0] == "Bennett" || ran3[0] == "Kaeya" || 
       ran3[0] == "Layla" || ran3[0] == "Yunjin" || ran3[0] == "Gorou" || ran3[0] == "Rosaria" || ran3[0] == "Xingqiu" || ran3[0] == "Sucrose" || ran3[0] == "Razor" || ran3[0] == "Lisa" || 
       ran3[0] == "Candace" || ran3[0] == "Kuki_Shinobu" || ran3[0] == "Kujou_Sara" || ran3[0] == "Xinyan" || ran3[0] == "Xiangling" || ran3[0] == "Fischl" || ran3[0] == "Barbara" || ran3[0] == "Amber"){
         document.querySelector(".random .bg.th").style.cssText = "background-image: url(../image/Character/bg/Background_Item_4_Star.png);";
       }
-      if(ran4[0] == "Yaoyao" || ran4[0] == "Dori" || ran4[0] == "Heizou" || ran4[0] == "Sayu" || ran4[0] == "Diona" || ran4[0] == "Ningguang" || ran4[0] == "Noelle" || 
+      if(ran4[0] == "Yaoyao" || ran4[0] == "Dori" || ran4[0] == "Heizou" || ran4[0] == "Sayu" || ran4[0] == "Diona" || ran4[0] == "Ningguang" || ran4[0] == "Noelle" || ran4[0] == "Kaveh" || ran4[0] == "Mika" || 
       ran4[0] == "Faruzan" || ran4[0] == "Collei" || ran4[0] == "Thoma" || ran4[0] == "Yanfei" || ran4[0] == "Chongyun" || ran4[0] == "Beidou" || ran4[0] == "Bennett" || ran4[0] == "Kaeya" || 
       ran4[0] == "Layla" || ran4[0] == "Yunjin" || ran4[0] == "Gorou" || ran4[0] == "Rosaria" || ran4[0] == "Xingqiu" || ran4[0] == "Sucrose" || ran4[0] == "Razor" || ran4[0] == "Lisa" || 
       ran4[0] == "Candace" || ran4[0] == "Kuki_Shinobu" || ran4[0] == "Kujou_Sara" || ran4[0] == "Xinyan" || ran4[0] == "Xiangling" || ran4[0] == "Fischl" || ran4[0] == "Barbara" || ran4[0] == "Amber"){
@@ -1912,22 +1980,22 @@ function start_random(){
 
     if (i == 2){
 
-      if (ran1[0] == "Albedo" || ran1[0] == "Ayaka" || ran1[0] == "Diluc" || ran1[0] == "Hutao" || ran1[0] == "Kazuha" || ran1[0] == "Kokomi" || ran1[0] == "Nilou" || ran1[0] == "Shenhe" || ran1[0] == "Venti" || 
+      if (ran1[0] == "Albedo" || ran1[0] == "Ayaka" || ran1[0] == "Diluc" || ran1[0] == "Hutao" || ran1[0] == "Kazuha" || ran1[0] == "Kokomi" || ran1[0] == "Nilou" || ran1[0] == "Shenhe" || ran1[0] == "Venti" || ran1[0] == "Baizhu" || ran1[0] == "Dehya" || 
       ran1[0] == "Alhaitham" || ran1[0] == "Ayato" || ran1[0] == "Eula" || ran1[0] == "Arataki_Itto" || ran1[0] == "Keqing" || ran1[0] == "Mona" || ran1[0] == "Qiqi" || ran1[0] == "Tartaglia" || ran1[0] == "Wanderer" || ran1[0] == "Yelan" || ran1[0] == "Yoimiya" || 
       ran1[0] == "Aloy" || ran1[0] == "Cyno" || ran1[0] == "Ganyu" || ran1[0] == "Jean" || ran1[0] == "Klee" || ran1[0] == "Nahida" || ran1[0] == "Raiden" || ran1[0] == "Tighnari" || ran1[0] == "Xiao" || ran1[0] == "Yae_miko" || ran1[0] == "Zhongli"){
         document.querySelector(".random .bg.f").style.cssText = "background-image: url(../image/Character/bg/Background_Item_5_Star.png);";
       }
-      if (ran2[0] == "Albedo" || ran2[0] == "Ayaka" || ran2[0] == "Diluc" || ran2[0] == "Hutao" || ran2[0] == "Kazuha" || ran2[0] == "Kokomi" || ran2[0] == "Nilou" || ran2[0] == "Shenhe" || ran2[0] == "Venti" || 
+      if (ran2[0] == "Albedo" || ran2[0] == "Ayaka" || ran2[0] == "Diluc" || ran2[0] == "Hutao" || ran2[0] == "Kazuha" || ran2[0] == "Kokomi" || ran2[0] == "Nilou" || ran2[0] == "Shenhe" || ran2[0] == "Venti" || ran2[0] == "Baizhu" || ran2[0] == "Dehya" ||
       ran2[0] == "Alhaitham" || ran2[0] == "Ayato" || ran2[0] == "Eula" || ran2[0] == "Arataki_Itto" || ran2[0] == "Keqing" || ran2[0] == "Mona" || ran2[0] == "Qiqi" || ran2[0] == "Tartaglia" || ran2[0] == "Wanderer" || ran2[0] == "Yelan" || ran2[0] == "Yoimiya" || 
       ran2[0] == "Aloy" || ran2[0] == "Cyno" || ran2[0] == "Ganyu" || ran2[0] == "Jean" || ran2[0] == "Klee" || ran2[0] == "Nahida" || ran2[0] == "Raiden" || ran2[0] == "Tighnari" || ran2[0] == "Xiao" || ran2[0] == "Yae_miko" || ran2[0] == "Zhongli"){
         document.querySelector(".random .bg.s").style.cssText = "background-image: url(../image/Character/bg/Background_Item_5_Star.png);";
       }
-      if (ran3[0] == "Albedo" || ran3[0] == "Ayaka" || ran3[0] == "Diluc" || ran3[0] == "Hutao" || ran3[0] == "Kazuha" || ran3[0] == "Kokomi" || ran3[0] == "Nilou" || ran3[0] == "Shenhe" || ran3[0] == "Venti" || 
+      if (ran3[0] == "Albedo" || ran3[0] == "Ayaka" || ran3[0] == "Diluc" || ran3[0] == "Hutao" || ran3[0] == "Kazuha" || ran3[0] == "Kokomi" || ran3[0] == "Nilou" || ran3[0] == "Shenhe" || ran3[0] == "Venti" || ran3[0] == "Baizhu" || ran3[0] == "Dehya" ||
       ran3[0] == "Alhaitham" || ran3[0] == "Ayato" || ran3[0] == "Eula" || ran3[0] == "Arataki_Itto" || ran3[0] == "Keqing" || ran3[0] == "Mona" || ran3[0] == "Qiqi" || ran3[0] == "Tartaglia" || ran3[0] == "Wanderer" || ran3[0] == "Yelan" || ran3[0] == "Yoimiya" || 
       ran3[0] == "Aloy" || ran3[0] == "Cyno" || ran3[0] == "Ganyu" || ran3[0] == "Jean" || ran3[0] == "Klee" || ran3[0] == "Nahida" || ran3[0] == "Raiden" || ran3[0] == "Tighnari" || ran3[0] == "Xiao" || ran3[0] == "Yae_miko" || ran3[0] == "Zhongli"){
         document.querySelector(".random .bg.th").style.cssText = "background-image: url(../image/Character/bg/Background_Item_5_Star.png);";
       }
-      if (ran4[0] == "Albedo" || ran4[0] == "Ayaka" || ran4[0] == "Diluc" || ran4[0] == "Hutao" || ran4[0] == "Kazuha" || ran4[0] == "Kokomi" || ran4[0] == "Nilou" || ran4[0] == "Shenhe" || ran4[0] == "Venti" || 
+      if (ran4[0] == "Albedo" || ran4[0] == "Ayaka" || ran4[0] == "Diluc" || ran4[0] == "Hutao" || ran4[0] == "Kazuha" || ran4[0] == "Kokomi" || ran4[0] == "Nilou" || ran4[0] == "Shenhe" || ran4[0] == "Venti" || ran4[0] == "Baizhu" || ran4[0] == "Dehya" ||
       ran4[0] == "Alhaitham" || ran4[0] == "Ayato" || ran4[0] == "Eula" || ran4[0] == "Arataki_Itto" || ran4[0] == "Keqing" || ran4[0] == "Mona" || ran4[0] == "Qiqi" || ran4[0] == "Tartaglia" || ran4[0] == "Wanderer" || ran4[0] == "Yelan" || ran4[0] == "Yoimiya" || 
       ran4[0] == "Aloy" || ran4[0] == "Cyno" || ran4[0] == "Ganyu" || ran4[0] == "Jean" || ran4[0] == "Klee" || ran4[0] == "Nahida" || ran4[0] == "Raiden" || ran4[0] == "Tighnari" || ran4[0] == "Xiao" || ran4[0] == "Yae_miko" || ran4[0] == "Zhongli"){
         document.querySelector(".random .bg.fth").style.cssText = "background-image: url(../image/Character/bg/Background_Item_5_Star.png);";
@@ -1956,6 +2024,7 @@ function selectcharall(){
   count_Aloy = true;
   count_Amber = true;
   count_Arataki_Itto = true;
+  count_Baizhu = true;
   count_Barbara = true;
   count_Beidou = true;
   count_Bennett = true;
@@ -1963,6 +2032,7 @@ function selectcharall(){
   count_Chongyun = true;
   count_Collei = true;
   count_Cyno = true;
+  count_Dehya = true;
   count_Diluc = true;
   count_Diona = true;
   count_Dori = true;
@@ -1974,6 +2044,7 @@ function selectcharall(){
   count_Hutao = true;
   count_Jean = true;
   count_Kaeya = true;
+  count_Kaveh = true;
   count_Ayaka = true;
   count_Ayato = true;
   count_Kazuha = true;
@@ -1983,6 +2054,7 @@ function selectcharall(){
   count_Kuki_Shinobu = true;
   count_Layla = true;
   count_Lisa = true;
+  count_Mika = true;
   count_Mona = true;
   count_Nahida = true;
   ount_Nilou = true;
@@ -2020,6 +2092,7 @@ function selectcharall(){
   document.querySelector(".char .Aloy .box").style.cssText = Borders
   document.querySelector(".char .Amber .box").style.cssText = Borders
   document.querySelector(".char .Arataki_Itto .box").style.cssText = Borders
+  document.querySelector(".char .Baizhu .box").style.cssText = Borders
   document.querySelector(".char .Candace .box").style.cssText = Borders
   document.querySelector(".char .Beidou .box").style.cssText = Borders
   document.querySelector(".char .Bennett .box").style.cssText = Borders
@@ -2028,6 +2101,7 @@ function selectcharall(){
   document.querySelector(".char .Chongyun .box").style.cssText = Borders
   document.querySelector(".char .Collei .box").style.cssText = Borders
   document.querySelector(".char .Cyno .box").style.cssText = Borders
+  document.querySelector(".char .Dehya .box").style.cssText = Borders
   document.querySelector(".char .Diluc .box").style.cssText = Borders
   document.querySelector(".char .Diona .box").style.cssText = Borders
   document.querySelector(".char .Dori .box").style.cssText = Borders
@@ -2039,6 +2113,7 @@ function selectcharall(){
   document.querySelector(".char .Hutao .box").style.cssText = Borders
   document.querySelector(".char .Jean .box").style.cssText = Borders
   document.querySelector(".char .Kaeya .box").style.cssText = Borders
+  document.querySelector(".char .Kaveh .box").style.cssText = Borders
   document.querySelector(".char .Ayaka .box").style.cssText = Borders
   document.querySelector(".char .Ayato .box").style.cssText = Borders
   document.querySelector(".char .Kazuha .box").style.cssText = Borders
@@ -2048,6 +2123,7 @@ function selectcharall(){
   document.querySelector(".char .Kuki_Shinobu .box").style.cssText = Borders
   document.querySelector(".char .Layla .box").style.cssText = Borders
   document.querySelector(".char .Lisa .box").style.cssText = Borders
+  document.querySelector(".char .Mika .box").style.cssText = Borders
   document.querySelector(".char .Mona .box").style.cssText = Borders
   document.querySelector(".char .Nahida .box").style.cssText = Borders
   document.querySelector(".char .Nilou .box").style.cssText = Borders
@@ -2079,12 +2155,16 @@ function selectcharall(){
   document.querySelector(".char .Yunjin .box").style.cssText = Borders
   document.querySelector(".char .Zhongli .box").style.cssText = Borders
 
+  Character.length = 0;
+  Character.splice(0,Character.length);
+
   Character[Character.length] = "Aether";
   Character[Character.length] = "Albedo";
   Character[Character.length] = "Alhaitham";
   Character[Character.length] = "Aloy";
   Character[Character.length] = "Amber";
   Character[Character.length] = "Arataki_Itto";
+  Character[Character.length] = "Baizhu";
   Character[Character.length] = "Barbara";
   Character[Character.length] = "Beidou";
   Character[Character.length] = "Bennett";
@@ -2092,6 +2172,7 @@ function selectcharall(){
   Character[Character.length] = "Chongyun";
   Character[Character.length] = "Collei";
   Character[Character.length] = "Cyno";
+  Character[Character.length] = "Dehya";
   Character[Character.length] = "Diluc";
   Character[Character.length] = "Diona";
   Character[Character.length] = "Dori";
@@ -2103,6 +2184,7 @@ function selectcharall(){
   Character[Character.length] = "Hutao";
   Character[Character.length] = "Jean";
   Character[Character.length] = "Kaeya";
+  Character[Character.length] = "Kaveh";
   Character[Character.length] = "Ayaka";
   Character[Character.length] = "Ayato";
   Character[Character.length] = "Kazuha";
@@ -2112,6 +2194,7 @@ function selectcharall(){
   Character[Character.length] = "Kuki_Shinobu";
   Character[Character.length] = "Layla";
   Character[Character.length] = "Lisa";
+  Character[Character.length] = "Mika";
   Character[Character.length] = "Mona";
   Character[Character.length] = "Nahida";
   Character[Character.length] = "Nilou";
@@ -2152,6 +2235,7 @@ function unselectcharall(){
   count_Aloy = false;
   count_Amber = false;
   count_Arataki_Itto = false;
+  count_Baizhu = false;
   count_Barbara = false;
   count_Beidou = false;
   count_Bennett = false;
@@ -2159,6 +2243,7 @@ function unselectcharall(){
   count_Chongyun = false;
   count_Collei = false;
   count_Cyno = false;
+  count_Dehya = false;
   count_Diluc = false;
   count_Diona = false;
   count_Dori = false;
@@ -2170,6 +2255,7 @@ function unselectcharall(){
   count_Hutao = false;
   count_Jean = false;
   count_Kaeya = false;
+  count_Kaveh = false;
   count_Ayaka = false;
   count_Ayato = false;
   count_Kazuha = false;
@@ -2179,6 +2265,7 @@ function unselectcharall(){
   count_Kuki_Shinobu = false;
   count_Layla = false;
   count_Lisa = false;
+  count_Mika = false;
   count_Mona = false;
   count_Nahida = false;
   ount_Nilou = false;
@@ -2216,6 +2303,7 @@ function unselectcharall(){
   document.querySelector(".char .Aloy .box").style.cssText = "";
   document.querySelector(".char .Amber .box").style.cssText = "";
   document.querySelector(".char .Arataki_Itto .box").style.cssText = "";
+  document.querySelector(".char .Baizhu .box").style.cssText = ""
   document.querySelector(".char .Barbara .box").style.cssText = "";
   document.querySelector(".char .Candace .box").style.cssText = "";
   document.querySelector(".char .Beidou .box").style.cssText = "";
@@ -2224,6 +2312,7 @@ function unselectcharall(){
   document.querySelector(".char .Chongyun .box").style.cssText = "";
   document.querySelector(".char .Collei .box").style.cssText = "";
   document.querySelector(".char .Cyno .box").style.cssText = "";
+  document.querySelector(".char .Dehya .box").style.cssText = "";
   document.querySelector(".char .Diluc .box").style.cssText = "";
   document.querySelector(".char .Diona .box").style.cssText = "";
   document.querySelector(".char .Dori .box").style.cssText = "";
@@ -2235,6 +2324,7 @@ function unselectcharall(){
   document.querySelector(".char .Hutao .box").style.cssText = "";
   document.querySelector(".char .Jean .box").style.cssText = "";
   document.querySelector(".char .Kaeya .box").style.cssText = "";
+  document.querySelector(".char .Kaveh .box").style.cssText = "";
   document.querySelector(".char .Ayaka .box").style.cssText = "";
   document.querySelector(".char .Ayato .box").style.cssText = "";
   document.querySelector(".char .Kazuha .box").style.cssText = "";
@@ -2244,6 +2334,7 @@ function unselectcharall(){
   document.querySelector(".char .Kuki_Shinobu .box").style.cssText = "";
   document.querySelector(".char .Layla .box").style.cssText = "";
   document.querySelector(".char .Lisa .box").style.cssText = "";
+  document.querySelector(".char .Mika .box").style.cssText = "";
   document.querySelector(".char .Mona .box").style.cssText = "";
   document.querySelector(".char .Nahida .box").style.cssText = "";
   document.querySelector(".char .Nilou .box").style.cssText = "";
@@ -2409,6 +2500,9 @@ function selectbossall(){
   document.querySelector(".boss.La_Signora.box").style.cssText = Borders;
   document.querySelector(".boss.Magatsu_Mitake.box").style.cssText = Borders;
   document.querySelector(".boss.Shouki_no_Kami.box").style.cssText = Borders;
+
+  Boss.length = 0;
+  Boss.splice(0,Boss.length);
 
   Boss[Boss.length] = "Anemo_Hypotasis";
   Boss[Boss.length] = "Cryo_Hypotasis";
