@@ -1654,6 +1654,7 @@ function select_Shouki_no_Kami() {
   }
 }
 
+const Elements = ["Anemo","Dendro","Electro","Geo"];
 
 function start_random(){
 
@@ -1666,30 +1667,18 @@ function start_random(){
     return
   }
 
-  for(var i = 0; i<1; i++){
-    var ran1 = Character.splice(Math.floor(Math.random()*Character.length), 1);
-  }
-  for(var i = 0; i<1; i++){
-    var ran2 = Character.splice(Math.floor(Math.random()*Character.length), 1);
-  }
-  for(var i = 0; i<1; i++){
-    var ran3 = Character.splice(Math.floor(Math.random()*Character.length), 1);
-  }
-  for(var i = 0; i<1; i++){
-    var ran4 = Character.splice(Math.floor(Math.random()*Character.length), 1);
-  }
-  for(var i = 0; i<1; i++){
-    var ranboss = Boss.splice(Math.floor(Math.random()*Boss.length), 1);
-  }
-  
-  
+  var ran1 = Character.splice(Math.floor(Math.random()*Character.length), 1);
+  var ran2 = Character.splice(Math.floor(Math.random()*Character.length), 1);
+  var ran3 = Character.splice(Math.floor(Math.random()*Character.length), 1);
+  var ran4 = Character.splice(Math.floor(Math.random()*Character.length), 1);
+  var ranboss = Boss.splice(Math.floor(Math.random()*Boss.length), 1);
+  var Element = Elements.splice(Math.floor(Math.random()*Elements.length), 1);
+
   document.querySelector(".start_random").style.cssText = "display: none;"
   document.querySelector(".section_random").style.cssText = "display: ;"
   document.querySelector(".return").style.cssText = "display: ;"
   document.querySelector(".random_again").style.cssText = "display: ;"
   document.querySelector(".random").style.cssText = "pointer-events: none;"
-
-
 
   document.getElementById("charf").src = `image/Character/all/${ran1[0]}.png`;
   document.getElementById("chars").src = `image/Character/all/${ran2[0]}.png`;
@@ -1697,308 +1686,200 @@ function start_random(){
   document.getElementById("charfth").src = `image/Character/all/${ran4[0]}.png`;
   document.getElementById("bossf").src = `image/Boss/${ranboss[0]}.png`;
 
-  
   if (ran1[0] == "Aether"){
     document.getElementById("elementf").src = "";
     document.querySelector(".random .bg.f").style.cssText = "background-image: url(image/Character/bg/Background_Item_5_Star.png);";
-    document.querySelector("img.element.f").style.cssText = "opacity: 0;";
+    document.getElementById("elementf").src = `image/Element/${Element[0]}.png`;
   }
   if (ran2[0] == "Aether"){
     document.getElementById("elements").src = "";
     document.querySelector(".random .bg.s").style.cssText = "background-image: url(image/Character/bg/Background_Item_5_Star.png);";
-    document.querySelector("img.element.s").style.cssText = "opacity: 0;";
+    document.getElementById("elements").src = `image/Element/${Element[0]}.png`;
   }
   if (ran3[0] == "Aether"){
     document.getElementById("elementth").src = "";
     document.querySelector(".random .bg.th").style.cssText = "background-image: url(image/Character/bg/Background_Item_5_Star.png);";
-    document.querySelector("img.element.th").style.cssText = "opacity: 0;";
+    document.getElementById("elementth").src = `image/Element/${Element[0]}.png`;
   }
   if (ran4[0] == "Aether"){
     document.getElementById("elementfth").src = "";
     document.querySelector(".random .bg.fth").style.cssText = "background-image: url(image/Character/bg/Background_Item_5_Star.png);";
-    document.querySelector("img.element.fth").style.cssText = "opacity: 0;";
+    document.getElementById("elementfth").src = `image/Element/${Element[0]}.png`;
   }
-
-  //document.querySelector("img.element.f").style.cssText = "opacity: 1;";
-  //document.querySelector("img.element.s").style.cssText = "opacity: 1;";
-  //document.querySelector("img.element.th").style.cssText = "opacity: 1;";
-  //document.querySelector("img.element.fth").style.cssText = "opacity: 1;";
-
 
   //First Random Character
-  for(var i = 1 ; i < 8; i++){
-
-    if (i == 1) {
-      if (ran1[0] == "Layla" || ran1[0] == "Shenhe" || ran1[0] == "Aloy" || ran1[0] == "Ayaka" || ran1[0] == "Eula" || ran1[0] == "Mika" || 
-        ran1[0] == "Rosaria" || ran1[0] == "Ganyu" || ran1[0] == "Diona" || ran1[0] == "Kaeya" || ran1[0] == "Qiqi" || ran1[0] == "Chongyun"){
-          document.querySelector("img.element.f").style.cssText = "opacity: 1;";
-          document.getElementById("elementf").src = "image/Element/Cryo.png";
-      }
-    }
-    if (i == 2) {
-      if (ran1[0] == "Faruzan" || ran1[0] == "Jean" || ran1[0] == "Kazuha" || ran1[0] == "Sayu" || ran1[0] == "Heizou" ||
-        ran1[0] == "Sucrose" || ran1[0] == "Venti" || ran1[0] == "Wanderer" || ran1[0] == "Xiao"){
-          document.querySelector("img.element.f").style.cssText = "opacity: 1;";  
-          document.getElementById("elementf").src = "image/Element/Anemo.png";
-      }
-    }
-    if (i == 3) {
-      if (ran1[0] == "Beidou" || ran1[0] == "Dori" || ran1[0] == "Keqing" || ran1[0] == "Kuki_Shinobu" || ran1[0] == "Raiden" ||
-        ran1[0] == "Cyno" || ran1[0] == "Fischl" || ran1[0] == "Kujou_Sara" || ran1[0] == "Lisa" || ran1[0] == "Razor" || ran1[0] == "Yae_miko"){
-          document.querySelector("img.element.f").style.cssText = "opacity: 1;";
-          document.getElementById("elementf").src = "image/Element/Electro.png";
-      }
-    }
-    if (i == 4) {
-      if (ran1[0] == "Barbara" || ran1[0] == "Ayato" || ran1[0] == "Nilou" || ran1[0] == "Tartaglia" || ran1[0] == "Yelan" ||
-        ran1[0] == "Candace" || ran1[0] == "Mona" || ran1[0] == "Kokomi" || ran1[0] == "Xingqiu"){
-          document.querySelector("img.element.f").style.cssText = "opacity: 1;";
-          document.getElementById("elementf").src = "image/Element/Hydro.png";
-      }
-    }
-    if (i == 5) {
-      if (ran1[0] == "Amber" || ran1[0] == "Dehya" || ran1[0] == "Diluc" || ran1[0] == "Klee" || ran1[0] == "Xiangling" || ran1[0] == "Yanfei" ||
-        ran1[0] == "Bennett" || ran1[0] == "Hutao" || ran1[0] == "Thoma" || ran1[0] == "Xinyan" || ran1[0] == "Yoimiya"){
-          document.querySelector("img.element.f").style.cssText = "opacity: 1;";
-          document.getElementById("elementf").src = "image/Element/Pyro.png";
-      }
-    }
-    if (i == 6) {
-      if (ran1[0] == "Yunjin" || ran1[0] == "Arataki_Itto" || ran1[0] == "Noelle" || ran1[0] == "Albedo" ||
-        ran1[0] == "Gorou" || ran1[0] == "Zhongli" || ran1[0] == "Ningguang"){
-          document.querySelector("img.element.f").style.cssText = "opacity: 1;";
-          document.getElementById("elementf").src = "image/Element/Geo.png";
-      }
-    }
-    if (i == 7) {
-      if (ran1[0] == "Yaoyao" || ran1[0] == "Nahida" || ran1[0] == "Tighnari" || 
-        ran1[0] == "Alhaitham" || ran1[0] == "Collei" || ran1[0] == "Baizhu" || ran1[0] == "Kaveh"){
-          document.querySelector("img.element.f").style.cssText = "opacity: 1;";
-          document.getElementById("elementf").src = "image/Element/Dendro.png";
-      }
-    }
+  if (ran1[0] == "Layla" || ran1[0] == "Shenhe" || ran1[0] == "Aloy" || ran1[0] == "Ayaka" || ran1[0] == "Eula" || ran1[0] == "Mika" || 
+      ran1[0] == "Rosaria" || ran1[0] == "Ganyu" || ran1[0] == "Diona" || ran1[0] == "Kaeya" || ran1[0] == "Qiqi" || ran1[0] == "Chongyun"){
+    document.getElementById("elementf").src = "image/Element/Cryo.png";
   }
-
-
-  //Second Random Character
-  for(var i = 1 ; i < 8; i++){
-    
-    if (i == 1) {
-      if (ran2[0] == "Layla" || ran2[0] == "Shenhe" || ran2[0] == "Aloy" || ran2[0] == "Ayaka" || ran2[0] == "Eula" || ran2[0] == "Mika" ||
+  if (ran1[0] == "Faruzan" || ran1[0] == "Jean" || ran1[0] == "Kazuha" || ran1[0] == "Sayu" || ran1[0] == "Heizou" ||
+      ran1[0] == "Sucrose" || ran1[0] == "Venti" || ran1[0] == "Wanderer" || ran1[0] == "Xiao"){
+    document.getElementById("elementf").src = "image/Element/Anemo.png";
+  }
+  if (ran1[0] == "Beidou" || ran1[0] == "Dori" || ran1[0] == "Keqing" || ran1[0] == "Kuki_Shinobu" || ran1[0] == "Raiden" ||
+      ran1[0] == "Cyno" || ran1[0] == "Fischl" || ran1[0] == "Kujou_Sara" || ran1[0] == "Lisa" || ran1[0] == "Razor" || ran1[0] == "Yae_miko"){
+    document.getElementById("elementf").src = "image/Element/Electro.png";
+  }
+  if (ran1[0] == "Barbara" || ran1[0] == "Ayato" || ran1[0] == "Nilou" || ran1[0] == "Tartaglia" || ran1[0] == "Yelan" ||
+      ran1[0] == "Candace" || ran1[0] == "Mona" || ran1[0] == "Kokomi" || ran1[0] == "Xingqiu"){
+    document.getElementById("elementf").src = "image/Element/Hydro.png";
+  }
+  if (ran1[0] == "Amber" || ran1[0] == "Dehya" || ran1[0] == "Diluc" || ran1[0] == "Klee" || ran1[0] == "Xiangling" || ran1[0] == "Yanfei" ||
+      ran1[0] == "Bennett" || ran1[0] == "Hutao" || ran1[0] == "Thoma" || ran1[0] == "Xinyan" || ran1[0] == "Yoimiya"){
+    document.getElementById("elementf").src = "image/Element/Pyro.png";
+  }
+  if (ran1[0] == "Yunjin" || ran1[0] == "Arataki_Itto" || ran1[0] == "Noelle" || ran1[0] == "Albedo" ||
+      ran1[0] == "Gorou" || ran1[0] == "Zhongli" || ran1[0] == "Ningguang"){
+    document.getElementById("elementf").src = "image/Element/Geo.png";
+  }
+  if (ran1[0] == "Yaoyao" || ran1[0] == "Nahida" || ran1[0] == "Tighnari" || 
+      ran1[0] == "Alhaitham" || ran1[0] == "Collei" || ran1[0] == "Baizhu" || ran1[0] == "Kaveh"){
+    document.getElementById("elementf").src = "image/Element/Dendro.png";
+  }
+  
+  //Second Random Character  
+  if (ran2[0] == "Layla" || ran2[0] == "Shenhe" || ran2[0] == "Aloy" || ran2[0] == "Ayaka" || ran2[0] == "Eula" || ran2[0] == "Mika" ||
       ran2[0] == "Rosaria" || ran2[0] == "Ganyu" || ran2[0] == "Diona" || ran2[0] == "Kaeya" || ran2[0] == "Qiqi" || ran2[0] == "Chongyun"){
-        document.querySelector("img.element.s").style.cssText = "opacity: 1;";
-        document.getElementById("elements").src = "image/Element/Cryo.png";
-      }
-    }
-    if (i == 2) {
-      if (ran2[0] == "Faruzan" || ran2[0] == "Jean" || ran2[0] == "Kazuha" || ran2[0] == "Sayu" || ran2[0] == "Heizou" ||
-      ran2[0] == "Sucrose" || ran2[0] == "Venti" || ran2[0] == "Wanderer" || ran2[0] == "Xiao"){
-        document.querySelector("img.element.s").style.cssText = "opacity: 1;";
-        document.getElementById("elements").src = "image/Element/Anemo.png";
-      }
-    }
-    if (i == 3) {
-      if (ran2[0] == "Beidou" || ran2[0] == "Dori" || ran2[0] == "Keqing" || ran2[0] == "Kuki_Shinobu" || ran2[0] == "Raiden" ||
-      ran2[0] == "Cyno" || ran2[0] == "Fischl" || ran2[0] == "Kujou_Sara" || ran2[0] == "Lisa" || ran2[0] == "Razor" || ran2[0] == "Yae_miko"){
-        document.querySelector("img.element.s").style.cssText = "opacity: 1;";
-        document.getElementById("elements").src = "image/Element/Electro.png";
-      }
-    }
-    if (i == 4) {
-      if (ran2[0] == "Barbara" || ran2[0] == "Ayato" || ran2[0] == "Nilou" || ran2[0] == "Tartaglia" || ran2[0] == "Yelan" ||
-      ran2[0] == "Candace" || ran2[0] == "Mona" || ran2[0] == "Kokomi" || ran2[0] == "Xingqiu"){
-        document.querySelector("img.element.s").style.cssText = "opacity: 1;";
-        document.getElementById("elements").src = "image/Element/Hydro.png";
-      }
-    }
-    if (i == 5) {
-      if (ran2[0] == "Amber" || ran2[0] == "Dehya" || ran2[0] == "Diluc" || ran2[0] == "Klee" || ran2[0] == "Xiangling" || ran2[0] == "Yanfei" ||
-      ran2[0] == "Bennett" || ran2[0] == "Hutao" || ran2[0] == "Thoma" || ran2[0] == "Xinyan" || ran2[0] == "Yoimiya"){
-        document.querySelector("img.element.s").style.cssText = "opacity: 1;";
-        document.getElementById("elements").src = "image/Element/Pyro.png";
-      }
-    }
-    if (i == 6) {
-      if (ran2[0] == "Yunjin" || ran2[0] == "Arataki_Itto" || ran2[0] == "Noelle" || ran2[0] == "Albedo" ||
-      ran2[0] == "Gorou" || ran2[0] == "Zhongli" || ran2[0] == "Ningguang"){
-        document.querySelector("img.element.s").style.cssText = "opacity: 1;";
-        document.getElementById("elements").src = "image/Element/Geo.png";
-      }
-    }
-    if (i == 7) {
-      if (ran2[0] == "Yaoyao" || ran2[0] == "Nahida" || ran2[0] == "Tighnari" || 
-      ran2[0] == "Alhaitham" || ran2[0] == "Collei" || ran2[0] == "Baizhu" || ran2[0] == "Kaveh"){
-        document.querySelector("img.element.s").style.cssText = "opacity: 1;";
-        document.getElementById("elements").src = "image/Element/Dendro.png";
-      }
-    }
+    document.querySelector("img.element.s").style.cssText = "opacity: 1;";
+    document.getElementById("elements").src = "image/Element/Cryo.png";
   }
-
+  if (ran2[0] == "Faruzan" || ran2[0] == "Jean" || ran2[0] == "Kazuha" || ran2[0] == "Sayu" || ran2[0] == "Heizou" ||
+      ran2[0] == "Sucrose" || ran2[0] == "Venti" || ran2[0] == "Wanderer" || ran2[0] == "Xiao"){
+    document.querySelector("img.element.s").style.cssText = "opacity: 1;";
+    document.getElementById("elements").src = "image/Element/Anemo.png";
+  }  
+  if (ran2[0] == "Beidou" || ran2[0] == "Dori" || ran2[0] == "Keqing" || ran2[0] == "Kuki_Shinobu" || ran2[0] == "Raiden" ||
+      ran2[0] == "Cyno" || ran2[0] == "Fischl" || ran2[0] == "Kujou_Sara" || ran2[0] == "Lisa" || ran2[0] == "Razor" || ran2[0] == "Yae_miko"){
+    document.querySelector("img.element.s").style.cssText = "opacity: 1;";
+    document.getElementById("elements").src = "image/Element/Electro.png";
+  }
+  if (ran2[0] == "Barbara" || ran2[0] == "Ayato" || ran2[0] == "Nilou" || ran2[0] == "Tartaglia" || ran2[0] == "Yelan" ||
+      ran2[0] == "Candace" || ran2[0] == "Mona" || ran2[0] == "Kokomi" || ran2[0] == "Xingqiu"){
+    document.querySelector("img.element.s").style.cssText = "opacity: 1;";
+    document.getElementById("elements").src = "image/Element/Hydro.png";
+  }
+  if (ran2[0] == "Amber" || ran2[0] == "Dehya" || ran2[0] == "Diluc" || ran2[0] == "Klee" || ran2[0] == "Xiangling" || ran2[0] == "Yanfei" ||
+      ran2[0] == "Bennett" || ran2[0] == "Hutao" || ran2[0] == "Thoma" || ran2[0] == "Xinyan" || ran2[0] == "Yoimiya"){
+    document.querySelector("img.element.s").style.cssText = "opacity: 1;";
+    document.getElementById("elements").src = "image/Element/Pyro.png";
+  }
+  if (ran2[0] == "Yunjin" || ran2[0] == "Arataki_Itto" || ran2[0] == "Noelle" || ran2[0] == "Albedo" ||
+      ran2[0] == "Gorou" || ran2[0] == "Zhongli" || ran2[0] == "Ningguang"){
+    document.querySelector("img.element.s").style.cssText = "opacity: 1;";
+    document.getElementById("elements").src = "image/Element/Geo.png";
+  }
+  if (ran2[0] == "Yaoyao" || ran2[0] == "Nahida" || ran2[0] == "Tighnari" || 
+      ran2[0] == "Alhaitham" || ran2[0] == "Collei" || ran2[0] == "Baizhu" || ran2[0] == "Kaveh"){
+    document.querySelector("img.element.s").style.cssText = "opacity: 1;";
+    document.getElementById("elements").src = "image/Element/Dendro.png";
+  }
 
   //Third Random Character
-  for(var i = 1 ; i < 8; i++){
-      
-    if (i == 1) {
-      if (ran3[0] == "Layla" || ran3[0] == "Shenhe" || ran3[0] == "Aloy" || ran3[0] == "Ayaka" || ran3[0] == "Eula" || ran3[0] == "Mika" ||
+  if (ran3[0] == "Layla" || ran3[0] == "Shenhe" || ran3[0] == "Aloy" || ran3[0] == "Ayaka" || ran3[0] == "Eula" || ran3[0] == "Mika" ||
       ran3[0] == "Rosaria" || ran3[0] == "Ganyu" || ran3[0] == "Diona" || ran3[0] == "Kaeya" || ran3[0] == "Qiqi" || ran3[0] == "Chongyun"){
-        document.querySelector("img.element.th").style.cssText = "opacity: 1;";
-        document.getElementById("elementth").src = "image/Element/Cryo.png";
-      }
-    }
-    if (i == 2) {
-      if (ran3[0] == "Faruzan" || ran3[0] == "Jean" || ran3[0] == "Kazuha" || ran3[0] == "Sayu" || ran3[0] == "Heizou" ||
+    document.getElementById("elementth").src = "image/Element/Cryo.png";
+  }
+  if (ran3[0] == "Faruzan" || ran3[0] == "Jean" || ran3[0] == "Kazuha" || ran3[0] == "Sayu" || ran3[0] == "Heizou" ||
       ran3[0] == "Sucrose" || ran3[0] == "Venti" || ran3[0] == "Wanderer" || ran3[0] == "Xiao"){
-        document.querySelector("img.element.th").style.cssText = "opacity: 1;";
-        document.getElementById("elementth").src = "image/Element/Anemo.png";
-      }
-    }
-    if (i == 3) {
-      if (ran3[0] == "Beidou" || ran3[0] == "Dori" || ran3[0] == "Keqing" || ran3[0] == "Kuki_Shinobu" || ran3[0] == "Raiden" ||
+    document.getElementById("elementth").src = "image/Element/Anemo.png";
+  }
+  if (ran3[0] == "Beidou" || ran3[0] == "Dori" || ran3[0] == "Keqing" || ran3[0] == "Kuki_Shinobu" || ran3[0] == "Raiden" ||
       ran3[0] == "Cyno" || ran3[0] == "Fischl" || ran3[0] == "Kujou_Sara" || ran3[0] == "Lisa" || ran3[0] == "Razor" || ran3[0] == "Yae_miko"){
-        document.querySelector("img.element.th").style.cssText = "opacity: 1;";
-        document.getElementById("elementth").src = "image/Element/Electro.png";
-      }
-    }
-    if (i == 4) {
-      if (ran3[0] == "Barbara" || ran3[0] == "Ayato" || ran3[0] == "Nilou" || ran3[0] == "Tartaglia" || ran3[0] == "Yelan" ||
+    document.getElementById("elementth").src = "image/Element/Electro.png";
+  }
+  if (ran3[0] == "Barbara" || ran3[0] == "Ayato" || ran3[0] == "Nilou" || ran3[0] == "Tartaglia" || ran3[0] == "Yelan" ||
       ran3[0] == "Candace" || ran3[0] == "Mona" || ran3[0] == "Kokomi" || ran3[0] == "Xingqiu"){
-        document.querySelector("img.element.th").style.cssText = "opacity: 1;";
-        document.getElementById("elementth").src = "image/Element/Hydro.png";
-      }
-    }
-    if (i == 5) {
-      if (ran3[0] == "Amber" || ran3[0] == "Dehya" || ran3[0] == "Diluc" || ran3[0] == "Klee" || ran3[0] == "Xiangling" || ran3[0] == "Yanfei" ||
+    document.getElementById("elementth").src = "image/Element/Hydro.png";
+  }
+  if (ran3[0] == "Amber" || ran3[0] == "Dehya" || ran3[0] == "Diluc" || ran3[0] == "Klee" || ran3[0] == "Xiangling" || ran3[0] == "Yanfei" ||
       ran3[0] == "Bennett" || ran3[0] == "Hutao" || ran3[0] == "Thoma" || ran3[0] == "Xinyan" || ran3[0] == "Yoimiya"){
-        document.querySelector("img.element.th").style.cssText = "opacity: 1;";
-        document.getElementById("elementth").src = "image/Element/Pyro.png";
-      }
-    }
-    if (i == 6) {
-      if (ran3[0] == "Yunjin" || ran3[0] == "Arataki_Itto" || ran3[0] == "Noelle" || ran3[0] == "Albedo" ||
+    document.getElementById("elementth").src = "image/Element/Pyro.png";
+  }
+  if (ran3[0] == "Yunjin" || ran3[0] == "Arataki_Itto" || ran3[0] == "Noelle" || ran3[0] == "Albedo" ||
       ran3[0] == "Gorou" || ran3[0] == "Zhongli" || ran3[0] == "Ningguang"){
-        document.querySelector("img.element.th").style.cssText = "opacity: 1;";
-        document.getElementById("elementth").src = "image/Element/Geo.png";
-      }
-    }
-
-    if (i == 7) {
-      if (ran3[0] == "Yaoyao" || ran3[0] == "Nahida" || ran3[0] == "Tighnari" || 
+    document.getElementById("elementth").src = "image/Element/Geo.png";
+  }
+  if (ran3[0] == "Yaoyao" || ran3[0] == "Nahida" || ran3[0] == "Tighnari" || 
       ran3[0] == "Alhaitham" || ran3[0] == "Collei" || ran3[0] == "Baizhu" || ran3[0] == "Kaveh"){
-        document.querySelector("img.element.th").style.cssText = "opacity: 1;";
-        document.getElementById("elementth").src = "image/Element/Dendro.png";
-      }
-    }
+    document.getElementById("elementth").src = "image/Element/Dendro.png";
   }
-
+  
   //Fourth Random Character
-  for(var i = 1 ; i < 8; i++){
-      
-    if (i == 1) {
-      if (ran4[0] == "Layla" || ran4[0] == "Shenhe" || ran4[0] == "Aloy" || ran4[0] == "Ayaka" || ran4[0] == "Eula" || ran4[0] == "Mika" ||
+  if (ran4[0] == "Layla" || ran4[0] == "Shenhe" || ran4[0] == "Aloy" || ran4[0] == "Ayaka" || ran4[0] == "Eula" || ran4[0] == "Mika" ||
       ran4[0] == "Rosaria" || ran4[0] == "Ganyu" || ran4[0] == "Diona" || ran4[0] == "Kaeya" || ran4[0] == "Qiqi" || ran4[0] == "Chongyun"){
-        document.querySelector("img.element.fth").style.cssText = "opacity: 1;";
-        document.getElementById("elementfth").src = "image/Element/Cryo.png";
-      }
-    }
-    if (i == 2) {
-      if (ran4[0] == "Faruzan" || ran4[0] == "Jean" || ran4[0] == "Kazuha" || ran4[0] == "Sayu" || ran4[0] == "Heizou" ||
-      ran4[0] == "Sucrose" || ran4[0] == "Venti" || ran4[0] == "Wanderer" || ran4[0] == "Xiao"){
-        document.querySelector("img.element.fth").style.cssText = "opacity: 1;";
-        document.getElementById("elementfth").src = "image/Element/Anemo.png";
-      }
-    }
-    if (i == 3) {
-      if (ran4[0] == "Beidou" || ran4[0] == "Dori" || ran4[0] == "Keqing" || ran4[0] == "Kuki_Shinobu" || ran4[0] == "Raiden" ||
-      ran4[0] == "Cyno" || ran4[0] == "Fischl" || ran4[0] == "Kujou_Sara" || ran4[0] == "Lisa" || ran4[0] == "Razor" || ran4[0] == "Yae_miko"){
-        document.querySelector("img.element.fth").style.cssText = "opacity: 1;";
-        document.getElementById("elementfth").src = "image/Element/Electro.png";
-      }
-    }
-    if (i == 4) {
-      if (ran4[0] == "Barbara" || ran4[0] == "Ayato" || ran4[0] == "Nilou" || ran4[0] == "Tartaglia" || ran4[0] == "Yelan" ||
-      ran4[0] == "Candace" || ran4[0] == "Mona" || ran4[0] == "Kokomi" || ran4[0] == "Xingqiu"){
-        document.querySelector("img.element.fth").style.cssText = "opacity: 1;";
-        document.getElementById("elementfth").src = "image/Element/Hydro.png";
-      }
-    }
-    if (i == 5) {
-      if (ran4[0] == "Amber" || ran4[0] == "Dehya" || ran4[0] == "Diluc" || ran4[0] == "Klee" || ran4[0] == "Xiangling" || ran4[0] == "Yanfei" ||
-      ran4[0] == "Bennett" || ran4[0] == "Hutao" || ran4[0] == "Thoma" || ran4[0] == "Xinyan" || ran4[0] == "Yoimiya"){
-        document.querySelector("img.element.fth").style.cssText = "opacity: 1;";
-        document.getElementById("elementfth").src = "image/Element/Pyro.png";
-      }
-    }
-    if (i == 6) {
-      if (ran4[0] == "Yunjin" || ran4[0] == "Arataki_Itto" || ran4[0] == "Noelle" || ran4[0] == "Albedo" ||
-      ran4[0] == "Gorou" || ran4[0] == "Zhongli" || ran4[0] == "Ningguang"){
-        document.querySelector("img.element.fth").style.cssText = "opacity: 1;";
-        document.getElementById("elementfth").src = "image/Element/Geo.png";
-      }
-    }
-
-    if (i == 7) {
-      if (ran4[0] == "Yaoyao" || ran4[0] == "Nahida" || ran4[0] == "Tighnari" || 
-      ran4[0] == "Alhaitham" || ran4[0] == "Collei" || ran4[0] == "Baizhu" || ran4[0] == "Kaveh"){
-        document.querySelector("img.element.fth").style.cssText = "opacity: 1;";
-        document.getElementById("elementfth").src = "image/Element/Dendro.png";
-      }
-    }
+    document.getElementById("elementfth").src = "image/Element/Cryo.png";
   }
-
-  // Change BG character 
-  for(var i = 1 ; i < 3; i++){
-
-    if (i == 1){
-
-      if(ran1[0] == "Yaoyao" || ran1[0] == "Dori" || ran1[0] == "Heizou" || ran1[0] == "Sayu" || ran1[0] == "Diona" || ran1[0] == "Ningguang" || ran1[0] == "Noelle" || ran1[0] == "Kaveh" || ran1[0] == "Mika" || 
+  if (ran4[0] == "Faruzan" || ran4[0] == "Jean" || ran4[0] == "Kazuha" || ran4[0] == "Sayu" || ran4[0] == "Heizou" ||
+      ran4[0] == "Sucrose" || ran4[0] == "Venti" || ran4[0] == "Wanderer" || ran4[0] == "Xiao"){
+    document.getElementById("elementfth").src = "image/Element/Anemo.png";
+  }
+  if (ran4[0] == "Beidou" || ran4[0] == "Dori" || ran4[0] == "Keqing" || ran4[0] == "Kuki_Shinobu" || ran4[0] == "Raiden" ||
+      ran4[0] == "Cyno" || ran4[0] == "Fischl" || ran4[0] == "Kujou_Sara" || ran4[0] == "Lisa" || ran4[0] == "Razor" || ran4[0] == "Yae_miko"){
+    document.getElementById("elementfth").src = "image/Element/Electro.png";
+  }
+  if (ran4[0] == "Barbara" || ran4[0] == "Ayato" || ran4[0] == "Nilou" || ran4[0] == "Tartaglia" || ran4[0] == "Yelan" ||
+      ran4[0] == "Candace" || ran4[0] == "Mona" || ran4[0] == "Kokomi" || ran4[0] == "Xingqiu"){
+    document.getElementById("elementfth").src = "image/Element/Hydro.png";
+  }
+  if (ran4[0] == "Amber" || ran4[0] == "Dehya" || ran4[0] == "Diluc" || ran4[0] == "Klee" || ran4[0] == "Xiangling" || ran4[0] == "Yanfei" ||
+      ran4[0] == "Bennett" || ran4[0] == "Hutao" || ran4[0] == "Thoma" || ran4[0] == "Xinyan" || ran4[0] == "Yoimiya"){
+    document.getElementById("elementfth").src = "image/Element/Pyro.png";
+  }
+  if (ran4[0] == "Yunjin" || ran4[0] == "Arataki_Itto" || ran4[0] == "Noelle" || ran4[0] == "Albedo" ||
+      ran4[0] == "Gorou" || ran4[0] == "Zhongli" || ran4[0] == "Ningguang"){
+    document.getElementById("elementfth").src = "image/Element/Geo.png";
+  }
+  if (ran4[0] == "Yaoyao" || ran4[0] == "Nahida" || ran4[0] == "Tighnari" || 
+      ran4[0] == "Alhaitham" || ran4[0] == "Collei" || ran4[0] == "Baizhu" || ran4[0] == "Kaveh"){
+    document.getElementById("elementfth").src = "image/Element/Dendro.png";
+  }
+  
+  ///Change BG character 
+  ///444
+  if(ran1[0] == "Yaoyao" || ran1[0] == "Dori" || ran1[0] == "Heizou" || ran1[0] == "Sayu" || ran1[0] == "Diona" || ran1[0] == "Ningguang" || ran1[0] == "Noelle" || ran1[0] == "Kaveh" || ran1[0] == "Mika" || 
       ran1[0] == "Faruzan" || ran1[0] == "Collei" || ran1[0] == "Thoma" || ran1[0] == "Yanfei" || ran1[0] == "Chongyun" || ran1[0] == "Beidou" || ran1[0] == "Bennett" || ran1[0] == "Kaeya" || 
       ran1[0] == "Layla" || ran1[0] == "Yunjin" || ran1[0] == "Gorou" || ran1[0] == "Rosaria" || ran1[0] == "Xingqiu" || ran1[0] == "Sucrose" || ran1[0] == "Razor" || ran1[0] == "Lisa" || 
       ran1[0] == "Candace" || ran1[0] == "Kuki_Shinobu" || ran1[0] == "Kujou_Sara" || ran1[0] == "Xinyan" || ran1[0] == "Xiangling" || ran1[0] == "Fischl" || ran1[0] == "Barbara" || ran1[0] == "Amber"){
-        document.querySelector(".random .bg.f").style.cssText = "background-image: url(image/Character/bg/Background_Item_4_Star.png);";
-      }
-      if(ran2[0] == "Yaoyao" || ran2[0] == "Dori" || ran2[0] == "Heizou" || ran2[0] == "Sayu" || ran2[0] == "Diona" || ran2[0] == "Ningguang" || ran2[0] == "Noelle" || ran2[0] == "Kaveh" || ran2[0] == "Mika" || 
+    document.querySelector(".random .bg.f").style.cssText = "background-image: url(image/Character/bg/Background_Item_4_Star.png);";
+  }
+  if(ran2[0] == "Yaoyao" || ran2[0] == "Dori" || ran2[0] == "Heizou" || ran2[0] == "Sayu" || ran2[0] == "Diona" || ran2[0] == "Ningguang" || ran2[0] == "Noelle" || ran2[0] == "Kaveh" || ran2[0] == "Mika" || 
       ran2[0] == "Faruzan" || ran2[0] == "Collei" || ran2[0] == "Thoma" || ran2[0] == "Yanfei" || ran2[0] == "Chongyun" || ran2[0] == "Beidou" || ran2[0] == "Bennett" || ran2[0] == "Kaeya" || 
       ran2[0] == "Layla" || ran2[0] == "Yunjin" || ran2[0] == "Gorou" || ran2[0] == "Rosaria" || ran2[0] == "Xingqiu" || ran2[0] == "Sucrose" || ran2[0] == "Razor" || ran2[0] == "Lisa" || 
       ran2[0] == "Candace" || ran2[0] == "Kuki_Shinobu" || ran2[0] == "Kujou_Sara" || ran2[0] == "Xinyan" || ran2[0] == "Xiangling" || ran2[0] == "Fischl" || ran2[0] == "Barbara" || ran2[0] == "Amber"){
-        document.querySelector(".random .bg.s").style.cssText = "background-image: url(image/Character/bg/Background_Item_4_Star.png);";
-      }
-      if(ran3[0] == "Yaoyao" || ran3[0] == "Dori" || ran3[0] == "Heizou" || ran3[0] == "Sayu" || ran3[0] == "Diona" || ran3[0] == "Ningguang" || ran3[0] == "Noelle" || ran3[0] == "Kaveh" || ran3[0] == "Mika" || 
+    document.querySelector(".random .bg.s").style.cssText = "background-image: url(image/Character/bg/Background_Item_4_Star.png);";
+  }
+  if(ran3[0] == "Yaoyao" || ran3[0] == "Dori" || ran3[0] == "Heizou" || ran3[0] == "Sayu" || ran3[0] == "Diona" || ran3[0] == "Ningguang" || ran3[0] == "Noelle" || ran3[0] == "Kaveh" || ran3[0] == "Mika" || 
       ran3[0] == "Faruzan" || ran3[0] == "Collei" || ran3[0] == "Thoma" || ran3[0] == "Yanfei" || ran3[0] == "Chongyun" || ran3[0] == "Beidou" || ran3[0] == "Bennett" || ran3[0] == "Kaeya" || 
       ran3[0] == "Layla" || ran3[0] == "Yunjin" || ran3[0] == "Gorou" || ran3[0] == "Rosaria" || ran3[0] == "Xingqiu" || ran3[0] == "Sucrose" || ran3[0] == "Razor" || ran3[0] == "Lisa" || 
       ran3[0] == "Candace" || ran3[0] == "Kuki_Shinobu" || ran3[0] == "Kujou_Sara" || ran3[0] == "Xinyan" || ran3[0] == "Xiangling" || ran3[0] == "Fischl" || ran3[0] == "Barbara" || ran3[0] == "Amber"){
-        document.querySelector(".random .bg.th").style.cssText = "background-image: url(image/Character/bg/Background_Item_4_Star.png);";
-      }
-      if(ran4[0] == "Yaoyao" || ran4[0] == "Dori" || ran4[0] == "Heizou" || ran4[0] == "Sayu" || ran4[0] == "Diona" || ran4[0] == "Ningguang" || ran4[0] == "Noelle" || ran4[0] == "Kaveh" || ran4[0] == "Mika" || 
+    document.querySelector(".random .bg.th").style.cssText = "background-image: url(image/Character/bg/Background_Item_4_Star.png);";
+  }
+  if(ran4[0] == "Yaoyao" || ran4[0] == "Dori" || ran4[0] == "Heizou" || ran4[0] == "Sayu" || ran4[0] == "Diona" || ran4[0] == "Ningguang" || ran4[0] == "Noelle" || ran4[0] == "Kaveh" || ran4[0] == "Mika" || 
       ran4[0] == "Faruzan" || ran4[0] == "Collei" || ran4[0] == "Thoma" || ran4[0] == "Yanfei" || ran4[0] == "Chongyun" || ran4[0] == "Beidou" || ran4[0] == "Bennett" || ran4[0] == "Kaeya" || 
       ran4[0] == "Layla" || ran4[0] == "Yunjin" || ran4[0] == "Gorou" || ran4[0] == "Rosaria" || ran4[0] == "Xingqiu" || ran4[0] == "Sucrose" || ran4[0] == "Razor" || ran4[0] == "Lisa" || 
       ran4[0] == "Candace" || ran4[0] == "Kuki_Shinobu" || ran4[0] == "Kujou_Sara" || ran4[0] == "Xinyan" || ran4[0] == "Xiangling" || ran4[0] == "Fischl" || ran4[0] == "Barbara" || ran4[0] == "Amber"){
-        document.querySelector(".random .bg.fth").style.cssText = "background-image: url(image/Character/bg/Background_Item_4_Star.png);";
-      }
-    }
-
-    if (i == 2){
-
-      if (ran1[0] == "Albedo" || ran1[0] == "Ayaka" || ran1[0] == "Diluc" || ran1[0] == "Hutao" || ran1[0] == "Kazuha" || ran1[0] == "Kokomi" || ran1[0] == "Nilou" || ran1[0] == "Shenhe" || ran1[0] == "Venti" || ran1[0] == "Baizhu" || ran1[0] == "Dehya" || 
+    document.querySelector(".random .bg.fth").style.cssText = "background-image: url(image/Character/bg/Background_Item_4_Star.png);";
+  }
+  ///555
+  if (ran1[0] == "Albedo" || ran1[0] == "Ayaka" || ran1[0] == "Diluc" || ran1[0] == "Hutao" || ran1[0] == "Kazuha" || ran1[0] == "Kokomi" || ran1[0] == "Nilou" || ran1[0] == "Shenhe" || ran1[0] == "Venti" || ran1[0] == "Baizhu" || ran1[0] == "Dehya" || 
       ran1[0] == "Alhaitham" || ran1[0] == "Ayato" || ran1[0] == "Eula" || ran1[0] == "Arataki_Itto" || ran1[0] == "Keqing" || ran1[0] == "Mona" || ran1[0] == "Qiqi" || ran1[0] == "Tartaglia" || ran1[0] == "Wanderer" || ran1[0] == "Yelan" || ran1[0] == "Yoimiya" || 
       ran1[0] == "Aloy" || ran1[0] == "Cyno" || ran1[0] == "Ganyu" || ran1[0] == "Jean" || ran1[0] == "Klee" || ran1[0] == "Nahida" || ran1[0] == "Raiden" || ran1[0] == "Tighnari" || ran1[0] == "Xiao" || ran1[0] == "Yae_miko" || ran1[0] == "Zhongli"){
-        document.querySelector(".random .bg.f").style.cssText = "background-image: url(image/Character/bg/Background_Item_5_Star.png);";
-      }
-      if (ran2[0] == "Albedo" || ran2[0] == "Ayaka" || ran2[0] == "Diluc" || ran2[0] == "Hutao" || ran2[0] == "Kazuha" || ran2[0] == "Kokomi" || ran2[0] == "Nilou" || ran2[0] == "Shenhe" || ran2[0] == "Venti" || ran2[0] == "Baizhu" || ran2[0] == "Dehya" ||
+    document.querySelector(".random .bg.f").style.cssText = "background-image: url(image/Character/bg/Background_Item_5_Star.png);";
+  }
+  if (ran2[0] == "Albedo" || ran2[0] == "Ayaka" || ran2[0] == "Diluc" || ran2[0] == "Hutao" || ran2[0] == "Kazuha" || ran2[0] == "Kokomi" || ran2[0] == "Nilou" || ran2[0] == "Shenhe" || ran2[0] == "Venti" || ran2[0] == "Baizhu" || ran2[0] == "Dehya" ||
       ran2[0] == "Alhaitham" || ran2[0] == "Ayato" || ran2[0] == "Eula" || ran2[0] == "Arataki_Itto" || ran2[0] == "Keqing" || ran2[0] == "Mona" || ran2[0] == "Qiqi" || ran2[0] == "Tartaglia" || ran2[0] == "Wanderer" || ran2[0] == "Yelan" || ran2[0] == "Yoimiya" || 
       ran2[0] == "Aloy" || ran2[0] == "Cyno" || ran2[0] == "Ganyu" || ran2[0] == "Jean" || ran2[0] == "Klee" || ran2[0] == "Nahida" || ran2[0] == "Raiden" || ran2[0] == "Tighnari" || ran2[0] == "Xiao" || ran2[0] == "Yae_miko" || ran2[0] == "Zhongli"){
-        document.querySelector(".random .bg.s").style.cssText = "background-image: url(image/Character/bg/Background_Item_5_Star.png);";
-      }
-      if (ran3[0] == "Albedo" || ran3[0] == "Ayaka" || ran3[0] == "Diluc" || ran3[0] == "Hutao" || ran3[0] == "Kazuha" || ran3[0] == "Kokomi" || ran3[0] == "Nilou" || ran3[0] == "Shenhe" || ran3[0] == "Venti" || ran3[0] == "Baizhu" || ran3[0] == "Dehya" ||
+    document.querySelector(".random .bg.s").style.cssText = "background-image: url(image/Character/bg/Background_Item_5_Star.png);";
+  }
+  if (ran3[0] == "Albedo" || ran3[0] == "Ayaka" || ran3[0] == "Diluc" || ran3[0] == "Hutao" || ran3[0] == "Kazuha" || ran3[0] == "Kokomi" || ran3[0] == "Nilou" || ran3[0] == "Shenhe" || ran3[0] == "Venti" || ran3[0] == "Baizhu" || ran3[0] == "Dehya" ||
       ran3[0] == "Alhaitham" || ran3[0] == "Ayato" || ran3[0] == "Eula" || ran3[0] == "Arataki_Itto" || ran3[0] == "Keqing" || ran3[0] == "Mona" || ran3[0] == "Qiqi" || ran3[0] == "Tartaglia" || ran3[0] == "Wanderer" || ran3[0] == "Yelan" || ran3[0] == "Yoimiya" || 
       ran3[0] == "Aloy" || ran3[0] == "Cyno" || ran3[0] == "Ganyu" || ran3[0] == "Jean" || ran3[0] == "Klee" || ran3[0] == "Nahida" || ran3[0] == "Raiden" || ran3[0] == "Tighnari" || ran3[0] == "Xiao" || ran3[0] == "Yae_miko" || ran3[0] == "Zhongli"){
-        document.querySelector(".random .bg.th").style.cssText = "background-image: url(image/Character/bg/Background_Item_5_Star.png);";
-      }
-      if (ran4[0] == "Albedo" || ran4[0] == "Ayaka" || ran4[0] == "Diluc" || ran4[0] == "Hutao" || ran4[0] == "Kazuha" || ran4[0] == "Kokomi" || ran4[0] == "Nilou" || ran4[0] == "Shenhe" || ran4[0] == "Venti" || ran4[0] == "Baizhu" || ran4[0] == "Dehya" ||
+    document.querySelector(".random .bg.th").style.cssText = "background-image: url(image/Character/bg/Background_Item_5_Star.png);";
+  }
+  if (ran4[0] == "Albedo" || ran4[0] == "Ayaka" || ran4[0] == "Diluc" || ran4[0] == "Hutao" || ran4[0] == "Kazuha" || ran4[0] == "Kokomi" || ran4[0] == "Nilou" || ran4[0] == "Shenhe" || ran4[0] == "Venti" || ran4[0] == "Baizhu" || ran4[0] == "Dehya" ||
       ran4[0] == "Alhaitham" || ran4[0] == "Ayato" || ran4[0] == "Eula" || ran4[0] == "Arataki_Itto" || ran4[0] == "Keqing" || ran4[0] == "Mona" || ran4[0] == "Qiqi" || ran4[0] == "Tartaglia" || ran4[0] == "Wanderer" || ran4[0] == "Yelan" || ran4[0] == "Yoimiya" || 
       ran4[0] == "Aloy" || ran4[0] == "Cyno" || ran4[0] == "Ganyu" || ran4[0] == "Jean" || ran4[0] == "Klee" || ran4[0] == "Nahida" || ran4[0] == "Raiden" || ran4[0] == "Tighnari" || ran4[0] == "Xiao" || ran4[0] == "Yae_miko" || ran4[0] == "Zhongli"){
-        document.querySelector(".random .bg.fth").style.cssText = "background-image: url(image/Character/bg/Background_Item_5_Star.png);";
-      }
-    }
+    document.querySelector(".random .bg.fth").style.cssText = "background-image: url(image/Character/bg/Background_Item_5_Star.png);";
   }
 
   document.getElementById("name_text_first").innerHTML = `${ran1[0]}`;
@@ -2012,7 +1893,7 @@ function start_random(){
   Character[Character.length] = ran3[0];
   Character[Character.length] = ran4[0];
   Boss[Boss.length] = ranboss[0];
-
+  Elements[Elements.length] = Element[0];
 }
 
 function selectcharall(){
@@ -2223,7 +2104,6 @@ function selectcharall(){
   Character[Character.length] = "Yoimiya";
   Character[Character.length] = "Yunjin";
   Character[Character.length] = "Zhongli";
-
 }
 
 function unselectcharall(){
@@ -2366,7 +2246,6 @@ function unselectcharall(){
 
   Character.length = 0;
   Character.splice(0,Character.length);
-
 }
 
 function unselectbossall(){
@@ -2531,5 +2410,4 @@ function selectbossall(){
   Boss[Boss.length] = "La_Signora";
   Boss[Boss.length] = "Magatsu_Mitake";
   Boss[Boss.length] = "Shouki_no_Kami";
-
 }
