@@ -58,9 +58,6 @@
     height: 10px;
 }
 
-
-
-
 .random .bg{
     height: 100%;
     background-position: center;
@@ -89,7 +86,6 @@
     background-color: Gainsboro;
 }
 
-
 .btn button:hover{
     color: white;
     transition: .75s;
@@ -107,6 +103,7 @@
 .return button{
     background-color: FireBrick;
 }
+
 .random_again button{
     background-color: greenyellow;
 }

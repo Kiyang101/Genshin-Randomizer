@@ -119,7 +119,6 @@ main p{
 } 
 
 .menu div#select header ul.element img{
-    
     width: 40px;
     height: 40px;
     margin-left: 0;
@@ -128,7 +127,6 @@ main p{
 
 .menu div#select header ul.element{
     display:inline-flex;
-
 }
 
 .menu div#select header button.filter{
