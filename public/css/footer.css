@@ -3,7 +3,6 @@
     bottom: 0;
     left: 0;
     right: 0;
-    /*height: 50px;*/
     background-color: Gainsboro;
     cursor: default;
     text-align: center;
@@ -37,13 +36,33 @@ a{
 }
 
 .discord:hover{
+    padding: 2px;
     background-color: dodgerblue;
     border-radius: 6px;
-    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;}
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
 .youtube:hover{
+    padding: 2px;
     background-color: red;
     border-radius: 6px;
-    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;}
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
 .icon_footer a:hover{
     color: azure;
+}
+.kiyang:hover{
+    padding: 2px;
+    background-color: silver;
+    border-radius: 6px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+.github{
+    display: inline;
+}
+.github:hover{
+    padding: 2px;
+    background-color: #333;
+    border-radius: 6px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
