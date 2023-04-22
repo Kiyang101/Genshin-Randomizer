@@ -1,4 +1,4 @@
-const Borders = "border-top: 5px solid MediumSpringGreen; border-bottom: 5px solid SpringGreen;transition: .15s;";
+const Borders = "border-top: 5px solid MediumSpringGreen; border-bottom: 5px solid SpringGreen;transition: .15s; transition: all .2s ease-in-out;";
 
 let count_Aether = false;
 let count_Albedo = false;
@@ -31,6 +31,7 @@ let count_Ayaka = false;
 let count_Ayato = false;
 let count_Kazuha = false;
 let count_Keqing = false;
+let count_Kirara = false;
 let count_Klee = false;
 let count_Kujou_Sara = false;
 let count_Kuki_Shinobu = false;
@@ -83,6 +84,7 @@ let count_Primo_Geovishap = false;
 let count_Golden_Wolflord = false;
 let count_Bathysmal_Vishap = false;
 let count_Thunder_Manifestation = false;
+let count_Iniquitous_Baptist = false;
 let count_Jadeplume_Terrorshroom = false;
 let count_Setekh_Wenut = false;
 let count_Maguu_Kenki = false;
@@ -97,6 +99,7 @@ let count_Childe = false;
 let count_La_Signora = false;
 let count_Magatsu_Mitake = false;
 let count_Shouki_no_Kami = false;
+let count_Warden_of_Oasis = false;
 
 const Boss = [];
 const Character = [];
@@ -592,6 +595,22 @@ function select_Keqing() {
     document.querySelector(".char .Keqing .box").style.border="";
     count_Keqing = false;
     let index = Character.indexOf("Keqing");
+    Character.splice(index,1);
+    return
+  }
+}
+
+function select_Kirara() {
+  if (count_Kirara == false){
+    document.querySelector(".char .Kirara .box").style.cssText = Borders
+    count_Kirara = true;
+    Character[Character.length] = "Kirara";
+    return
+  }
+  if (count_Kirara == true){
+    document.querySelector(".char .Kirara .box").style.border="";
+    count_Kirara = false;
+    let index = Character.indexOf("Kirara");
     Character.splice(index,1);
     return
   }
@@ -1414,6 +1433,22 @@ function select_Thunder_Manifestation() {
   }
 }
 
+function select_Iniquitous_Baptist() {
+  if (count_Iniquitous_Baptist == false){
+    document.querySelector(".boss.Iniquitous_Baptist.box").style.cssText = Borders
+    count_Iniquitous_Baptist = true;
+    Boss[Boss.length] = "Iniquitous Baptist";
+    return
+  }
+  if (count_Iniquitous_Baptist == true){
+    document.querySelector(".boss.Iniquitous_Baptist.box").style.border="";
+    count_Iniquitous_Baptist = false;
+    let index = Boss.indexOf("Iniquitous Baptist");
+    Boss.splice(index,1);
+    return
+  }
+}
+
 function select_Jadeplume() {
   if (count_Jadeplume_Terrorshroom == false){
     document.querySelector(".boss.Jadeplume.box").style.cssText = Borders
@@ -1654,18 +1689,34 @@ function select_Shouki_no_Kami() {
   }
 }
 
+function select_Warden_of_Oasis() {
+  if (count_Warden_of_Oasis == false){
+    document.querySelector(".boss.Warden_of_Oasis.box").style.cssText = Borders
+    count_Warden_of_Oasis = true;
+    Boss[Boss.length] = "Warden of Oasis";
+    return
+  }
+  if (count_Warden_of_Oasis == true){
+    document.querySelector(".boss.Warden_of_Oasis.box").style.border="";
+    count_Warden_of_Oasis = false;
+    let index = Boss.indexOf("Warden of Oasis");
+    Boss.splice(index,1);
+    return
+  }
+}
+
 const Elements = ["Anemo","Dendro","Electro","Geo"];
 
-const Anemo = ["Faruzan","Jean","Kazuha","Sayu","Heizou","Sucrose","Venti","Wanderer","Xiao"];
-const Cryo = ["Aloy","Chongyun","Diona","Eula","Ganyu","Kaeya","Ayaka","Layla","Mika","Qiqi","Rosaria","Shenhe"];
-const Dendro = ["Alhaitham","Baizhu","Collei","Kaveh","Nahida","Tighnari","Yaoyao"];
-const Electro = ["Beidou","Cyno","Dori","Fischl","Keqing","Kujou Sara","Kuki Shinobu","Lisa","Raiden","Razor","Yae Miko"];
-const Geo = ["Albedo","Arataki Itto","Gorou","Ningguang","Noelle","Yunjin","Zhongli"];
-const Hydro = ["Barbara","Candace","Ayato","Mona","Nilou","Kokomi","Tartaglia","Xingqiu","Yelan"];
-const Pyro = ["Amber","Bennett","Dehya","Diluc","Hutao","Klee","Thoma","Xiangling","Xinyan","Yanfei","Yoimiya"];
+const listAnemo = ["Faruzan","Jean","Kazuha","Sayu","Heizou","Sucrose","Venti","Wanderer","Xiao"];
+const listCryo = ["Aloy","Chongyun","Diona","Eula","Ganyu","Kaeya","Ayaka","Layla","Mika","Qiqi","Rosaria","Shenhe"];
+const listDendro = ["Alhaitham","Baizhu","Collei","Kaveh","Kirara","Nahida","Tighnari","Yaoyao"];
+const listElectro = ["Beidou","Cyno","Dori","Fischl","Keqing","Kujou Sara","Kuki Shinobu","Lisa","Raiden","Razor","Yae Miko"];
+const listGeo = ["Albedo","Arataki Itto","Gorou","Ningguang","Noelle","Yunjin","Zhongli"];
+const listHydro = ["Barbara","Candace","Ayato","Mona","Nilou","Kokomi","Tartaglia","Xingqiu","Yelan"];
+const listPyro = ["Amber","Bennett","Dehya","Diluc","Hutao","Klee","Thoma","Xiangling","Xinyan","Yanfei","Yoimiya"];
 
 const FourStar = ["Amber","Barbara","Beidou","Bennett","Candace","Chongyun","Collei","Diona","Dori","Faruzan","Fischl",
-                  "Gorou","Kaeya","Kaveh","Kujou Sara","Kuki Shinobu","Layla","Lisa","Mika","Ningguang","Noelle","Razor",
+                  "Gorou","Kaeya","Kaveh","Kirara","Kujou Sara","Kuki Shinobu","Layla","Lisa","Mika","Ningguang","Noelle","Razor",
                   "Rosaria","Sayu","Heizou","Sucrose","Thoma","Xiangling","Xingqiu","Xinyan","Yanfei","Yaoyao","Yunjin"];
 
 const FiveStar = ["Albedo","Alhaitham","Aloy","Arataki Itto","Baizhu","Cyno","Dehya","Diluc","Eula","Ganyu","Hutao",
@@ -1673,14 +1724,14 @@ const FiveStar = ["Albedo","Alhaitham","Aloy","Arataki Itto","Baizhu","Cyno","De
                   "Kokomi","Shenhe","Tartaglia","Tighnari","Venti","Wanderer","Xiao","Yae Miko","Yelan","Yoimiya","Zhongli"];
 
 const Countchar = ["Amber","Barbara","Beidou","Bennett","Candace","Chongyun","Collei","Diona","Dori","Faruzan","Fischl",
-                "Gorou","Kaeya","Kaveh","Kujou_Sara","Kuki_Shinobu","Layla","Lisa","Mika","Ningguang","Noelle","Razor",
+                "Gorou","Kaeya","Kaveh","Kirara","Kujou_Sara","Kuki_Shinobu","Layla","Lisa","Mika","Ningguang","Noelle","Razor",
                 "Rosaria","Sayu","Heizou","Sucrose","Thoma","Xiangling","Xingqiu","Xinyan","Yanfei","Yaoyao","Yunjin","Aether","Albedo",
                 "Alhaitham","Aloy","Arataki_Itto","Baizhu","Cyno","Dehya","Diluc","Eula","Ganyu","Hutao","Jean","Ayaka","Ayato",
                 "Kazuha","Keqing","Klee","Mona","Nahida","Nilou","Qiqi","Raiden","Kokomi","Shenhe","Tartaglia","Tighnari","Venti",
                 "Wanderer","Xiao","Yae_miko","Yelan","Yoimiya","Zhongli"];
 
 const Countboss = ["Anemo_Hypotasis","Cryo_Hypotasis","Dendro_Hypotasis","Electro_Hypotasis","Geo_Hypotasis","Hydro_Hypotasis","Pyro_Hypotasis","Cryo_Regisvine","Electro_Regisvine","Pyro_Regisvine",
-                   "Oceanid","Primo_Geovishap","Golden_Wolflord","Bathysmal_Vishap","Thunder_Manifestation","Jadeplume_Terrorshroom","Setekh_Wenut","Maguu_Kenki","Aeonblight_Drake","Algorithm",
+                   "Oceanid","Primo_Geovishap","Golden_Wolflord","Bathysmal_Vishap","Thunder_Manifestation","Iniquitous_Baptist","Jadeplume_Terrorshroom","Setekh_Wenut","Maguu_Kenki","Aeonblight_Drake","Algorithm",
                    "Perpetual_Mechanical_Array","Ruin_Serpent","Lupus_Boreas","Stormterror","Azhdaha","Childe","La_Signora","Magatsu_Mitake","Shouki_no_Kami"];
 
 function start_random(){
@@ -1735,173 +1786,173 @@ function start_random(){
   }
 
   //////////////////////////////////////////////////////////////////////////First Random Character
-  for (let i = 0; i < Anemo.length; i++){
-    if(ran1[0] == Anemo[i]){    
+  for (let i = 0; i < listAnemo.length; i++){
+    if(ran1[0] == listAnemo[i]){    
       document.getElementById("elementf").src = "image/Element/Anemo.png";
     }
   }
 
-  for (let i = 0; i < Cryo.length; i++){
-    if(ran1[0] == Cryo[i]){
+  for (let i = 0; i < listCryo.length; i++){
+    if(ran1[0] == listCryo[i]){
       document.getElementById("elementf").src = "image/Element/Cryo.png";
     }
   }
 
-  for (let i = 0; i < Dendro.length; i++){
-    if(ran1[0] == Dendro[i]){
+  for (let i = 0; i < listDendro.length; i++){
+    if(ran1[0] == listDendro[i]){
       document.getElementById("elementf").src = "image/Element/Dendro.png";
     }
   }
 
-  for (let i = 0; i < Electro.length; i++){
-    if(ran1[0] == Electro[i]){
+  for (let i = 0; i < listElectro.length; i++){
+    if(ran1[0] == listElectro[i]){
       document.getElementById("elementf").src = "image/Element/Electro.png";
     }
   }
 
-  for (let i = 0; i < Geo.length; i++){
-    if(ran1[0] == Geo[i]){
+  for (let i = 0; i < listGeo.length; i++){
+    if(ran1[0] == listGeo[i]){
       document.getElementById("elementf").src = "image/Element/Geo.png";
     }
   }
 
-  for (let i = 0; i < Hydro.length; i++){
-    if(ran1[0] == Hydro[i]){
+  for (let i = 0; i < listHydro.length; i++){
+    if(ran1[0] == listHydro[i]){
       document.getElementById("elementf").src = "image/Element/Hydro.png";
     }
   }
 
-  for (let i = 0; i < Pyro.length; i++){
-    if(ran1[0] == Pyro[i]){
+  for (let i = 0; i < listPyro.length; i++){
+    if(ran1[0] == listPyro[i]){
       document.getElementById("elementf").src = "image/Element/Pyro.png";
     }
   }
 
   ///////////////////////////////////////////////////////////////////////////Second Random Character
-  for (let i = 0; i < Anemo.length; i++){
-    if(ran2[0] == Anemo[i]){
+  for (let i = 0; i < listAnemo.length; i++){
+    if(ran2[0] == listAnemo[i]){
       document.getElementById("elements").src = "image/Element/Anemo.png";
     }
   }
 
-  for (let i = 0; i < Cryo.length; i++){
-    if(ran2[0] == Cryo[i]){
+  for (let i = 0; i < listCryo.length; i++){
+    if(ran2[0] == listCryo[i]){
       document.getElementById("elements").src = "image/Element/Cryo.png";
     }
   }
 
-  for (let i = 0; i < Dendro.length; i++){
-    if(ran2[0] == Dendro[i]){
+  for (let i = 0; i < listDendro.length; i++){
+    if(ran2[0] == listDendro[i]){
       document.getElementById("elements").src = "image/Element/Dendro.png";
     }
   }
 
-  for (let i = 0; i < Electro.length; i++){
-    if(ran2[0] == Electro[i]){
+  for (let i = 0; i < listElectro.length; i++){
+    if(ran2[0] == listElectro[i]){
       document.getElementById("elements").src = "image/Element/Electro.png";
     }
   }
 
-  for (let i = 0; i < Geo.length; i++){
-    if(ran2[0] == Geo[i]){
+  for (let i = 0; i < listGeo.length; i++){
+    if(ran2[0] == listGeo[i]){
       document.getElementById("elements").src = "image/Element/Geo.png";
     }
   }
 
-  for (let i = 0; i < Hydro.length; i++){
-    if(ran2[0] == Hydro[i]){
+  for (let i = 0; i < listHydro.length; i++){
+    if(ran2[0] == listHydro[i]){
       document.getElementById("elements").src = "image/Element/Hydro.png";
     }
   }
 
-  for (let i = 0; i < Pyro.length; i++){
-    if(ran2[0] == Pyro[i]){
+  for (let i = 0; i < listPyro.length; i++){
+    if(ran2[0] == listPyro[i]){
       document.getElementById("elements").src = "image/Element/Pyro.png";
     }
   }
 
   ///////////////////////////////////////////////////////////////////////////////Third Random Character
-  for (let i = 0; i < Anemo.length; i++){
-    if(ran3[0] == Anemo[i]){
+  for (let i = 0; i < listAnemo.length; i++){
+    if(ran3[0] == listAnemo[i]){
       document.getElementById("elementth").src = "image/Element/Anemo.png";
     }
   }
 
-  for (let i = 0; i < Cryo.length; i++){
-    if(ran3[0] == Cryo[i]){
+  for (let i = 0; i < listCryo.length; i++){
+    if(ran3[0] == listCryo[i]){
       document.getElementById("elementth").src = "image/Element/Cryo.png";
     }
   }
 
-  for (let i = 0; i < Dendro.length; i++){
-    if(ran3[0] == Dendro[i]){
+  for (let i = 0; i < listDendro.length; i++){
+    if(ran3[0] == listDendro[i]){
       document.getElementById("elementth").src = "image/Element/Dendro.png";
     }
   }
 
-  for (let i = 0; i < Electro.length; i++){
-    if(ran3[0] == Electro[i]){
+  for (let i = 0; i < listElectro.length; i++){
+    if(ran3[0] == listElectro[i]){
       document.getElementById("elementth").src = "image/Element/Electro.png";
     }
   }
 
-  for (let i = 0; i < Geo.length; i++){
-    if(ran3[0] == Geo[i]){
+  for (let i = 0; i < listGeo.length; i++){
+    if(ran3[0] == listGeo[i]){
       document.getElementById("elementth").src = "image/Element/Geo.png";
     }
   }
 
-  for (let i = 0; i < Hydro.length; i++){
-    if(ran3[0] == Hydro[i]){
+  for (let i = 0; i < listHydro.length; i++){
+    if(ran3[0] == listHydro[i]){
       document.getElementById("elementth").src = "image/Element/Hydro.png";
     }
   }
 
-  for (let i = 0; i < Pyro.length; i++){
-    if(ran3[0] == Pyro[i]){
+  for (let i = 0; i < listPyro.length; i++){
+    if(ran3[0] == listPyro[i]){
       document.getElementById("elementth").src = "image/Element/Pyro.png";
     }
   }
 
   //////////////////////////////////////////////////////////////////////////////Fourth Random Character
-  for (let i = 0; i < Anemo.length; i++){
-    if(ran4[0] == Anemo[i]){
+  for (let i = 0; i < listAnemo.length; i++){
+    if(ran4[0] == listAnemo[i]){
       document.getElementById("elementfth").src = "image/Element/Anemo.png";
     }
   }
 
-  for (let i = 0; i < Cryo.length; i++){
-    if(ran4[0] == Cryo[i]){
+  for (let i = 0; i < listCryo.length; i++){
+    if(ran4[0] == listCryo[i]){
       document.getElementById("elementfth").src = "image/Element/Cryo.png";
     }
   }
 
-  for (let i = 0; i < Dendro.length; i++){
-    if(ran4[0] == Dendro[i]){
+  for (let i = 0; i < listDendro.length; i++){
+    if(ran4[0] == listDendro[i]){
       document.getElementById("elementfth").src = "image/Element/Dendro.png";
     }
   }
 
-  for (let i = 0; i < Electro.length; i++){
-    if(ran4[0] == Electro[i]){
+  for (let i = 0; i < listElectro.length; i++){
+    if(ran4[0] == listElectro[i]){
       document.getElementById("elementfth").src = "image/Element/Electro.png";
     }
   }
 
-  for (let i = 0; i < Geo.length; i++){
-    if(ran4[0] == Geo[i]){
+  for (let i = 0; i < listGeo.length; i++){
+    if(ran4[0] == listGeo[i]){
       document.getElementById("elementfth").src = "image/Element/Geo.png";
     }
   }
 
-  for (let i = 0; i < Hydro.length; i++){
-    if(ran4[0] == Hydro[i]){
+  for (let i = 0; i < listHydro.length; i++){
+    if(ran4[0] == listHydro[i]){
       document.getElementById("elementfth").src = "image/Element/Hydro.png";
     }
   }
 
-  for (let i = 0; i < Pyro.length; i++){
-    if(ran4[0] == Pyro[i]){
+  for (let i = 0; i < listPyro.length; i++){
+    if(ran4[0] == listPyro[i]){
       document.getElementById("elementfth").src = "image/Element/Pyro.png";
     }
   }

@@ -19838,7 +19838,7 @@ function E_Anemo(){
 
   if (anm == true){
 
-    for(Anemo of anemo) {
+    for(Anemo of anemo){
       Anemo.style.display = "none";
     }
 
