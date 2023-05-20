@@ -58,11 +58,12 @@ section.filter button.close{
     border-radius: 10px;
     margin-right: 10px;
     margin-top: 8.5px;
+    transition: all .2s ease-in-out;
 }
 section.filter button.close:hover{
     background-color: #FF1700;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
-
 
 section.filter div.header{
     border-bottom: 1.5px solid Black;

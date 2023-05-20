@@ -118,16 +118,23 @@
     padding-left: 0.5%;
     padding-right: 0.7%;
     cursor: pointer;
+    transition: all .2s ease-in-out;
 }
 .displaycharacter button:hover,
 .displayboss button:hover,
 .selectall_char button:hover,
 .selectall_boss button:hover{
     background-color: #00FFAB;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, 
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, 
+    rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
 .unselectall_char button:hover,
 .unselectall_boss button:hover{
     background-color: #FF1700;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, 
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, 
+    rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
 
 

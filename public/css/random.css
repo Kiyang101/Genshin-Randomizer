@@ -46,8 +46,16 @@
     margin-right: auto;
     margin-left: auto;
     margin-bottom: 15px;
+    transition: all .2s ease-in-out;
 }
-
+.random.box:hover{
+    scale: 104%;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, 
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, 
+    rgba(0, 0, 0, 0.12) 0px 4px 6px, 
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, 
+    rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
 .random h1{
     color: #000;
     font-size: 17px;
@@ -115,14 +123,18 @@
     padding-left: 0.5%;
     padding-right: 0.7%;
     cursor: pointer;
+    transition: all .2s ease-in-out;
 }
 .return button:hover{
     background-color: #FF1700;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
 .random_again button{
     color: azure;
+    transition: all .2s ease-in-out;
 }
 .random_again button:hover{
     background-color: #00FFAB;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }   
 
