@@ -4,7 +4,7 @@ function Filter(){
   document.querySelector("button.filter").style.cssText = "pointer-events: none;"
   document.querySelector("div.modal-box").style.cssText = "transition: all 1s ease;"
   document.querySelector("div.modal-box").style.cssText = "opacity: 1;"
-  document.querySelector(".overlay").style.cssText = "opacity: 1;" 
+  document.querySelector(".overlay").style.cssText = "opacity: 1;"
 }
 
 function Close(){
@@ -16,211 +16,1293 @@ function Close(){
   document.querySelector(".overlay").style.cssText = "opacity: 0;"
 }
 
-///////////////////////////
-let Char_4 = true;
-let Char_5 = true;
+function rarity_all(){
+  Char_all = true;
+  Char_4 = true;
+  Char_5 = true;
+  ///////////////////////////////////// Sword ANEMO
+  if (anm == true && Char_4 == true ){
+    for(Sword_Anemo_Four of sword_anemo_four) {
+      Sword_Anemo_Four.style.display = "";
+      sw_anm_four = true;
+    }
+  }
+  if (anm == true && Char_4 == false ){
+    for(Sword_Anemo_Four of sword_anemo_four) {
+      Sword_Anemo_Four.style.display = "none";
+      sw_anm_four = false;
+    }
+  }
+  if (anm == true && Char_5 == true ){
+    for(Sword_Anemo_Five of sword_anemo_five) {
+      Sword_Anemo_Five.style.display = "";
+      sw_anm_five = true;
+    }
+  }
+  if (anm == true && Char_5 == false ){
+    for(Sword_Anemo_Five of sword_anemo_five) {
+      Sword_Anemo_Five.style.display = "none";
+      sw_anm_five = false;
+    }
+  }
+  if (anm == false){
+    for(Sword_Anemo_Four of sword_anemo_four) {
+      Sword_Anemo_Four.style.display = "none";
+    }
+    for(Sword_Anemo_Five of sword_anemo_five) {
+      Sword_Anemo_Five.style.display = "none";
+    }
+    sw_anm_four = false;
+    sw_anm_five = false;
+  }
+  
+  ////////////////////////////////////// Sword CRYO
+  if (co == true && Char_4 == true ){
+    for(Sword_Cryo_Four of sword_cryo_four) {
+      Sword_Cryo_Four.style.display = "";
+      sw_co_four = true;
+    }
+  }
+  if (co == true && Char_4 == false ){
+    for(Sword_Cryo_Four of sword_cryo_four) {
+      Sword_Cryo_Four.style.display = "none";
+      sw_co_four = false;
+    }
+  }
+  if (co == true && Char_5 == true ){
+    for(Sword_Cryo_Five of sword_cryo_five) {
+      Sword_Cryo_Five.style.display = "";
+      sw_co_five = true;
+    }
+  }
+  if (co == true && Char_5 == false ){
+    for(Sword_Cryo_Five of sword_cryo_five) {
+      Sword_Cryo_Five.style.display = "none";
+      sw_co_five = false;
+    }
+  }
+  if (co == false){
+    for(Sword_Cryo_Four of sword_cryo_four) {
+      Sword_Cryo_Four.style.display = "none";
+    }
+    for(Sword_Cryo_Five of sword_cryo_five) {
+      Sword_Cryo_Five.style.display = "none";
+    }
+    sw_co_five = false;
+    sw_co_four = false;
+  }
+  //////////////////////////////////////  Sword DENDRO
+  if (dd == true && Char_4 == true ){
+    for(Sword_Dendro_Four of sword_dendro_four) {
+      Sword_Dendro_Four.style.display = "";
+      sw_dd_four = true;
+    }
+  }
+  if (dd == true && Char_4 == false ){
+    for(Sword_Dendro_Four of sword_dendro_four) {
+      Sword_Dendro_Four.style.display = "none";
+      sw_dd_four = false;
+    }
+  }
+  if (dd == true && Char_5 == true ){
+    for(Sword_Dendro_Five of sword_dendro_five) {
+      Sword_Dendro_Five.style.display = "";
+      sw_dd_five = true;
+    }
+  }
+  if (dd == true && Char_5 == false ){
+    for(Sword_Dendro_Five of sword_dendro_five) {
+      Sword_Dendro_Five.style.display = "none";
+      sw_dd_five = false;
+    }
+  }
+  if (dd == false){
+    for(Sword_Dendro_Four of sword_dendro_four) {
+      Sword_Dendro_Four.style.display = "none";
+    }
+    for(Sword_Dendro_Five of sword_dendro_five) {
+      Sword_Dendro_Five.style.display = "none";
+    }
+    sw_dd_five = false;
+    sw_dd_four = false;
+  }
+  //////////////////////////////////////  Sword ELECTRO
+  if (elt == true && Char_4 == true ){
+    for(Sword_Electro_Four of sword_electro_four) {
+      Sword_Electro_Four.style.display = "";
+      sw_elt_four = true;
+    }
+  }
+  if (elt == true && Char_4 == false ){
+    for(Sword_Electro_Four of sword_electro_four) {
+      Sword_Electro_Four.style.display = "none";
+      sw_elt_four = false;
+    }
+  }
+  if (elt == true && Char_5 == true ){
+    for(Sword_Electro_Five of sword_electro_five) {
+      Sword_Electro_Five.style.display = "";
+      sw_elt_five = true;
+    }
+  }
+  if (elt == true && Char_5 == false ){
+    for(Sword_Electro_Five of sword_electro_five) {
+      Sword_Electro_Five.style.display = "none";
+      sw_elt_five = false;
+    }
+  }
+  if (elt == false){
+    for(Sword_Electro_Four of sword_electro_four) {
+      Sword_Electro_Four.style.display = "none";
+    }
+    for(Sword_Electro_Five of sword_electro_five) {
+      Sword_Electro_Five.style.display = "none";
+    }
+    sw_elt_five = false;
+    sw_elt_four = false;
+  }
+  ////////////////////////////////////// Sword  GEO
+  if (go == true && Char_4 == true ){
+    for(Sword_Geo_Four of sword_geo_four) {
+      Sword_Geo_Four.style.display = "";
+      sw_geo_four = true;
+    }
+  }
+  if (go == true && Char_4 == false){
+    for(Sword_Geo_Four of sword_geo_four) {
+      Sword_Geo_Four.style.display = "none";
+      sw_geo_four = false;
+    }
+  }
+  if (go == true && Char_5 == true){
+    for(Sword_Geo_Five of sword_geo_five) {
+      Sword_Geo_Five.style.display = "";
+      sw_geo_five = true;
+    }
+  }
+  if (go == true && Char_5 == false ){
+    for(Sword_Geo_Five of sword_geo_five) {
+      Sword_Geo_Five.style.display = "none";
+      sw_geo_five = false;
+    }
+  }
+  if (go == false){
+    for(Sword_Geo_Four of sword_geo_four) {
+      Sword_Geo_Four.style.display = "none";
+    }
+    for(Sword_Geo_Five of sword_geo_five) {
+      Sword_Geo_Five.style.display = "none";
+    }
+    sw_geo_five = false;
+    sw_geo_four = false;
+  }
+  ////////////////////////////////////// Sword HYDRO
+  if (hd == true && Char_4 == true){
+    for(Sword_Hydro_Four of sword_hydro_four) {
+      Sword_Hydro_Four.style.display = "";
+      sw_hydro_four = true;
+    }
+  }
+  if (hd == true && Char_4 == false ){
+    for(Sword_Hydro_Four of sword_hydro_four) {
+      Sword_Hydro_Four.style.display = "none";
+      sw_hydro_four = false;
+    }
+  }
+  if (hd == true && Char_5 == true){
+    for(Sword_Hydro_Five of sword_hydro_five) {
+      Sword_Hydro_Five.style.display = "";
+      sw_hydro_five = true;
+    }
+  }
+  if (hd == true && Char_5 == false ){
+    for(Sword_Hydro_Five of sword_hydro_five) {
+      Sword_Hydro_Five.style.display = "none";
+      sw_hydro_five = false;
+    }
+  }
+  if (hd == false){
+    for(Sword_Hydro_Four of sword_hydro_four) {
+      Sword_Hydro_Four.style.display = "none";
+    }
+    for(Sword_Hydro_Five of sword_hydro_five) {
+      Sword_Hydro_Five.style.display = "none";
+    }
+    sw_hydro_five = false;
+    sw_hydro_four = false;
+  }
+  ////////////////////////////////////// Sword PYRO
+  if (po == true && Char_4 == true ){
+    for(Sword_Pyro_Four of sword_pyro_four) {
+      Sword_Pyro_Four.style.display = "";
+      sw_pyro_four = true;
+    }
+  }
+  if (po == true && Char_4 == false ){
+    for(Sword_Pyro_Four of sword_pyro_four) {
+      Sword_Pyro_Four.style.display = "none";
+      sw_pyro_four = false;
+    }
+  }
+  if (po == true && Char_5 == true){
+    for(Sword_Pyro_Five of sword_pyro_five) {
+      Sword_Pyro_Five.style.display = "";
+      sw_pyro_five = true;
+    }
+  }
+  if (po == true && Char_5 == false ){
+    for(Sword_Pyro_Five of sword_pyro_five) {
+      Sword_Pyro_Five.style.display = "none";
+      sw_pyro_five = false;
+    }
+  }
+  if (po == false){
+    for(Sword_Pyro_Four of sword_pyro_four) {
+      Sword_Pyro_Four.style.display = "none";
+    }
+    for(Sword_Pyro_Five of sword_pyro_five) {
+      Sword_Pyro_Five.style.display = "none";
+    }
+    sw_pyro_five = false;
+    sw_pyro_four = false;
+  }
+  
+  ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-let sw = true;
-let cm = true;
-let pl = true;
-let b = true;
-let ctl = true;
+  ////////////////////////////////////// Claymore ANEMO
+  if (anm == true && Char_4 == true ){
+    for(Claymore_Anemo_Four of claymore_anemo_four) {
+      Claymore_Anemo_Four.style.display = "";
+      cm_anm_four = true;
+    }
+  }
+  if (anm == true && Char_4 == false ){
+    for(Claymore_Anemo_Four of claymore_anemo_four) {
+      Claymore_Anemo_Four.style.display = "none";
+      cm_anm_four = false;
+    }
+  }
+  if (anm == true && Char_5 == true){
+    for(Claymore_Anemo_Five of claymore_anemo_five) {
+      Claymore_Anemo_Five.style.display = "";
+      cm_anm_five = true;
+    }
+  }
+  if (anm == true && Char_5 == false){
+    for(Claymore_Anemo_Five of claymore_anemo_five) {
+      Claymore_Anemo_Five.style.display = "none";
+      cm_anm_five = false;
+    }
+  }
+  if (anm == false){
+    for(Claymore_Anemo_Four of claymore_anemo_four) {
+      Claymore_Anemo_Four.style.display = "none";
+    }
+    for(Claymore_Anemo_Five of claymore_anemo_five) {
+      Claymore_Anemo_Five.style.display = "none";
+    }
+    cm_anm_four = false;
+    cm_anm_five = false;
+  }
+  
+  //////////////////////////////////////  Claymore  CRYO
+  if (co == true && Char_4 == true ){
+    for(Claymore_Cryo_Four of claymore_cryo_four) {
+      Claymore_Cryo_Four.style.display = "";
+      cm_co_four = true;
+    }
+  }
+  if (co == true && Char_4 == false ){
+    for(Claymore_Cryo_Four of claymore_cryo_four) {
+      Claymore_Cryo_Four.style.display = "none";
+      cm_co_four = false;
+    }
+  }
+  if (co == true && Char_5 == true ){
+    for(Claymore_Cryo_Five of claymore_cryo_five) {
+      Claymore_Cryo_Five.style.display = "";
+      cm_co_five = true;
+    }
+  }
+  if (co == true && Char_5 == false ){
+    for(Claymore_Cryo_Five of claymore_cryo_five) {
+      Claymore_Cryo_Five.style.display = "none";
+      cm_co_five = false;
+    }
+  }
+  if (co == false){
+    for(Claymore_Cryo_Four of claymore_cryo_four) {
+      Claymore_Cryo_Four.style.display = "none";
+    }
+    for(Claymore_Cryo_Five of claymore_cryo_five) {
+      Claymore_Cryo_Five.style.display = "none";
+    }
+    cm_co_five = false;
+    cm_co_four = false;
+  }
+  //////////////////////////////////////   Claymore DENDRO
+  if (dd == true && Char_4 == true ){
+    for(Claymore_Dendro_Four of claymore_dendro_four) {
+      Claymore_Dendro_Four.style.display = "";
+      cm_dd_four = true;
+    }
+  }
+  if (dd == true && Char_4 == false){
+    for(Claymore_Dendro_Four of claymore_dendro_four) {
+      Claymore_Dendro_Four.style.display = "none";
+      cm_dd_four = false;
+    }
+  }
+  if (dd == true && Char_5 == true ){
+    for(Claymore_Dendro_Five of claymore_dendro_five) {
+      Claymore_Dendro_Five.style.display = "";
+      cm_dd_five = true;
+    }
+  }
+  if (dd == true && Char_5 == false){
+    for(Claymore_Dendro_Five of claymore_dendro_five) {
+      Claymore_Dendro_Five.style.display = "none";
+      cm_dd_five = false;
+    }
+  }
+  if (dd == false){
+    for(Claymore_Dendro_Four of claymore_dendro_four) {
+      Claymore_Dendro_Four.style.display = "none";
+    }
+    for(Claymore_Dendro_Five of claymore_dendro_five) {
+      Claymore_Dendro_Five.style.display = "none";
+    }
+    cm_dd_five = false;
+    cm_dd_four = false;
+  }
+  //////////////////////////////////////  Claymore ELECTRO
+  if (elt == true && Char_4 == true ){
+    for(Claymore_Electro_Four of claymore_electro_four) {
+      Claymore_Electro_Four.style.display = "";
+      cm_elt_four = true;
+    }
+  }
+  if (elt == true && Char_4 == false ){
+    for(Claymore_Electro_Four of claymore_electro_four) {
+      Claymore_Electro_Four.style.display = "none";
+      cm_elt_four = false;
+    }
+  }
+  if (elt == true && Char_5 == true ){
+    for(Claymore_Electro_Five of claymore_electro_five) {
+      Claymore_Electro_Five.style.display = "";
+      cm_elt_five = true;
+    }
+  }
+  if (elt == true && Char_5 == false ){
+    for(Claymore_Electro_Five of claymore_electro_five) {
+      Claymore_Electro_Five.style.display = "none";
+      cm_elt_five = false;
+    }
+  }
+  if (elt == false){
+    for(Claymore_Electro_Four of claymore_electro_four) {
+      Claymore_Electro_Four.style.display = "none";
+    }
+    for(Claymore_Electro_Five of claymore_electro_five) {
+      Claymore_Electro_Five.style.display = "none";
+    }
+    cm_elt_five = false;
+    cm_elt_four = false;
+  }
+  //////////////////////////////////////  Claymore GEO
+  if (go == true && Char_4 == true ){
+    for(Claymore_Geo_Four of claymore_geo_four) {
+      Claymore_Geo_Four.style.display = "";
+      cm_geo_four = true;
+    }
+  }
+  if (go == true && Char_4 == false ){
+    for(Claymore_Geo_Four of claymore_geo_four) {
+      Claymore_Geo_Four.style.display = "none";
+      cm_geo_four = false;
+    }
+  }
+  if (go == true && Char_5 == true ){
+    for(Claymore_Geo_Five of claymore_geo_five) {
+      Claymore_Geo_Five.style.display = "";
+      cm_geo_five = true;
+    }
+  }
+  if (go == true && Char_5 == false ){
+    for(Claymore_Geo_Five of claymore_geo_five) {
+      Claymore_Geo_Five.style.display = "none";
+      cm_geo_five = false;
+    }
+  }
+  if (go == false){
+    for(Claymore_Geo_Four of claymore_geo_four) {
+      Claymore_Geo_Four.style.display = "none";
+    }
+    for(Claymore_Geo_Five of claymore_geo_five) {
+      Claymore_Geo_Five.style.display = "none";
+    }
+    cm_geo_five = false;
+    cm_geo_four = false;
+  }
+  ////////////////////////////////////// Claymore  HYDRO
+  if (hd == true && Char_4 == true ){
+    for(Claymore_Hydro_Four of claymore_hydro_four) {
+      Claymore_Hydro_Four.style.display = "";
+      cm_hydro_four = true;
+    }
+  }
+  if (hd == true && Char_4 == false ){
+    for(Claymore_Hydro_Four of claymore_hydro_four) {
+      Claymore_Hydro_Four.style.display = "none";
+      cm_hydro_four = false;
+    }
+  }
+  if (hd == true && Char_5 == true ){
+    for(Claymore_Hydro_Five of claymore_hydro_five) {
+      Claymore_Hydro_Five.style.display = "";
+      cm_hydro_five = true;
+    }
+  }
+  if (hd == true && Char_5 == false){
+    for(Claymore_Hydro_Five of claymore_hydro_five) {
+      Claymore_Hydro_Five.style.display = "none";
+      cm_hydro_five = false;
+    }
+  }
+  if (hd == false){
+    for(Claymore_Hydro_Four of claymore_hydro_four) {
+      Claymore_Hydro_Four.style.display = "none";
+    }
+    for(Claymore_Hydro_Five of claymore_hydro_five) {
+      Claymore_Hydro_Five.style.display = "none";
+    }
+    cm_hydro_five = false;
+    cm_hydro_four = false;
+  }
+  //////////////////////////////////////  Claymore PYRO
+  if (po == true && Char_4 == true ){
+    for(Claymore_Pyro_Four of claymore_pyro_four) {
+      Claymore_Pyro_Four.style.display = "";
+      cm_pyro_four = true;
+    }
+  }
+  if (po == true && Char_4 == false){
+    for(Claymore_Pyro_Four of claymore_pyro_four) {
+      Claymore_Pyro_Four.style.display = "none";
+      cm_pyro_four = false;
+    }
+  }
+  if (po == true && Char_5 == true){
+    for(Claymore_Pyro_Five of claymore_pyro_five) {
+      Claymore_Pyro_Five.style.display = "";
+      cm_pyro_five = true;
+    }
+  }
+  if (po == true && Char_5 == false ){
+    for(Claymore_Pyro_Five of claymore_pyro_five) {
+      Claymore_Pyro_Five.style.display = "none";
+      cm_pyro_five = false;
+    }
+  }
+  if (po == false){
+    for(Claymore_Pyro_Four of claymore_pyro_four) {
+      Claymore_Pyro_Four.style.display = "none";
+    }
+    for(Claymore_Pyro_Five of claymore_pyro_five) {
+      Claymore_Pyro_Five.style.display = "none";
+    }
+    cm_pyro_five = false;
+    cm_pyro_four = false;
+  }
 
-let anm = true;
-let co = true;
-let dd = true;
-let elt = true;
-let go = true;
-let hd = true;
-let po = true;
+  ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-///////////////////////////4
-let sw_anm_four = true;
-let sw_co_four = true;
-let sw_dd_four = true;
-let sw_elt_four = true;
-let sw_geo_four = true;
-let sw_hydro_four = true;
-let sw_pyro_four = true;
+  //////////////////////////////////////  Polearm ANEMO
+  if (anm == true && Char_4 == true ){
+    for(Polearm_Anemo_Four of polearm_anemo_four) {
+      Polearm_Anemo_Four.style.display = "";
+      pl_anm_four = true;
+    }
+  }
+  if (anm == true && Char_4 == false){
+    for(Polearm_Anemo_Four of polearm_anemo_four) {
+      Polearm_Anemo_Four.style.display = "none";
+      pl_anm_four = false;
+    }
+  }
+  if (anm == true && Char_5 == true ){
+    for(Polearm_Anemo_Five of polearm_anemo_five) {
+      Polearm_Anemo_Five.style.display = "";
+      pl_anm_five = true;
+    }
+  }
+  if (anm == true && Char_5 == false ){
+    for(Polearm_Anemo_Five of polearm_anemo_five) {
+      Polearm_Anemo_Five.style.display = "none";
+      pl_anm_five = false;
+    }
+  }
+  if (anm == false){
+    for(Polearm_Anemo_Four of polearm_anemo_four) {
+      Polearm_Anemo_Four.style.display = "none";
+    }
+    for(Polearm_Anemo_Five of polearm_anemo_five) {
+      Polearm_Anemo_Five.style.display = "none";
+    }
+    pl_anm_four = false;
+    pl_anm_five = false;
+  }
+  
+  //////////////////////////////////////  CRYO
+  if (co == true && Char_4 == true ){
+    for(Polearm_Cryo_Four of polearm_cryo_four) {
+      Polearm_Cryo_Four.style.display = "";
+      pl_co_four = true;
+    }
+  }
+  if (co == true && Char_4 == false ){
+    for(Polearm_Cryo_Four of polearm_cryo_four) {
+      Polearm_Cryo_Four.style.display = "none";
+      pl_co_four = false;
+    }
+  }
+  if (co == true && Char_5 == true ){
+    for(Polearm_Cryo_Five of polearm_cryo_five) {
+      Polearm_Cryo_Five.style.display = "";
+      pl_co_five = true;
+    }
+  }
+  if (co == true && Char_5 == false ){
+    for(Polearm_Cryo_Five of polearm_cryo_five) {
+      Polearm_Cryo_Five.style.display = "none";
+      pl_co_five = false;
+    }
+  }
+  if (co == false){
+    for(Polearm_Cryo_Four of polearm_cryo_four) {
+      Polearm_Cryo_Four.style.display = "none";
+    }
+    for(Polearm_Cryo_Five of polearm_cryo_five) {
+      Polearm_Cryo_Five.style.display = "none";
+    }
+    pl_co_five = false;
+    pl_co_four = false;
+  }
+  //////////////////////////////////////   DENDRO
+  if (dd == true && Char_4 == true ){
+    for(Polearm_Dendro_Four of polearm_dendro_four) {
+      Polearm_Dendro_Four.style.display = "";
+      pl_dd_four = true;
+    }
+  }
+  if (dd == true && Char_4 == false){
+    for(Polearm_Dendro_Four of polearm_dendro_four) {
+      Polearm_Dendro_Four.style.display = "none";
+      pl_dd_four = false;
+    }
+  }
+  if (dd == true && Char_5 == true ){
+    for(Polearm_Dendro_Five of polearm_dendro_five) {
+      Polearm_Dendro_Five.style.display = "";
+      pl_dd_five = true;
+    }
+  }
+  if (dd == true && Char_5 == false ){
+    for(Polearm_Dendro_Five of polearm_dendro_five) {
+      Polearm_Dendro_Five.style.display = "none";
+      pl_dd_five = false;
+    }
+  }
+  if (dd == false){
+    for(Polearm_Dendro_Four of polearm_dendro_four) {
+      Polearm_Dendro_Four.style.display = "none";
+    }
+    for(Polearm_Dendro_Five of polearm_dendro_five) {
+      Polearm_Dendro_Five.style.display = "none";
+    }
+    pl_dd_five = false;
+    pl_dd_four = false;
+  }
+  //////////////////////////////////////  Polearm ELECTRO
+  if (elt == true && Char_4 == true ){
+    for(Polearm_Electro_Four of polearm_electro_four) {
+      Polearm_Electro_Four.style.display = "";
+      pl_elt_four = true;
+    }
+  }
+  if (elt == true && Char_4 == false && pl ==true){
+    for(Polearm_Electro_Four of polearm_electro_four) {
+      Polearm_Electro_Four.style.display = "none";
+      pl_elt_four = false;
+    }
+  }
+  if (elt == true && Char_5 == true ){
+    for(Polearm_Electro_Five of polearm_electro_five) {
+      Polearm_Electro_Five.style.display = "";
+      pl_elt_five = true;
+    }
+  }
+  if (elt == true && Char_5 == false){
+    for(Polearm_Electro_Five of polearm_electro_five) {
+      Polearm_Electro_Five.style.display = "none";
+      pl_elt_five = false;
+    }
+  }
+  if (elt == false){
+    for(Polearm_Electro_Four of polearm_electro_four) {
+      Polearm_Electro_Four.style.display = "none";
+    }
+    for(Polearm_Electro_Five of polearm_electro_five) {
+      Polearm_Electro_Five.style.display = "none";
+    }
+    pl_elt_five = false;
+    pl_elt_four = false;
+  }
+  //////////////////////////////////////   GEO
+  if (go == true && Char_4 == true ){
+    for(Polearm_Geo_Four of polearm_geo_four) {
+      Polearm_Geo_Four.style.display = "";
+      pl_geo_four = true;
+    }
+  }
+  if (go == true && Char_4 == false){
+    for(Polearm_Geo_Four of polearm_geo_four) {
+      Polearm_Geo_Four.style.display = "none";
+      pl_geo_four = false;
+    }
+  }
+  if (go == true && Char_5 == true ){
+    for(Polearm_Geo_Five of polearm_geo_five) {
+      Polearm_Geo_Five.style.display = "";
+      pl_geo_five = true;
+    }
+  }
+  if (go == true && Char_5 == false ){
+    for(Polearm_Geo_Five of polearm_geo_five) {
+      Polearm_Geo_Five.style.display = "none";
+      pl_geo_five = false;
+    }
+  }
+  if (go == false){
+    for(Polearm_Geo_Four of polearm_geo_four) {
+      Polearm_Geo_Four.style.display = "none";
+    }
+    for(Polearm_Geo_Five of polearm_geo_five) {
+      Polearm_Geo_Five.style.display = "none";
+    }
+    pl_geo_five = false;
+    pl_geo_four = false;
+  }
+  //////////////////////////////////////  HYDRO
+  if (hd == true && Char_4 == true ){
+    for(Polearm_Hydro_Four of polearm_hydro_four) {
+      Polearm_Hydro_Four.style.display = "";
+      pl_hydro_four = true;
+    }
+  }
+  if (hd == true && Char_4 == false ){
+    for(Polearm_Hydro_Four of polearm_hydro_four) {
+      Polearm_Hydro_Four.style.display = "none";
+      pl_hydro_four = false;
+    }
+  }
+  if (hd == true && Char_5 == true ){
+    for(Polearm_Hydro_Five of polearm_hydro_five) {
+      Polearm_Hydro_Five.style.display = "";
+      pl_hydro_five = true;
+    }
+  }
+  if (hd == true && Char_5 == false){
+    for(Polearm_Hydro_Five of polearm_hydro_five) {
+      Polearm_Hydro_Five.style.display = "none";
+      pl_hydro_five = false;
+    }
+  }
+  if (hd == false){
+    for(Polearm_Hydro_Four of polearm_hydro_four) {
+      Polearm_Hydro_Four.style.display = "none";
+    }
+    for(Polearm_Hydro_Five of polearm_hydro_five) {
+      Polearm_Hydro_Five.style.display = "none";
+    }
+    pl_hydro_five = false;
+    pl_hydro_four = false;
+  }
+  //////////////////////////////////////  PYRO
+  if (po == true && Char_4 == true){
+    for(Polearm_Pyro_Four of polearm_pyro_four) {
+      Polearm_Pyro_Four.style.display = "";
+      pl_pyro_four = true;
+    }
+  }
+  if (po == true && Char_4 == false){
+    for(Polearm_Pyro_Four of polearm_pyro_four) {
+      Polearm_Pyro_Four.style.display = "none";
+      pl_pyro_four = false;
+    }
+  }
+  if (po == true && Char_5 == true){
+    for(Polearm_Pyro_Five of polearm_pyro_five) {
+      Polearm_Pyro_Five.style.display = "";
+      pl_pyro_five = true;
+    }
+  }
+  if (po == true && Char_5 == false ){
+    for(_Pyro_Five of polearm_pyro_five) {
+      _Pyro_Five.style.display = "none";
+      _pyro_five = false;
+    }
+  }
+  if (po == false){
+    for(Polearm_Pyro_Four of polearm_pyro_four) {
+      Polearm_Pyro_Four.style.display = "none";
+    }
+    for(Polearm_Pyro_Five of polearm_pyro_five) {
+      Polearm_Pyro_Five.style.display = "none";
+    }
+    pl_pyro_five = false;
+    pl_pyro_four = false;
+  }
 
-let cm_anm_four = true;
-let cm_co_four = true;
-let cm_dd_four = true;
-let cm_elt_four = true;
-let cm_geo_four = true;
-let cm_hydro_four = true;
-let cm_pyro_four = true;
+  ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-let pl_anm_four = true;
-let pl_co_four = true;
-let pl_dd_four = true;
-let pl_elt_four = true;
-let pl_geo_four = true;
-let pl_hydro_four = true;
-let pl_pyro_four = true;
+  ////////////////////////////////////// Bow  ANEMO
+  if (anm == true && Char_4 == true){
+    for(Bow_Anemo_Four of bow_anemo_four) {
+      Bow_Anemo_Four.style.display = "";
+      b_anm_four = true;
+    }
+  }
+  if (anm == true && Char_4 == false){
+    for(Bow_Anemo_Four of bow_anemo_four) {
+      Bow_Anemo_Four.style.display = "none";
+      b_anm_four = false;
+    }
+  }
+  if (anm == true && Char_5 == true){
+    for(Bow_Anemo_Five of bow_anemo_five) {
+      Bow_Anemo_Five.style.display = "";
+      b_anm_five = true;
+    }
+  }
+  if (anm == true && Char_5 == false){
+    for(Bow_Anemo_Five of bow_anemo_five) {
+      Bow_Anemo_Five.style.display = "none";
+      b_anm_five = false;
+    }
+  }
+  if (anm == false){
+    for(Bow_Anemo_Four of bow_anemo_four) {
+      Bow_Anemo_Four.style.display = "none";
+    }
+    for(Bow_Anemo_Five of bow_anemo_five) {
+      Bow_Anemo_Five.style.display = "none";
+    }
+    b_anm_four = false;
+    b_anm_five = false;
+  }
+  
+  //////////////////////////////////////  Bow CRYO
+  if (co == true && Char_4 == true){
+    for(Bow_Cryo_Four of bow_cryo_four) {
+      Bow_Cryo_Four.style.display = "";
+      b_co_four = true;
+    }
+  }
+  if (co == true && Char_4 == false){
+    for(Bow_Cryo_Four of bow_cryo_four) {
+      Bow_Cryo_Four.style.display = "none";
+      b_co_four = false;
+    }
+  }
+  if (co == true && Char_5 == true){
+    for(Bow_Cryo_Five of bow_cryo_five) {
+      Bow_Cryo_Five.style.display = "";
+      b_co_five = true;
+    }
+  }
+  if (co == true && Char_5 == false){
+    for(Bow_Cryo_Five of bow_cryo_five) {
+      Bow_Cryo_Five.style.display = "none";
+      b_co_five = false;
+    }
+  }
+  if (co == false){
+    for(Bow_Cryo_Four of bow_cryo_four) {
+      Bow_Cryo_Four.style.display = "none";
+    }
+    for(Bow_Cryo_Five of bow_cryo_five) {
+      Bow_Cryo_Five.style.display = "none";
+    }
+    b_co_five = false;
+    b_co_four = false;
+  }
+  //////////////////////////////////////  Bow DENDRO
+  if (dd == true && Char_4 == true){
+    for(Bow_Dendro_Four of bow_dendro_four) {
+      Bow_Dendro_Four.style.display = "";
+      b_dd_four = true;
+    }
+  }
+  if (dd == true && Char_4 == false){
+    for(Bow_Dendro_Four of bow_dendro_four) {
+      Bow_Dendro_Four.style.display = "none";
+      b_dd_four = false;
+    }
+  }
+  if (dd == true && Char_5 == true){
+    for(Bow_Dendro_Five of bow_dendro_five) {
+      Bow_Dendro_Five.style.display = "";
+      b_dd_five = true;
+    }
+  }
+  if (dd == true && Char_5 == false){
+    for(Bow_Dendro_Five of bow_dendro_five) {
+      Bow_Dendro_Five.style.display = "none";
+      b_dd_five = false;
+    }
+  }
+  if (dd == false){
+    for(Bow_Dendro_Four of bow_dendro_four) {
+      Bow_Dendro_Four.style.display = "none";
+    }
+    for(Bow_Dendro_Five of bow_dendro_five) {
+      Bow_Dendro_Five.style.display = "none";
+    }
+    b_dd_five = false;
+    b_dd_four = false;
+  }
+  //////////////////////////////////////  Bow ELECTRO
+  if (elt == true && Char_4 == true){
+    for(Bow_Electro_Four of bow_electro_four) {
+      Bow_Electro_Four.style.display = "";
+      b_elt_four = true;
+    }
+  }
+  if (elt == true && Char_4 == false){
+    for(Bow_Electro_Four of bow_electro_four) {
+      Bow_Electro_Four.style.display = "none";
+      b_elt_four = false;
+    }
+  }
+  if (elt == true && Char_5 == true){
+    for(Bow_Electro_Five of bow_electro_five) {
+      Bow_Electro_Five.style.display = "";
+      b_elt_five = true;
+    }
+  }
+  if (elt == true && Char_5 == false){
+    for(Bow_Electro_Five of bow_electro_five) {
+      Bow_Electro_Five.style.display = "none";
+      b_elt_five = false;
+    }
+  }
+  if (elt == false){
+    for(Bow_Electro_Four of bow_electro_four) {
+      Bow_Electro_Four.style.display = "none";
+    }
+    for(_Electro_Five of bow_electro_five) {
+      Bow_Electro_Five.style.display = "none";
+    }
+    b_elt_five = false;
+    b_elt_four = false;
+  }
+  //////////////////////////////////////  Bow  GEO
+  if (go == true && Char_4 == true){
+    for(Bow_Geo_Four of bow_geo_four) {
+      Bow_Geo_Four.style.display = "";
+      b_geo_four = true;
+    }
+  }
+  if (go == true && Char_4 == false){
+    for(Bow_Geo_Four of bow_geo_four) {
+      Bow_Geo_Four.style.display = "none";
+      b_geo_four = false;
+    }
+  }
+  if (go == true && Char_5 == true){
+    for(Bow_Geo_Five of bow_geo_five) {
+      Bow_Geo_Five.style.display = "";
+      b_geo_five = true;
+    }
+  }
+  if (go == true && Char_5 == false){
+    for(Bow_Geo_Five of bow_geo_five) {
+      Bow_Geo_Five.style.display = "none";
+      b_geo_five = false;
+    }
+  }
+  if (go == false){
+    for(Bow_Geo_Four of bow_geo_four) {
+      Bow_Geo_Four.style.display = "none";
+    }
+    for(Bow_Geo_Five of bow_geo_five) {
+      Bow_Geo_Five.style.display = "none";
+    }
+    b_geo_five = false;
+    b_geo_four = false;
+  }
+  //////////////////////////////////////   Bow HYDRO
+  if (hd == true && Char_4 == true){
+    for(Bow_Hydro_Four of bow_hydro_four) {
+      Bow_Hydro_Four.style.display = "";
+      b_hydro_four = true;
+    }
+  }
+  if (hd == true && Char_4 == false){
+    for(Bow_Hydro_Four of bow_hydro_four) {
+      Bow_Hydro_Four.style.display = "none";
+      b_hydro_four = false;
+    }
+  }
+  if (hd == true && Char_5 == true){
+    for(Bow_Hydro_Five of bow_hydro_five) {
+      Bow_Hydro_Five.style.display = "";
+      b_hydro_five = true;
+    }
+  }
+  if (hd == true && Char_5 == false){
+    for(Bow_Hydro_Five of bow_hydro_five) {
+      Bow_Hydro_Five.style.display = "none";
+      b_hydro_five = false;
+    }
+  }
+  if (hd == false){
+    for(Bow_Hydro_Four of bow_hydro_four) {
+      Bow_Hydro_Four.style.display = "none";
+    }
+    for(Bow_Hydro_Five of bow_hydro_five) {
+      Bow_Hydro_Five.style.display = "none";
+    }
+    b_hydro_five = false;
+    b_hydro_four = false;
+  }
+  //////////////////////////////////////  Bow PYRO
+  if (po == true && Char_4 == true){
+    for(Bow_Pyro_Four of bow_pyro_four) {
+      Bow_Pyro_Four.style.display = "";
+      b_pyro_four = true;
+    }
+  }
+  if (po == true && Char_4 == false){
+    for(Bow_Pyro_Four of bow_pyro_four) {
+      Bow_Pyro_Four.style.display = "none";
+      b_pyro_four = false;
+    }
+  }
+  if (po == true && Char_5 == true){
+    for(Bow_Pyro_Five of bow_pyro_five) {
+      Bow_Pyro_Five.style.display = "";
+      b_pyro_five = true;
+    }
+  }
+  if (po == true && Char_5 == false){
+    for(bow_Pyro_Five of bow_pyro_five) {
+      bow_Pyro_Five.style.display = "none";
+      b_pyro_five = false;
+    }
+  }
+  if (po == false){
+    for(Bow_Pyro_Four of bow_pyro_four) {
+      Bow_Pyro_Four.style.display = "none";
+    }
+    for(Bow_Pyro_Five of bow_pyro_five) {
+      Bow_Pyro_Five.style.display = "none";
+    }
+    b_pyro_five = false;
+    b_pyro_four = false;
+  }
 
-let b_anm_four = true;
-let b_co_four = true;
-let b_dd_four = true;
-let b_elt_four = true;
-let b_geo_four = true;
-let b_hydro_four = true;
-let b_pyro_four = true;
+  ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-let ctl_anm_four = true;
-let ctl_co_four = true;
-let ctl_dd_four = true;
-let ctl_elt_four = true;
-let ctl_geo_four = true;
-let ctl_hydro_four = true;
-let ctl_pyro_four = true;
+  ////////////////////////////////////// Catalyst ANEMO
+  if (anm == true && Char_4 == true){
+    for(Catalyst_Anemo_Four of catalyst_anemo_four) {
+      Catalyst_Anemo_Four.style.display = "";
+      ctl_anm_four = true;
+    }
+  }
+  if (anm == true && Char_4 == false){
+    for(Catalyst_Anemo_Four of catalyst_anemo_four) {
+      Catalyst_Anemo_Four.style.display = "none";
+      ctl_anm_four = false;
+    }
+  }
+  if (anm == true && Char_5 == true){
+    for(Catalyst_Anemo_Five of catalyst_anemo_five) {
+      Catalyst_Anemo_Five.style.display = "";
+      ctl_anm_five = true;
+    }
+  }
+  if (anm == true && Char_5 == false){
+    for(Catalyst_Anemo_Five of catalyst_anemo_five) {
+      Catalyst_Anemo_Five.style.display = "none";
+      ctl_anm_five = false;
+    }
+  }
+  if (anm == false){
+    for(Catalyst_Anemo_Four of catalyst_anemo_four) {
+      Catalyst_Anemo_Four.style.display = "none";
+    }
+    for(Catalyst_Anemo_Five of catalyst_anemo_five) {
+      Catalyst_Anemo_Five.style.display = "none";
+    }
+    ctl_anm_four = false;
+    ctl_anm_five = false;
+  }
+  
+  //////////////////////////////////////  CRYO
+  if (co == true && Char_4 == true){
+    for(Catalyst_Cryo_Four of catalyst_cryo_four) {
+      catalyst_Cryo_Four.style.display = "";
+      ctl_co_four = true;
+    }
+  }
+  if (co == true && Char_4 == false){
+    for(Catalyst_Cryo_Four of catalyst_cryo_four) {
+      Catalyst_Cryo_Four.style.display = "none";
+      ctl_co_four = false;
+    }
+  }
+  if (co == true && Char_5 == true){
+    for(Catalyst_Cryo_Five of catalyst_cryo_five) {
+      Catalyst_Cryo_Five.style.display = "";
+      ctl_co_five = true;
+    }
+  }
+  if (co == true && Char_5 == false){
+    for(Catalyst_Cryo_Five of catalyst_cryo_five) {
+      Catalyst_Cryo_Five.style.display = "none";
+      ctl_co_five = false;
+    }
+  }
+  if (co == false){
+    for(Catalyst_Cryo_Four of catalyst_cryo_four) {
+      Catalyst_Cryo_Four.style.display = "none";
+    }
+    for(Catalyst_Cryo_Five of catalyst_cryo_five) {
+      Catalyst_Cryo_Five.style.display = "none";
+    }
+    ctl_co_five = false;
+    ctl_co_four = false;
+  }
+  //////////////////////////////////////   DENDRO
+  if (dd == true && Char_4 == true){
+    for(Catalyst_Dendro_Four of catalyst_dendro_four) {
+      Catalyst_Dendro_Four.style.display = "";
+      ctl_dd_four = true;
+    }
+  }
+  if (dd == true && Char_4 == false){
+    for(Catalyst_Dendro_Four of catalyst_dendro_four) {
+      Catalyst_Dendro_Four.style.display = "none";
+      ctl_dd_four = false;
+    }
+  }
+  if (dd == true && Char_5 == true){
+    for(Catalyst_Dendro_Five of catalyst_dendro_five) {
+      Catalyst_Dendro_Five.style.display = "";
+      ctl_dd_five = true;
+    }
+  }
+  if (dd == true && Char_5 == false){
+    for(Catalyst_Dendro_Five of catalyst_dendro_five) {
+      Catalyst_Dendro_Five.style.display = "none";
+      ctl_dd_five = false;
+    }
+  }
+  if (dd == false){
+    for(Catalyst_Dendro_Four of catalyst_dendro_four) {
+      Catalyst_Dendro_Four.style.display = "none";
+    }
+    for(Catalyst_Dendro_Five of catalyst_dendro_five) {
+      Catalyst_Dendro_Five.style.display = "none";
+    }
+    ctl_dd_five = false;
+    ctl_dd_four = false;
+  }
+  //////////////////////////////////////   ELECTRO
+  if (elt == true && Char_4 == true){
+    for(Catalyst_Electro_Four of catalyst_electro_four) {
+      Catalyst_Electro_Four.style.display = "";
+      ctl_elt_four = true;
+    }
+  }
+  if (elt == true && Char_4 == false){
+    for(Catalyst_Electro_Four of catalyst_electro_four) {
+      Catalyst_Electro_Four.style.display = "none";
+      catalyst_elt_four = false;
+    }
+  }
+  if (elt == true && Char_5 == true){
+    for(Catalyst_Electro_Five of catalyst_electro_five) {
+      Catalyst_Electro_Five.style.display = "";
+      ctl_elt_five = true;
+    }
+  }
+  if (elt == true && Char_5 == false){
+    for(Catalyst_Electro_Five of catalyst_electro_five) {
+      Catalyst_Electro_Five.style.display = "none";
+      ctl_elt_five = false;
+    }
+  }
+  if (elt == false){
+    for(Catalyst_Electro_Four of catalyst_electro_four) {
+      Catalyst_Electro_Four.style.display = "none";
+    }
+    for(Catalyst_Electro_Five of catalyst_electro_five) {
+      Catalyst_Electro_Five.style.display = "none";
+    }
+    ctl_elt_five = false;
+    ctl_elt_four = false;
+  }
+  //////////////////////////////////////   GEO
+  if (go == true && Char_4 == true){
+    for(Catalyst_Geo_Four of catalyst_geo_four) {
+      Catalyst_Geo_Four.style.display = "";
+      ctl_geo_four = true;
+    }
+  }
+  if (go == true && Char_4 == false){
+    for(Catalyst_Geo_Four of catalyst_geo_four) {
+      Catalyst_Geo_Four.style.display = "none";
+      ctl_geo_four = false;
+    }
+  }
+  if (go == true && Char_5 == true){
+    for(Catalyst_Geo_Five of catalyst_geo_five) {
+      Catalyst_Geo_Five.style.display = "";
+      ctl_geo_five = true;
+    }
+  }
+  if (go == true && Char_5 == false){
+    for(Catalyst_Geo_Five of catalyst_geo_five) {
+      Catalyst_Geo_Five.style.display = "none";
+      ctl_geo_five = false;
+    }
+  }
+  if (go == false){
+    for(Catalyst_Geo_Four of catalyst_geo_four) {
+      Catalyst_Geo_Four.style.display = "none";
+    }
+    for(Catalyst_Geo_Five of catalyst_geo_five) {
+      Catalyst_Geo_Five.style.display = "none";
+    }
+    ctl_geo_five = false;
+    ctl_geo_four = false;
+  }
+  //////////////////////////////////////  HYDRO
+  if (hd == true && Char_4 == true){
+    for(Catalyst_Hydro_Four of catalyst_hydro_four) {
+      Catalyst_Hydro_Four.style.display = "";
+      ctl_hydro_four = true;
+    }
+  }
+  if (hd == true && Char_4 == false){
+    for(Catalyst_Hydro_Four of catalyst_hydro_four) {
+      Catalyst_Hydro_Four.style.display = "none";
+      ctl_hydro_four = false;
+    }
+  }
+  if (hd == true && Char_5 == true){
+    for(Catalyst_Hydro_Five of catalyst_hydro_five) {
+      Catalyst_Hydro_Five.style.display = "";
+      ctl_hydro_five = true;
+    }
+  }
+  if (hd == true && Char_5 == false){
+    for(Catalyst_Hydro_Five of catalyst_hydro_five) {
+      Catalyst_Hydro_Five.style.display = "none";
+      ctl_hydro_five = false;
+    }
+  }
+  if (hd == false){
+    for(Catalyst_Hydro_Four of catalyst_hydro_four) {
+      Catalyst_Hydro_Four.style.display = "none";
+    }
+    for(Catalyst_Hydro_Five of catalyst_hydro_five) {
+      Catalyst_Hydro_Five.style.display = "none";
+    }
+    ctl_hydro_five = false;
+    ctl_hydro_four = false;
+  }
+  //////////////////////////////////////  PYRO
+  if (po == true && Char_4 == true){
+    for(Catalyst_Pyro_Four of catalyst_pyro_four) {
+      Catalyst_Pyro_Four.style.display = "";
+      ctl_pyro_four = true;
+    }
+  }
+  if (po == true && Char_4 == false){
+    for(Catalyst_Pyro_Four of catalyst_pyro_four) {
+      Catalyst_Pyro_Four.style.display = "none";
+      ctl_pyro_four = false;
+    }
+  }
+  if (po == true && Char_5 == true){
+    for(Catalyst_Pyro_Five of catalyst_pyro_five) {
+      Catalyst_Pyro_Five.style.display = "";
+      ctl_pyro_five = true;
+    }
+  }
+  if (po == true && Char_5 == false){
+    for(Catalyst_Pyro_Five of catalyst_pyro_five) {
+      Catalyst_Pyro_Five.style.display = "none";
+      ctl_pyro_five = false;
+    }
+  }
+  if (po == false){
+    for(Catalyst_Pyro_Four of catalyst_pyro_four) {
+      Catalyst_Pyro_Four.style.display = "none";
+    }
+    for(Catalyst_Pyro_Five of catalyst_pyro_five) {
+      Catalyst_Pyro_Five.style.display = "none";
+    }
+    ctl_pyro_five = false;
+    ctl_pyro_four = false;
+  }
+  
+  if(sw == false){
+    for(Sword of sword) {
+      Sword.style.display = "none";
+    }
+  }
+  if(cm == false){
+    for(Claymore of claymore) {
+      Claymore.style.display = "none";
+    }
+  }
+  
+  if(pl == false){
+    for(Polearm of polearm) {
+      Polearm.style.display = "none";
+    }
+  }
 
-///////////////////////////5
-let sw_anm_five = true;
-let sw_co_five = true;
-let sw_dd_five = true;
-let sw_elt_five = true;
-let sw_geo_five = true;
-let sw_hydro_five = true;
-let sw_pyro_five = true;
+  if(b == false){
+    for(Bow of bow) {
+      Bow.style.display = "none";
+    }
+  }
 
-let cm_anm_five = true;
-let cm_co_five = true;
-let cm_dd_five = true;
-let cm_elt_five = true;
-let cm_geo_five = true;
-let cm_hydro_five = true;
-let cm_pyro_five = true;
-
-let pl_anm_five = true;
-let pl_co_five = true;
-let pl_dd_five = true;
-let pl_elt_five = true;
-let pl_geo_five = true;
-let pl_hydro_five = true;
-let pl_pyro_five = true;
-
-let b_anm_five = true;
-let b_co_five = true;
-let b_dd_five = true;
-let b_elt_five = true;
-let b_geo_five = true;
-let b_hydro_five = true;
-let b_pyro_five = true;
-
-let ctl_anm_five = true;
-let ctl_co_five = true;
-let ctl_dd_five = true;
-let ctl_elt_five = true;
-let ctl_geo_five = true;
-let ctl_hydro_five = true;
-let ctl_pyro_five = true;
-
-//////////////////////////////
-const four = document.getElementsByClassName("four_star");
-const five = document.getElementsByClassName("five_star");
-
-const sword = document.getElementsByClassName("Sword");
-const claymore = document.getElementsByClassName("Claymore");
-const polearm = document.getElementsByClassName("Polearm");
-const bow = document.getElementsByClassName("Bow");
-const catalyst = document.getElementsByClassName("Catalyst");
-
-const anemo = document.getElementsByClassName("Anemo");
-const cryo = document.getElementsByClassName("Cryo");
-const dendro = document.getElementsByClassName("Dendro");
-const electro = document.getElementsByClassName("Electro");
-const geo = document.getElementsByClassName("Geo");
-const hydro = document.getElementsByClassName("Hydro");
-const pyro = document.getElementsByClassName("Pyro");
-
-////////////////////////////////////////////////////////////////////////4444
-const sword_anemo_four = document.getElementsByClassName("Sword_Anemo_Four");
-const sword_cryo_four = document.getElementsByClassName("Sword_Cryo_Four");
-const sword_dendro_four = document.getElementsByClassName("Sword_Dendro_Four");
-const sword_electro_four = document.getElementsByClassName("Sword_Electro_Four");
-const sword_geo_four = document.getElementsByClassName("Sword_Geo_Four");
-const sword_hydro_four = document.getElementsByClassName("Sword_Hydro_Four");
-const sword_pyro_four = document.getElementsByClassName("Sword_Pyro_Four");
-
-const claymore_anemo_four = document.getElementsByClassName("Claymore_Anemo_Four");
-const claymore_cryo_four = document.getElementsByClassName("Claymore_Cryo_Four");
-const claymore_dendro_four = document.getElementsByClassName("Claymore_Dendro_Four");
-const claymore_electro_four = document.getElementsByClassName("Claymore_Electro_Four");
-const claymore_geo_four = document.getElementsByClassName("Claymore_Geo_Four");
-const claymore_hydro_four = document.getElementsByClassName("Claymore_Hydro_Four");
-const claymore_pyro_four = document.getElementsByClassName("Claymore_Pyro_Four");
-
-const polearm_anemo_four = document.getElementsByClassName("Polearm_Anemo_Four");
-const polearm_cryo_four = document.getElementsByClassName("Polearm_Cryo_Four");
-const polearm_dendro_four = document.getElementsByClassName("Polearm_Dendro_Four");
-const polearm_electro_four = document.getElementsByClassName("Polearm_Electro_Four");
-const polearm_geo_four = document.getElementsByClassName("Polearm_Geo_Four");
-const polearm_hydro_four = document.getElementsByClassName("Polearm_Hydro_Four");
-const polearm_pyro_four = document.getElementsByClassName("Polearm_Pyro_Four");
-
-const bow_anemo_four = document.getElementsByClassName("Bow_Anemo_Four");
-const bow_cryo_four = document.getElementsByClassName("Bow_Cryo_Four");
-const bow_dendro_four = document.getElementsByClassName("Bow_Dendro_Four");
-const bow_electro_four = document.getElementsByClassName("Bow_Electro_Four");
-const bow_geo_four = document.getElementsByClassName("Bow_Geo_Four");
-const bow_hydro_four = document.getElementsByClassName("Bow_Hydro_Four");
-const bow_pyro_four = document.getElementsByClassName("Bow_Pyro_Four");
-
-const catalyst_anemo_four = document.getElementsByClassName("Catalyst_Anemo_Four");
-const catalyst_cryo_four = document.getElementsByClassName("Catalyst_Cryo_Four");
-const catalyst_dendro_four = document.getElementsByClassName("Catalyst_Dendro_Four");
-const catalyst_electro_four = document.getElementsByClassName("Catalyst_Electro_Four");
-const catalyst_geo_four = document.getElementsByClassName("Catalyst_Geo_Four");
-const catalyst_hydro_four = document.getElementsByClassName("Catalyst_Hydro_Four");
-const catalyst_pyro_four = document.getElementsByClassName("Catalyst_Pyro_Four");
-
-////////////////////////////////////////////////////////////////////////555
-const sword_anemo_five = document.getElementsByClassName("Sword_Anemo_Five");
-const sword_cryo_five = document.getElementsByClassName("Sword_Cryo_Five");
-const sword_dendro_five = document.getElementsByClassName("Sword_Dendro_Five");
-const sword_electro_five = document.getElementsByClassName("Sword_Electro_Five");
-const sword_geo_five = document.getElementsByClassName("Sword_Geo_Five");
-const sword_hydro_five = document.getElementsByClassName("Sword_Hydro_Five");
-const sword_pyro_five = document.getElementsByClassName("Sword_Pyro_Five");
-
-const claymore_anemo_five = document.getElementsByClassName("Claymore_Anemo_Five");
-const claymore_cryo_five = document.getElementsByClassName("Claymore_Cryo_Five");
-const claymore_dendro_five = document.getElementsByClassName("Claymore_Dendro_Five");
-const claymore_electro_five = document.getElementsByClassName("Claymore_Electro_Five");
-const claymore_geo_five = document.getElementsByClassName("Claymore_Geo_Five");
-const claymore_hydro_five = document.getElementsByClassName("Claymore_Hydro_Five");
-const claymore_pyro_five = document.getElementsByClassName("Claymore_Pyro_Five");
-
-const polearm_anemo_five = document.getElementsByClassName("Polearm_Anemo_Five");
-const polearm_cryo_five = document.getElementsByClassName("Polearm_Cryo_Five");
-const polearm_dendro_five = document.getElementsByClassName("Polearm_Dendro_Five");
-const polearm_electro_five = document.getElementsByClassName("Polearm_Electro_Five");
-const polearm_geo_five = document.getElementsByClassName("Polearm_Geo_Five");
-const polearm_hydro_five = document.getElementsByClassName("Polearm_Hydro_Five");
-const polearm_pyro_five = document.getElementsByClassName("Polearm_Pyro_Five");
-
-const bow_anemo_five = document.getElementsByClassName("Bow_Anemo_Five");
-const bow_cryo_five = document.getElementsByClassName("Bow_Cryo_Five");
-const bow_dendro_five = document.getElementsByClassName("Bow_Dendro_Five");
-const bow_electro_five = document.getElementsByClassName("Bow_Electro_Five");
-const bow_geo_five = document.getElementsByClassName("Bow_Geo_Five");
-const bow_hydro_five = document.getElementsByClassName("Bow_Hydro_Five");
-const bow_pyro_five = document.getElementsByClassName("Bow_Pyro_Five");
-
-const catalyst_anemo_five = document.getElementsByClassName("Catalyst_Anemo_Five");
-const catalyst_cryo_five = document.getElementsByClassName("Catalyst_Cryo_Five");
-const catalyst_dendro_five = document.getElementsByClassName("Catalyst_Dendro_Five");
-const catalyst_electro_five = document.getElementsByClassName("Catalyst_Electro_Five");
-const catalyst_geo_five = document.getElementsByClassName("Catalyst_Geo_Five");
-const catalyst_hydro_five = document.getElementsByClassName("Catalyst_Hydro_Five");
-const catalyst_pyro_five = document.getElementsByClassName("Catalyst_Pyro_Five");
+  if(ctl == false){
+    for(Catalyst of catalyst) {
+      Catalyst.style.display = "none";
+    }
+  }
+  
+  document.querySelector(".rarity_4").style.cssText = "background-color: #97DEFF;"
+  document.querySelector(".rarity_5").style.cssText = "background-color: #97DEFF;"
+  document.querySelector(".rarity_all").style.cssText = "background-color: #97DEFF;"
+}
 
 function rarity_4(){
   if (Char_4 == true && Char_5 == true){
 
     Char_4 = true;
     Char_5 = false;
+    Char_all = false;
 
     ///////////////////////////////////// Sword ANEMO
     if (anm == true && Char_4 == true ){
@@ -1494,9 +2576,9 @@ function rarity_4(){
       }
     }
 
-
-    document.querySelector(".rarity_4").style.cssText = "background-color: Aquamarine;"
+    document.querySelector(".rarity_4").style.cssText = "background-color: #97DEFF;"
     document.querySelector(".rarity_5").style.cssText = "background-color: white;"
+    document.querySelector(".rarity_all").style.cssText = "background-color: white;"
     return
   }
 
@@ -1504,6 +2586,7 @@ function rarity_4(){
 
     Char_4 = true;
     Char_5 = true;
+    Char_all = true;
 
     ///////////////////////////////////// Sword ANEMO
     if (anm == true && Char_4 == true ){
@@ -2777,17 +3860,13 @@ function rarity_4(){
       }
     }
 
-    document.querySelector(".rarity_4").style.cssText = "background-color: Aquamarine;"
-    document.querySelector(".rarity_5").style.cssText = "background-color: Aquamarine;"
-    
+    document.querySelector(".rarity_4").style.cssText = "background-color: #97DEFF;"
+    document.querySelector(".rarity_5").style.cssText = "background-color: #97DEFF;"
+    document.querySelector(".rarity_all").style.cssText = "background-color: #97DEFF;"
     return
   }
 
   if (Char_4 == false && Char_5 == true){
-    
-    Char_4 = true;
-    Char_5 = true;
-
     ///////////////////////////////////// Sword ANEMO
     if (anm == true && Char_4 == true ){
       for(Sword_Anemo_Four of sword_anemo_four) {
@@ -4061,10 +5140,13 @@ function rarity_4(){
     }
     
 
-    document.querySelector(".rarity_4").style.cssText = "background-color: Aquamarine;"
-    document.querySelector(".rarity_5").style.cssText = "background-color: Aquamarine;"
+    document.querySelector(".rarity_4").style.cssText = "background-color: #97DEFF;"
+    document.querySelector(".rarity_5").style.cssText = "background-color: #97DEFF;"
+    document.querySelector(".rarity_all").style.cssText = "background-color: #97DEFF;"
+
     Char_4 = true;
     Char_5 = true;
+    Char_all = true;
     return
   }
 
@@ -4076,6 +5158,7 @@ function rarity_5(){
 
     Char_5 = true;
     Char_4 = false;
+    Char_all = false;
 
     ///////////////////////////////////// Sword ANEMO
     if (anm == true && Char_4 == true ){
@@ -5350,8 +6433,10 @@ function rarity_5(){
     }
 
     
-    document.querySelector(".rarity_5").style.cssText = "background-color: Aquamarine;"
+    document.querySelector(".rarity_5").style.cssText = "background-color: #97DEFF;"
     document.querySelector(".rarity_4").style.cssText = "background-color: white;"
+    document.querySelector(".rarity_all").style.cssText = "background-color: white;"
+
     return
   }
 
@@ -5359,6 +6444,7 @@ function rarity_5(){
 
     Char_5 = true;
     Char_4 = true;
+    Char_all = true;
 
     ///////////////////////////////////// Sword ANEMO
     if (anm == true && Char_4 == true ){
@@ -6633,8 +7719,9 @@ function rarity_5(){
     }
 
 
-    document.querySelector(".rarity_4").style.cssText = "background-color: Aquamarine;"
-    document.querySelector(".rarity_5").style.cssText = "background-color: Aquamarine;"
+    document.querySelector(".rarity_4").style.cssText = "background-color: #97DEFF;"
+    document.querySelector(".rarity_5").style.cssText = "background-color: #97DEFF;"
+    document.querySelector(".rarity_all").style.cssText = "background-color: #97DEFF;"
     return
   }
 
@@ -6642,6 +7729,7 @@ function rarity_5(){
     
     Char_4 = true;
     Char_5 = true;
+    Char_all = true
 
     ///////////////////////////////////// Sword ANEMO
     if (anm == true && Char_4 == true ){
@@ -7915,12 +9003,1290 @@ function rarity_5(){
       }
     }
 
-    document.querySelector(".rarity_4").style.cssText = "background-color: Aquamarine;"
-    document.querySelector(".rarity_5").style.cssText = "background-color: Aquamarine;"
-    
+    document.querySelector(".rarity_4").style.cssText = "background-color: #97DEFF;"
+    document.querySelector(".rarity_5").style.cssText = "background-color: #97DEFF;"
+    document.querySelector(".rarity_all").style.cssText = "background-color: #97DEFF;"
+
     return
   }
 } 
+
+function type_all(){
+  sw = true;
+  cm = true;
+  pl = true;
+  b = true;
+  ctl = true;
+  types_all = true;
+
+  for(Sword of sword) {
+    Sword.style.display = "";
+  }
+  for(Claymore of claymore) {
+    Claymore.style.display = "";
+  }
+  for(Polearm of polearm) {
+    Polearm.style.display = "";
+  }
+  for(Bow of bow) {
+    Bow.style.display = "";
+  }
+  for(Catalyst of catalyst) {
+    Catalyst.style.display = "";
+  }
+
+  ////////////////////////////////////// Sword ANEMO
+  if (anm == true && Char_4 == true ){
+    for(Sword_Anemo_Four of sword_anemo_four) {
+      Sword_Anemo_Four.style.display = "";
+      sw_anm_four = true;
+    }
+  }
+  if (anm == true && Char_4 == false ){
+    for(Sword_Anemo_Four of sword_anemo_four) {
+      Sword_Anemo_Four.style.display = "none";
+      sw_anm_four = false;
+    }
+  }
+  if (anm == true && Char_5 == true ){
+    for(Sword_Anemo_Five of sword_anemo_five) {
+      Sword_Anemo_Five.style.display = "";
+      sw_anm_five = true;
+    }
+  }
+  if (anm == true && Char_5 == false ){
+    for(Sword_Anemo_Five of sword_anemo_five) {
+      Sword_Anemo_Five.style.display = "none";
+      sw_anm_five = false;
+    }
+  }
+  if (anm == false){
+    for(Sword_Anemo_Four of sword_anemo_four) {
+      Sword_Anemo_Four.style.display = "none";
+    }
+    for(Sword_Anemo_Five of sword_anemo_five) {
+      Sword_Anemo_Five.style.display = "none";
+    }
+    sw_anm_four = false;
+    sw_anm_five = false;
+  }
+  
+  ////////////////////////////////////// Sword CRYO
+  if (co == true && Char_4 == true ){
+    for(Sword_Cryo_Four of sword_cryo_four) {
+      Sword_Cryo_Four.style.display = "";
+      sw_co_four = true;
+    }
+  }
+  if (co == true && Char_4 == false ){
+    for(Sword_Cryo_Four of sword_cryo_four) {
+      Sword_Cryo_Four.style.display = "none";
+      sw_co_four = false;
+    }
+  }
+  if (co == true && Char_5 == true ){
+    for(Sword_Cryo_Five of sword_cryo_five) {
+      Sword_Cryo_Five.style.display = "";
+      sw_co_five = true;
+    }
+  }
+  if (co == true && Char_5 == false ){
+    for(Sword_Cryo_Five of sword_cryo_five) {
+      Sword_Cryo_Five.style.display = "none";
+      sw_co_five = false;
+    }
+  }
+  if (co == false){
+    for(Sword_Cryo_Four of sword_cryo_four) {
+      Sword_Cryo_Four.style.display = "none";
+    }
+    for(Sword_Cryo_Five of sword_cryo_five) {
+      Sword_Cryo_Five.style.display = "none";
+    }
+    sw_co_five = false;
+    sw_co_four = false;
+  }
+  //////////////////////////////////////  Sword DENDRO
+  if (dd == true && Char_4 == true ){
+    for(Sword_Dendro_Four of sword_dendro_four) {
+      Sword_Dendro_Four.style.display = "";
+      sw_dd_four = true;
+    }
+  }
+  if (dd == true && Char_4 == false ){
+    for(Sword_Dendro_Four of sword_dendro_four) {
+      Sword_Dendro_Four.style.display = "none";
+      sw_dd_four = false;
+    }
+  }
+  if (dd == true && Char_5 == true ){
+    for(Sword_Dendro_Five of sword_dendro_five) {
+      Sword_Dendro_Five.style.display = "";
+      sw_dd_five = true;
+    }
+  }
+  if (dd == true && Char_5 == false ){
+    for(Sword_Dendro_Five of sword_dendro_five) {
+      Sword_Dendro_Five.style.display = "none";
+      sw_dd_five = false;
+    }
+  }
+  if (dd == false){
+    for(Sword_Dendro_Four of sword_dendro_four) {
+      Sword_Dendro_Four.style.display = "none";
+    }
+    for(Sword_Dendro_Five of sword_dendro_five) {
+      Sword_Dendro_Five.style.display = "none";
+    }
+    sw_dd_five = false;
+    sw_dd_four = false;
+  }
+  //////////////////////////////////////  Sword ELECTRO
+  if (elt == true && Char_4 == true ){
+    for(Sword_Electro_Four of sword_electro_four) {
+      Sword_Electro_Four.style.display = "";
+      sw_elt_four = true;
+    }
+  }
+  if (elt == true && Char_4 == false ){
+    for(Sword_Electro_Four of sword_electro_four) {
+      Sword_Electro_Four.style.display = "none";
+      sw_elt_four = false;
+    }
+  }
+  if (elt == true && Char_5 == true ){
+    for(Sword_Electro_Five of sword_electro_five) {
+      Sword_Electro_Five.style.display = "";
+      sw_elt_five = true;
+    }
+  }
+  if (elt == true && Char_5 == false ){
+    for(Sword_Electro_Five of sword_electro_five) {
+      Sword_Electro_Five.style.display = "none";
+      sw_elt_five = false;
+    }
+  }
+  if (elt == false){
+    for(Sword_Electro_Four of sword_electro_four) {
+      Sword_Electro_Four.style.display = "none";
+    }
+    for(Sword_Electro_Five of sword_electro_five) {
+      Sword_Electro_Five.style.display = "none";
+    }
+    sw_elt_five = false;
+    sw_elt_four = false;
+  }
+  ////////////////////////////////////// Sword  GEO
+  if (go == true && Char_4 == true ){
+    for(Sword_Geo_Four of sword_geo_four) {
+      Sword_Geo_Four.style.display = "";
+      sw_geo_four = true;
+    }
+  }
+  if (go == true && Char_4 == false){
+    for(Sword_Geo_Four of sword_geo_four) {
+      Sword_Geo_Four.style.display = "none";
+      sw_geo_four = false;
+    }
+  }
+  if (go == true && Char_5 == true){
+    for(Sword_Geo_Five of sword_geo_five) {
+      Sword_Geo_Five.style.display = "";
+      sw_geo_five = true;
+    }
+  }
+  if (go == true && Char_5 == false ){
+    for(Sword_Geo_Five of sword_geo_five) {
+      Sword_Geo_Five.style.display = "none";
+      sw_geo_five = false;
+    }
+  }
+  if (go == false){
+    for(Sword_Geo_Four of sword_geo_four) {
+      Sword_Geo_Four.style.display = "none";
+    }
+    for(Sword_Geo_Five of sword_geo_five) {
+      Sword_Geo_Five.style.display = "none";
+    }
+    sw_geo_five = false;
+    sw_geo_four = false;
+  }
+  ////////////////////////////////////// Sword HYDRO
+  if (hd == true && Char_4 == true){
+    for(Sword_Hydro_Four of sword_hydro_four) {
+      Sword_Hydro_Four.style.display = "";
+      sw_hydro_four = true;
+    }
+  }
+  if (hd == true && Char_4 == false ){
+    for(Sword_Hydro_Four of sword_hydro_four) {
+      Sword_Hydro_Four.style.display = "none";
+      sw_hydro_four = false;
+    }
+  }
+  if (hd == true && Char_5 == true){
+    for(Sword_Hydro_Five of sword_hydro_five) {
+      Sword_Hydro_Five.style.display = "";
+      sw_hydro_five = true;
+    }
+  }
+  if (hd == true && Char_5 == false ){
+    for(Sword_Hydro_Five of sword_hydro_five) {
+      Sword_Hydro_Five.style.display = "none";
+      sw_hydro_five = false;
+    }
+  }
+  if (hd == false){
+    for(Sword_Hydro_Four of sword_hydro_four) {
+      Sword_Hydro_Four.style.display = "none";
+    }
+    for(Sword_Hydro_Five of sword_hydro_five) {
+      Sword_Hydro_Five.style.display = "none";
+    }
+    sw_hydro_five = false;
+    sw_hydro_four = false;
+  }
+  ////////////////////////////////////// Sword PYRO
+  if (po == true && Char_4 == true ){
+    for(Sword_Pyro_Four of sword_pyro_four) {
+      Sword_Pyro_Four.style.display = "";
+      sw_pyro_four = true;
+    }
+  }
+  if (po == true && Char_4 == false ){
+    for(Sword_Pyro_Four of sword_pyro_four) {
+      Sword_Pyro_Four.style.display = "none";
+      sw_pyro_four = false;
+    }
+  }
+  if (po == true && Char_5 == true){
+    for(Sword_Pyro_Five of sword_pyro_five) {
+      Sword_Pyro_Five.style.display = "";
+      sw_pyro_five = true;
+    }
+  }
+  if (po == true && Char_5 == false ){
+    for(Sword_Pyro_Five of sword_pyro_five) {
+      Sword_Pyro_Five.style.display = "none";
+      sw_pyro_five = false;
+    }
+  }
+  if (po == false){
+    for(Sword_Pyro_Four of sword_pyro_four) {
+      Sword_Pyro_Four.style.display = "none";
+    }
+    for(Sword_Pyro_Five of sword_pyro_five) {
+      Sword_Pyro_Five.style.display = "none";
+    }
+    sw_pyro_five = false;
+    sw_pyro_four = false;
+  }
+  
+  ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+  ////////////////////////////////////// Claymore ANEMO
+  if (anm == true && Char_4 == true ){
+    for(Claymore_Anemo_Four of claymore_anemo_four) {
+      Claymore_Anemo_Four.style.display = "";
+      cm_anm_four = true;
+    }
+  }
+  if (anm == true && Char_4 == false ){
+    for(Claymore_Anemo_Four of claymore_anemo_four) {
+      Claymore_Anemo_Four.style.display = "none";
+      cm_anm_four = false;
+    }
+  }
+  if (anm == true && Char_5 == true){
+    for(Claymore_Anemo_Five of claymore_anemo_five) {
+      Claymore_Anemo_Five.style.display = "";
+      cm_anm_five = true;
+    }
+  }
+  if (anm == true && Char_5 == false){
+    for(Claymore_Anemo_Five of claymore_anemo_five) {
+      Claymore_Anemo_Five.style.display = "none";
+      cm_anm_five = false;
+    }
+  }
+  if (anm == false){
+    for(Claymore_Anemo_Four of claymore_anemo_four) {
+      Claymore_Anemo_Four.style.display = "none";
+    }
+    for(Claymore_Anemo_Five of claymore_anemo_five) {
+      Claymore_Anemo_Five.style.display = "none";
+    }
+    cm_anm_four = false;
+    cm_anm_five = false;
+  }
+  
+  //////////////////////////////////////  Claymore  CRYO
+  if (co == true && Char_4 == true ){
+    for(Claymore_Cryo_Four of claymore_cryo_four) {
+      Claymore_Cryo_Four.style.display = "";
+      cm_co_four = true;
+    }
+  }
+  if (co == true && Char_4 == false ){
+    for(Claymore_Cryo_Four of claymore_cryo_four) {
+      Claymore_Cryo_Four.style.display = "none";
+      cm_co_four = false;
+    }
+  }
+  if (co == true && Char_5 == true ){
+    for(Claymore_Cryo_Five of claymore_cryo_five) {
+      Claymore_Cryo_Five.style.display = "";
+      cm_co_five = true;
+    }
+  }
+  if (co == true && Char_5 == false ){
+    for(Claymore_Cryo_Five of claymore_cryo_five) {
+      Claymore_Cryo_Five.style.display = "none";
+      cm_co_five = false;
+    }
+  }
+  if (co == false){
+    for(Claymore_Cryo_Four of claymore_cryo_four) {
+      Claymore_Cryo_Four.style.display = "none";
+    }
+    for(Claymore_Cryo_Five of claymore_cryo_five) {
+      Claymore_Cryo_Five.style.display = "none";
+    }
+    cm_co_five = false;
+    cm_co_four = false;
+  }
+  //////////////////////////////////////   Claymore DENDRO
+  if (dd == true && Char_4 == true ){
+    for(Claymore_Dendro_Four of claymore_dendro_four) {
+      Claymore_Dendro_Four.style.display = "";
+      cm_dd_four = true;
+    }
+  }
+  if (dd == true && Char_4 == false){
+    for(Claymore_Dendro_Four of claymore_dendro_four) {
+      Claymore_Dendro_Four.style.display = "none";
+      cm_dd_four = false;
+    }
+  }
+  if (dd == true && Char_5 == true ){
+    for(Claymore_Dendro_Five of claymore_dendro_five) {
+      Claymore_Dendro_Five.style.display = "";
+      cm_dd_five = true;
+    }
+  }
+  if (dd == true && Char_5 == false){
+    for(Claymore_Dendro_Five of claymore_dendro_five) {
+      Claymore_Dendro_Five.style.display = "none";
+      cm_dd_five = false;
+    }
+  }
+  if (dd == false){
+    for(Claymore_Dendro_Four of claymore_dendro_four) {
+      Claymore_Dendro_Four.style.display = "none";
+    }
+    for(Claymore_Dendro_Five of claymore_dendro_five) {
+      Claymore_Dendro_Five.style.display = "none";
+    }
+    cm_dd_five = false;
+    cm_dd_four = false;
+  }
+  //////////////////////////////////////  Claymore ELECTRO
+  if (elt == true && Char_4 == true ){
+    for(Claymore_Electro_Four of claymore_electro_four) {
+      Claymore_Electro_Four.style.display = "";
+      cm_elt_four = true;
+    }
+  }
+  if (elt == true && Char_4 == false ){
+    for(Claymore_Electro_Four of claymore_electro_four) {
+      Claymore_Electro_Four.style.display = "none";
+      cm_elt_four = false;
+    }
+  }
+  if (elt == true && Char_5 == true ){
+    for(Claymore_Electro_Five of claymore_electro_five) {
+      Claymore_Electro_Five.style.display = "";
+      cm_elt_five = true;
+    }
+  }
+  if (elt == true && Char_5 == false ){
+    for(Claymore_Electro_Five of claymore_electro_five) {
+      Claymore_Electro_Five.style.display = "none";
+      cm_elt_five = false;
+    }
+  }
+  if (elt == false){
+    for(Claymore_Electro_Four of claymore_electro_four) {
+      Claymore_Electro_Four.style.display = "none";
+    }
+    for(Claymore_Electro_Five of claymore_electro_five) {
+      Claymore_Electro_Five.style.display = "none";
+    }
+    cm_elt_five = false;
+    cm_elt_four = false;
+  }
+  //////////////////////////////////////  Claymore GEO
+  if (go == true && Char_4 == true ){
+    for(Claymore_Geo_Four of claymore_geo_four) {
+      Claymore_Geo_Four.style.display = "";
+      cm_geo_four = true;
+    }
+  }
+  if (go == true && Char_4 == false ){
+    for(Claymore_Geo_Four of claymore_geo_four) {
+      Claymore_Geo_Four.style.display = "none";
+      cm_geo_four = false;
+    }
+  }
+  if (go == true && Char_5 == true ){
+    for(Claymore_Geo_Five of claymore_geo_five) {
+      Claymore_Geo_Five.style.display = "";
+      cm_geo_five = true;
+    }
+  }
+  if (go == true && Char_5 == false ){
+    for(Claymore_Geo_Five of claymore_geo_five) {
+      Claymore_Geo_Five.style.display = "none";
+      cm_geo_five = false;
+    }
+  }
+  if (go == false){
+    for(Claymore_Geo_Four of claymore_geo_four) {
+      Claymore_Geo_Four.style.display = "none";
+    }
+    for(Claymore_Geo_Five of claymore_geo_five) {
+      Claymore_Geo_Five.style.display = "none";
+    }
+    cm_geo_five = false;
+    cm_geo_four = false;
+  }
+  ////////////////////////////////////// Claymore  HYDRO
+  if (hd == true && Char_4 == true ){
+    for(Claymore_Hydro_Four of claymore_hydro_four) {
+      Claymore_Hydro_Four.style.display = "";
+      cm_hydro_four = true;
+    }
+  }
+  if (hd == true && Char_4 == false ){
+    for(Claymore_Hydro_Four of claymore_hydro_four) {
+      Claymore_Hydro_Four.style.display = "none";
+      cm_hydro_four = false;
+    }
+  }
+  if (hd == true && Char_5 == true ){
+    for(Claymore_Hydro_Five of claymore_hydro_five) {
+      Claymore_Hydro_Five.style.display = "";
+      cm_hydro_five = true;
+    }
+  }
+  if (hd == true && Char_5 == false){
+    for(Claymore_Hydro_Five of claymore_hydro_five) {
+      Claymore_Hydro_Five.style.display = "none";
+      cm_hydro_five = false;
+    }
+  }
+  if (hd == false){
+    for(Claymore_Hydro_Four of claymore_hydro_four) {
+      Claymore_Hydro_Four.style.display = "none";
+    }
+    for(Claymore_Hydro_Five of claymore_hydro_five) {
+      Claymore_Hydro_Five.style.display = "none";
+    }
+    cm_hydro_five = false;
+    cm_hydro_four = false;
+  }
+  //////////////////////////////////////  Claymore PYRO
+  if (po == true && Char_4 == true ){
+    for(Claymore_Pyro_Four of claymore_pyro_four) {
+      Claymore_Pyro_Four.style.display = "";
+      cm_pyro_four = true;
+    }
+  }
+  if (po == true && Char_4 == false){
+    for(Claymore_Pyro_Four of claymore_pyro_four) {
+      Claymore_Pyro_Four.style.display = "none";
+      cm_pyro_four = false;
+    }
+  }
+  if (po == true && Char_5 == true){
+    for(Claymore_Pyro_Five of claymore_pyro_five) {
+      Claymore_Pyro_Five.style.display = "";
+      cm_pyro_five = true;
+    }
+  }
+  if (po == true && Char_5 == false ){
+    for(Claymore_Pyro_Five of claymore_pyro_five) {
+      Claymore_Pyro_Five.style.display = "none";
+      cm_pyro_five = false;
+    }
+  }
+  if (po == false){
+    for(Claymore_Pyro_Four of claymore_pyro_four) {
+      Claymore_Pyro_Four.style.display = "none";
+    }
+    for(Claymore_Pyro_Five of claymore_pyro_five) {
+      Claymore_Pyro_Five.style.display = "none";
+    }
+    cm_pyro_five = false;
+    cm_pyro_four = false;
+  }
+
+  ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+  //////////////////////////////////////  Polearm ANEMO
+  if (anm == true && Char_4 == true ){
+    for(Polearm_Anemo_Four of polearm_anemo_four) {
+      Polearm_Anemo_Four.style.display = "";
+      pl_anm_four = true;
+    }
+  }
+  if (anm == true && Char_4 == false){
+    for(Polearm_Anemo_Four of polearm_anemo_four) {
+      Polearm_Anemo_Four.style.display = "none";
+      pl_anm_four = false;
+    }
+  }
+  if (anm == true && Char_5 == true ){
+    for(Polearm_Anemo_Five of polearm_anemo_five) {
+      Polearm_Anemo_Five.style.display = "";
+      pl_anm_five = true;
+    }
+  }
+  if (anm == true && Char_5 == false ){
+    for(Polearm_Anemo_Five of polearm_anemo_five) {
+      Polearm_Anemo_Five.style.display = "none";
+      pl_anm_five = false;
+    }
+  }
+  if (anm == false){
+    for(Polearm_Anemo_Four of polearm_anemo_four) {
+      Polearm_Anemo_Four.style.display = "none";
+    }
+    for(Polearm_Anemo_Five of polearm_anemo_five) {
+      Polearm_Anemo_Five.style.display = "none";
+    }
+    pl_anm_four = false;
+    pl_anm_five = false;
+  }
+  
+  //////////////////////////////////////  CRYO
+  if (co == true && Char_4 == true ){
+    for(Polearm_Cryo_Four of polearm_cryo_four) {
+      Polearm_Cryo_Four.style.display = "";
+      pl_co_four = true;
+    }
+  }
+  if (co == true && Char_4 == false ){
+    for(Polearm_Cryo_Four of polearm_cryo_four) {
+      Polearm_Cryo_Four.style.display = "none";
+      pl_co_four = false;
+    }
+  }
+  if (co == true && Char_5 == true ){
+    for(Polearm_Cryo_Five of polearm_cryo_five) {
+      Polearm_Cryo_Five.style.display = "";
+      pl_co_five = true;
+    }
+  }
+  if (co == true && Char_5 == false ){
+    for(Polearm_Cryo_Five of polearm_cryo_five) {
+      Polearm_Cryo_Five.style.display = "none";
+      pl_co_five = false;
+    }
+  }
+  if (co == false){
+    for(Polearm_Cryo_Four of polearm_cryo_four) {
+      Polearm_Cryo_Four.style.display = "none";
+    }
+    for(Polearm_Cryo_Five of polearm_cryo_five) {
+      Polearm_Cryo_Five.style.display = "none";
+    }
+    pl_co_five = false;
+    pl_co_four = false;
+  }
+  //////////////////////////////////////   DENDRO
+  if (dd == true && Char_4 == true ){
+    for(Polearm_Dendro_Four of polearm_dendro_four) {
+      Polearm_Dendro_Four.style.display = "";
+      pl_dd_four = true;
+    }
+  }
+  if (dd == true && Char_4 == false){
+    for(Polearm_Dendro_Four of polearm_dendro_four) {
+      Polearm_Dendro_Four.style.display = "none";
+      pl_dd_four = false;
+    }
+  }
+  if (dd == true && Char_5 == true ){
+    for(Polearm_Dendro_Five of polearm_dendro_five) {
+      Polearm_Dendro_Five.style.display = "";
+      pl_dd_five = true;
+    }
+  }
+  if (dd == true && Char_5 == false ){
+    for(Polearm_Dendro_Five of polearm_dendro_five) {
+      Polearm_Dendro_Five.style.display = "none";
+      pl_dd_five = false;
+    }
+  }
+  if (dd == false){
+    for(Polearm_Dendro_Four of polearm_dendro_four) {
+      Polearm_Dendro_Four.style.display = "none";
+    }
+    for(Polearm_Dendro_Five of polearm_dendro_five) {
+      Polearm_Dendro_Five.style.display = "none";
+    }
+    pl_dd_five = false;
+    pl_dd_four = false;
+  }
+  //////////////////////////////////////  Polearm ELECTRO
+  if (elt == true && Char_4 == true ){
+    for(Polearm_Electro_Four of polearm_electro_four) {
+      Polearm_Electro_Four.style.display = "";
+      pl_elt_four = true;
+    }
+  }
+  if (elt == true && Char_4 == false && pl ==true){
+    for(Polearm_Electro_Four of polearm_electro_four) {
+      Polearm_Electro_Four.style.display = "none";
+      pl_elt_four = false;
+    }
+  }
+  if (elt == true && Char_5 == true ){
+    for(Polearm_Electro_Five of polearm_electro_five) {
+      Polearm_Electro_Five.style.display = "";
+      pl_elt_five = true;
+    }
+  }
+  if (elt == true && Char_5 == false){
+    for(Polearm_Electro_Five of polearm_electro_five) {
+      Polearm_Electro_Five.style.display = "none";
+      pl_elt_five = false;
+    }
+  }
+  if (elt == false){
+    for(Polearm_Electro_Four of polearm_electro_four) {
+      Polearm_Electro_Four.style.display = "none";
+    }
+    for(Polearm_Electro_Five of polearm_electro_five) {
+      Polearm_Electro_Five.style.display = "none";
+    }
+    pl_elt_five = false;
+    pl_elt_four = false;
+  }
+  //////////////////////////////////////   GEO
+  if (go == true && Char_4 == true ){
+    for(Polearm_Geo_Four of polearm_geo_four) {
+      Polearm_Geo_Four.style.display = "";
+      pl_geo_four = true;
+    }
+  }
+  if (go == true && Char_4 == false){
+    for(Polearm_Geo_Four of polearm_geo_four) {
+      Polearm_Geo_Four.style.display = "none";
+      pl_geo_four = false;
+    }
+  }
+  if (go == true && Char_5 == true ){
+    for(Polearm_Geo_Five of polearm_geo_five) {
+      Polearm_Geo_Five.style.display = "";
+      pl_geo_five = true;
+    }
+  }
+  if (go == true && Char_5 == false ){
+    for(Polearm_Geo_Five of polearm_geo_five) {
+      Polearm_Geo_Five.style.display = "none";
+      pl_geo_five = false;
+    }
+  }
+  if (go == false){
+    for(Polearm_Geo_Four of polearm_geo_four) {
+      Polearm_Geo_Four.style.display = "none";
+    }
+    for(Polearm_Geo_Five of polearm_geo_five) {
+      Polearm_Geo_Five.style.display = "none";
+    }
+    pl_geo_five = false;
+    pl_geo_four = false;
+  }
+  //////////////////////////////////////  HYDRO
+  if (hd == true && Char_4 == true ){
+    for(Polearm_Hydro_Four of polearm_hydro_four) {
+      Polearm_Hydro_Four.style.display = "";
+      pl_hydro_four = true;
+    }
+  }
+  if (hd == true && Char_4 == false ){
+    for(Polearm_Hydro_Four of polearm_hydro_four) {
+      Polearm_Hydro_Four.style.display = "none";
+      pl_hydro_four = false;
+    }
+  }
+  if (hd == true && Char_5 == true ){
+    for(Polearm_Hydro_Five of polearm_hydro_five) {
+      Polearm_Hydro_Five.style.display = "";
+      pl_hydro_five = true;
+    }
+  }
+  if (hd == true && Char_5 == false){
+    for(Polearm_Hydro_Five of polearm_hydro_five) {
+      Polearm_Hydro_Five.style.display = "none";
+      pl_hydro_five = false;
+    }
+  }
+  if (hd == false){
+    for(Polearm_Hydro_Four of polearm_hydro_four) {
+      Polearm_Hydro_Four.style.display = "none";
+    }
+    for(Polearm_Hydro_Five of polearm_hydro_five) {
+      Polearm_Hydro_Five.style.display = "none";
+    }
+    pl_hydro_five = false;
+    pl_hydro_four = false;
+  }
+  //////////////////////////////////////  PYRO
+  if (po == true && Char_4 == true){
+    for(Polearm_Pyro_Four of polearm_pyro_four) {
+      Polearm_Pyro_Four.style.display = "";
+      pl_pyro_four = true;
+    }
+  }
+  if (po == true && Char_4 == false){
+    for(Polearm_Pyro_Four of polearm_pyro_four) {
+      Polearm_Pyro_Four.style.display = "none";
+      pl_pyro_four = false;
+    }
+  }
+  if (po == true && Char_5 == true){
+    for(Polearm_Pyro_Five of polearm_pyro_five) {
+      Polearm_Pyro_Five.style.display = "";
+      pl_pyro_five = true;
+    }
+  }
+  if (po == true && Char_5 == false ){
+    for(_Pyro_Five of polearm_pyro_five) {
+      _Pyro_Five.style.display = "none";
+      _pyro_five = false;
+    }
+  }
+  if (po == false){
+    for(Polearm_Pyro_Four of polearm_pyro_four) {
+      Polearm_Pyro_Four.style.display = "none";
+    }
+    for(Polearm_Pyro_Five of polearm_pyro_five) {
+      Polearm_Pyro_Five.style.display = "none";
+    }
+    pl_pyro_five = false;
+    pl_pyro_four = false;
+  }
+
+  ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+  ////////////////////////////////////// Bow  ANEMO
+  if (anm == true && Char_4 == true){
+    for(Bow_Anemo_Four of bow_anemo_four) {
+      Bow_Anemo_Four.style.display = "";
+      b_anm_four = true;
+    }
+  }
+  if (anm == true && Char_4 == false){
+    for(Bow_Anemo_Four of bow_anemo_four) {
+      Bow_Anemo_Four.style.display = "none";
+      b_anm_four = false;
+    }
+  }
+  if (anm == true && Char_5 == true){
+    for(Bow_Anemo_Five of bow_anemo_five) {
+      Bow_Anemo_Five.style.display = "";
+      b_anm_five = true;
+    }
+  }
+  if (anm == true && Char_5 == false){
+    for(Bow_Anemo_Five of bow_anemo_five) {
+      Bow_Anemo_Five.style.display = "none";
+      b_anm_five = false;
+    }
+  }
+  if (anm == false){
+    for(Bow_Anemo_Four of bow_anemo_four) {
+      Bow_Anemo_Four.style.display = "none";
+    }
+    for(Bow_Anemo_Five of bow_anemo_five) {
+      Bow_Anemo_Five.style.display = "none";
+    }
+    b_anm_four = false;
+    b_anm_five = false;
+  }
+  
+  //////////////////////////////////////  Bow CRYO
+  if (co == true && Char_4 == true){
+    for(Bow_Cryo_Four of bow_cryo_four) {
+      Bow_Cryo_Four.style.display = "";
+      b_co_four = true;
+    }
+  }
+  if (co == true && Char_4 == false){
+    for(Bow_Cryo_Four of bow_cryo_four) {
+      Bow_Cryo_Four.style.display = "none";
+      b_co_four = false;
+    }
+  }
+  if (co == true && Char_5 == true){
+    for(Bow_Cryo_Five of bow_cryo_five) {
+      Bow_Cryo_Five.style.display = "";
+      b_co_five = true;
+    }
+  }
+  if (co == true && Char_5 == false){
+    for(Bow_Cryo_Five of bow_cryo_five) {
+      Bow_Cryo_Five.style.display = "none";
+      b_co_five = false;
+    }
+  }
+  if (co == false){
+    for(Bow_Cryo_Four of bow_cryo_four) {
+      Bow_Cryo_Four.style.display = "none";
+    }
+    for(Bow_Cryo_Five of bow_cryo_five) {
+      Bow_Cryo_Five.style.display = "none";
+    }
+    b_co_five = false;
+    b_co_four = false;
+  }
+  //////////////////////////////////////  Bow DENDRO
+  if (dd == true && Char_4 == true){
+    for(Bow_Dendro_Four of bow_dendro_four) {
+      Bow_Dendro_Four.style.display = "";
+      b_dd_four = true;
+    }
+  }
+  if (dd == true && Char_4 == false){
+    for(Bow_Dendro_Four of bow_dendro_four) {
+      Bow_Dendro_Four.style.display = "none";
+      b_dd_four = false;
+    }
+  }
+  if (dd == true && Char_5 == true){
+    for(Bow_Dendro_Five of bow_dendro_five) {
+      Bow_Dendro_Five.style.display = "";
+      b_dd_five = true;
+    }
+  }
+  if (dd == true && Char_5 == false){
+    for(Bow_Dendro_Five of bow_dendro_five) {
+      Bow_Dendro_Five.style.display = "none";
+      b_dd_five = false;
+    }
+  }
+  if (dd == false){
+    for(Bow_Dendro_Four of bow_dendro_four) {
+      Bow_Dendro_Four.style.display = "none";
+    }
+    for(Bow_Dendro_Five of bow_dendro_five) {
+      Bow_Dendro_Five.style.display = "none";
+    }
+    b_dd_five = false;
+    b_dd_four = false;
+  }
+  //////////////////////////////////////  Bow ELECTRO
+  if (elt == true && Char_4 == true){
+    for(Bow_Electro_Four of bow_electro_four) {
+      Bow_Electro_Four.style.display = "";
+      b_elt_four = true;
+    }
+  }
+  if (elt == true && Char_4 == false){
+    for(Bow_Electro_Four of bow_electro_four) {
+      Bow_Electro_Four.style.display = "none";
+      b_elt_four = false;
+    }
+  }
+  if (elt == true && Char_5 == true){
+    for(Bow_Electro_Five of bow_electro_five) {
+      Bow_Electro_Five.style.display = "";
+      b_elt_five = true;
+    }
+  }
+  if (elt == true && Char_5 == false){
+    for(Bow_Electro_Five of bow_electro_five) {
+      Bow_Electro_Five.style.display = "none";
+      b_elt_five = false;
+    }
+  }
+  if (elt == false){
+    for(Bow_Electro_Four of bow_electro_four) {
+      Bow_Electro_Four.style.display = "none";
+    }
+    for(_Electro_Five of bow_electro_five) {
+      Bow_Electro_Five.style.display = "none";
+    }
+    b_elt_five = false;
+    b_elt_four = false;
+  }
+  //////////////////////////////////////  Bow  GEO
+  if (go == true && Char_4 == true){
+    for(Bow_Geo_Four of bow_geo_four) {
+      Bow_Geo_Four.style.display = "";
+      b_geo_four = true;
+    }
+  }
+  if (go == true && Char_4 == false){
+    for(Bow_Geo_Four of bow_geo_four) {
+      Bow_Geo_Four.style.display = "none";
+      b_geo_four = false;
+    }
+  }
+  if (go == true && Char_5 == true){
+    for(Bow_Geo_Five of bow_geo_five) {
+      Bow_Geo_Five.style.display = "";
+      b_geo_five = true;
+    }
+  }
+  if (go == true && Char_5 == false){
+    for(Bow_Geo_Five of bow_geo_five) {
+      Bow_Geo_Five.style.display = "none";
+      b_geo_five = false;
+    }
+  }
+  if (go == false){
+    for(Bow_Geo_Four of bow_geo_four) {
+      Bow_Geo_Four.style.display = "none";
+    }
+    for(Bow_Geo_Five of bow_geo_five) {
+      Bow_Geo_Five.style.display = "none";
+    }
+    b_geo_five = false;
+    b_geo_four = false;
+  }
+  //////////////////////////////////////   Bow HYDRO
+  if (hd == true && Char_4 == true){
+    for(Bow_Hydro_Four of bow_hydro_four) {
+      Bow_Hydro_Four.style.display = "";
+      b_hydro_four = true;
+    }
+  }
+  if (hd == true && Char_4 == false){
+    for(Bow_Hydro_Four of bow_hydro_four) {
+      Bow_Hydro_Four.style.display = "none";
+      b_hydro_four = false;
+    }
+  }
+  if (hd == true && Char_5 == true){
+    for(Bow_Hydro_Five of bow_hydro_five) {
+      Bow_Hydro_Five.style.display = "";
+      b_hydro_five = true;
+    }
+  }
+  if (hd == true && Char_5 == false){
+    for(Bow_Hydro_Five of bow_hydro_five) {
+      Bow_Hydro_Five.style.display = "none";
+      b_hydro_five = false;
+    }
+  }
+  if (hd == false){
+    for(Bow_Hydro_Four of bow_hydro_four) {
+      Bow_Hydro_Four.style.display = "none";
+    }
+    for(Bow_Hydro_Five of bow_hydro_five) {
+      Bow_Hydro_Five.style.display = "none";
+    }
+    b_hydro_five = false;
+    b_hydro_four = false;
+  }
+  //////////////////////////////////////  Bow PYRO
+  if (po == true && Char_4 == true){
+    for(Bow_Pyro_Four of bow_pyro_four) {
+      Bow_Pyro_Four.style.display = "";
+      b_pyro_four = true;
+    }
+  }
+  if (po == true && Char_4 == false){
+    for(Bow_Pyro_Four of bow_pyro_four) {
+      Bow_Pyro_Four.style.display = "none";
+      b_pyro_four = false;
+    }
+  }
+  if (po == true && Char_5 == true){
+    for(Bow_Pyro_Five of bow_pyro_five) {
+      Bow_Pyro_Five.style.display = "";
+      b_pyro_five = true;
+    }
+  }
+  if (po == true && Char_5 == false){
+    for(bow_Pyro_Five of bow_pyro_five) {
+      bow_Pyro_Five.style.display = "none";
+      b_pyro_five = false;
+    }
+  }
+  if (po == false){
+    for(Bow_Pyro_Four of bow_pyro_four) {
+      Bow_Pyro_Four.style.display = "none";
+    }
+    for(Bow_Pyro_Five of bow_pyro_five) {
+      Bow_Pyro_Five.style.display = "none";
+    }
+    b_pyro_five = false;
+    b_pyro_four = false;
+  }
+
+  ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+  ////////////////////////////////////// Catalyst ANEMO
+  if (anm == true && Char_4 == true){
+    for(Catalyst_Anemo_Four of catalyst_anemo_four) {
+      Catalyst_Anemo_Four.style.display = "";
+      ctl_anm_four = true;
+    }
+  }
+  if (anm == true && Char_4 == false){
+    for(Catalyst_Anemo_Four of catalyst_anemo_four) {
+      Catalyst_Anemo_Four.style.display = "none";
+      ctl_anm_four = false;
+    }
+  }
+  if (anm == true && Char_5 == true){
+    for(Catalyst_Anemo_Five of catalyst_anemo_five) {
+      Catalyst_Anemo_Five.style.display = "";
+      ctl_anm_five = true;
+    }
+  }
+  if (anm == true && Char_5 == false){
+    for(Catalyst_Anemo_Five of catalyst_anemo_five) {
+      Catalyst_Anemo_Five.style.display = "none";
+      ctl_anm_five = false;
+    }
+  }
+  if (anm == false){
+    for(Catalyst_Anemo_Four of catalyst_anemo_four) {
+      Catalyst_Anemo_Four.style.display = "none";
+    }
+    for(Catalyst_Anemo_Five of catalyst_anemo_five) {
+      Catalyst_Anemo_Five.style.display = "none";
+    }
+    ctl_anm_four = false;
+    ctl_anm_five = false;
+  }
+  
+  //////////////////////////////////////  CRYO
+  if (co == true && Char_4 == true){
+    for(Catalyst_Cryo_Four of catalyst_cryo_four) {
+      catalyst_Cryo_Four.style.display = "";
+      ctl_co_four = true;
+    }
+  }
+  if (co == true && Char_4 == false){
+    for(Catalyst_Cryo_Four of catalyst_cryo_four) {
+      Catalyst_Cryo_Four.style.display = "none";
+      ctl_co_four = false;
+    }
+  }
+  if (co == true && Char_5 == true){
+    for(Catalyst_Cryo_Five of catalyst_cryo_five) {
+      Catalyst_Cryo_Five.style.display = "";
+      ctl_co_five = true;
+    }
+  }
+  if (co == true && Char_5 == false){
+    for(Catalyst_Cryo_Five of catalyst_cryo_five) {
+      Catalyst_Cryo_Five.style.display = "none";
+      ctl_co_five = false;
+    }
+  }
+  if (co == false){
+    for(Catalyst_Cryo_Four of catalyst_cryo_four) {
+      Catalyst_Cryo_Four.style.display = "none";
+    }
+    for(Catalyst_Cryo_Five of catalyst_cryo_five) {
+      Catalyst_Cryo_Five.style.display = "none";
+    }
+    ctl_co_five = false;
+    ctl_co_four = false;
+  }
+  //////////////////////////////////////   DENDRO
+  if (dd == true && Char_4 == true){
+    for(Catalyst_Dendro_Four of catalyst_dendro_four) {
+      Catalyst_Dendro_Four.style.display = "";
+      ctl_dd_four = true;
+    }
+  }
+  if (dd == true && Char_4 == false){
+    for(Catalyst_Dendro_Four of catalyst_dendro_four) {
+      Catalyst_Dendro_Four.style.display = "none";
+      ctl_dd_four = false;
+    }
+  }
+  if (dd == true && Char_5 == true){
+    for(Catalyst_Dendro_Five of catalyst_dendro_five) {
+      Catalyst_Dendro_Five.style.display = "";
+      ctl_dd_five = true;
+    }
+  }
+  if (dd == true && Char_5 == false){
+    for(Catalyst_Dendro_Five of catalyst_dendro_five) {
+      Catalyst_Dendro_Five.style.display = "none";
+      ctl_dd_five = false;
+    }
+  }
+  if (dd == false){
+    for(Catalyst_Dendro_Four of catalyst_dendro_four) {
+      Catalyst_Dendro_Four.style.display = "none";
+    }
+    for(Catalyst_Dendro_Five of catalyst_dendro_five) {
+      Catalyst_Dendro_Five.style.display = "none";
+    }
+    ctl_dd_five = false;
+    ctl_dd_four = false;
+  }
+  //////////////////////////////////////   ELECTRO
+  if (elt == true && Char_4 == true){
+    for(Catalyst_Electro_Four of catalyst_electro_four) {
+      Catalyst_Electro_Four.style.display = "";
+      ctl_elt_four = true;
+    }
+  }
+  if (elt == true && Char_4 == false){
+    for(Catalyst_Electro_Four of catalyst_electro_four) {
+      Catalyst_Electro_Four.style.display = "none";
+      catalyst_elt_four = false;
+    }
+  }
+  if (elt == true && Char_5 == true){
+    for(Catalyst_Electro_Five of catalyst_electro_five) {
+      Catalyst_Electro_Five.style.display = "";
+      ctl_elt_five = true;
+    }
+  }
+  if (elt == true && Char_5 == false){
+    for(Catalyst_Electro_Five of catalyst_electro_five) {
+      Catalyst_Electro_Five.style.display = "none";
+      ctl_elt_five = false;
+    }
+  }
+  if (elt == false){
+    for(Catalyst_Electro_Four of catalyst_electro_four) {
+      Catalyst_Electro_Four.style.display = "none";
+    }
+    for(Catalyst_Electro_Five of catalyst_electro_five) {
+      Catalyst_Electro_Five.style.display = "none";
+    }
+    ctl_elt_five = false;
+    ctl_elt_four = false;
+  }
+  //////////////////////////////////////   GEO
+  if (go == true && Char_4 == true){
+    for(Catalyst_Geo_Four of catalyst_geo_four) {
+      Catalyst_Geo_Four.style.display = "";
+      ctl_geo_four = true;
+    }
+  }
+  if (go == true && Char_4 == false){
+    for(Catalyst_Geo_Four of catalyst_geo_four) {
+      Catalyst_Geo_Four.style.display = "none";
+      ctl_geo_four = false;
+    }
+  }
+  if (go == true && Char_5 == true){
+    for(Catalyst_Geo_Five of catalyst_geo_five) {
+      Catalyst_Geo_Five.style.display = "";
+      ctl_geo_five = true;
+    }
+  }
+  if (go == true && Char_5 == false){
+    for(Catalyst_Geo_Five of catalyst_geo_five) {
+      Catalyst_Geo_Five.style.display = "none";
+      ctl_geo_five = false;
+    }
+  }
+  if (go == false){
+    for(Catalyst_Geo_Four of catalyst_geo_four) {
+      Catalyst_Geo_Four.style.display = "none";
+    }
+    for(Catalyst_Geo_Five of catalyst_geo_five) {
+      Catalyst_Geo_Five.style.display = "none";
+    }
+    ctl_geo_five = false;
+    ctl_geo_four = false;
+  }
+  //////////////////////////////////////  HYDRO
+  if (hd == true && Char_4 == true){
+    for(Catalyst_Hydro_Four of catalyst_hydro_four) {
+      Catalyst_Hydro_Four.style.display = "";
+      ctl_hydro_four = true;
+    }
+  }
+  if (hd == true && Char_4 == false){
+    for(Catalyst_Hydro_Four of catalyst_hydro_four) {
+      Catalyst_Hydro_Four.style.display = "none";
+      ctl_hydro_four = false;
+    }
+  }
+  if (hd == true && Char_5 == true){
+    for(Catalyst_Hydro_Five of catalyst_hydro_five) {
+      Catalyst_Hydro_Five.style.display = "";
+      ctl_hydro_five = true;
+    }
+  }
+  if (hd == true && Char_5 == false){
+    for(Catalyst_Hydro_Five of catalyst_hydro_five) {
+      Catalyst_Hydro_Five.style.display = "none";
+      ctl_hydro_five = false;
+    }
+  }
+  if (hd == false){
+    for(Catalyst_Hydro_Four of catalyst_hydro_four) {
+      Catalyst_Hydro_Four.style.display = "none";
+    }
+    for(Catalyst_Hydro_Five of catalyst_hydro_five) {
+      Catalyst_Hydro_Five.style.display = "none";
+    }
+    ctl_hydro_five = false;
+    ctl_hydro_four = false;
+  }
+  //////////////////////////////////////  PYRO
+  if (po == true && Char_4 == true){
+    for(Catalyst_Pyro_Four of catalyst_pyro_four) {
+      Catalyst_Pyro_Four.style.display = "";
+      ctl_pyro_four = true;
+    }
+  }
+  if (po == true && Char_4 == false){
+    for(Catalyst_Pyro_Four of catalyst_pyro_four) {
+      Catalyst_Pyro_Four.style.display = "none";
+      ctl_pyro_four = false;
+    }
+  }
+  if (po == true && Char_5 == true){
+    for(Catalyst_Pyro_Five of catalyst_pyro_five) {
+      Catalyst_Pyro_Five.style.display = "";
+      ctl_pyro_five = true;
+    }
+  }
+  if (po == true && Char_5 == false){
+    for(Catalyst_Pyro_Five of catalyst_pyro_five) {
+      Catalyst_Pyro_Five.style.display = "none";
+      ctl_pyro_five = false;
+    }
+  }
+  if (po == false){
+    for(Catalyst_Pyro_Four of catalyst_pyro_four) {
+      Catalyst_Pyro_Four.style.display = "none";
+    }
+    for(Catalyst_Pyro_Five of catalyst_pyro_five) {
+      Catalyst_Pyro_Five.style.display = "none";
+    }
+    ctl_pyro_five = false;
+    ctl_pyro_four = false;
+  }
+
+  document.querySelector(".type_sword").style.cssText = "background-color: #97DEFF";
+  document.querySelector(".type_Claymore").style.cssText = "background-color: #97DEFF";
+  document.querySelector(".type_Pole").style.cssText = "background-color: #97DEFF";
+  document.querySelector(".type_Bow").style.cssText = "background-color: #97DEFF";
+  document.querySelector(".type_Catalyst").style.cssText = "background-color: #97DEFF";
+  document.querySelector(".type_all").style.cssText = "background-color: #97DEFF";
+
+  return
+}
 
 function type_sword(){
 
@@ -8187,16 +10553,18 @@ function type_sword(){
       sw_pyro_four = false;
     }
 
-    document.querySelector(".type_sword").style.cssText = "background-color: Aquamarine;"
+    document.querySelector(".type_sword").style.cssText = "background-color: #97DEFF;"
     document.querySelector(".type_Claymore").style.cssText = "background-color: white;"
     document.querySelector(".type_Pole").style.cssText = "background-color: white;"
     document.querySelector(".type_Bow").style.cssText = "background-color: white;"
     document.querySelector(".type_Catalyst").style.cssText = "background-color: white;"
+    document.querySelector(".type_all").style.cssText = "background-color: white;"
     sw = true;
     cm = false;
     pl = false;
     b = false;
     ctl = false;
+    types_all = false;
     return
   }
 
@@ -8207,6 +10575,7 @@ function type_sword(){
     pl = true;
     b = true;
     ctl = true;
+    types_all = true;
 
     for(Sword of sword) {
       Sword.style.display = "";
@@ -9467,12 +11836,12 @@ function type_sword(){
       ctl_pyro_four = false;
     }
 
-    document.querySelector(".type_sword").style.cssText = "background-color: Aquamarine;"
-    document.querySelector(".type_Claymore").style.cssText = "background-color: Aquamarine;"
-    document.querySelector(".type_Pole").style.cssText = "background-color: Aquamarine;"
-    document.querySelector(".type_Bow").style.cssText = "background-color: Aquamarine;"
-    document.querySelector(".type_Catalyst").style.cssText = "background-color: Aquamarine;"
-    
+    document.querySelector(".type_sword").style.cssText = "background-color: #97DEFF;"
+    document.querySelector(".type_Claymore").style.cssText = "background-color: #97DEFF;"
+    document.querySelector(".type_Pole").style.cssText = "background-color: #97DEFF;"
+    document.querySelector(".type_Bow").style.cssText = "background-color: #97DEFF;"
+    document.querySelector(".type_Catalyst").style.cssText = "background-color: #97DEFF;"
+    document.querySelector(".type_all").style.cssText = "background-color: #97DEFF;"
     return
   }
 
@@ -9485,6 +11854,11 @@ function type_sword(){
     return
   }
 
+  if (sw == false && cm == true && pl == true && b == true && ctl == true){
+    types_all = true;
+    document.querySelector(".type_all").style.cssText = "background-color: #97DEFF;"
+  }
+
   if (sw == false){
     
     sw == true;
@@ -9494,16 +11868,13 @@ function type_sword(){
         four_star.style.display = "none";
       }
     }
-    
 
     if (Char_5 == false){
       for(five_star of five) {
         five_star.style.display = "none";
       }
     }
-    
 
-    
     if(cm == false){
       for(Claymore of claymore) {
         Claymore.style.display = "none";
@@ -9778,7 +12149,7 @@ function type_sword(){
     }
     
     sw = true
-    document.querySelector(".type_sword").style.cssText = "background-color: Aquamarine;"
+    document.querySelector(".type_sword").style.cssText = "background-color: #97DEFF;"
     return
   }
 
@@ -10052,15 +12423,18 @@ function type_Claymore(){
     }
 
     document.querySelector(".type_sword").style.cssText = "background-color: white;"
-    document.querySelector(".type_Claymore").style.cssText = "background-color: Aquamarine;"
+    document.querySelector(".type_Claymore").style.cssText = "background-color: #97DEFF;"
     document.querySelector(".type_Pole").style.cssText = "background-color: white;"
     document.querySelector(".type_Bow").style.cssText = "background-color: white;"
     document.querySelector(".type_Catalyst").style.cssText = "background-color: white;"
+    document.querySelector(".type_all").style.cssText = "background-color: white;"
+
     sw = false;
     cm = true;
     pl = false;
     b = false;
     ctl = false;
+    types_all = false;
     return
   }
 
@@ -11324,16 +13698,19 @@ function type_Claymore(){
       ctl_pyro_four = false;
     }
 
-    document.querySelector(".type_sword").style.cssText = "background-color: Aquamarine;"
-    document.querySelector(".type_Claymore").style.cssText = "background-color: Aquamarine;"
-    document.querySelector(".type_Pole").style.cssText = "background-color: Aquamarine;"
-    document.querySelector(".type_Bow").style.cssText = "background-color: Aquamarine;"
-    document.querySelector(".type_Catalyst").style.cssText = "background-color: Aquamarine;"
+    document.querySelector(".type_sword").style.cssText = "background-color: #97DEFF;"
+    document.querySelector(".type_Claymore").style.cssText = "background-color: #97DEFF;"
+    document.querySelector(".type_Pole").style.cssText = "background-color: #97DEFF;"
+    document.querySelector(".type_Bow").style.cssText = "background-color: #97DEFF;"
+    document.querySelector(".type_Catalyst").style.cssText = "background-color: #97DEFF;"
+    document.querySelector(".type_all").style.cssText = "background-color: #97DEFF;"
+
     sw = true;
     cm = true;
     pl = true;
     b = true;
     ctl = true;
+    types_all = true;
     return
   }
 
@@ -11344,6 +13721,11 @@ function type_Claymore(){
     cm = false
     document.querySelector(".type_Claymore").style.cssText = "background-color: white;"
     return
+  }
+
+  if (sw == true && cm == false && pl == true && b == true && ctl == true){
+    types_all = true;
+    document.querySelector(".type_all").style.cssText = "background-color: #97DEFF;"
   }
 
   if (cm == false){
@@ -11636,7 +14018,7 @@ function type_Claymore(){
     }
 
 
-    document.querySelector(".type_Claymore").style.cssText = "background-color: Aquamarine;"
+    document.querySelector(".type_Claymore").style.cssText = "background-color: #97DEFF;"
     return
   }
 
@@ -11911,14 +14293,17 @@ function type_Pole(){
 
     document.querySelector(".type_sword").style.cssText = "background-color: white;"
     document.querySelector(".type_Claymore").style.cssText = "background-color: white;"
-    document.querySelector(".type_Pole").style.cssText = "background-color: Aquamarine;"
+    document.querySelector(".type_Pole").style.cssText = "background-color: #97DEFF;"
     document.querySelector(".type_Bow").style.cssText = "background-color: white;"
     document.querySelector(".type_Catalyst").style.cssText = "background-color: white;"
+    document.querySelector(".type_all").style.cssText = "background-color: white;"
+
     sw = false;
     cm = false;
     pl = true;
     b = false;
     ctl = false;
+    types_all = false;
     return
 
   }
@@ -13183,16 +15568,19 @@ function type_Pole(){
       ctl_pyro_four = false;
     }
 
-    document.querySelector(".type_sword").style.cssText = "background-color: Aquamarine;"
-    document.querySelector(".type_Claymore").style.cssText = "background-color: Aquamarine;"
-    document.querySelector(".type_Pole").style.cssText = "background-color: Aquamarine;"
-    document.querySelector(".type_Bow").style.cssText = "background-color: Aquamarine;"
-    document.querySelector(".type_Catalyst").style.cssText = "background-color: Aquamarine;"
+    document.querySelector(".type_sword").style.cssText = "background-color: #97DEFF;"
+    document.querySelector(".type_Claymore").style.cssText = "background-color: #97DEFF;"
+    document.querySelector(".type_Pole").style.cssText = "background-color: #97DEFF;"
+    document.querySelector(".type_Bow").style.cssText = "background-color: #97DEFF;"
+    document.querySelector(".type_Catalyst").style.cssText = "background-color: #97DEFF;"
+    document.querySelector(".type_all").style.cssText = "background-color: #97DEFF;"
+
     sw = true;
     cm = true;
     pl = true;
     b = true;
     ctl = true;
+    types_all = true;
     return
   }
 
@@ -13204,6 +15592,11 @@ function type_Pole(){
     document.querySelector(".type_Pole").style.cssText = "background-color: white;"
     pl = false;
     return
+  }
+
+  if (sw == true && cm == true && pl == false && b == true && ctl == true){
+    types_all = true;
+    document.querySelector(".type_all").style.cssText = "background-color: #97DEFF;"
   }
 
   if (pl == false){
@@ -13492,14 +15885,13 @@ function type_Pole(){
       pl_pyro_four = false;
     }
 
-    document.querySelector(".type_Pole").style.cssText = "background-color: Aquamarine;"
+    document.querySelector(".type_Pole").style.cssText = "background-color: #97DEFF;"
     
     return
   }
 }
 
 function type_Bow(){
-
 
   if (sw == true && cm == true && pl == true && b == true && ctl == true){
 
@@ -13518,7 +15910,6 @@ function type_Bow(){
     for(Catalyst of catalyst) {
       Catalyst.style.display = "none";
     }
-
 
     ////////////////////////////////////// Bow  ANEMO
     if (anm == true && Char_4 == true){
@@ -13770,17 +16161,19 @@ function type_Bow(){
     document.querySelector(".type_sword").style.cssText = "background-color: white;"
     document.querySelector(".type_Claymore").style.cssText = "background-color: white;"
     document.querySelector(".type_Pole").style.cssText = "background-color: white;"
-    document.querySelector(".type_Bow").style.cssText = "background-color: Aquamarine;"
+    document.querySelector(".type_Bow").style.cssText = "background-color: #97DEFF;"
     document.querySelector(".type_Catalyst").style.cssText = "background-color: white;"
+    document.querySelector(".type_all").style.cssText = "background-color: white;"
+
     sw = false;
     cm = false;
     pl = false;
     b = true;
     ctl = false;
+    types_all = false;
     return
 
   }
-
 
   if (sw == false && cm == false && pl == false && b == true && ctl == false){
     for(Sword of sword) {
@@ -15042,19 +17435,21 @@ function type_Bow(){
       ctl_pyro_four = false;
     }
 
-    document.querySelector(".type_sword").style.cssText = "background-color: Aquamarine;"
-    document.querySelector(".type_Claymore").style.cssText = "background-color: Aquamarine;"
-    document.querySelector(".type_Pole").style.cssText = "background-color: Aquamarine;"
-    document.querySelector(".type_Bow").style.cssText = "background-color: Aquamarine;"
-    document.querySelector(".type_Catalyst").style.cssText = "background-color: Aquamarine;"
+    document.querySelector(".type_sword").style.cssText = "background-color: #97DEFF;"
+    document.querySelector(".type_Claymore").style.cssText = "background-color: #97DEFF;"
+    document.querySelector(".type_Pole").style.cssText = "background-color: #97DEFF;"
+    document.querySelector(".type_Bow").style.cssText = "background-color: #97DEFF;"
+    document.querySelector(".type_Catalyst").style.cssText = "background-color: #97DEFF;"
+    document.querySelector(".type_all").style.cssText = "background-color: #97DEFF;"
+
     sw = true;
     cm = true;
     pl = true;
     b = true;
     ctl = true;
+    types_all = true;
     return
   }
-
 
   if (b == true){
     for(Bow of bow) {
@@ -15064,6 +17459,11 @@ function type_Bow(){
     document.querySelector(".type_Bow").style.cssText = "background-color: white;"
     b = false;
     return
+  }
+
+  if (sw == true && cm == true && pl == true && b == false && ctl == true){
+    types_all = true;
+    document.querySelector(".type_all").style.cssText = "background-color: #97DEFF;"
   }
 
   if (b == false){
@@ -15355,7 +17755,7 @@ function type_Bow(){
     }
 
 
-    document.querySelector(".type_Bow").style.cssText = "background-color: Aquamarine;"
+    document.querySelector(".type_Bow").style.cssText = "background-color: #97DEFF;"
     
     return
   }
@@ -15633,16 +18033,18 @@ function type_Catalyst(){
     document.querySelector(".type_Claymore").style.cssText = "background-color: white;"
     document.querySelector(".type_Pole").style.cssText = "background-color: white;"
     document.querySelector(".type_Bow").style.cssText = "background-color: white;"
-    document.querySelector(".type_Catalyst").style.cssText = "background-color: Aquamarine;"
+    document.querySelector(".type_Catalyst").style.cssText = "background-color: #97DEFF;"
+    document.querySelector(".type_all").style.cssText = "background-color: white;"
+
     sw = false;
     cm = false;
     pl = false;
     b = false;
     ctl = true;
+    types_all = false;
     return
 
   }
-
 
   if (sw == false && cm == false && pl == false && b == false && ctl == true){
     for(Sword of sword) {
@@ -16904,19 +19306,22 @@ function type_Catalyst(){
       ctl_pyro_four = false;
     }
 
-    document.querySelector(".type_sword").style.cssText = "background-color: Aquamarine;"
-    document.querySelector(".type_Claymore").style.cssText = "background-color: Aquamarine;"
-    document.querySelector(".type_Pole").style.cssText = "background-color: Aquamarine;"
-    document.querySelector(".type_Bow").style.cssText = "background-color: Aquamarine;"
-    document.querySelector(".type_Catalyst").style.cssText = "background-color: Aquamarine;"
+    document.querySelector(".type_sword").style.cssText = "background-color: #97DEFF;"
+    document.querySelector(".type_Claymore").style.cssText = "background-color: #97DEFF;"
+    document.querySelector(".type_Pole").style.cssText = "background-color: #97DEFF;"
+    document.querySelector(".type_Bow").style.cssText = "background-color: #97DEFF;"
+    document.querySelector(".type_Catalyst").style.cssText = "background-color: #97DEFF;"
+    document.querySelector(".type_Catalyst").style.cssText = "background-color: #97DEFF;"
+    document.querySelector(".type_all").style.cssText = "background-color: #97DEFF;"
+
     sw = true;
     cm = true;
     pl = true;
     b = true;
     ctl = true;
+    types_all = true;
     return
   }
-
 
   if (ctl == true){
     for(Catalyst of catalyst) {
@@ -16926,6 +19331,11 @@ function type_Catalyst(){
     document.querySelector(".type_Catalyst").style.cssText = "background-color: white;"
     ctl = false;
     return
+  }
+
+  if (sw == true && cm == true && pl == true && b == true && ctl == false){
+    types_all = true;
+    document.querySelector(".type_all").style.cssText = "background-color: aqua;"
   }
 
   if (ctl == false){
@@ -17217,10 +19627,1315 @@ function type_Catalyst(){
       ctl_pyro_four = false;
     }
 
-    document.querySelector(".type_Catalyst").style.cssText = "background-color: Aquamarine;"
+    document.querySelector(".type_Catalyst").style.cssText = "background-color: #97DEFF;"
     
     return
   }
+}
+
+function element_all(){
+  anm = true;
+  co = true;
+  dd = true;
+  elt = true;
+  go = true;
+  hd = true;
+  po = true;
+  elements_all = true;
+
+  ///////////////////////////////////// Sword ANEMO
+  if (anm == true && Char_4 == true ){
+    for(Sword_Anemo_Four of sword_anemo_four) {
+      Sword_Anemo_Four.style.display = "";
+      sw_anm_four = true;
+    }
+  }
+  if (anm == true && Char_4 == false ){
+    for(Sword_Anemo_Four of sword_anemo_four) {
+      Sword_Anemo_Four.style.display = "none";
+      sw_anm_four = false;
+    }
+  }
+  if (anm == true && Char_5 == true ){
+    for(Sword_Anemo_Five of sword_anemo_five) {
+      Sword_Anemo_Five.style.display = "";
+      sw_anm_five = true;
+    }
+  }
+  if (anm == true && Char_5 == false ){
+    for(Sword_Anemo_Five of sword_anemo_five) {
+      Sword_Anemo_Five.style.display = "none";
+      sw_anm_five = false;
+    }
+  }
+  if (anm == false){
+    for(Sword_Anemo_Four of sword_anemo_four) {
+      Sword_Anemo_Four.style.display = "none";
+    }
+    for(Sword_Anemo_Five of sword_anemo_five) {
+      Sword_Anemo_Five.style.display = "none";
+    }
+    sw_anm_four = false;
+    sw_anm_five = false;
+  }
+  
+  ////////////////////////////////////// Sword CRYO
+  if (co == true && Char_4 == true ){
+    for(Sword_Cryo_Four of sword_cryo_four) {
+      Sword_Cryo_Four.style.display = "";
+      sw_co_four = true;
+    }
+  }
+  if (co == true && Char_4 == false ){
+    for(Sword_Cryo_Four of sword_cryo_four) {
+      Sword_Cryo_Four.style.display = "none";
+      sw_co_four = false;
+    }
+  }
+  if (co == true && Char_5 == true ){
+    for(Sword_Cryo_Five of sword_cryo_five) {
+      Sword_Cryo_Five.style.display = "";
+      sw_co_five = true;
+    }
+  }
+  if (co == true && Char_5 == false ){
+    for(Sword_Cryo_Five of sword_cryo_five) {
+      Sword_Cryo_Five.style.display = "none";
+      sw_co_five = false;
+    }
+  }
+  if (co == false){
+    for(Sword_Cryo_Four of sword_cryo_four) {
+      Sword_Cryo_Four.style.display = "none";
+    }
+    for(Sword_Cryo_Five of sword_cryo_five) {
+      Sword_Cryo_Five.style.display = "none";
+    }
+    sw_co_five = false;
+    sw_co_four = false;
+  }
+  //////////////////////////////////////  Sword DENDRO
+  if (dd == true && Char_4 == true ){
+    for(Sword_Dendro_Four of sword_dendro_four) {
+      Sword_Dendro_Four.style.display = "";
+      sw_dd_four = true;
+    }
+  }
+  if (dd == true && Char_4 == false ){
+    for(Sword_Dendro_Four of sword_dendro_four) {
+      Sword_Dendro_Four.style.display = "none";
+      sw_dd_four = false;
+    }
+  }
+  if (dd == true && Char_5 == true ){
+    for(Sword_Dendro_Five of sword_dendro_five) {
+      Sword_Dendro_Five.style.display = "";
+      sw_dd_five = true;
+    }
+  }
+  if (dd == true && Char_5 == false ){
+    for(Sword_Dendro_Five of sword_dendro_five) {
+      Sword_Dendro_Five.style.display = "none";
+      sw_dd_five = false;
+    }
+  }
+  if (dd == false){
+    for(Sword_Dendro_Four of sword_dendro_four) {
+      Sword_Dendro_Four.style.display = "none";
+    }
+    for(Sword_Dendro_Five of sword_dendro_five) {
+      Sword_Dendro_Five.style.display = "none";
+    }
+    sw_dd_five = false;
+    sw_dd_four = false;
+  }
+  //////////////////////////////////////  Sword ELECTRO
+  if (elt == true && Char_4 == true ){
+    for(Sword_Electro_Four of sword_electro_four) {
+      Sword_Electro_Four.style.display = "";
+      sw_elt_four = true;
+    }
+  }
+  if (elt == true && Char_4 == false ){
+    for(Sword_Electro_Four of sword_electro_four) {
+      Sword_Electro_Four.style.display = "none";
+      sw_elt_four = false;
+    }
+  }
+  if (elt == true && Char_5 == true ){
+    for(Sword_Electro_Five of sword_electro_five) {
+      Sword_Electro_Five.style.display = "";
+      sw_elt_five = true;
+    }
+  }
+  if (elt == true && Char_5 == false ){
+    for(Sword_Electro_Five of sword_electro_five) {
+      Sword_Electro_Five.style.display = "none";
+      sw_elt_five = false;
+    }
+  }
+  if (elt == false){
+    for(Sword_Electro_Four of sword_electro_four) {
+      Sword_Electro_Four.style.display = "none";
+    }
+    for(Sword_Electro_Five of sword_electro_five) {
+      Sword_Electro_Five.style.display = "none";
+    }
+    sw_elt_five = false;
+    sw_elt_four = false;
+  }
+  ////////////////////////////////////// Sword  GEO
+  if (go == true && Char_4 == true ){
+    for(Sword_Geo_Four of sword_geo_four) {
+      Sword_Geo_Four.style.display = "";
+      sw_geo_four = true;
+    }
+  }
+  if (go == true && Char_4 == false){
+    for(Sword_Geo_Four of sword_geo_four) {
+      Sword_Geo_Four.style.display = "none";
+      sw_geo_four = false;
+    }
+  }
+  if (go == true && Char_5 == true){
+    for(Sword_Geo_Five of sword_geo_five) {
+      Sword_Geo_Five.style.display = "";
+      sw_geo_five = true;
+    }
+  }
+  if (go == true && Char_5 == false ){
+    for(Sword_Geo_Five of sword_geo_five) {
+      Sword_Geo_Five.style.display = "none";
+      sw_geo_five = false;
+    }
+  }
+  if (go == false){
+    for(Sword_Geo_Four of sword_geo_four) {
+      Sword_Geo_Four.style.display = "none";
+    }
+    for(Sword_Geo_Five of sword_geo_five) {
+      Sword_Geo_Five.style.display = "none";
+    }
+    sw_geo_five = false;
+    sw_geo_four = false;
+  }
+  ////////////////////////////////////// Sword HYDRO
+  if (hd == true && Char_4 == true){
+    for(Sword_Hydro_Four of sword_hydro_four) {
+      Sword_Hydro_Four.style.display = "";
+      sw_hydro_four = true;
+    }
+  }
+  if (hd == true && Char_4 == false ){
+    for(Sword_Hydro_Four of sword_hydro_four) {
+      Sword_Hydro_Four.style.display = "none";
+      sw_hydro_four = false;
+    }
+  }
+  if (hd == true && Char_5 == true){
+    for(Sword_Hydro_Five of sword_hydro_five) {
+      Sword_Hydro_Five.style.display = "";
+      sw_hydro_five = true;
+    }
+  }
+  if (hd == true && Char_5 == false ){
+    for(Sword_Hydro_Five of sword_hydro_five) {
+      Sword_Hydro_Five.style.display = "none";
+      sw_hydro_five = false;
+    }
+  }
+  if (hd == false){
+    for(Sword_Hydro_Four of sword_hydro_four) {
+      Sword_Hydro_Four.style.display = "none";
+    }
+    for(Sword_Hydro_Five of sword_hydro_five) {
+      Sword_Hydro_Five.style.display = "none";
+    }
+    sw_hydro_five = false;
+    sw_hydro_four = false;
+  }
+  ////////////////////////////////////// Sword PYRO
+  if (po == true && Char_4 == true ){
+    for(Sword_Pyro_Four of sword_pyro_four) {
+      Sword_Pyro_Four.style.display = "";
+      sw_pyro_four = true;
+    }
+  }
+  if (po == true && Char_4 == false ){
+    for(Sword_Pyro_Four of sword_pyro_four) {
+      Sword_Pyro_Four.style.display = "none";
+      sw_pyro_four = false;
+    }
+  }
+  if (po == true && Char_5 == true){
+    for(Sword_Pyro_Five of sword_pyro_five) {
+      Sword_Pyro_Five.style.display = "";
+      sw_pyro_five = true;
+    }
+  }
+  if (po == true && Char_5 == false ){
+    for(Sword_Pyro_Five of sword_pyro_five) {
+      Sword_Pyro_Five.style.display = "none";
+      sw_pyro_five = false;
+    }
+  }
+  if (po == false){
+    for(Sword_Pyro_Four of sword_pyro_four) {
+      Sword_Pyro_Four.style.display = "none";
+    }
+    for(Sword_Pyro_Five of sword_pyro_five) {
+      Sword_Pyro_Five.style.display = "none";
+    }
+    sw_pyro_five = false;
+    sw_pyro_four = false;
+  }
+  
+  ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+  ////////////////////////////////////// Claymore ANEMO
+  if (anm == true && Char_4 == true ){
+    for(Claymore_Anemo_Four of claymore_anemo_four) {
+      Claymore_Anemo_Four.style.display = "";
+      cm_anm_four = true;
+    }
+  }
+  if (anm == true && Char_4 == false ){
+    for(Claymore_Anemo_Four of claymore_anemo_four) {
+      Claymore_Anemo_Four.style.display = "none";
+      cm_anm_four = false;
+    }
+  }
+  if (anm == true && Char_5 == true){
+    for(Claymore_Anemo_Five of claymore_anemo_five) {
+      Claymore_Anemo_Five.style.display = "";
+      cm_anm_five = true;
+    }
+  }
+  if (anm == true && Char_5 == false){
+    for(Claymore_Anemo_Five of claymore_anemo_five) {
+      Claymore_Anemo_Five.style.display = "none";
+      cm_anm_five = false;
+    }
+  }
+  if (anm == false){
+    for(Claymore_Anemo_Four of claymore_anemo_four) {
+      Claymore_Anemo_Four.style.display = "none";
+    }
+    for(Claymore_Anemo_Five of claymore_anemo_five) {
+      Claymore_Anemo_Five.style.display = "none";
+    }
+    cm_anm_four = false;
+    cm_anm_five = false;
+  }
+  
+  //////////////////////////////////////  Claymore  CRYO
+  if (co == true && Char_4 == true ){
+    for(Claymore_Cryo_Four of claymore_cryo_four) {
+      Claymore_Cryo_Four.style.display = "";
+      cm_co_four = true;
+    }
+  }
+  if (co == true && Char_4 == false ){
+    for(Claymore_Cryo_Four of claymore_cryo_four) {
+      Claymore_Cryo_Four.style.display = "none";
+      cm_co_four = false;
+    }
+  }
+  if (co == true && Char_5 == true ){
+    for(Claymore_Cryo_Five of claymore_cryo_five) {
+      Claymore_Cryo_Five.style.display = "";
+      cm_co_five = true;
+    }
+  }
+  if (co == true && Char_5 == false ){
+    for(Claymore_Cryo_Five of claymore_cryo_five) {
+      Claymore_Cryo_Five.style.display = "none";
+      cm_co_five = false;
+    }
+  }
+  if (co == false){
+    for(Claymore_Cryo_Four of claymore_cryo_four) {
+      Claymore_Cryo_Four.style.display = "none";
+    }
+    for(Claymore_Cryo_Five of claymore_cryo_five) {
+      Claymore_Cryo_Five.style.display = "none";
+    }
+    cm_co_five = false;
+    cm_co_four = false;
+  }
+  //////////////////////////////////////   Claymore DENDRO
+  if (dd == true && Char_4 == true ){
+    for(Claymore_Dendro_Four of claymore_dendro_four) {
+      Claymore_Dendro_Four.style.display = "";
+      cm_dd_four = true;
+    }
+  }
+  if (dd == true && Char_4 == false){
+    for(Claymore_Dendro_Four of claymore_dendro_four) {
+      Claymore_Dendro_Four.style.display = "none";
+      cm_dd_four = false;
+    }
+  }
+  if (dd == true && Char_5 == true ){
+    for(Claymore_Dendro_Five of claymore_dendro_five) {
+      Claymore_Dendro_Five.style.display = "";
+      cm_dd_five = true;
+    }
+  }
+  if (dd == true && Char_5 == false){
+    for(Claymore_Dendro_Five of claymore_dendro_five) {
+      Claymore_Dendro_Five.style.display = "none";
+      cm_dd_five = false;
+    }
+  }
+  if (dd == false){
+    for(Claymore_Dendro_Four of claymore_dendro_four) {
+      Claymore_Dendro_Four.style.display = "none";
+    }
+    for(Claymore_Dendro_Five of claymore_dendro_five) {
+      Claymore_Dendro_Five.style.display = "none";
+    }
+    cm_dd_five = false;
+    cm_dd_four = false;
+  }
+  //////////////////////////////////////  Claymore ELECTRO
+  if (elt == true && Char_4 == true ){
+    for(Claymore_Electro_Four of claymore_electro_four) {
+      Claymore_Electro_Four.style.display = "";
+      cm_elt_four = true;
+    }
+  }
+  if (elt == true && Char_4 == false ){
+    for(Claymore_Electro_Four of claymore_electro_four) {
+      Claymore_Electro_Four.style.display = "none";
+      cm_elt_four = false;
+    }
+  }
+  if (elt == true && Char_5 == true ){
+    for(Claymore_Electro_Five of claymore_electro_five) {
+      Claymore_Electro_Five.style.display = "";
+      cm_elt_five = true;
+    }
+  }
+  if (elt == true && Char_5 == false ){
+    for(Claymore_Electro_Five of claymore_electro_five) {
+      Claymore_Electro_Five.style.display = "none";
+      cm_elt_five = false;
+    }
+  }
+  if (elt == false){
+    for(Claymore_Electro_Four of claymore_electro_four) {
+      Claymore_Electro_Four.style.display = "none";
+    }
+    for(Claymore_Electro_Five of claymore_electro_five) {
+      Claymore_Electro_Five.style.display = "none";
+    }
+    cm_elt_five = false;
+    cm_elt_four = false;
+  }
+  //////////////////////////////////////  Claymore GEO
+  if (go == true && Char_4 == true ){
+    for(Claymore_Geo_Four of claymore_geo_four) {
+      Claymore_Geo_Four.style.display = "";
+      cm_geo_four = true;
+    }
+  }
+  if (go == true && Char_4 == false ){
+    for(Claymore_Geo_Four of claymore_geo_four) {
+      Claymore_Geo_Four.style.display = "none";
+      cm_geo_four = false;
+    }
+  }
+  if (go == true && Char_5 == true ){
+    for(Claymore_Geo_Five of claymore_geo_five) {
+      Claymore_Geo_Five.style.display = "";
+      cm_geo_five = true;
+    }
+  }
+  if (go == true && Char_5 == false ){
+    for(Claymore_Geo_Five of claymore_geo_five) {
+      Claymore_Geo_Five.style.display = "none";
+      cm_geo_five = false;
+    }
+  }
+  if (go == false){
+    for(Claymore_Geo_Four of claymore_geo_four) {
+      Claymore_Geo_Four.style.display = "none";
+    }
+    for(Claymore_Geo_Five of claymore_geo_five) {
+      Claymore_Geo_Five.style.display = "none";
+    }
+    cm_geo_five = false;
+    cm_geo_four = false;
+  }
+  ////////////////////////////////////// Claymore  HYDRO
+  if (hd == true && Char_4 == true ){
+    for(Claymore_Hydro_Four of claymore_hydro_four) {
+      Claymore_Hydro_Four.style.display = "";
+      cm_hydro_four = true;
+    }
+  }
+  if (hd == true && Char_4 == false ){
+    for(Claymore_Hydro_Four of claymore_hydro_four) {
+      Claymore_Hydro_Four.style.display = "none";
+      cm_hydro_four = false;
+    }
+  }
+  if (hd == true && Char_5 == true ){
+    for(Claymore_Hydro_Five of claymore_hydro_five) {
+      Claymore_Hydro_Five.style.display = "";
+      cm_hydro_five = true;
+    }
+  }
+  if (hd == true && Char_5 == false){
+    for(Claymore_Hydro_Five of claymore_hydro_five) {
+      Claymore_Hydro_Five.style.display = "none";
+      cm_hydro_five = false;
+    }
+  }
+  if (hd == false){
+    for(Claymore_Hydro_Four of claymore_hydro_four) {
+      Claymore_Hydro_Four.style.display = "none";
+    }
+    for(Claymore_Hydro_Five of claymore_hydro_five) {
+      Claymore_Hydro_Five.style.display = "none";
+    }
+    cm_hydro_five = false;
+    cm_hydro_four = false;
+  }
+  //////////////////////////////////////  Claymore PYRO
+  if (po == true && Char_4 == true ){
+    for(Claymore_Pyro_Four of claymore_pyro_four) {
+      Claymore_Pyro_Four.style.display = "";
+      cm_pyro_four = true;
+    }
+  }
+  if (po == true && Char_4 == false){
+    for(Claymore_Pyro_Four of claymore_pyro_four) {
+      Claymore_Pyro_Four.style.display = "none";
+      cm_pyro_four = false;
+    }
+  }
+  if (po == true && Char_5 == true){
+    for(Claymore_Pyro_Five of claymore_pyro_five) {
+      Claymore_Pyro_Five.style.display = "";
+      cm_pyro_five = true;
+    }
+  }
+  if (po == true && Char_5 == false ){
+    for(Claymore_Pyro_Five of claymore_pyro_five) {
+      Claymore_Pyro_Five.style.display = "none";
+      cm_pyro_five = false;
+    }
+  }
+  if (po == false){
+    for(Claymore_Pyro_Four of claymore_pyro_four) {
+      Claymore_Pyro_Four.style.display = "none";
+    }
+    for(Claymore_Pyro_Five of claymore_pyro_five) {
+      Claymore_Pyro_Five.style.display = "none";
+    }
+    cm_pyro_five = false;
+    cm_pyro_four = false;
+  }
+
+  ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+  //////////////////////////////////////  Polearm ANEMO
+  if (anm == true && Char_4 == true ){
+    for(Polearm_Anemo_Four of polearm_anemo_four) {
+      Polearm_Anemo_Four.style.display = "";
+      pl_anm_four = true;
+    }
+  }
+  if (anm == true && Char_4 == false){
+    for(Polearm_Anemo_Four of polearm_anemo_four) {
+      Polearm_Anemo_Four.style.display = "none";
+      pl_anm_four = false;
+    }
+  }
+  if (anm == true && Char_5 == true ){
+    for(Polearm_Anemo_Five of polearm_anemo_five) {
+      Polearm_Anemo_Five.style.display = "";
+      pl_anm_five = true;
+    }
+  }
+  if (anm == true && Char_5 == false ){
+    for(Polearm_Anemo_Five of polearm_anemo_five) {
+      Polearm_Anemo_Five.style.display = "none";
+      pl_anm_five = false;
+    }
+  }
+  if (anm == false){
+    for(Polearm_Anemo_Four of polearm_anemo_four) {
+      Polearm_Anemo_Four.style.display = "none";
+    }
+    for(Polearm_Anemo_Five of polearm_anemo_five) {
+      Polearm_Anemo_Five.style.display = "none";
+    }
+    pl_anm_four = false;
+    pl_anm_five = false;
+  }
+  
+  //////////////////////////////////////  CRYO
+  if (co == true && Char_4 == true ){
+    for(Polearm_Cryo_Four of polearm_cryo_four) {
+      Polearm_Cryo_Four.style.display = "";
+      pl_co_four = true;
+    }
+  }
+  if (co == true && Char_4 == false ){
+    for(Polearm_Cryo_Four of polearm_cryo_four) {
+      Polearm_Cryo_Four.style.display = "none";
+      pl_co_four = false;
+    }
+  }
+  if (co == true && Char_5 == true ){
+    for(Polearm_Cryo_Five of polearm_cryo_five) {
+      Polearm_Cryo_Five.style.display = "";
+      pl_co_five = true;
+    }
+  }
+  if (co == true && Char_5 == false ){
+    for(Polearm_Cryo_Five of polearm_cryo_five) {
+      Polearm_Cryo_Five.style.display = "none";
+      pl_co_five = false;
+    }
+  }
+  if (co == false){
+    for(Polearm_Cryo_Four of polearm_cryo_four) {
+      Polearm_Cryo_Four.style.display = "none";
+    }
+    for(Polearm_Cryo_Five of polearm_cryo_five) {
+      Polearm_Cryo_Five.style.display = "none";
+    }
+    pl_co_five = false;
+    pl_co_four = false;
+  }
+  //////////////////////////////////////   DENDRO
+  if (dd == true && Char_4 == true ){
+    for(Polearm_Dendro_Four of polearm_dendro_four) {
+      Polearm_Dendro_Four.style.display = "";
+      pl_dd_four = true;
+    }
+  }
+  if (dd == true && Char_4 == false){
+    for(Polearm_Dendro_Four of polearm_dendro_four) {
+      Polearm_Dendro_Four.style.display = "none";
+      pl_dd_four = false;
+    }
+  }
+  if (dd == true && Char_5 == true ){
+    for(Polearm_Dendro_Five of polearm_dendro_five) {
+      Polearm_Dendro_Five.style.display = "";
+      pl_dd_five = true;
+    }
+  }
+  if (dd == true && Char_5 == false ){
+    for(Polearm_Dendro_Five of polearm_dendro_five) {
+      Polearm_Dendro_Five.style.display = "none";
+      pl_dd_five = false;
+    }
+  }
+  if (dd == false){
+    for(Polearm_Dendro_Four of polearm_dendro_four) {
+      Polearm_Dendro_Four.style.display = "none";
+    }
+    for(Polearm_Dendro_Five of polearm_dendro_five) {
+      Polearm_Dendro_Five.style.display = "none";
+    }
+    pl_dd_five = false;
+    pl_dd_four = false;
+  }
+  //////////////////////////////////////  Polearm ELECTRO
+  if (elt == true && Char_4 == true ){
+    for(Polearm_Electro_Four of polearm_electro_four) {
+      Polearm_Electro_Four.style.display = "";
+      pl_elt_four = true;
+    }
+  }
+  if (elt == true && Char_4 == false && pl ==true){
+    for(Polearm_Electro_Four of polearm_electro_four) {
+      Polearm_Electro_Four.style.display = "none";
+      pl_elt_four = false;
+    }
+  }
+  if (elt == true && Char_5 == true ){
+    for(Polearm_Electro_Five of polearm_electro_five) {
+      Polearm_Electro_Five.style.display = "";
+      pl_elt_five = true;
+    }
+  }
+  if (elt == true && Char_5 == false){
+    for(Polearm_Electro_Five of polearm_electro_five) {
+      Polearm_Electro_Five.style.display = "none";
+      pl_elt_five = false;
+    }
+  }
+  if (elt == false){
+    for(Polearm_Electro_Four of polearm_electro_four) {
+      Polearm_Electro_Four.style.display = "none";
+    }
+    for(Polearm_Electro_Five of polearm_electro_five) {
+      Polearm_Electro_Five.style.display = "none";
+    }
+    pl_elt_five = false;
+    pl_elt_four = false;
+  }
+  //////////////////////////////////////   GEO
+  if (go == true && Char_4 == true ){
+    for(Polearm_Geo_Four of polearm_geo_four) {
+      Polearm_Geo_Four.style.display = "";
+      pl_geo_four = true;
+    }
+  }
+  if (go == true && Char_4 == false){
+    for(Polearm_Geo_Four of polearm_geo_four) {
+      Polearm_Geo_Four.style.display = "none";
+      pl_geo_four = false;
+    }
+  }
+  if (go == true && Char_5 == true ){
+    for(Polearm_Geo_Five of polearm_geo_five) {
+      Polearm_Geo_Five.style.display = "";
+      pl_geo_five = true;
+    }
+  }
+  if (go == true && Char_5 == false ){
+    for(Polearm_Geo_Five of polearm_geo_five) {
+      Polearm_Geo_Five.style.display = "none";
+      pl_geo_five = false;
+    }
+  }
+  if (go == false){
+    for(Polearm_Geo_Four of polearm_geo_four) {
+      Polearm_Geo_Four.style.display = "none";
+    }
+    for(Polearm_Geo_Five of polearm_geo_five) {
+      Polearm_Geo_Five.style.display = "none";
+    }
+    pl_geo_five = false;
+    pl_geo_four = false;
+  }
+  //////////////////////////////////////  HYDRO
+  if (hd == true && Char_4 == true ){
+    for(Polearm_Hydro_Four of polearm_hydro_four) {
+      Polearm_Hydro_Four.style.display = "";
+      pl_hydro_four = true;
+    }
+  }
+  if (hd == true && Char_4 == false ){
+    for(Polearm_Hydro_Four of polearm_hydro_four) {
+      Polearm_Hydro_Four.style.display = "none";
+      pl_hydro_four = false;
+    }
+  }
+  if (hd == true && Char_5 == true ){
+    for(Polearm_Hydro_Five of polearm_hydro_five) {
+      Polearm_Hydro_Five.style.display = "";
+      pl_hydro_five = true;
+    }
+  }
+  if (hd == true && Char_5 == false){
+    for(Polearm_Hydro_Five of polearm_hydro_five) {
+      Polearm_Hydro_Five.style.display = "none";
+      pl_hydro_five = false;
+    }
+  }
+  if (hd == false){
+    for(Polearm_Hydro_Four of polearm_hydro_four) {
+      Polearm_Hydro_Four.style.display = "none";
+    }
+    for(Polearm_Hydro_Five of polearm_hydro_five) {
+      Polearm_Hydro_Five.style.display = "none";
+    }
+    pl_hydro_five = false;
+    pl_hydro_four = false;
+  }
+  //////////////////////////////////////  PYRO
+  if (po == true && Char_4 == true){
+    for(Polearm_Pyro_Four of polearm_pyro_four) {
+      Polearm_Pyro_Four.style.display = "";
+      pl_pyro_four = true;
+    }
+  }
+  if (po == true && Char_4 == false){
+    for(Polearm_Pyro_Four of polearm_pyro_four) {
+      Polearm_Pyro_Four.style.display = "none";
+      pl_pyro_four = false;
+    }
+  }
+  if (po == true && Char_5 == true){
+    for(Polearm_Pyro_Five of polearm_pyro_five) {
+      Polearm_Pyro_Five.style.display = "";
+      pl_pyro_five = true;
+    }
+  }
+  if (po == true && Char_5 == false ){
+    for(_Pyro_Five of polearm_pyro_five) {
+      _Pyro_Five.style.display = "none";
+      _pyro_five = false;
+    }
+  }
+  if (po == false){
+    for(Polearm_Pyro_Four of polearm_pyro_four) {
+      Polearm_Pyro_Four.style.display = "none";
+    }
+    for(Polearm_Pyro_Five of polearm_pyro_five) {
+      Polearm_Pyro_Five.style.display = "none";
+    }
+    pl_pyro_five = false;
+    pl_pyro_four = false;
+  }
+
+  ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+  ////////////////////////////////////// Bow  ANEMO
+  if (anm == true && Char_4 == true){
+    for(Bow_Anemo_Four of bow_anemo_four) {
+      Bow_Anemo_Four.style.display = "";
+      b_anm_four = true;
+    }
+  }
+  if (anm == true && Char_4 == false){
+    for(Bow_Anemo_Four of bow_anemo_four) {
+      Bow_Anemo_Four.style.display = "none";
+      b_anm_four = false;
+    }
+  }
+  if (anm == true && Char_5 == true){
+    for(Bow_Anemo_Five of bow_anemo_five) {
+      Bow_Anemo_Five.style.display = "";
+      b_anm_five = true;
+    }
+  }
+  if (anm == true && Char_5 == false){
+    for(Bow_Anemo_Five of bow_anemo_five) {
+      Bow_Anemo_Five.style.display = "none";
+      b_anm_five = false;
+    }
+  }
+  if (anm == false){
+    for(Bow_Anemo_Four of bow_anemo_four) {
+      Bow_Anemo_Four.style.display = "none";
+    }
+    for(Bow_Anemo_Five of bow_anemo_five) {
+      Bow_Anemo_Five.style.display = "none";
+    }
+    b_anm_four = false;
+    b_anm_five = false;
+  }
+  
+  //////////////////////////////////////  Bow CRYO
+  if (co == true && Char_4 == true){
+    for(Bow_Cryo_Four of bow_cryo_four) {
+      Bow_Cryo_Four.style.display = "";
+      b_co_four = true;
+    }
+  }
+  if (co == true && Char_4 == false){
+    for(Bow_Cryo_Four of bow_cryo_four) {
+      Bow_Cryo_Four.style.display = "none";
+      b_co_four = false;
+    }
+  }
+  if (co == true && Char_5 == true){
+    for(Bow_Cryo_Five of bow_cryo_five) {
+      Bow_Cryo_Five.style.display = "";
+      b_co_five = true;
+    }
+  }
+  if (co == true && Char_5 == false){
+    for(Bow_Cryo_Five of bow_cryo_five) {
+      Bow_Cryo_Five.style.display = "none";
+      b_co_five = false;
+    }
+  }
+  if (co == false){
+    for(Bow_Cryo_Four of bow_cryo_four) {
+      Bow_Cryo_Four.style.display = "none";
+    }
+    for(Bow_Cryo_Five of bow_cryo_five) {
+      Bow_Cryo_Five.style.display = "none";
+    }
+    b_co_five = false;
+    b_co_four = false;
+  }
+  //////////////////////////////////////  Bow DENDRO
+  if (dd == true && Char_4 == true){
+    for(Bow_Dendro_Four of bow_dendro_four) {
+      Bow_Dendro_Four.style.display = "";
+      b_dd_four = true;
+    }
+  }
+  if (dd == true && Char_4 == false){
+    for(Bow_Dendro_Four of bow_dendro_four) {
+      Bow_Dendro_Four.style.display = "none";
+      b_dd_four = false;
+    }
+  }
+  if (dd == true && Char_5 == true){
+    for(Bow_Dendro_Five of bow_dendro_five) {
+      Bow_Dendro_Five.style.display = "";
+      b_dd_five = true;
+    }
+  }
+  if (dd == true && Char_5 == false){
+    for(Bow_Dendro_Five of bow_dendro_five) {
+      Bow_Dendro_Five.style.display = "none";
+      b_dd_five = false;
+    }
+  }
+  if (dd == false){
+    for(Bow_Dendro_Four of bow_dendro_four) {
+      Bow_Dendro_Four.style.display = "none";
+    }
+    for(Bow_Dendro_Five of bow_dendro_five) {
+      Bow_Dendro_Five.style.display = "none";
+    }
+    b_dd_five = false;
+    b_dd_four = false;
+  }
+  //////////////////////////////////////  Bow ELECTRO
+  if (elt == true && Char_4 == true){
+    for(Bow_Electro_Four of bow_electro_four) {
+      Bow_Electro_Four.style.display = "";
+      b_elt_four = true;
+    }
+  }
+  if (elt == true && Char_4 == false){
+    for(Bow_Electro_Four of bow_electro_four) {
+      Bow_Electro_Four.style.display = "none";
+      b_elt_four = false;
+    }
+  }
+  if (elt == true && Char_5 == true){
+    for(Bow_Electro_Five of bow_electro_five) {
+      Bow_Electro_Five.style.display = "";
+      b_elt_five = true;
+    }
+  }
+  if (elt == true && Char_5 == false){
+    for(Bow_Electro_Five of bow_electro_five) {
+      Bow_Electro_Five.style.display = "none";
+      b_elt_five = false;
+    }
+  }
+  if (elt == false){
+    for(Bow_Electro_Four of bow_electro_four) {
+      Bow_Electro_Four.style.display = "none";
+    }
+    for(_Electro_Five of bow_electro_five) {
+      Bow_Electro_Five.style.display = "none";
+    }
+    b_elt_five = false;
+    b_elt_four = false;
+  }
+  //////////////////////////////////////  Bow  GEO
+  if (go == true && Char_4 == true){
+    for(Bow_Geo_Four of bow_geo_four) {
+      Bow_Geo_Four.style.display = "";
+      b_geo_four = true;
+    }
+  }
+  if (go == true && Char_4 == false){
+    for(Bow_Geo_Four of bow_geo_four) {
+      Bow_Geo_Four.style.display = "none";
+      b_geo_four = false;
+    }
+  }
+  if (go == true && Char_5 == true){
+    for(Bow_Geo_Five of bow_geo_five) {
+      Bow_Geo_Five.style.display = "";
+      b_geo_five = true;
+    }
+  }
+  if (go == true && Char_5 == false){
+    for(Bow_Geo_Five of bow_geo_five) {
+      Bow_Geo_Five.style.display = "none";
+      b_geo_five = false;
+    }
+  }
+  if (go == false){
+    for(Bow_Geo_Four of bow_geo_four) {
+      Bow_Geo_Four.style.display = "none";
+    }
+    for(Bow_Geo_Five of bow_geo_five) {
+      Bow_Geo_Five.style.display = "none";
+    }
+    b_geo_five = false;
+    b_geo_four = false;
+  }
+  //////////////////////////////////////   Bow HYDRO
+  if (hd == true && Char_4 == true){
+    for(Bow_Hydro_Four of bow_hydro_four) {
+      Bow_Hydro_Four.style.display = "";
+      b_hydro_four = true;
+    }
+  }
+  if (hd == true && Char_4 == false){
+    for(Bow_Hydro_Four of bow_hydro_four) {
+      Bow_Hydro_Four.style.display = "none";
+      b_hydro_four = false;
+    }
+  }
+  if (hd == true && Char_5 == true){
+    for(Bow_Hydro_Five of bow_hydro_five) {
+      Bow_Hydro_Five.style.display = "";
+      b_hydro_five = true;
+    }
+  }
+  if (hd == true && Char_5 == false){
+    for(Bow_Hydro_Five of bow_hydro_five) {
+      Bow_Hydro_Five.style.display = "none";
+      b_hydro_five = false;
+    }
+  }
+  if (hd == false){
+    for(Bow_Hydro_Four of bow_hydro_four) {
+      Bow_Hydro_Four.style.display = "none";
+    }
+    for(Bow_Hydro_Five of bow_hydro_five) {
+      Bow_Hydro_Five.style.display = "none";
+    }
+    b_hydro_five = false;
+    b_hydro_four = false;
+  }
+  //////////////////////////////////////  Bow PYRO
+  if (po == true && Char_4 == true){
+    for(Bow_Pyro_Four of bow_pyro_four) {
+      Bow_Pyro_Four.style.display = "";
+      b_pyro_four = true;
+    }
+  }
+  if (po == true && Char_4 == false){
+    for(Bow_Pyro_Four of bow_pyro_four) {
+      Bow_Pyro_Four.style.display = "none";
+      b_pyro_four = false;
+    }
+  }
+  if (po == true && Char_5 == true){
+    for(Bow_Pyro_Five of bow_pyro_five) {
+      Bow_Pyro_Five.style.display = "";
+      b_pyro_five = true;
+    }
+  }
+  if (po == true && Char_5 == false){
+    for(bow_Pyro_Five of bow_pyro_five) {
+      bow_Pyro_Five.style.display = "none";
+      b_pyro_five = false;
+    }
+  }
+  if (po == false){
+    for(Bow_Pyro_Four of bow_pyro_four) {
+      Bow_Pyro_Four.style.display = "none";
+    }
+    for(Bow_Pyro_Five of bow_pyro_five) {
+      Bow_Pyro_Five.style.display = "none";
+    }
+    b_pyro_five = false;
+    b_pyro_four = false;
+  }
+
+  ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+  ////////////////////////////////////// Catalyst ANEMO
+  if (anm == true && Char_4 == true){
+    for(Catalyst_Anemo_Four of catalyst_anemo_four) {
+      Catalyst_Anemo_Four.style.display = "";
+      ctl_anm_four = true;
+    }
+  }
+  if (anm == true && Char_4 == false){
+    for(Catalyst_Anemo_Four of catalyst_anemo_four) {
+      Catalyst_Anemo_Four.style.display = "none";
+      ctl_anm_four = false;
+    }
+  }
+  if (anm == true && Char_5 == true){
+    for(Catalyst_Anemo_Five of catalyst_anemo_five) {
+      Catalyst_Anemo_Five.style.display = "";
+      ctl_anm_five = true;
+    }
+  }
+  if (anm == true && Char_5 == false){
+    for(Catalyst_Anemo_Five of catalyst_anemo_five) {
+      Catalyst_Anemo_Five.style.display = "none";
+      ctl_anm_five = false;
+    }
+  }
+  if (anm == false){
+    for(Catalyst_Anemo_Four of catalyst_anemo_four) {
+      Catalyst_Anemo_Four.style.display = "none";
+    }
+    for(Catalyst_Anemo_Five of catalyst_anemo_five) {
+      Catalyst_Anemo_Five.style.display = "none";
+    }
+    ctl_anm_four = false;
+    ctl_anm_five = false;
+  }
+  
+  //////////////////////////////////////  CRYO
+  if (co == true && Char_4 == true){
+    for(Catalyst_Cryo_Four of catalyst_cryo_four) {
+      catalyst_Cryo_Four.style.display = "";
+      ctl_co_four = true;
+    }
+  }
+  if (co == true && Char_4 == false){
+    for(Catalyst_Cryo_Four of catalyst_cryo_four) {
+      Catalyst_Cryo_Four.style.display = "none";
+      ctl_co_four = false;
+    }
+  }
+  if (co == true && Char_5 == true){
+    for(Catalyst_Cryo_Five of catalyst_cryo_five) {
+      Catalyst_Cryo_Five.style.display = "";
+      ctl_co_five = true;
+    }
+  }
+  if (co == true && Char_5 == false){
+    for(Catalyst_Cryo_Five of catalyst_cryo_five) {
+      Catalyst_Cryo_Five.style.display = "none";
+      ctl_co_five = false;
+    }
+  }
+  if (co == false){
+    for(Catalyst_Cryo_Four of catalyst_cryo_four) {
+      Catalyst_Cryo_Four.style.display = "none";
+    }
+    for(Catalyst_Cryo_Five of catalyst_cryo_five) {
+      Catalyst_Cryo_Five.style.display = "none";
+    }
+    ctl_co_five = false;
+    ctl_co_four = false;
+  }
+  //////////////////////////////////////   DENDRO
+  if (dd == true && Char_4 == true){
+    for(Catalyst_Dendro_Four of catalyst_dendro_four) {
+      Catalyst_Dendro_Four.style.display = "";
+      ctl_dd_four = true;
+    }
+  }
+  if (dd == true && Char_4 == false){
+    for(Catalyst_Dendro_Four of catalyst_dendro_four) {
+      Catalyst_Dendro_Four.style.display = "none";
+      ctl_dd_four = false;
+    }
+  }
+  if (dd == true && Char_5 == true){
+    for(Catalyst_Dendro_Five of catalyst_dendro_five) {
+      Catalyst_Dendro_Five.style.display = "";
+      ctl_dd_five = true;
+    }
+  }
+  if (dd == true && Char_5 == false){
+    for(Catalyst_Dendro_Five of catalyst_dendro_five) {
+      Catalyst_Dendro_Five.style.display = "none";
+      ctl_dd_five = false;
+    }
+  }
+  if (dd == false){
+    for(Catalyst_Dendro_Four of catalyst_dendro_four) {
+      Catalyst_Dendro_Four.style.display = "none";
+    }
+    for(Catalyst_Dendro_Five of catalyst_dendro_five) {
+      Catalyst_Dendro_Five.style.display = "none";
+    }
+    ctl_dd_five = false;
+    ctl_dd_four = false;
+  }
+  //////////////////////////////////////   ELECTRO
+  if (elt == true && Char_4 == true){
+    for(Catalyst_Electro_Four of catalyst_electro_four) {
+      Catalyst_Electro_Four.style.display = "";
+      ctl_elt_four = true;
+    }
+  }
+  if (elt == true && Char_4 == false){
+    for(Catalyst_Electro_Four of catalyst_electro_four) {
+      Catalyst_Electro_Four.style.display = "none";
+      catalyst_elt_four = false;
+    }
+  }
+  if (elt == true && Char_5 == true){
+    for(Catalyst_Electro_Five of catalyst_electro_five) {
+      Catalyst_Electro_Five.style.display = "";
+      ctl_elt_five = true;
+    }
+  }
+  if (elt == true && Char_5 == false){
+    for(Catalyst_Electro_Five of catalyst_electro_five) {
+      Catalyst_Electro_Five.style.display = "none";
+      ctl_elt_five = false;
+    }
+  }
+  if (elt == false){
+    for(Catalyst_Electro_Four of catalyst_electro_four) {
+      Catalyst_Electro_Four.style.display = "none";
+    }
+    for(Catalyst_Electro_Five of catalyst_electro_five) {
+      Catalyst_Electro_Five.style.display = "none";
+    }
+    ctl_elt_five = false;
+    ctl_elt_four = false;
+  }
+  //////////////////////////////////////   GEO
+  if (go == true && Char_4 == true){
+    for(Catalyst_Geo_Four of catalyst_geo_four) {
+      Catalyst_Geo_Four.style.display = "";
+      ctl_geo_four = true;
+    }
+  }
+  if (go == true && Char_4 == false){
+    for(Catalyst_Geo_Four of catalyst_geo_four) {
+      Catalyst_Geo_Four.style.display = "none";
+      ctl_geo_four = false;
+    }
+  }
+  if (go == true && Char_5 == true){
+    for(Catalyst_Geo_Five of catalyst_geo_five) {
+      Catalyst_Geo_Five.style.display = "";
+      ctl_geo_five = true;
+    }
+  }
+  if (go == true && Char_5 == false){
+    for(Catalyst_Geo_Five of catalyst_geo_five) {
+      Catalyst_Geo_Five.style.display = "none";
+      ctl_geo_five = false;
+    }
+  }
+  if (go == false){
+    for(Catalyst_Geo_Four of catalyst_geo_four) {
+      Catalyst_Geo_Four.style.display = "none";
+    }
+    for(Catalyst_Geo_Five of catalyst_geo_five) {
+      Catalyst_Geo_Five.style.display = "none";
+    }
+    ctl_geo_five = false;
+    ctl_geo_four = false;
+  }
+  //////////////////////////////////////  HYDRO
+  if (hd == true && Char_4 == true){
+    for(Catalyst_Hydro_Four of catalyst_hydro_four) {
+      Catalyst_Hydro_Four.style.display = "";
+      ctl_hydro_four = true;
+    }
+  }
+  if (hd == true && Char_4 == false){
+    for(Catalyst_Hydro_Four of catalyst_hydro_four) {
+      Catalyst_Hydro_Four.style.display = "none";
+      ctl_hydro_four = false;
+    }
+  }
+  if (hd == true && Char_5 == true){
+    for(Catalyst_Hydro_Five of catalyst_hydro_five) {
+      Catalyst_Hydro_Five.style.display = "";
+      ctl_hydro_five = true;
+    }
+  }
+  if (hd == true && Char_5 == false){
+    for(Catalyst_Hydro_Five of catalyst_hydro_five) {
+      Catalyst_Hydro_Five.style.display = "none";
+      ctl_hydro_five = false;
+    }
+  }
+  if (hd == false){
+    for(Catalyst_Hydro_Four of catalyst_hydro_four) {
+      Catalyst_Hydro_Four.style.display = "none";
+    }
+    for(Catalyst_Hydro_Five of catalyst_hydro_five) {
+      Catalyst_Hydro_Five.style.display = "none";
+    }
+    ctl_hydro_five = false;
+    ctl_hydro_four = false;
+  }
+  //////////////////////////////////////  PYRO
+  if (po == true && Char_4 == true){
+    for(Catalyst_Pyro_Four of catalyst_pyro_four) {
+      Catalyst_Pyro_Four.style.display = "";
+      ctl_pyro_four = true;
+    }
+  }
+  if (po == true && Char_4 == false){
+    for(Catalyst_Pyro_Four of catalyst_pyro_four) {
+      Catalyst_Pyro_Four.style.display = "none";
+      ctl_pyro_four = false;
+    }
+  }
+  if (po == true && Char_5 == true){
+    for(Catalyst_Pyro_Five of catalyst_pyro_five) {
+      Catalyst_Pyro_Five.style.display = "";
+      ctl_pyro_five = true;
+    }
+  }
+  if (po == true && Char_5 == false){
+    for(Catalyst_Pyro_Five of catalyst_pyro_five) {
+      Catalyst_Pyro_Five.style.display = "none";
+      ctl_pyro_five = false;
+    }
+  }
+  if (po == false){
+    for(Catalyst_Pyro_Four of catalyst_pyro_four) {
+      Catalyst_Pyro_Four.style.display = "none";
+    }
+    for(Catalyst_Pyro_Five of catalyst_pyro_five) {
+      Catalyst_Pyro_Five.style.display = "none";
+    }
+    ctl_pyro_five = false;
+    ctl_pyro_four = false;
+  }
+
+
+  if(sw == false){
+    for(Sword of sword) {
+      Sword.style.display = "none";
+    }
+  }
+  if(cm == false){
+    for(Claymore of claymore) {
+      Claymore.style.display = "none";
+    }
+  }
+  
+  if(pl == false){
+    for(Polearm of polearm) {
+      Polearm.style.display = "none";
+    }
+  }
+
+  if(b == false){
+    for(Bow of bow) {
+      Bow.style.display = "none";
+    }
+  }
+
+  if(ctl == false){
+    for(Catalyst of catalyst) {
+      Catalyst.style.display = "none";
+    }
+  }
+
+  if (Char_4 == false){
+    for(four_star of four) {
+      four_star.style.display = "none";
+    }
+  }
+  if (Char_5 == false){
+    for(five_star of five) {
+      five_star.style.display = "none";
+    }
+  }
+
+  document.querySelector(".E_Anemo").style.cssText = "background-color: #97DEFF;"
+  document.querySelector(".E_Cryo").style.cssText = "background-color: #97DEFF;"
+  document.querySelector(".E_Dendro").style.cssText = "background-color: #97DEFF;"
+  document.querySelector(".E_Electro").style.cssText = "background-color: #97DEFF;"
+  document.querySelector(".E_Geo").style.cssText = "background-color: #97DEFF;"
+  document.querySelector(".E_Hydro").style.cssText = "background-color: #97DEFF;"
+  document.querySelector(".E_Pyro").style.cssText = "background-color: #97DEFF;"
+  document.querySelector(".element_all").style.cssText = "background-color: #97DEFF;"
+
 }
 
 function E_Anemo(){
@@ -17234,6 +20949,7 @@ function E_Anemo(){
     go = false;
     hd = false;
     po = false;
+    elements_all = false;
 
     ///////////////////////////////////// Sword ANEMO
     if (anm == true && Char_4 == true ){
@@ -18519,15 +22235,14 @@ function E_Anemo(){
       }
     }
 
-    document.querySelector(".E_Anemo").style.cssText = "background-color: Aquamarine;"
+    document.querySelector(".E_Anemo").style.cssText = "background-color: #97DEFF;"
     document.querySelector(".E_Cryo").style.cssText = "background-color: white;"
     document.querySelector(".E_Dendro").style.cssText = "background-color: white;"
     document.querySelector(".E_Electro").style.cssText = "background-color: white;"
     document.querySelector(".E_Geo").style.cssText = "background-color: white;"
     document.querySelector(".E_Hydro").style.cssText = "background-color: white;"
     document.querySelector(".E_Pyro").style.cssText = "background-color: white;"
-
-    
+    document.querySelector(".element_all").style.cssText = "background-color: white;"
     return
   }
 
@@ -18540,6 +22255,7 @@ function E_Anemo(){
     go = true;
     hd = true;
     po = true;
+    elements_all = true;
 
     ///////////////////////////////////// Sword ANEMO
     if (anm == true && Char_4 == true ){
@@ -19825,14 +23541,15 @@ function E_Anemo(){
       }
     }
 
-    document.querySelector(".E_Anemo").style.cssText = "background-color: Aquamarine;"
-    document.querySelector(".E_Cryo").style.cssText = "background-color: Aquamarine;"
-    document.querySelector(".E_Dendro").style.cssText = "background-color: Aquamarine;"
-    document.querySelector(".E_Electro").style.cssText = "background-color: Aquamarine;"
-    document.querySelector(".E_Geo").style.cssText = "background-color: Aquamarine;"
-    document.querySelector(".E_Hydro").style.cssText = "background-color: Aquamarine;"
-    document.querySelector(".E_Pyro").style.cssText = "background-color: Aquamarine;"
-    
+    document.querySelector(".E_Anemo").style.cssText = "background-color: #97DEFF;"
+    document.querySelector(".E_Cryo").style.cssText = "background-color: #97DEFF;"
+    document.querySelector(".E_Dendro").style.cssText = "background-color: #97DEFF;"
+    document.querySelector(".E_Electro").style.cssText = "background-color: #97DEFF;"
+    document.querySelector(".E_Geo").style.cssText = "background-color: #97DEFF;"
+    document.querySelector(".E_Hydro").style.cssText = "background-color: #97DEFF;"
+    document.querySelector(".E_Pyro").style.cssText = "background-color: #97DEFF;"
+    document.querySelector(".element_all").style.cssText = "background-color: #97DEFF;"
+
     return
   }
 
@@ -19847,10 +23564,14 @@ function E_Anemo(){
     return
   }
 
+  if (anm == false && co == true && dd == true && elt == true && go == true && hd == true && po == true){
+    elements_all = true;
+    document.querySelector(".element_all").style.cssText = "background-color: #97DEFF;"
+  }
+
   if (anm == false){
 
     anm = true
-
 
     ///////////////////////////////////// Sword ANEMO
     if (anm == true && Char_4 == true ){
@@ -21136,8 +24857,7 @@ function E_Anemo(){
       }
     }
 
-
-    document.querySelector(".E_Anemo").style.cssText = "background-color: Aquamarine;"
+    document.querySelector(".E_Anemo").style.cssText = "background-color: #97DEFF;"
 
   }
 
@@ -21154,6 +24874,7 @@ function E_Cryo(){
     go = false;
     hd = false;
     po = false;
+    elements_all = false;
 
     ///////////////////////////////////// Sword ANEMO
     if (anm == true && Char_4 == true ){
@@ -22440,13 +26161,13 @@ function E_Cryo(){
     }
 
     document.querySelector(".E_Anemo").style.cssText = "background-color: white;"
-    document.querySelector(".E_Cryo").style.cssText = "background-color: Aquamarine;"
+    document.querySelector(".E_Cryo").style.cssText = "background-color: #97DEFF;"
     document.querySelector(".E_Dendro").style.cssText = "background-color: white;"
     document.querySelector(".E_Electro").style.cssText = "background-color: white;"
     document.querySelector(".E_Geo").style.cssText = "background-color: white;"
     document.querySelector(".E_Hydro").style.cssText = "background-color: white;"
     document.querySelector(".E_Pyro").style.cssText = "background-color: white;"
-
+    document.querySelector(".element_all").style.cssText = "background-color: white;"
     
     return
   }
@@ -22460,6 +26181,7 @@ function E_Cryo(){
     go = true;
     hd = true;
     po = true;
+    elements_all = true;
 
     ///////////////////////////////////// Sword ANEMO
     if (anm == true && Char_4 == true ){
@@ -23745,14 +27467,15 @@ function E_Cryo(){
       }
     }
 
-    document.querySelector(".E_Anemo").style.cssText = "background-color: Aquamarine;"
-    document.querySelector(".E_Cryo").style.cssText = "background-color: Aquamarine;"
-    document.querySelector(".E_Dendro").style.cssText = "background-color: Aquamarine;"
-    document.querySelector(".E_Electro").style.cssText = "background-color: Aquamarine;"
-    document.querySelector(".E_Geo").style.cssText = "background-color: Aquamarine;"
-    document.querySelector(".E_Hydro").style.cssText = "background-color: Aquamarine;"
-    document.querySelector(".E_Pyro").style.cssText = "background-color: Aquamarine;"
-    
+    document.querySelector(".E_Anemo").style.cssText = "background-color: #97DEFF;"
+    document.querySelector(".E_Cryo").style.cssText = "background-color: #97DEFF;"
+    document.querySelector(".E_Dendro").style.cssText = "background-color: #97DEFF;"
+    document.querySelector(".E_Electro").style.cssText = "background-color: #97DEFF;"
+    document.querySelector(".E_Geo").style.cssText = "background-color: #97DEFF;"
+    document.querySelector(".E_Hydro").style.cssText = "background-color: #97DEFF;"
+    document.querySelector(".E_Pyro").style.cssText = "background-color: #97DEFF;"
+    document.querySelector(".element_all").style.cssText = "background-color: #97DEFF;"
+
     return
   }
 
@@ -23765,6 +27488,11 @@ function E_Cryo(){
     co = false;
     document.querySelector(".E_Cryo").style.cssText = "background-color: white;"
     return
+  }
+
+  if (anm == true && co == false && dd == true && elt == true && go == true && hd == true && po == true){
+    elements_all = true;
+    document.querySelector(".element_all").style.cssText = "background-color: #97DEFF;"
   }
 
   if (co == false){
@@ -25055,7 +28783,7 @@ function E_Cryo(){
       }
     }
 
-    document.querySelector(".E_Cryo").style.cssText = "background-color: Aquamarine;"
+    document.querySelector(".E_Cryo").style.cssText = "background-color: #97DEFF;"
     
     return
   }
@@ -25072,6 +28800,7 @@ function E_Dendro(){
     go = false;
     hd = false;
     po = false;
+    elements_all = false;
 
     ///////////////////////////////////// Sword ANEMO
     if (anm == true && Char_4 == true ){
@@ -26359,11 +30088,12 @@ function E_Dendro(){
 
     document.querySelector(".E_Anemo").style.cssText = "background-color: white;"
     document.querySelector(".E_Cryo").style.cssText = "background-color: white;"
-    document.querySelector(".E_Dendro").style.cssText = "background-color: Aquamarine;"
+    document.querySelector(".E_Dendro").style.cssText = "background-color: #97DEFF;"
     document.querySelector(".E_Electro").style.cssText = "background-color: white;"
     document.querySelector(".E_Geo").style.cssText = "background-color: white;"
     document.querySelector(".E_Hydro").style.cssText = "background-color: white;"
     document.querySelector(".E_Pyro").style.cssText = "background-color: white;"
+    document.querySelector(".element_all").style.cssText = "background-color: white;"
 
     return
   }
@@ -26377,6 +30107,7 @@ function E_Dendro(){
     go = true;
     hd = true;
     po = true;
+    elements_all = true;
 
     ///////////////////////////////////// Sword ANEMO
     if (anm == true && Char_4 == true ){
@@ -27662,14 +31393,15 @@ function E_Dendro(){
       }
     }
 
-    document.querySelector(".E_Anemo").style.cssText = "background-color: Aquamarine;"
-    document.querySelector(".E_Cryo").style.cssText = "background-color: Aquamarine;"
-    document.querySelector(".E_Dendro").style.cssText = "background-color: Aquamarine;"
-    document.querySelector(".E_Electro").style.cssText = "background-color: Aquamarine;"
-    document.querySelector(".E_Geo").style.cssText = "background-color: Aquamarine;"
-    document.querySelector(".E_Hydro").style.cssText = "background-color: Aquamarine;"
-    document.querySelector(".E_Pyro").style.cssText = "background-color: Aquamarine;"
-    
+    document.querySelector(".E_Anemo").style.cssText = "background-color: #97DEFF;"
+    document.querySelector(".E_Cryo").style.cssText = "background-color: #97DEFF;"
+    document.querySelector(".E_Dendro").style.cssText = "background-color: #97DEFF;"
+    document.querySelector(".E_Electro").style.cssText = "background-color: #97DEFF;"
+    document.querySelector(".E_Geo").style.cssText = "background-color: #97DEFF;"
+    document.querySelector(".E_Hydro").style.cssText = "background-color: #97DEFF;"
+    document.querySelector(".E_Pyro").style.cssText = "background-color: #97DEFF;"
+    document.querySelector(".element_all").style.cssText = "background-color: #97DEFF;"
+
     return
   }
 
@@ -27682,6 +31414,11 @@ function E_Dendro(){
     dd = false;
     document.querySelector(".E_Dendro").style.cssText = "background-color: white;"
     return
+  }
+
+  if (anm == true && co == true && dd == false && elt == true && go == true && hd == true && po == true){
+    elements_all = true;
+    document.querySelector(".element_all").style.cssText = "background-color: #97DEFF;"
   }
 
   if (dd == false){
@@ -28972,7 +32709,7 @@ function E_Dendro(){
       }
     }
 
-    document.querySelector(".E_Dendro").style.cssText = "background-color: Aquamarine;"
+    document.querySelector(".E_Dendro").style.cssText = "background-color: #97DEFF;"
     
     return
   }
@@ -28989,6 +32726,7 @@ function E_Electro(){
     go = false;
     hd = false;
     po = false;
+    elements_all = false;
 
     ///////////////////////////////////// Sword ANEMO
     if (anm == true && Char_4 == true ){
@@ -30277,10 +34015,11 @@ function E_Electro(){
     document.querySelector(".E_Anemo").style.cssText = "background-color: white;"
     document.querySelector(".E_Cryo").style.cssText = "background-color: white;"
     document.querySelector(".E_Dendro").style.cssText = "background-color: white;"
-    document.querySelector(".E_Electro").style.cssText = "background-color: Aquamarine;"
+    document.querySelector(".E_Electro").style.cssText = "background-color: #97DEFF;"
     document.querySelector(".E_Geo").style.cssText = "background-color: white;"
     document.querySelector(".E_Hydro").style.cssText = "background-color: white;"
     document.querySelector(".E_Pyro").style.cssText = "background-color: white;"
+    document.querySelector(".element_all").style.cssText = "background-color: white;"
 
     return
   }
@@ -30294,6 +34033,7 @@ function E_Electro(){
     go = true;
     hd = true;
     po = true;
+    elements_all = true;
 
     ///////////////////////////////////// Sword ANEMO
     if (anm == true && Char_4 == true ){
@@ -31579,14 +35319,15 @@ function E_Electro(){
       }
     }
 
-    document.querySelector(".E_Anemo").style.cssText = "background-color: Aquamarine;"
-    document.querySelector(".E_Cryo").style.cssText = "background-color: Aquamarine;"
-    document.querySelector(".E_Dendro").style.cssText = "background-color: Aquamarine;"
-    document.querySelector(".E_Electro").style.cssText = "background-color: Aquamarine;"
-    document.querySelector(".E_Geo").style.cssText = "background-color: Aquamarine;"
-    document.querySelector(".E_Hydro").style.cssText = "background-color: Aquamarine;"
-    document.querySelector(".E_Pyro").style.cssText = "background-color: Aquamarine;"
-    
+    document.querySelector(".E_Anemo").style.cssText = "background-color: #97DEFF;"
+    document.querySelector(".E_Cryo").style.cssText = "background-color: #97DEFF;"
+    document.querySelector(".E_Dendro").style.cssText = "background-color: #97DEFF;"
+    document.querySelector(".E_Electro").style.cssText = "background-color: #97DEFF;"
+    document.querySelector(".E_Geo").style.cssText = "background-color: #97DEFF;"
+    document.querySelector(".E_Hydro").style.cssText = "background-color: #97DEFF;"
+    document.querySelector(".E_Pyro").style.cssText = "background-color: #97DEFF;"
+    document.querySelector(".element_all").style.cssText = "background-color: #97DEFF;"
+
     return
   }
 
@@ -31598,6 +35339,11 @@ function E_Electro(){
     document.querySelector(".E_Electro").style.cssText = "background-color: white;"
     elt = false;
     return
+  }
+
+  if (anm == true && co == true && dd == true && elt == false && go == true && hd == true && po == true){
+    elements_all = true;
+    document.querySelector(".element_all").style.cssText = "background-color: #97DEFF;"
   }
 
   if (elt == false){
@@ -32888,7 +36634,7 @@ function E_Electro(){
       }
     }
 
-    document.querySelector(".E_Electro").style.cssText = "background-color: Aquamarine;"
+    document.querySelector(".E_Electro").style.cssText = "background-color: #97DEFF;"
     
     return
   }
@@ -32905,6 +36651,7 @@ function E_Geo(){
     go = true;
     hd = false;
     po = false;
+    elements_all = false;
 
     ///////////////////////////////////// Sword ANEMO
     if (anm == true && Char_4 == true ){
@@ -34194,9 +37941,10 @@ function E_Geo(){
     document.querySelector(".E_Cryo").style.cssText = "background-color: white;"
     document.querySelector(".E_Dendro").style.cssText = "background-color: white;"
     document.querySelector(".E_Electro").style.cssText = "background-color: white;"
-    document.querySelector(".E_Geo").style.cssText = "background-color: Aquamarine;"
+    document.querySelector(".E_Geo").style.cssText = "background-color: #97DEFF;"
     document.querySelector(".E_Hydro").style.cssText = "background-color: white;"
     document.querySelector(".E_Pyro").style.cssText = "background-color: white;"
+    document.querySelector(".element_all").style.cssText = "background-color: white;"
 
     return
   }
@@ -34210,6 +37958,7 @@ function E_Geo(){
     go = true;
     hd = true;
     po = true;
+    elements_all = true;
 
     ///////////////////////////////////// Sword ANEMO
     if (anm == true && Char_4 == true ){
@@ -35495,14 +39244,15 @@ function E_Geo(){
       }
     }
 
-    document.querySelector(".E_Anemo").style.cssText = "background-color: Aquamarine;"
-    document.querySelector(".E_Cryo").style.cssText = "background-color: Aquamarine;"
-    document.querySelector(".E_Dendro").style.cssText = "background-color: Aquamarine;"
-    document.querySelector(".E_Electro").style.cssText = "background-color: Aquamarine;"
-    document.querySelector(".E_Geo").style.cssText = "background-color: Aquamarine;"
-    document.querySelector(".E_Hydro").style.cssText = "background-color: Aquamarine;"
-    document.querySelector(".E_Pyro").style.cssText = "background-color: Aquamarine;"
-    
+    document.querySelector(".E_Anemo").style.cssText = "background-color: #97DEFF;"
+    document.querySelector(".E_Cryo").style.cssText = "background-color: #97DEFF;"
+    document.querySelector(".E_Dendro").style.cssText = "background-color: #97DEFF;"
+    document.querySelector(".E_Electro").style.cssText = "background-color: #97DEFF;"
+    document.querySelector(".E_Geo").style.cssText = "background-color: #97DEFF;"
+    document.querySelector(".E_Hydro").style.cssText = "background-color: #97DEFF;"
+    document.querySelector(".E_Pyro").style.cssText = "background-color: #97DEFF;"
+    document.querySelector(".element_all").style.cssText = "background-color: #97DEFF;"
+
     return
   }
 
@@ -35514,6 +39264,11 @@ function E_Geo(){
     document.querySelector(".E_Geo").style.cssText = "background-color: white;"
     go = false;
     return
+  }
+
+  if (anm == true && co == true && dd == true && elt == true && go == false && hd == true && po == true){
+    elements_all = true;
+    document.querySelector(".element_all").style.cssText = "background-color: #97DEFF;"
   }
 
   if (go == false){
@@ -36804,7 +40559,7 @@ function E_Geo(){
       }
     }
 
-    document.querySelector(".E_Geo").style.cssText = "background-color: Aquamarine;"
+    document.querySelector(".E_Geo").style.cssText = "background-color: #97DEFF;"
     
     return
   }
@@ -36821,6 +40576,7 @@ function E_Hydro(){
     go = false;
     hd = true;
     po = false;
+    elements_all = false;
 
     ///////////////////////////////////// Sword ANEMO
     if (anm == true && Char_4 == true ){
@@ -38111,8 +41867,9 @@ function E_Hydro(){
     document.querySelector(".E_Dendro").style.cssText = "background-color: white;"
     document.querySelector(".E_Electro").style.cssText = "background-color: white;"
     document.querySelector(".E_Geo").style.cssText = "background-color: white;"
-    document.querySelector(".E_Hydro").style.cssText = "background-color: Aquamarine;"
+    document.querySelector(".E_Hydro").style.cssText = "background-color: #97DEFF;"
     document.querySelector(".E_Pyro").style.cssText = "background-color: white;"
+    document.querySelector(".element_all").style.cssText = "background-color: white;"
 
     return
   }
@@ -38126,6 +41883,7 @@ function E_Hydro(){
     go = true;
     hd = true;
     po = true;
+    elements_all = true;
 
     ///////////////////////////////////// Sword ANEMO
     if (anm == true && Char_4 == true ){
@@ -39411,14 +43169,15 @@ function E_Hydro(){
       }
     }
 
-    document.querySelector(".E_Anemo").style.cssText = "background-color: Aquamarine;"
-    document.querySelector(".E_Cryo").style.cssText = "background-color: Aquamarine;"
-    document.querySelector(".E_Dendro").style.cssText = "background-color: Aquamarine;"
-    document.querySelector(".E_Electro").style.cssText = "background-color: Aquamarine;"
-    document.querySelector(".E_Geo").style.cssText = "background-color: Aquamarine;"
-    document.querySelector(".E_Hydro").style.cssText = "background-color: Aquamarine;"
-    document.querySelector(".E_Pyro").style.cssText = "background-color: Aquamarine;"
-    
+    document.querySelector(".E_Anemo").style.cssText = "background-color: #97DEFF;"
+    document.querySelector(".E_Cryo").style.cssText = "background-color: #97DEFF;"
+    document.querySelector(".E_Dendro").style.cssText = "background-color: #97DEFF;"
+    document.querySelector(".E_Electro").style.cssText = "background-color: #97DEFF;"
+    document.querySelector(".E_Geo").style.cssText = "background-color: #97DEFF;"
+    document.querySelector(".E_Hydro").style.cssText = "background-color: #97DEFF;"
+    document.querySelector(".E_Pyro").style.cssText = "background-color: #97DEFF;"
+    document.querySelector(".element_all").style.cssText = "background-color: #97DEFF;"
+
     return
   }
 
@@ -39430,6 +43189,11 @@ function E_Hydro(){
     document.querySelector(".E_Hydro").style.cssText = "background-color: white;"
     hd = false;
     return
+  }
+
+  if (anm == true && co == true && dd == true && elt == true && go == true && hd == false && po == true){
+    elements_all = true;
+    document.querySelector(".element_all").style.cssText = "background-color: #97DEFF;"
   }
 
   if (hd == false){
@@ -40720,7 +44484,7 @@ function E_Hydro(){
       }
     }
 
-    document.querySelector(".E_Hydro").style.cssText = "background-color: Aquamarine;"
+    document.querySelector(".E_Hydro").style.cssText = "background-color: #97DEFF;"
     
     return
   }
@@ -40737,6 +44501,7 @@ function E_Pyro(){
     go = false;
     hd = false;
     po = true;
+    elements_all = false;
 
     ///////////////////////////////////// Sword ANEMO
     if (anm == true && Char_4 == true ){
@@ -42028,7 +45793,8 @@ function E_Pyro(){
     document.querySelector(".E_Electro").style.cssText = "background-color: white;"
     document.querySelector(".E_Geo").style.cssText = "background-color: white;"
     document.querySelector(".E_Hydro").style.cssText = "background-color: white;"
-    document.querySelector(".E_Pyro").style.cssText = "background-color: Aquamarine;"
+    document.querySelector(".E_Pyro").style.cssText = "background-color: #97DEFF;"
+    document.querySelector(".element_all").style.cssText = "background-color: white;"
 
     return
   }
@@ -42042,6 +45808,7 @@ function E_Pyro(){
     go = true;
     hd = true;
     po = true;
+    elements_all = true;
 
     ///////////////////////////////////// Sword ANEMO
     if (anm == true && Char_4 == true ){
@@ -43327,14 +47094,15 @@ function E_Pyro(){
       }
     }
 
-    document.querySelector(".E_Anemo").style.cssText = "background-color: Aquamarine;"
-    document.querySelector(".E_Cryo").style.cssText = "background-color: Aquamarine;"
-    document.querySelector(".E_Dendro").style.cssText = "background-color: Aquamarine;"
-    document.querySelector(".E_Electro").style.cssText = "background-color: Aquamarine;"
-    document.querySelector(".E_Geo").style.cssText = "background-color: Aquamarine;"
-    document.querySelector(".E_Hydro").style.cssText = "background-color: Aquamarine;"
-    document.querySelector(".E_Pyro").style.cssText = "background-color: Aquamarine;"
-    
+    document.querySelector(".E_Anemo").style.cssText = "background-color: #97DEFF;"
+    document.querySelector(".E_Cryo").style.cssText = "background-color: #97DEFF;"
+    document.querySelector(".E_Dendro").style.cssText = "background-color: #97DEFF;"
+    document.querySelector(".E_Electro").style.cssText = "background-color: #97DEFF;"
+    document.querySelector(".E_Geo").style.cssText = "background-color: #97DEFF;"
+    document.querySelector(".E_Hydro").style.cssText = "background-color: #97DEFF;"
+    document.querySelector(".E_Pyro").style.cssText = "background-color: #97DEFF;"
+    document.querySelector(".element_all").style.cssText = "background-color: #97DEFF;"
+
     return
   }
 
@@ -43346,6 +47114,11 @@ function E_Pyro(){
     document.querySelector(".E_Pyro").style.cssText = "background-color: white;"
     po = false;
     return
+  }
+
+  if (anm == true && co == true && dd == true && elt == true && go == true && hd == true && po == false){
+    elements_all = true;
+    document.querySelector(".element_all").style.cssText = "background-color: #97DEFF;"
   }
 
   if (po == false){
@@ -44636,8 +48409,7 @@ function E_Pyro(){
       }
     }
 
-    document.querySelector(".E_Pyro").style.cssText = "background-color: Aquamarine;"
-    
+    document.querySelector(".E_Pyro").style.cssText = "background-color: #97DEFF;"
     return
   }
 }

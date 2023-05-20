@@ -6,7 +6,8 @@
     margin-right: 1%;
     text-align: center;
     border-radius: 10px;
-    background-color: Gainsboro;
+    background-color: #95BDFF;/*Gainsboro*/
+    box-shadow: 5px 5px 32px 2px rgba(0,0,0,0.4);
 }
 /*------------------------------------*/
 .char span#color img#element{
@@ -33,7 +34,6 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-image: url(../image/Character/bg/Background_Item_5_Star.png);
-    /*background-color: rgb(162, 143, 0);*/
     border-radius: 16px 16px 28px 0px;
 }
 .char span#color img#four-star{
@@ -42,7 +42,6 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-image: url(../image/Character/bg/Background_Item_4_Star.png);
-    /*background-color: rgba(125, 0, 179, 0.737);*/
     border-radius: 16px 16px 28px 0px;
 }
 .boss img{
@@ -66,7 +65,7 @@
     display: inline-table;
     padding-top: -5%;
     margin-top: 1%;
-    background-color: rgb(197, 197, 197);
+    background-color: #e2eff1;
     cursor: pointer;
     scale: 100%;
     border-radius: 16px;
@@ -99,7 +98,6 @@
 
 /*------------------------------------*/
 
-
 .boss h1{
     font-size: 15px;
 }
@@ -110,16 +108,28 @@
 .unselectall_char button,
 .selectall_boss button,
 .unselectall_boss button,
-.return button,
 .random_again button{
-    border-radius: 10px;
-    border: 1px solid black;
+    color: #e2eff1;
+    background-color: #2CD3E1;
+    border-radius: 8px;
+    border: none;
     margin-top: 1.5%;
     margin-left: 1.5%;
     padding-left: 0.5%;
     padding-right: 0.7%;
     cursor: pointer;
 }
+.displaycharacter button:hover,
+.displayboss button:hover,
+.selectall_char button:hover,
+.selectall_boss button:hover{
+    background-color: #00FFAB;
+}
+.unselectall_char button:hover,
+.unselectall_boss button:hover{
+    background-color: #FF1700;
+}
+
 
 .random_again button{
     padding-top: 0;
@@ -149,3 +159,6 @@
     font-size: 1.3rem;
 }
 
+.detect{
+    display: inline-block;
+}

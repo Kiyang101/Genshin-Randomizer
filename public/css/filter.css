@@ -5,10 +5,10 @@ section.filter{
 section div.modal-box{
     border: 1.5px solid Black;
     background: LightSkyBlue;
-    background: -webkit-linear-gradient(DodgerBlue, LightSkyBlue,LightCyan); 
-    background: -o-linear-gradient(DodgerBlue, LightSkyBlue,LightCyan); 
-    background: -moz-linear-gradient(DodgerBlue, LightSkyBlue,LightCyan); 
-    background: linear-gradient(DodgerBlue, LightSkyBlue,LightCyan); 
+    background: -webkit-linear-gradient(#82AAE3, #91D8E4,#BFEAF5,#EAFDFC); 
+    background: -o-linear-gradient(#82AAE3, #91D8E4,#BFEAF5,#EAFDFC); 
+    background: -moz-linear-gradient(#82AAE3, #91D8E4,#BFEAF5,#EAFDFC); 
+    background: linear-gradient(#82AAE3, #91D8E4,#BFEAF5,#EAFDFC); 
     border-radius: 10px;
     opacity: 0;
     margin: auto;
@@ -51,7 +51,7 @@ section.filter header#filter h1{
 section.filter button.close{
     border: 1px solid black;
     color: white;
-    background-color: dodgerblue;
+    background-color: #81F5FF;
     cursor: pointer;
     float: right;
     font-size: 30px;
@@ -59,6 +59,10 @@ section.filter button.close{
     margin-right: 10px;
     margin-top: 8.5px;
 }
+section.filter button.close:hover{
+    background-color: #FF1700;
+}
+
 
 section.filter div.header{
     border-bottom: 1.5px solid Black;
@@ -74,7 +78,7 @@ ul#center{
 }
 
 li.type_weapon button{
-    border: 1.5px solid CornflowerBlue;
+    border: none;
     border-radius: 10px;
     margin-top: 5px;
     margin-bottom: 5px;
@@ -91,7 +95,7 @@ li.type_weapon h1{
 
 img#weapon_type{
     height: 30px;
-    background-color: aqua;
+    background-color: #62CDFF;
     border-radius: 5px;
 }
 
@@ -111,13 +115,13 @@ li.type button,
 li.element button{
     border-radius: 5px;
     font-size: 1rem;
-    border: 1.5px solid CornflowerBlue;
+    border: none;
 }
 
 li.rarity_star button{
     margin-top: 0px;
     margin-bottom: 10px;
-    border: 1.5px solid CornflowerBlue;
+    border: none;
 }
 
 li.type_weapon button.type_Catalyst{
@@ -134,7 +138,7 @@ li.element_img button{
     border-radius: 10px;
     margin-right: 10px;
     margin-top: 5px;
-    border: 1.5px solid CornflowerBlue;
+    border: none;
 }
 
 li.element_img button img{
@@ -145,17 +149,29 @@ li.element_img button img{
 .rarity_4,.rarity_5,
 .type_sword,.type_Claymore,.type_Pole,.type_Bow,.type_Catalyst,
 .E_Anemo,.E_Cryo,.E_Dendro,.E_Electro,.E_Geo,.E_Hydro,.E_Pyro{
-    background-color: Aquamarine;
+    background-color: #97DEFF;
+    color: #11324D;
+    box-shadow: 2px 2px 5px 1px rgba(0,0,0,0.3);
 }
 
 .overlay{
     position: fixed;
-    height: 100%;
-    width: 100%;
+    top: 0;
+    height: 100vh;
+    width: 100vw;
     background: rgba(0, 0, 0, 0.5);
     opacity: 0;
     pointer-events: none;
     z-index: 90;
     margin: 0;
     padding: 0;
+}
+
+.rarity_all,.type_all,.element_all{
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    background-color: #97DEFF;
+    color: #11324D;
+    box-shadow: 2px 2px 5px 1px rgba(0,0,0,0.3);
 }

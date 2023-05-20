@@ -4,7 +4,7 @@
     margin-right: 1%;
     text-align: center;
     border-radius: 10px;
-    background-color: Gainsboro;
+    background-color: #95BDFF;
 }
 
 .random img.element{
@@ -39,7 +39,7 @@
     display: inline-table;
     padding-top: -5%;
     margin-top: 1%;
-    background-color: Silver;
+    background-color: #e2eff1;
     cursor: default;
     scale: 100%;
     border-radius: 16px;
@@ -79,17 +79,20 @@
 .btn button{
     margin-top: 5%;
     margin-bottom: 5%;
-    border-radius: 10px;
-    background-color: none;
+    padding-left: 3%;
+    padding-right: 3%;
+    border-radius: 50px;    
     cursor: pointer;
-    border: 2.35px solid dodgerblue;
-    background-color: Gainsboro;
+    color: #2b2e4a;
+    border: 1px solid SpringGreen;
+    background-color: MediumSpringGreen;
     transition: all .3s ease-in-out;
 }
 
 .btn button:hover{
     color: white;
-    background-color: dodgerblue;
+    border: 1px solid CornflowerBlue;
+    /* background-color: #97DEFF; */
     border-radius: 50px;
     padding-left: 3%;
     padding-right: 3%;
@@ -98,12 +101,28 @@
     rgba(0, 0, 0, 0.12) 0px 4px 6px, 
     rgba(0, 0, 0, 0.17) 0px 12px 13px, 
     rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    /* animation: rainbow 4s infinite; */
+
 }
 
 .return button{
-    background-color: FireBrick;
+    color: #e2eff1;
+    background-color: #2CD3E1;
+    border-radius: 8px;
+    border: none;
+    margin-top: 1.5%;
+    margin-left: 1.5%;
+    padding-left: 0.5%;
+    padding-right: 0.7%;
+    cursor: pointer;
 }
-
+.return button:hover{
+    background-color: #FF1700;
+}
 .random_again button{
-    background-color: greenyellow;
+    color: azure;
 }
+.random_again button:hover{
+    background-color: #00FFAB;
+}   
+
