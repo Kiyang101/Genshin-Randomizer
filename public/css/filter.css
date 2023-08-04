@@ -1,14 +1,14 @@
-section.filter{
+section.filter {
     pointer-events: none;
 }
 
-section div.modal-box{
+section div.modal-box {
     border: 1.5px solid Black;
     background: LightSkyBlue;
-    background: -webkit-linear-gradient(#82AAE3, #91D8E4,#BFEAF5,#EAFDFC); 
-    background: -o-linear-gradient(#82AAE3, #91D8E4,#BFEAF5,#EAFDFC); 
-    background: -moz-linear-gradient(#82AAE3, #91D8E4,#BFEAF5,#EAFDFC); 
-    background: linear-gradient(#82AAE3, #91D8E4,#BFEAF5,#EAFDFC); 
+    background: -webkit-linear-gradient(#82AAE3, #91D8E4, #BFEAF5, #EAFDFC);
+    background: -o-linear-gradient(#82AAE3, #91D8E4, #BFEAF5, #EAFDFC);
+    background: -moz-linear-gradient(#82AAE3, #91D8E4, #BFEAF5, #EAFDFC);
+    background: linear-gradient(#82AAE3, #91D8E4, #BFEAF5, #EAFDFC);
     border-radius: 10px;
     opacity: 0;
     margin: auto;
@@ -22,33 +22,33 @@ section div.modal-box{
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 }
 
-section.filter button{
+section.filter button {
     cursor: pointer;
 }
 
-section.filter header#filter{
+section.filter header#filter {
     display: inline-flex;
     border: 0px;
 }
 
-section.filter header#filter{
-    cursor:default;
+section.filter header#filter {
+    cursor: default;
 }
 
-section.filter div.header{
+section.filter div.header {
     text-align: center;
 }
 
-section.filter header#filter h1{
+section.filter header#filter h1 {
     font-size: 30px;
     margin-top: 10px;
     margin-bottom: 10px;
     padding-bottom: 0px;
     color: aliceblue;
-    text-shadow: 0 5px 5px #444444,0 -2px 1px #969696;
+    text-shadow: 0 5px 5px #444444, 0 -2px 1px #969696;
 }
 
-section.filter button.close{
+section.filter button.close {
     border: 1px solid black;
     color: white;
     background-color: #81F5FF;
@@ -60,12 +60,13 @@ section.filter button.close{
     margin-top: 8.5px;
     transition: all .2s ease-in-out;
 }
-section.filter button.close:hover{
+
+section.filter button.close:hover {
     background-color: #FF1700;
     box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
 
-section.filter div.header{
+section.filter div.header {
     border-bottom: 1.5px solid Black;
     border-radius: 0px;
     padding-top: 0;
@@ -73,12 +74,12 @@ section.filter div.header{
     padding-left: 0;
 }
 
-ul#center{
+ul#center {
     padding-left: 8%;
     padding-right: 8%;
 }
 
-li.type_weapon button{
+li.type_weapon button {
     border: none;
     border-radius: 10px;
     margin-top: 5px;
@@ -86,7 +87,7 @@ li.type_weapon button{
     padding-top: 6px;
 }
 
-li.type_weapon h1{
+li.type_weapon h1 {
     margin-top: 0px;
     margin-bottom: 0px;
     display: inline-block;
@@ -94,7 +95,7 @@ li.type_weapon h1{
     -ms-transform: translateY(-50%);
 }
 
-img#weapon_type{
+img#weapon_type {
     height: 30px;
     background-color: #62CDFF;
     border-radius: 5px;
@@ -102,39 +103,39 @@ img#weapon_type{
 
 li.rarity h1,
 li.type h1,
-li.element h1{
+li.element h1 {
     display: inline-block;
     margin-top: 0px;
     margin-bottom: 10px;
     font-size: 1.5rem;
     color: aliceblue;
-    text-shadow: 0 5px 5px #444444,0 -2px 1px #969696;
+    text-shadow: 0 5px 5px #444444, 0 -2px 1px #969696;
 }
 
 li.rarity_star button,
 li.type button,
-li.element button{
+li.element button {
     border-radius: 5px;
     font-size: 1rem;
     border: none;
 }
 
-li.rarity_star button{
+li.rarity_star button {
     margin-top: 0px;
     margin-bottom: 10px;
     border: none;
 }
 
-li.type_weapon button.type_Catalyst{
+li.type_weapon button.type_Catalyst {
     margin-right: 20px;
 }
 
-li.element_img span{
+li.element_img span {
     display: grid;
     display: inline-table;
 }
 
-li.element_img button{
+li.element_img button {
     border: 0px;
     border-radius: 10px;
     margin-right: 10px;
@@ -142,20 +143,31 @@ li.element_img button{
     border: none;
 }
 
-li.element_img button img{
+li.element_img button img {
     height: 40px;
 }
 
 /*Color Button*/
-.rarity_4,.rarity_5,
-.type_sword,.type_Claymore,.type_Pole,.type_Bow,.type_Catalyst,
-.E_Anemo,.E_Cryo,.E_Dendro,.E_Electro,.E_Geo,.E_Hydro,.E_Pyro{
+.rarity_4,
+.rarity_5,
+.type_sword,
+.type_Claymore,
+.type_Pole,
+.type_Bow,
+.type_Catalyst,
+.E_Anemo,
+.E_Cryo,
+.E_Dendro,
+.E_Electro,
+.E_Geo,
+.E_Hydro,
+.E_Pyro {
     background-color: #97DEFF;
     color: #11324D;
-    box-shadow: 2px 2px 5px 1px rgba(0,0,0,0.3);
+    box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.3);
 }
 
-.overlay{
+.overlay {
     position: fixed;
     top: 0;
     height: 100vh;
@@ -168,11 +180,13 @@ li.element_img button img{
     padding: 0;
 }
 
-.rarity_all,.type_all,.element_all{
+.rarity_all,
+.type_all,
+.element_all {
     border: none;
     border-radius: 5px;
     font-size: 1rem;
     background-color: #97DEFF;
     color: #11324D;
-    box-shadow: 2px 2px 5px 1px rgba(0,0,0,0.3);
+    box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.3);
 }

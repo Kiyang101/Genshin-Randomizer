@@ -1,49 +1,49 @@
 //Array
 const Boss = [];
 const Character = [];
-const Elements = ["Anemo","Dendro","Electro","Geo"];
+const Elements = ["Anemo", "Dendro", "Electro", "Geo", "Hydro"];
 
-const listAnemo = ["Faruzan","Jean","Kazuha","Sayu","Heizou","Sucrose","Venti","Wanderer","Xiao"];
-const listCryo = ["Aloy","Chongyun","Diona","Eula","Ganyu","Kaeya","Ayaka","Layla","Mika","Qiqi","Rosaria","Shenhe"];
-const listDendro = ["Alhaitham","Baizhu","Collei","Kaveh","Kirara","Nahida","Tighnari","Yaoyao"];
-const listElectro = ["Beidou","Cyno","Dori","Fischl","Keqing","Kujou Sara","Kuki Shinobu","Lisa","Raiden","Razor","Yae Miko"];
-const listGeo = ["Albedo","Arataki Itto","Gorou","Ningguang","Noelle","Yunjin","Zhongli"];
-const listHydro = ["Barbara","Candace","Ayato","Mona","Nilou","Kokomi","Tartaglia","Xingqiu","Yelan"];
-const listPyro = ["Amber","Bennett","Dehya","Diluc","Hutao","Klee","Thoma","Xiangling","Xinyan","Yanfei","Yoimiya"];
+const listAnemo = ["Faruzan", "Jean", "Kazuha", "Sayu", "Heizou", "Sucrose", "Venti", "Wanderer", "Xiao", "Lynette"];
+const listCryo = ["Aloy", "Chongyun", "Diona", "Eula", "Ganyu", "Kaeya", "Ayaka", "Layla", "Mika", "Qiqi", "Rosaria", "Shenhe", "Freminet"];
+const listDendro = ["Alhaitham", "Baizhu", "Collei", "Kaveh", "Kirara", "Nahida", "Tighnari", "Yaoyao"];
+const listElectro = ["Beidou", "Cyno", "Dori", "Fischl", "Keqing", "Kujou Sara", "Kuki Shinobu", "Lisa", "Raiden", "Razor", "Yae Miko"];
+const listGeo = ["Albedo", "Arataki Itto", "Gorou", "Ningguang", "Noelle", "Yunjin", "Zhongli"];
+const listHydro = ["Barbara", "Candace", "Ayato", "Mona", "Nilou", "Kokomi", "Tartaglia", "Xingqiu", "Yelan"];
+const listPyro = ["Amber", "Bennett", "Dehya", "Diluc", "Hutao", "Klee", "Thoma", "Xiangling", "Xinyan", "Yanfei", "Yoimiya", "Lyney"];
 
-const FourStar = ["Amber","Barbara","Beidou","Bennett","Candace","Chongyun","Collei","Diona","Dori","Faruzan","Fischl",
-                  "Gorou","Kaeya","Kaveh","Kirara","Kujou Sara","Kuki Shinobu","Layla","Lisa","Mika","Ningguang","Noelle","Razor",
-                  "Rosaria","Sayu","Heizou","Sucrose","Thoma","Xiangling","Xingqiu","Xinyan","Yanfei","Yaoyao","Yunjin"
+const FourStar = ["Amber", "Barbara", "Beidou", "Bennett", "Candace", "Chongyun", "Collei", "Diona", "Dori", "Faruzan", "Fischl",
+    "Gorou", "Kaeya", "Kaveh", "Kirara", "Kujou Sara", "Kuki Shinobu", "Layla", "Lisa", "Mika", "Ningguang", "Noelle", "Razor",
+    "Rosaria", "Sayu", "Heizou", "Sucrose", "Thoma", "Xiangling", "Xingqiu", "Xinyan", "Yanfei", "Yaoyao", "Yunjin", "Lynette", "Freminet"
 ];
 
-const FiveStar = ["Albedo","Alhaitham","Aloy","Arataki Itto","Baizhu","Cyno","Dehya","Diluc","Eula","Ganyu","Hutao",
-                  "Jean","Ayaka","Ayato","Kazuha","Keqing","Klee","Mona","Nahida","Nilou","Qiqi","Raiden",
-                  "Kokomi","Shenhe","Tartaglia","Tighnari","Venti","Wanderer","Xiao","Yae Miko","Yelan","Yoimiya","Zhongli"
+const FiveStar = ["Albedo", "Alhaitham", "Aloy", "Arataki Itto", "Baizhu", "Cyno", "Dehya", "Diluc", "Eula", "Ganyu", "Hutao",
+    "Jean", "Ayaka", "Ayato", "Kazuha", "Keqing", "Klee", "Mona", "Nahida", "Nilou", "Qiqi", "Raiden",
+    "Kokomi", "Shenhe", "Tartaglia", "Tighnari", "Venti", "Wanderer", "Xiao", "Yae Miko", "Yelan", "Yoimiya", "Zhongli", "Lyney"
 ];
 
-const Countchar = ["Amber","Barbara","Beidou","Bennett","Candace","Chongyun","Collei","Diona","Dori","Faruzan","Fischl",
-                "Gorou","Kaeya","Kaveh","Kirara","Kujou_Sara","Kuki_Shinobu","Layla","Lisa","Mika","Ningguang","Noelle","Razor",
-                "Rosaria","Sayu","Heizou","Sucrose","Thoma","Xiangling","Xingqiu","Xinyan","Yanfei","Yaoyao","Yunjin","Aether","Albedo",
-                "Alhaitham","Aloy","Arataki_Itto","Baizhu","Cyno","Dehya","Diluc","Eula","Ganyu","Hutao","Jean","Ayaka","Ayato",
-                "Kazuha","Keqing","Klee","Mona","Nahida","Nilou","Qiqi","Raiden","Kokomi","Shenhe","Tartaglia","Tighnari","Venti",
-                "Wanderer","Xiao","Yae_miko","Yelan","Yoimiya","Zhongli"
+const Countchar = ["Amber", "Barbara", "Beidou", "Bennett", "Candace", "Chongyun", "Collei", "Diona", "Dori", "Faruzan", "Fischl",
+    "Gorou", "Kaeya", "Kaveh", "Kirara", "Kujou_Sara", "Kuki_Shinobu", "Layla", "Lisa", "Mika", "Ningguang", "Noelle", "Razor",
+    "Rosaria", "Sayu", "Heizou", "Sucrose", "Thoma", "Xiangling", "Xingqiu", "Xinyan", "Yanfei", "Yaoyao", "Yunjin", "Lynette", "Freminet", "Aether", "Albedo",
+    "Alhaitham", "Aloy", "Arataki_Itto", "Baizhu", "Cyno", "Dehya", "Diluc", "Eula", "Ganyu", "Hutao", "Jean", "Ayaka", "Ayato",
+    "Kazuha", "Keqing", "Klee", "Mona", "Nahida", "Nilou", "Qiqi", "Raiden", "Kokomi", "Shenhe", "Tartaglia", "Tighnari", "Venti",
+    "Wanderer", "Xiao", "Yae_miko", "Yelan", "Yoimiya", "Zhongli", "Lyney"
 ];
 
-const Countboss = ["Anemo_Hypotasis","Cryo_Hypotasis","Dendro_Hypotasis","Electro_Hypotasis","Geo_Hypotasis","Hydro_Hypotasis","Pyro_Hypotasis","Cryo_Regisvine","Electro_Regisvine","Pyro_Regisvine",
-                   "Oceanid","Primo_Geovishap","Golden_Wolflord","Bathysmal_Vishap","Thunder_Manifestation","Iniquitous_Baptist","Jadeplume_Terrorshroom","Setekh_Wenut","Maguu_Kenki","Aeonblight_Drake","Algorithm",
-                   "Perpetual_Mechanical_Array","Ruin_Serpent","Lupus_Boreas","Stormterror","Azhdaha","Childe","La_Signora","Magatsu_Mitake","Shouki_no_Kami","Warden_of_Oasis"
+const Countboss = ["Anemo_Hypotasis", "Cryo_Hypotasis", "Dendro_Hypotasis", "Electro_Hypotasis", "Geo_Hypotasis", "Hydro_Hypotasis", "Pyro_Hypotasis", "Cryo_Regisvine", "Electro_Regisvine", "Pyro_Regisvine",
+    "Oceanid", "Primo_Geovishap", "Golden_Wolflord", "Bathysmal_Vishap", "Thunder_Manifestation", "Iniquitous_Baptist", "Jadeplume_Terrorshroom", "Setekh_Wenut", "Maguu_Kenki", "Aeonblight_Drake", "Algorithm",
+    "Perpetual_Mechanical_Array", "Ruin_Serpent", "Lupus_Boreas", "Stormterror", "Azhdaha", "Childe", "La_Signora", "Magatsu_Mitake", "Shouki_no_Kami", "Warden_of_Oasis"
 ];
 
-const CharCheck = ["Amber","Barbara","Beidou","Bennett","Candace","Chongyun","Collei","Diona","Dori","Faruzan","Fischl",
-                "Gorou","Kaeya","Kaveh","Kirara","Kujou Sara","Kuki Shinobu","Layla","Lisa","Mika","Ningguang","Noelle","Razor",
-                "Rosaria","Sayu","Shikanoin Heizou","Sucrose","Thoma","Xiangling","Xingqiu","Xinyan","Yanfei","Yaoyao","Yunjin","Aether traveler mc Lumine","Albedo",
-                "Alhaitham","Aloy","Arataki Itto","Baizhu","Cyno","Dehya","Diluc","Eula","Ganyu","Hu tao Hutao","Jean","Kamisato Ayaka","Kamisato Ayato",
-                "Kaedehara Kazuha","Keqing","Klee","Mona","Nahida","Nilou","Qiqi","Raiden Shogun","Sangonomiya Kokomi","Shenhe","Tartaglia Childe","Tighnari","Venti",
-                "Wanderer Scaramouche","Xiao","Yae Miko","Yelan","Yoimiya","Zhongli"
+const CharCheck = ["Amber", "Barbara", "Beidou", "Bennett", "Candace", "Chongyun", "Collei", "Diona", "Dori", "Faruzan", "Fischl",
+    "Gorou", "Kaeya", "Kaveh", "Kirara", "Kujou Sara", "Kuki Shinobu", "Layla", "Lisa", "Mika", "Ningguang", "Noelle", "Razor",
+    "Rosaria", "Sayu", "Shikanoin Heizou", "Sucrose", "Thoma", "Xiangling", "Xingqiu", "Xinyan", "Yanfei", "Yaoyao", "Yunjin", "Lynette", "Freminet", "Aether traveler mc Lumine", "Albedo",
+    "Alhaitham", "Aloy", "Arataki Itto", "Baizhu", "Cyno", "Dehya", "Diluc", "Eula", "Ganyu", "Hu tao Hutao", "Jean", "Kamisato Ayaka", "Kamisato Ayato",
+    "Kaedehara Kazuha", "Keqing", "Klee", "Mona", "Nahida", "Nilou", "Qiqi", "Raiden Shogun", "Sangonomiya Kokomi", "Shenhe", "Tartaglia Childe", "Tighnari", "Venti",
+    "Wanderer Scaramouche", "Xiao", "Yae Miko", "Yelan", "Yoimiya", "Zhongli", "Lyney"
 ];
 
 //Select
-const Borders = "border-top: 5px solid #00FFDD; border-bottom: 5px solid #00FFDD;transition: .15s; transition: all .2s ease-in-out;";
+const Borders = "border-top: 5px solid #00FFDD; border-bottom: 5px solid #00FFDD;transition: all .15s ease-in-out;";
 
 let count_Aether = false;
 let count_Albedo = false;
@@ -66,6 +66,7 @@ let count_Dori = false;
 let count_Eula = false;
 let count_Faruzan = false;
 let count_Fischl = false;
+let count_Freminet = false;
 let count_Ganyu = false;
 let count_Gorou = false;
 let count_Hutao = false;
@@ -82,6 +83,8 @@ let count_Kujou_Sara = false;
 let count_Kuki_Shinobu = false;
 let count_Layla = false;
 let count_Lisa = false;
+let count_Lynette = false;
+let count_Lyney = false
 let count_Mika = false;
 let count_Mona = false;
 let count_Nahida = false;

@@ -1,0 +1,124 @@
+@media screen and (max-width: 450px) {
+    .head h1 {
+        font-size: 20px;
+    }
+
+    #title {
+        font-size: 15px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .menu div#select header h1#h1 {
+        font-size: 1.2rem;
+        margin-bottom: 1.5%;
+    }
+
+    .menu div#select header button {
+        font-size: 20px;
+        margin-bottom: 5px;
+    }
+
+    section div.modal-box {
+        top: 5%;
+        right: 5%;
+        left: 5%;
+        bottom: auto;
+        z-index: 100;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .menu div#select header button.filter {
+        border-radius: 30px;
+        padding: 1%;
+        margin-left: 2%;
+        margin-top: 0;
+        padding-right: 50px;
+        margin-right: 0px;
+    }
+
+    .search_input {
+        font-size: 1rem;
+    }
+
+    .char span#color img,
+    .boss img {
+        height: 90px;
+        width: 90px;
+        position: relative;
+        z-index: 1;
+    }
+
+    .char span#color img#element {
+        width: 20px;
+        height: 20px;
+        top: 1.25%;
+        left: 1.25%;
+    }
+
+    .char .box,
+    .boss.box {
+        padding-top: -5%;
+        margin-top: 1%;
+        border-radius: 8px;
+        margin-bottom: 5px;
+    }
+
+    .char span#color img#five-star,
+    .char span#color img#four-star,
+    .boss img {
+        border-radius: 8px 8px 16px 0px;
+    }
+
+    .char .box h1 {
+        font-size: 12px;
+        margin-left: 0px;
+        margin-top: 0px;
+        margin-bottom: 5px;
+        height: 10px;
+    }
+
+    .boss h1 {
+        font-size: 10px;
+        margin-left: 0px;
+        margin-top: 0px;
+        margin-bottom: 5px;
+        height: 10px;
+    }
+
+    .random img.element {
+        width: 36px;
+        height: 36px;
+        top: 1.25%;
+        left: 1.25%;
+    }
+
+    .random h1 {
+        font-size: 15px;
+    }
+
+    .menu div#select header button.random {
+        display: inline-block;
+        border-radius: 30px;
+        padding: 5px;
+        margin-left: 5%;
+        margin-top: 0;
+        text-align: center;
+        padding-right: 3%;
+        padding-left: 3%;
+        margin-right: 1%;
+    }
+
+    .char,
+    .Boss {
+        padding-top: 1%;
+        margin-top: 5px;
+        margin-left: 1%;
+        margin-right: 1%;
+        text-align: center;
+        border-radius: 10px;
+        background-color: #95BDFF;
+        /*Gainsboro*/
+        box-shadow: 5px 5px 32px 2px rgba(0, 0, 0, 0.4);
+    }
+}

@@ -1,169 +1,173 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Kiyang Impact | Random Team and Boss</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <link rel="icon" href="image/icon_web/icon.png" type="image/icon type">
-    <link rel="stylesheet" href="css/random.css">
-    <link rel="stylesheet" href="css/Main-UI.css">
-    <link rel="stylesheet" href="css/Character-UI.css">
-    <link rel="stylesheet" href="css/filter.css">
-    <link rel="stylesheet" href="css/footer.css">
-    <link rel="stylesheet" href="https://kit.fontawesome.com/0b7f1a7922.css" crossorigin="anonymous">
-  </head>
 
-  <body>
-    <div class="overlay"></div>
-    <!-- <div class="note">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kiyang Impact | Random Team and Boss</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <link rel="icon" href="image/icon_web/icon.png" type="image/icon type">
+  <link rel="stylesheet" href="css/random.css">
+  <link rel="stylesheet" href="css/Main-UI.css">
+  <link rel="stylesheet" href="css/Character-UI.css">
+  <link rel="stylesheet" href="css/filter.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="https://kit.fontawesome.com/0b7f1a7922.css" crossorigin="anonymous">
+</head>
+
+<body>
+  <div class="overlay"></div>
+  <!-- <div class="note">
       <i class="fa-solid fa-circle-exclamation"></i>
-      Search is under development
+      ... Text ...
       <i class="fa-solid fa-circle-exclamation"></i>
     </div> -->
-    <main class="main">
-      <div class="head">
-        <h1>สุ่มทีมสู้บอส<br>Genshin Impact Randomizer<br>By Kiyang</h1>
-      </div>
-      
-      <p id="title">ถ้าคุณเบื่อไม่รู้จะเล่นตัวละครอะไรดี<br>
-        เราขอเสนอเว็ปสุ่มทีมตัวละครและบอส เพื่อความสนุกที่ท้าทายและหลากหลายในการเล่นเกมมากขึ้น
-      </p>
-      
-      <section class="menu">
-        <div id="select">
-          <header>
-            <h1 id="h1">Select your Character&Boss</h1>
-            <button class="filter show-modal" onclick="Filter()">
-              <span><i class="fa-solid fa-filter"></i></span>
-              filter
-            </button>
+  <main class="main">
+    <div class="head">
+      <h1>สุ่มทีมสู้บอส<br>Genshin Impact Randomizer<br>By Kiyang</h1>
+    </div>
 
-            <span class="search">
-              <input class="search_input" type="text" name="search" id="search" placeholder="Search character name" autofocus autocomplete="off">
-            </span>
-            
-            <button class="random" onclick="Random()">
-              <span><i class="fa-solid fa-shuffle"></i></span>
-              Random
-            </button>
-            
-          </header>
-          
-          <section Class="filter">
-            <div class="modal-box">
-              <div class="header">
-                <header id="filter">
-                  <h1>Filter</h1>
-                </header>
-                <button class="close close-btn" onclick="Close()">
-                  <i class="fa-solid fa-xmark"></i>
-                </button>
-              </div>
+    <p id="title">ถ้าคุณเบื่อไม่รู้จะเล่นตัวละครอะไรดี<br>
+      เราขอเสนอเว็ปสุ่มทีมตัวละครและบอส เพื่อความสนุกที่ท้าทายและหลากหลายในการเล่นเกมมากขึ้น
+    </p>
 
-              <body class="pointer">
-                <ul id="center">
-                  <li class="rarity">
-                    <h1>Rarity</h1>
-                    <Button class="rarity_all" onclick="rarity_all()">all</Button>
-                  </li>
+    <section class="menu">
+      <div id="select">
+        <header>
+          <h1 id="h1">Select your Character&Boss</h1>
+          <button class="filter show-modal" onclick="Filter()">
+            <span><i class="fa-solid fa-filter"></i></span>
+            filter
+          </button>
 
-                  <li class="rarity_star">
-                    <Button class="rarity_4" onclick="rarity_4()">4
-                      <span style="color: Gold">
-                        <i class="fa-solid fa-star"></i>
-                      </span>
-                    </Button>
+          <span class="search">
+            <input class="search_input" type="text" name="search" id="search" placeholder="Search character name"
+              autocomplete="off">
+          </span>
 
-                    <Button class="rarity_5" onclick="rarity_5()">5
-                      <span style="color: Gold">
-                        <i class="fa-solid fa-star"></i>
-                      </span>
-                    </Button>
-                  </li>
+          <button class="random" onclick="Random()">
+            <span><i class="fa-solid fa-shuffle"></i></span>
+            Random
+          </button>
 
-                  <li class="type">
-                    <h1>Types</h1>
-                    <button class="type_all" onclick="type_all()">all</button>
-                  </li>
+        </header>
 
-                  <li class="type_weapon">
-                    <button id="weapon_type" class="type_sword" onclick="type_sword()">
-                      <img src="image/Icon_weapon/Sword.png" alt="" id="weapon_type">
-                      <h1>Sword</h1>
-                    </button>
-
-                    <button id="weapon_type" class="type_Claymore" onclick="type_Claymore()">
-                      <img src="image/Icon_weapon/Claymore.png" alt="" id="weapon_type">
-                      <h1>Claymore</h1>
-                    </button>
-
-                    <button id="weapon_type" class="type_Pole" onclick="type_Pole()">
-                      <img src="image/Icon_weapon/Pole.png" alt="" id="weapon_type">
-                      <h1>Polearm</h1>
-                    </button>
-
-                    <button id="weapon_type" class="type_Bow" onclick="type_Bow()">
-                      <img src="image/Icon_weapon/Bow.png" alt="" id="weapon_type">
-                      <h1>Bow</h1>
-                    </button>
-
-                    <button id="weapon_type" class="type_Catalyst" onclick="type_Catalyst()">
-                      <img src="image/Icon_weapon/Catalyst.png" alt="" id="weapon_type">
-                      <h1>Catalyst</h1>
-                    </button>
-                  </li>
-
-                  <li class="element">
-                    <h1>Element</h1>
-                    <button class="element_all" onclick="element_all()">all</button>
-                  </li>
-
-                  <li class="element_img">
-                    <span>
-                      <button class="E_Anemo" onclick="E_Anemo()"><img src="image/Element/Anemo.png" alt=""></button>
-                      <button class="E_Cryo" onclick="E_Cryo()"><img src="image/Element/Cryo.png" alt=""></button>
-                      <button class="E_Dendro" onclick="E_Dendro()"><img src="image/Element/Dendro.png" alt=""></button>
-                      <button class="E_Electro" onclick="E_Electro()"><img src="image/Element/Electro.png" alt=""></button>
-                      <button class="E_Geo" onclick="E_Geo()"><img src="image/Element/Geo.png" alt=""></button>
-                      <button class="E_Hydro" onclick="E_Hydro()"><img src="image/Element/Hydro.png" alt=""></button>
-                      <button class="E_Pyro" onclick="E_Pyro()"><img src="image/Element/Pyro.png" alt=""></button>
-                    </span>
-                  </li>
-                </ul>
-
-              </body>
+        <section Class="filter">
+          <div class="modal-box">
+            <div class="header">
+              <header id="filter">
+                <h1>Filter</h1>
+              </header>
+              <button class="close close-btn" onclick="Close()">
+                <i class="fa-solid fa-xmark"></i>
+              </button>
             </div>
-            
-          </section>
-          
-          <span class="displaycharacter">
-            <button onclick="dischar()">
-              <h1>Character</h1>
-              <span class="char-caret-right" style="display: none;"><i class="fa-solid fa-caret-right"></i></span>
-              <span class="char-caret-down"><i class="fa-sharp fa-solid fa-caret-down"></i></span>
-            </button>
-          </span>
 
-          <span class="selectall_char">
-            <button onclick="selectcharall()">
-              <h1>select all</h1>
-            </button>
-          </span>
+            <body class="pointer">
+              <ul id="center">
+                <li class="rarity">
+                  <h1>Rarity</h1>
+                  <Button class="rarity_all" onclick="rarity_all()">all</Button>
+                </li>
 
-          <span class="unselectall_char" style="display: none;">
-            <button onclick="unselectcharall()">
-              <h1>unselect all</h1>
-            </button>
-          </span>
+                <li class="rarity_star">
+                  <Button class="rarity_4" onclick="rarity_4()">4
+                    <span style="color: Gold">
+                      <i class="fa-solid fa-star"></i>
+                    </span>
+                  </Button>
 
-          <div class="char">
-            <!--Character-->
-            <span id="Character" class="Aether Sword five_star" onclick="select_Aether()">
-              <span id="5-star">
-                <span class="box displaychar" id="element">
+                  <Button class="rarity_5" onclick="rarity_5()">5
+                    <span style="color: Gold">
+                      <i class="fa-solid fa-star"></i>
+                    </span>
+                  </Button>
+                </li>
+
+                <li class="type">
+                  <h1>Types</h1>
+                  <button class="type_all" onclick="type_all()">all</button>
+                </li>
+
+                <li class="type_weapon">
+                  <button id="weapon_type" class="type_sword" onclick="type_sword()">
+                    <img src="image/Icon_weapon/Sword.png" alt="" id="weapon_type">
+                    <h1>Sword</h1>
+                  </button>
+
+                  <button id="weapon_type" class="type_Claymore" onclick="type_Claymore()">
+                    <img src="image/Icon_weapon/Claymore.png" alt="" id="weapon_type">
+                    <h1>Claymore</h1>
+                  </button>
+
+                  <button id="weapon_type" class="type_Pole" onclick="type_Pole()">
+                    <img src="image/Icon_weapon/Pole.png" alt="" id="weapon_type">
+                    <h1>Polearm</h1>
+                  </button>
+
+                  <button id="weapon_type" class="type_Bow" onclick="type_Bow()">
+                    <img src="image/Icon_weapon/Bow.png" alt="" id="weapon_type">
+                    <h1>Bow</h1>
+                  </button>
+
+                  <button id="weapon_type" class="type_Catalyst" onclick="type_Catalyst()">
+                    <img src="image/Icon_weapon/Catalyst.png" alt="" id="weapon_type">
+                    <h1>Catalyst</h1>
+                  </button>
+                </li>
+
+                <li class="element">
+                  <h1>Element</h1>
+                  <button class="element_all" onclick="element_all()">all</button>
+                </li>
+
+                <li class="element_img">
+                  <span>
+                    <button class="E_Anemo" onclick="E_Anemo()"><img src="image/Element/Anemo.png" alt=""></button>
+                    <button class="E_Cryo" onclick="E_Cryo()"><img src="image/Element/Cryo.png" alt=""></button>
+                    <button class="E_Dendro" onclick="E_Dendro()"><img src="image/Element/Dendro.png" alt=""></button>
+                    <button class="E_Electro" onclick="E_Electro()"><img src="image/Element/Electro.png"
+                        alt=""></button>
+                    <button class="E_Geo" onclick="E_Geo()"><img src="image/Element/Geo.png" alt=""></button>
+                    <button class="E_Hydro" onclick="E_Hydro()"><img src="image/Element/Hydro.png" alt=""></button>
+                    <button class="E_Pyro" onclick="E_Pyro()"><img src="image/Element/Pyro.png" alt=""></button>
+                  </span>
+                </li>
+              </ul>
+
+            </body>
+          </div>
+
+        </section>
+
+        <span class="displaycharacter">
+          <button onclick="dischar()">
+            <h1>Character</h1>
+            <span class="char-caret-right" style="display: none;"><i class="fa-solid fa-caret-right"></i></span>
+            <span class="char-caret-down"><i class="fa-sharp fa-solid fa-caret-down"></i></span>
+          </button>
+        </span>
+
+        <span class="selectall_char">
+          <button onclick="selectcharall()">
+            <h1>select all</h1>
+          </button>
+        </span>
+
+        <span class="unselectall_char" style="display: none;">
+          <button onclick="unselectcharall()">
+            <h1>unselect all</h1>
+          </button>
+        </span>
+
+        <div class="char">
+          <!--Character-->
+          <span id="Character" class="Aether Sword five_star" onclick="select_Aether()">
+            <span id="5-star">
+              <span class="box displaychar" id="element">
                 <span id="color">
                   <img src="image/Character/all/Aether.png" alt="" id="five-star">
                 </span>
@@ -171,1255 +175,1309 @@
                   <h1 class="charname">Aether</h1>
                 </span>
               </span>
-              </span>
             </span>
+          </span>
 
-            
-            <!-- <span id="Character" class="displaychar box Aether Sword five_star" onclick="select_Aether()">
+
+          <!-- <span id="Character" class="displaychar box Aether Sword five_star" onclick="select_Aether()">
               <img src="image/Element/Geo.png" class="element">  
               <img src="image/Character/all/Aether.png">
               <h1 class="charname">Aether</h1>
             </span> -->
 
 
-            <span id="Character" class="Albedo Sword Geo Sword_Geo_Five five_star" onclick="select_Albedo()">
-              <span id="5-star">
-                <span class="box displaychar" id="element-geo">
+          <span id="Character" class="Albedo Sword Geo Sword_Geo_Five five_star" onclick="select_Albedo()">
+            <span id="5-star">
+              <span class="box displaychar" id="element-geo">
                 <span id="color">
-                  <img src="image/Element/Geo.png" alt="" id="element">  
+                  <img src="image/Element/Geo.png" alt="" id="element">
                   <img src="image/Character/all/Albedo.png" alt="" id="five-star">
                 </span>
                 <span id="text">
                   <h1 class="charname">Albedo</h1>
                 </span>
               </span>
-              </span>
             </span>
-            
-            <span id="Character" class="Alhaitham Sword Dendro Sword_Dendro_Five five_star" onclick="select_Alhatham()">
-              <span id="5-star">
-                <span class="box displaychar" id="element-Dendro">
+          </span>
+
+          <span id="Character" class="Alhaitham Sword Dendro Sword_Dendro_Five five_star" onclick="select_Alhatham()">
+            <span id="5-star">
+              <span class="box displaychar" id="element-Dendro">
                 <span id="color">
-                  <img src="image/Element/Dendro.png" alt="" id="element">  
+                  <img src="image/Element/Dendro.png" alt="" id="element">
                   <img src="image/Character/all/Alhaitham.png" alt="" id="five-star">
                 </span>
                 <span id="text">
                   <h1 class="charname">Alhaitham</h1>
                 </span>
               </span>
-              </span>
             </span>
-
-            <span id="Character" class="Aloy Bow Cryo Bow_Cryo_Five five_star" onclick="select_Aloy()">
-              <span id="5-star">
-                <span class="box displaychar" id="element-cryo Character">
-                  <span id="color">
-                    <img src="image/Element/Cryo.png" alt="" id="element">  
-                    <img src="image/Character/all/Aloy.png" alt="" id="five-star">
-                  </span>
-                  <span id="text">
-                    <h1 class="charname">Aloy</h1>
-                  </span>
-                </span>
-              </span>
-            </span>
-                
-            <span id="Character" class="Amber Bow Pyro Bow_Pyro_Four four_star" onclick="select_Amber()">
-              <span id="4-star">
-                <span class="box displaychar" id="element-pyro Character">
-                  <span id="color">
-                    <img src="image/Element/Pyro.png" alt="" id="element">  
-                    <img src="image/Character/all/Amber.png" alt="" id="four-star">
-                  </span>
-                  <span id="text">
-                    <h1 class="charname">Amber</h1>
-                  </span>
-                </span>
-              </span>
-            </span>
-            
-            <span id="Character" class="Arataki_Itto Claymore Geo Claymore_Geo_Five five_star" onclick="select_Arataki_Itto()">
-              <span id="5-star">
-                <span class="box displaychar" id="element-geo Character">
-                  <span id="color">
-                    <img src="image/Element/Geo.png" alt="" id="element">  
-                    <img src="image/Character/all/Arataki Itto.png" alt="" id="five-star">
-                  </span>
-                  <span id="text">
-                    <h1 class="charname">Arataki Itto</h1>
-                  </span>
-                </span>
-              </span>
-            </span>
-
-            <span id="Character" class="Baizhu Catalyst Dendro Catalyst_Dendro_Five five_star" onclick="select_Baizhu()">
-              <span id="5-star">
-                <span class="box displaychar" id="element-Dendro Character">
-                  <span id="color">
-                    <img src="image/Element/Dendro.png" alt="" id="element">  
-                    <img src="image/Character/all/Baizhu.png" alt="" id="five-star">
-                  </span>
-                  <span id="text">
-                    <h1 class="charname">Baizhu</h1>
-                  </span>
-                </span>
-              </span>
-            </span>
-            
-            <span id="Character" class="Barbara Catalyst Hydro Catalyst_Hydro_Four four_star" onclick="select_Barbara()">
-              <span id="4-star">
-                <span class="box displaychar" id="element-Hydro Character">
-                  <span id="color">
-                    <img src="image/Element/Hydro.png" alt="" id="element">  
-                    <img src="image/Character/all/Barbara.png" alt="" id="four-star">
-                  </span>
-                  <span id="text">
-                    <h1 class="charname">Barbara</h1>
-                  </span>
-                </span>
-              </span>
-            </span>
-
-            <span id="Character" class="Beidou Claymore Electro Claymore_Electro_Four four_star" onclick="select_Beidou()">
-              <span id="4-star">
-                <span class="box displaychar" id="element-Electro Character">
-                  <span id="color">
-                    <img src="image/Element/Electro.png" alt="" id="element">  
-                    <img src="image/Character/all/Beidou.png" alt="" id="four-star">
-                  </span>
-                  <span id="text">
-                    <h1 class="charname">Beidou</h1>
-                  </span>
-                </span>
-              </span>
-            </span>
-
-            <span id="Character" class="Bennett Sword Pyro Sword_Pyro_Four four_star" onclick="select_Bennett()">
-              <span id="4-star">
-                <span class="box displaychar" id="element-Pyro Character">
-                  <span id="color">
-                    <img src="image/Element/Pyro.png" alt="" id="element">  
-                    <img src="image/Character/all/Bennett.png" alt="" id="four-star">
-                  </span>
-                  <span id="text">
-                    <h1 class="charname">Bennett</h1>
-                  </span>
-                </span>
-              </span>
-            </span>
-
-            <span id="Character" class="Candace Polearm Hydro Polearm_Hydro_Four four_star" onclick="select_Candace()">
-              <span id="4-star">
-                <span class="box displaychar" id="element-Hydro Character">
-                  <span id="color">
-                    <img src="image/Element/Hydro.png" alt="" id="element">  
-                    <img src="image/Character/all/Candace.png" alt="" id="four-star">
-                  </span>
-                  <span id="text">
-                    <h1 class="charname">Candace</h1>
-                  </span>
-                </span>
-              </span>
-            </span>
-
-            <span id="Character" class="Chongyun Claymore Cryo Claymore_Cryo_Four four_star" onclick="select_Chongyun()">
-              <span id="4-star">
-                <span class="box displaychar" id="element-Cryo Character">
-                  <span id="color">
-                    <img src="image/Element/Cryo.png" alt="" id="element">  
-                    <img src="image/Character/all/Chongyun.png" alt="" id="four-star">
-                  </span>
-                  <span id="text">
-                    <h1 class="charname">Chongyun</h1>
-                  </span>
-                </span>
-              </span>
-            </span>
-
-            <span id="Character" class="Collei Bow Dendro Bow_Dendro_Four four_star" onclick="select_Collei()">
-              <span id="4-star">
-                <span class="box displaychar" id="element-Dendro Character">
-                  <span id="color">
-                    <img src="image/Element/Dendro.png" alt="" id="element">  
-                    <img src="image/Character/all/Collei.png" alt="" id="four-star">
-                  </span>
-                  <span id="text">
-                    <h1 class="charname">Collei</h1>
-                  </span>
-                </span>
-              </span>
-            </span>
-
-            <span id="Character" class="Cyno Polearm Electro Polearm_Electro_Five five_star" onclick="select_Cyno()">
-              <span id="5-star">
-                <span class="box displaychar" id="element-Electro Character">
-                  <span id="color">
-                    <img src="image/Element/Electro.png" alt="" id="element">  
-                    <img src="image/Character/all/Cyno.png" alt="" id="five-star">
-                  </span>
-                  <span id="text">
-                    <h1 class="charname">Cyno</h1>
-                  </span>
-                </span>
-              </span>
-            </span>
-
-            <span id="Character" class="Dehya Claymore Pyro Claymore_Pyro_Five five_star" onclick="select_Dehya()">
-              <span id="5-star">
-                <span class="box displaychar" id="element-Pyro Character">
-                  <span id="color">
-                    <img src="image/Element/Pyro.png" alt="" id="element">  
-                    <img src="image/Character/all/Dehya.png" alt="" id="five-star">
-                  </span>
-                  <span id="text">
-                    <h1 class="charname">Dehya</h1>
-                  </span>
-                </span>
-              </span>
-            </span>
-
-            <span id="Character" class="Diluc Claymore Pyro Claymore_Pyro_Five five_star" onclick="select_Diluc()">
-              <span id="5-star">
-                <span class="box displaychar" id="element-Pyro Character">
-                  <span id="color">
-                    <img src="image/Element/Pyro.png" alt="" id="element">  
-                    <img src="image/Character/all/Diluc.png" alt="" id="five-star">
-                  </span>
-                  <span id="text">
-                    <h1 class="charname">Diluc</h1>
-                  </span>
-                </span>
-              </span>
-            </span>
-
-            <span id="Character" class="Diona Bow Cryo Bow_Cryo_Four four_star" onclick="select_Diona()">
-              <span id="4-star">
-                <span class="box displaychar" id="element-Pyro Character">
-                  <span id="color">
-                    <img src="image/Element/Cryo.png" alt="" id="element">  
-                    <img src="image/Character/all/Diona.png" alt="" id="four-star">
-                  </span>
-                  <span id="text">
-                    <h1 class="charname">Diona</h1>
-                  </span>
-                </span>
-              </span>
-            </span>
-
-            <span id="Character" class="Dori Claymore Electro Claymore_Electro_Four four_star" onclick="select_Dori()">
-              <span id="4-star">
-                <span class="box displaychar" id="element-Electro Character">
-                  <span id="color">
-                    <img src="image/Element/Electro.png" alt="" id="element">  
-                    <img src="image/Character/all/Dori.png" alt="" id="four-star">
-                  </span>
-                  <span id="text">
-                    <h1 class="charname">Dori</h1>
-                  </span>
-                </span>
-              </span>
-            </span>
-
-            <span id="Character" class="Eula Claymore Cryo Claymore_Cryo_Five five_star" onclick="select_Eula()">
-              <span id="5-star">
-                <span class="box displaychar" id="element-Cryo Character">
-                  <span id="color">
-                    <img src="image/Element/Cryo.png" alt="" id="element">  
-                    <img src="image/Character/all/Eula.png" alt="" id="five-star">
-                  </span>
-                  <span id="text">
-                    <h1 class="charname">Eula</h1>
-                  </span>
-                </span>
-              </span>
-            </span>
-
-            <span id="Character" class="Faruzan Bow Anemo Bow_Anemo_Four four_star" onclick="select_Faruzan()">
-              <span id="4-star">
-                <span class="box displaychar" id="element-Anemo Character">
-                  <span id="color">
-                    <img src="image/Element/Anemo.png" alt="" id="element">  
-                    <img src="image/Character/all/Faruzan.png" alt="" id="four-star">
-                  </span>
-                  <span id="text">
-                    <h1 class="charname">Faruzan</h1>
-                  </span>
-                </span>
-              </span>
-            </span>
-
-            <span id="Character" class="Fischl Bow Electro Bow_Electro_Four four_star" onclick="select_Fischl()">
-              <span id="4-star">
-                <span class="box displaychar" id="element-Electro Character">
-                  <span id="color">
-                    <img src="image/Element/Electro.png" alt="" id="element">  
-                    <img src="image/Character/all/Fischl.png" alt="" id="four-star">
-                  </span>
-                  <span id="text">
-                    <h1 class="charname">Fischl</h1>
-                  </span>
-                </span>
-              </span>
-            </span>
-
-            <span id="Character" class="Ganyu Bow Cryo Bow_Cryo_Five five_star" onclick="select_Ganyu()">
-              <span id="5-star">
-                <span class="box displaychar" id="element-Cryo Character">
-                  <span id="color">
-                    <img src="image/Element/Cryo.png" alt="" id="element">  
-                    <img src="image/Character/all/Ganyu.png" alt="" id="five-star">
-                  </span>
-                  <span id="text">
-                    <h1 class="charname">Ganyu</h1>
-                  </span>
-                </span>
-              </span>
-            </span>
-
-            <span id="Character" class="Gorou Bow Geo Bow_Geo_Four four_star" onclick="select_Gorou()">
-              <span id="4-star">
-                <span class="box displaychar" id="element-Geo Character">
-                  <span id="color">
-                    <img src="image/Element/Geo.png" alt="" id="element">  
-                    <img src="image/Character/all/Gorou.png" alt="" id="four-star">
-                  </span>
-                  <span id="text">
-                    <h1 class="charname">Gorou</h1>
-                  </span>
-                </span>
-              </span>
-            </span>
-
-            <span id="Character" class="Hutao Polearm Pyro Polearm_Pyro_Five five_star" onclick="select_Hutao()">
-              <span id="5-star">
-                <span class="box displaychar" id="element-Pyro Character">
-                  <span id="color">
-                    <img src="image/Element/Pyro.png" alt="" id="element">  
-                    <img src="image/Character/all/Hutao.png" alt="" id="five-star">
-                  </span>
-                  <span id="text">
-                    <h1 class="charname">Hutao</h1>
-                  </span>
-                </span>
-              </span>
-            </span>
-
-            <span id="Character" class="Jean Sword Anemo Sword_Anemo_Five five_star" onclick="select_Jean()">
-              <span id="5-star">
-                <span class="box displaychar" id="element-Anemo Character">
-                  <span id="color">
-                    <img src="image/Element/Anemo.png" alt="" id="element">  
-                    <img src="image/Character/all/Jean.png" alt="" id="five-star">
-                  </span>
-                  <span id="text">
-                    <h1 class="charname">Jean</h1>
-                  </span>
-                </span>
-              </span>
-            </span>
-            
-            <span id="Character" class="Kaeya Sword Cryo Sword_Cryo_Four four_star" onclick="select_Kaeya()">
-              <span id="4-star">
-                <span class="box displaychar" id="element-Cryo Character">
-                  <span id="color">
-                    <img src="image/Element/Cryo.png" alt="" id="element">  
-                    <img src="image/Character/all/Kaeya.png" alt="" id="four-star">
-                  </span>
-                  <span id="text">
-                    <h1 class="charname">Kaeya</h1>
-                  </span>
-                </span>
-              </span>
-            </span>
-
-            <span id="Character" class="Kaveh Claymore Dendro Claymore_Dendro_Four four_star" onclick="select_Kaveh()">
-              <span id="4-star">
-                <span class="box displaychar" id="element-Dendro Character">
-                  <span id="color">
-                    <img src="image/Element/Dendro.png" alt="" id="element">  
-                    <img src="image/Character/all/Kaveh.png" alt="" id="four-star">
-                  </span>
-                  <span id="text">
-                    <h1 class="charname">Kaveh</h1>
-                  </span>
-                </span>
-              </span>
-            </span>
-
-            <span id="Character" class="Ayaka Sword Cryo Sword_Cryo_Five five_star" onclick="select_Ayaka()">
-              <span id="5-star">
-                <span class="box displaychar" id="element-Cryo Character">
-                  <span id="color">
-                    <img src="image/Element/Cryo.png" alt="" id="element">  
-                    <img src="image/Character/all/Ayaka.png" alt="" id="five-star">
-                  </span>
-                  <span id="text">
-                    <h1 class="charname">Ayaka</h1>
-                  </span>
-                </span>
-              </span>
-            </span>
-
-            <span id="Character" class="Ayato Sword Hydro Sword_Hydro_Five five_star" onclick="select_Ayato()">
-              <span id="5-star">
-                <span class="box displaychar" id="element-Hydro Character">
-                  <span id="color">
-                    <img src="image/Element/Hydro.png" alt="" id="element">  
-                    <img src="image/Character/all/Ayato.png" alt="" id="five-star">
-                  </span>
-                  <span id="text">
-                    <h1 class="charname">Ayato</h1>
-                  </span>
-                </span>
-              </span>
-            </span>
-
-            <span id="Character" class="Kazuha Sword Anemo Sword_Anemo_Five five_star" onclick="select_Kazuha()">
-              <span id="5-star">
-                <span class="box displaychar" id="element-Anemo Character">
-                  <span id="color">
-                    <img src="image/Element/Anemo.png" alt="" id="element">  
-                    <img src="image/Character/all/Kazuha.png" alt="" id="five-star">
-                  </span>
-                  <span id="text">
-                    <h1 class="charname">Kazuha</h1>
-                  </span>
-                </span>
-              </span>
-            </span>
-
-            <span id="Character" class="Keqing Sword Electro Sword_Electro_Five five_star" onclick="select_Keqing()">
-              <span id="5-star">
-                <span class="box displaychar" id="element-Electro Character">
-                  <span id="color">
-                    <img src="image/Element/Electro.png" alt="" id="element">  
-                    <img src="image/Character/all/Keqing.png" alt="" id="five-star">
-                  </span>
-                  <span id="text">
-                    <h1 class="charname">Keqing</h1>
-                  </span>
-                </span>
-              </span>
-            </span>
-
-            <span id="Character" class="Kirara Sword Dendro Sword_Dendro_Four four_star" onclick="select_Kirara()">
-              <span id="4-star">
-                <span class="box displaychar" id="element-Dendro Character">
-                  <span id="color">
-                    <img src="image/Element/Dendro.png" alt="" id="element">  
-                    <img src="image/Character/all/Kirara.png" alt="" id="four-star">
-                  </span>
-                  <span id="text">
-                    <h1 class="charname">Kirara</h1>
-                  </span>
-                </span>
-              </span>
-            </span>
-
-            <span id="Character" class="Klee Catalyst Pyro Catalyst_Pyro_Five five_star" onclick="select_Klee()">
-              <span id="5-star">
-                <span class="box displaychar" id="element-Pyro Character">
-                  <span id="color">
-                    <img src="image/Element/Pyro.png" alt="" id="element">  
-                    <img src="image/Character/all/Klee.png" alt="" id="five-star">
-                  </span>
-                  <span id="text">
-                    <h1 class="charname">Klee</h1>
-                  </span>
-                </span>
-              </span>
-            </span>
-
-            <span id="Character" class="Kujou_Sara Bow Electro Bow_Electro_Four four_star" onclick="select_Kujou_Sara()">
-              <span id="4-star">
-                <span class="box displaychar" id="element-Electro Character">
-                  <span id="color">
-                    <img src="image/Element/Electro.png" alt="" id="element">  
-                    <img src="image/Character/all/Kujou Sara.png" alt="" id="four-star">
-                  </span>
-                  <span id="text">
-                    <h1 class="charname">Kujou Sara</h1>
-                  </span>
-                </span>
-              </span>
-            </span>
-
-            <span id="Character" class="Kuki_Shinobu Sword Electro Sword_Electro_Four four_star" onclick="select_Kuki_Shinobu()">
-              <span id="4-star">
-                <span class="box displaychar" id="element-Electro Character">
-                  <span id="color">
-                    <img src="image/Element/Electro.png" alt="" id="element">  
-                    <img src="image/Character/all/Kuki Shinobu.png" alt="" id="four-star">
-                  </span>
-                  <span id="text">
-                    <h1 class="charname">Kuki Shinobu</h1>
-                  </span>
-                </span>
-              </span>
-            </span>
-
-            <span id="Character" class="Layla Sword Cryo Sword_Cryo_Four four_star" onclick="select_Layla()">
-              <span id="4-star">
-                <span class="box displaychar" id="element-Cryo Character">
-                  <span id="color">
-                    <img src="image/Element/Cryo.png" alt="" id="element">  
-                    <img src="image/Character/all/Layla.png" alt="" id="four-star">
-                  </span>
-                  <span id="text">
-                    <h1 class="charname">Layla</h1>
-                  </span>
-                </span>
-              </span>
-            </span>
-
-            <span id="Character" class="Lisa Catalyst Electro Catalyst_Electro_Four four_star" onclick="select_Lisa()">
-              <span id="4-star">
-                <span class="box displaychar" id="element-Electro Character">
-                  <span id="color">
-                    <img src="image/Element/Electro.png" alt="" id="element">  
-                    <img src="image/Character/all/Lisa.png" alt="" id="four-star">
-                  </span>
-                  <span id="text">
-                    <h1 class="charname">Lisa</h1>
-                  </span>
-                </span>
-              </span>
-            </span>
-
-            <span id="Character" class="Mika Polearm Cryo Polearm_Cryo_Four four_star" onclick="select_Mika()">
-              <span id="4-star">
-                <span class="box displaychar" id="element-Cryo Character">
-                  <span id="color">
-                    <img src="image/Element/Cryo.png" alt="" id="element">  
-                    <img src="image/Character/all/Mika.png" alt="" id="four-star">
-                  </span>
-                  <span id="text">
-                    <h1 class="charname">Mika</h1>
-                  </span>
-                </span>
-              </span>
-            </span>
-
-            <span id="Character" class="Mona Catalyst Hydro Catalyst_Hydro_Five five_star" onclick="select_Mona()">
-              <span id="5-star">
-                <span class="box displaychar" id="element-Hydro Character">
-                  <span id="color">
-                    <img src="image/Element/Hydro.png" alt="" id="element">  
-                    <img src="image/Character/all/Mona.png" alt="" id="five-star">
-                  </span>
-                  <span id="text">
-                    <h1 class="charname">Mona</h1>
-                  </span>
-                </span>
-              </span>
-            </span>
-
-            <span id="Character" class="Nahida Catalyst Dendro Catalyst_Dendro_Five five_star" onclick="select_Nahida()">
-              <span id="5-star">
-                <span class="box displaychar" id="element-Dendro Character">
-                  <span id="color">
-                    <img src="image/Element/Dendro.png" alt="" id="element">  
-                    <img src="image/Character/all/Nahida.png" alt="" id="five-star">
-                  </span>
-                  <span id="text">
-                    <h1 class="charname">Nahida</h1>
-                  </span>
-                </span>
-              </span>
-            </span>
-
-            <span id="Character" class="Nilou Sword Hydro Sword_Hydro_Five five_star" onclick="select_Nilou()">
-              <span id="5-star">
-                <span class="box displaychar" id="element-Hydro Character">
-                  <span id="color">
-                    <img src="image/Element/Hydro.png" alt="" id="element">  
-                    <img src="image/Character/all/Nilou.png" alt="" id="five-star">
-                  </span>
-                  <span id="text">
-                    <h1 class="charname">Nilou</h1>
-                  </span>
-                </span>
-              </span>
-            </span>
-
-            <span id="Character" class="Ningguang Catalyst Geo Catalyst_Geo_Four four_star" onclick="select_Ningguang()">
-              <span id="4-star">
-                <span class="box displaychar" id="element-Geo Character">
-                  <span id="color">
-                    <img src="image/Element/Geo.png" alt="" id="element">  
-                    <img src="image/Character/all/Ningguang.png" alt="" id="four-star">
-                  </span>
-                  <span id="text">
-                    <h1 class="charname">Ningguang</h1>
-                  </span>
-                </span>
-              </span>
-            </span>
-            
-            <span id="Character" class="Noelle Claymore Geo Claymore_Geo_Four four_star" onclick="select_Noelle()">
-              <span id="4-star">
-                <span class="box displaychar" id="element-Geo Character">
-                  <span id="color">
-                    <img src="image/Element/Geo.png" alt="" id="element">  
-                    <img src="image/Character/all/Noelle.png" alt="" id="four-star">
-                  </span>
-                  <span id="text">
-                    <h1 class="charname">Noelle</h1>
-                  </span>
-                </span>
-              </span>
-            </span>
-
-            <span id="Character" class="Qiqi Sword Cryo Sword_Cryo_Five five_star" onclick="select_Qiqi()">
-              <span id="5-star">
-                <span class="box displaychar" id="element-Cryo Character">
-                  <span id="color">
-                    <img src="image/Element/Cryo.png" alt="" id="element">  
-                    <img src="image/Character/all/Qiqi.png" alt="" id="five-star">
-                  </span>
-                  <span id="text">
-                    <h1 class="charname">Qiqi</h1>
-                  </span>
-                </span>
-              </span>
-            </span>
-
-            <span id="Character" class="Raiden Polearm Electro Polearm_Electro_Five five_star" onclick="select_Raiden()">
-              <span id="5-star">
-                <span class="box displaychar" id="element-Electro Character">
-                  <span id="color">
-                    <img src="image/Element/Electro.png" alt="" id="element">  
-                    <img src="image/Character/all/Raiden.png" alt="" id="five-star">
-                  </span>
-                  <span id="text">
-                    <h1 class="charname">Raiden</h1>
-                  </span>
-                </span>
-              </span>
-            </span>
-
-            <span id="Character" class="Razor Claymore Electro Claymore_Electro_Four four_star" onclick="select_Razor()">
-              <span id="4-star">
-                <span class="box displaychar" id="element-Electro Character">
-                  <span id="color">
-                    <img src="image/Element/Electro.png" alt="" id="element">  
-                    <img src="image/Character/all/Razor.png" alt="" id="four-star">
-                  </span>
-                  <span id="text">
-                    <h1 class="charname">Razor</h1>
-                  </span>
-                </span>
-              </span>
-            </span>
-
-            <span id="Character" class="Rosaria Polearm Cryo Polearm_Cryo_Four four_star" onclick="select_Rosaria()">
-              <span id="4-star">
-                <span class="box displaychar" id="element-Cryo Character">
-                  <span id="color">
-                    <img src="image/Element/Cryo.png" alt="" id="element">  
-                    <img src="image/Character/all/Rosaria.png" alt="" id="four-star">
-                  </span>
-                  <span id="text">
-                    <h1 class="charname">Rosaria</h1>
-                  </span>
-                </span>
-              </span>
-            </span>
-
-            <span id="Character" class="Kokomi Catalyst Hydro Catalyst_Hydro_Five five_star" onclick="select_Kokomi()">
-              <span id="5-star">
-                <span class="box displaychar" id="element-Hydro Character">
-                  <span id="color">
-                    <img src="image/Element/Hydro.png" alt="" id="element">  
-                    <img src="image/Character/all/Kokomi.png" alt="" id="five-star">
-                  </span>
-                  <span id="text">
-                    <h1 class="charname">Kokomi</h1>
-                  </span>
-                </span>
-              </span>
-            </span>
-
-            <span id="Character" class="Sayu Claymore Anemo Claymore_Anemo_Four four_star" onclick="select_Sayu()">
-              <span id="4-star">
-                <span class="box displaychar" id="element-Anemo Character">
-                  <span id="color">
-                    <img src="image/Element/Anemo.png" alt="" id="element">  
-                    <img src="image/Character/all/Sayu.png" alt="" id="four-star">
-                  </span>
-                  <span id="text">
-                    <h1 class="charname">Sayu</h1>
-                  </span>
-                </span>
-              </span>
-            </span>
-
-            <span id="Character" class="Shenhe Polearm Cryo Polearm_Cryo_Five five_star" onclick="select_Shenhe()">
-              <span id="5-star">
-                <span class="box displaychar" id="element-Cryo Character">
-                  <span id="color">
-                    <img src="image/Element/Cryo.png" alt="" id="element">  
-                    <img src="image/Character/all/Shenhe.png" alt="" id="five-star">
-                  </span>
-                  <span id="text">
-                    <h1 class="charname">Shenhe</h1>
-                  </span>
-                </span>
-              </span>
-            </span>
-
-            <span id="Character" class="Heizou Catalyst Anemo Catalyst_Anemo_Four four_star" onclick="select_Heizou()">
-              <span id="4-star">
-                <span class="box displaychar" id="element-Anemo Character">
-                  <span id="color">
-                    <img src="image/Element/Anemo.png" alt="" id="element">  
-                    <img src="image/Character/all/Heizou.png" alt="" id="four-star">
-                  </span>
-                  <span id="text">
-                    <h1 class="charname">Heizou</h1>
-                  </span>
-                </span>
-              </span>
-            </span>
-
-            <span id="Character" class="Sucrose Catalyst Anemo Catalyst_Anemo_Four four_star" onclick="select_Sucrose()">
-              <span id="4-star">
-                <span class="box displaychar" id="element-Anemo Character">
-                  <span id="color">
-                    <img src="image/Element/Anemo.png" alt="" id="element">  
-                    <img src="image/Character/all/Sucrose.png" alt="" id="four-star">
-                  </span>
-                  <span id="text">
-                    <h1 class="charname">Sucrose</h1>
-                  </span>
-                </span>
-              </span>
-            </span>
-
-            <span id="Character" class="Tartaglia Bow Hydro Bow_Hydro_Five five_star" onclick="select_Tartaglia()">
-              <span id="5-star">
-                <span class="box displaychar" id="element-Hydro Character">
-                  <span id="color">
-                    <img src="image/Element/Hydro.png" alt="" id="element">  
-                    <img src="image/Character/all/Tartaglia.png" alt="" id="five-star">
-                  </span>
-                  <span id="text">
-                    <h1 class="charname">Tartaglia</h1>
-                  </span>
-                </span>
-              </span>
-            </span>
-
-            <span id="Character" class="Thoma Polearm Pyro Polearm_Pyro_Four four_star" onclick="select_Thoma()">
-              <span id="4-star">
-                <span class="box displaychar" id="element-Pyro Character">
-                  <span id="color">
-                    <img src="image/Element/Pyro.png" alt="" id="element">  
-                    <img src="image/Character/all/Thoma.png" alt="" id="four-star">
-                  </span>
-                  <span id="text">
-                    <h1 class="charname">Thoma</h1>
-                  </span>
-                </span>
-              </span>
-            </span>
-
-            <span id="Character" class="Tighnari Bow Dendro Bow_Dendro_Five five_star" onclick="select_Tighnari()">
-              <span id="5-star">
-                <span class="box displaychar" id="element-Dendro Character">
-                  <span id="color">
-                    <img src="image/Element/Dendro.png" alt="" id="element">  
-                    <img src="image/Character/all/Tighnari.png" alt="" id="five-star">
-                  </span>
-                  <span id="text">
-                    <h1 class="charname">Tighnari</h1>
-                  </span>
-                </span>
-              </span>
-            </span>
-
-            <span id="Character" class="Venti Bow Anemo Bow_Anemo_Five five_star" onclick="select_Venti()">
-              <span id="5-star">
-                <span class="box displaychar" id="element-Anemo Character">
-                  <span id="color">
-                    <img src="image/Element/Anemo.png" alt="" id="element">  
-                    <img src="image/Character/all/Venti.png" alt="" id="five-star">
-                  </span>
-                  <span id="text">
-                    <h1 class="charname">Venti</h1>
-                  </span>
-                </span>
-              </span>
-            </span>
-
-            <span id="Character" class="Wanderer Catalyst Anemo Catalyst_Anemo_Five five_star" onclick="select_Wanderer()">
-              <span id="5-star">
-                <span class="box displaychar" id="element-Anemo Character">
-                  <span id="color">
-                    <img src="image/Element/Anemo.png" alt="" id="element">  
-                    <img src="image/Character/all/Wanderer.png" alt="" id="five-star">
-                  </span>
-                  <span id="text">
-                    <h1 class="charname">Wanderer</h1>
-                  </span>
-                </span>
-              </span>
-            </span>
-
-            <span id="Character" class="Xiangling Polearm Pyro Polearm_Pyro_Four four_star" onclick="select_Xiangling()">
-              <span id="4-star">
-                <span class="box displaychar" id="element-Pyro Character">
-                  <span id="color">
-                    <img src="image/Element/Pyro.png" alt="" id="element">  
-                    <img src="image/Character/all/Xiangling.png" alt="" id="four-star">
-                  </span>
-                  <span id="text">
-                    <h1 class="charname">Xiangling</h1>
-                  </span>
-                </span>
-              </span>
-            </span>
-
-            <span id="Character" class="Xiao Polearm Anemo Polearm_Anemo_Five five_star" onclick="select_Xiao()">
-              <span id="5-star">
-                <span class="box displaychar" id="element-Anemo Character">
-                  <span id="color">
-                    <img src="image/Element/Anemo.png" alt="" id="element">  
-                    <img src="image/Character/all/Xiao.png" alt="" id="five-star">
-                  </span>
-                  <span id="text">
-                    <h1 class="charname">Xiao</h1>
-                  </span>
-                </span>
-              </span>
-            </span>
-
-            <span id="Character" class="Xingqiu Sword Hydro Sword_Hydro_Four four_star" onclick="select_Xingqiu()">
-              <span id="4-star">
-                <span class="box displaychar" id="element-Hydro Character">
-                  <span id="color">
-                    <img src="image/Element/Hydro.png" alt="" id="element">  
-                    <img src="image/Character/all/Xingqiu.png" alt="" id="four-star">
-                  </span>
-                  <span id="text">
-                    <h1 class="charname">Xingqiu</h1>
-                  </span>
-                </span>
-              </span>
-            </span>
-
-            <span id="Character" class="Xinyan Claymore Pyro Claymore_Pyro_Four four_star" onclick="select_Xinyan()">
-              <span id="4-star">
-                <span class="box displaychar" id="element-Pyro Character">
-                  <span id="color">
-                    <img src="image/Element/Pyro.png" alt="" id="element">  
-                    <img src="image/Character/all/Xinyan.png" alt="" id="four-star">
-                  </span>
-                  <span id="text">
-                    <h1 class="charname">Xinyan</h1>
-                  </span>
-                </span>
-              </span>
-            </span>
-
-            <span id="Character" class="Yae_miko Catalyst Electro Catalyst_Electro_Five five_star" onclick="select_Yae_miko()">
-              <span id="5-star">
-                <span class="box displaychar" id="element-Electro Character">
-                  <span id="color">
-                    <img src="image/Element/Electro.png" alt="" id="element">  
-                    <img src="image/Character/all/Yae Miko.png" alt="" id="five-star">
-                  </span>
-                  <span id="text">
-                    <h1 class="charname">Yae Miko</h1>
-                  </span>
-                </span>
-              </span>
-            </span>
-
-            <span id="Character" class="Yanfei Catalyst Pyro Catalyst_Pyro_Four four_star" onclick="select_Yanfei()">
-              <span id="4-star">
-                <span class="box displaychar" id="element-Pyro Character">
-                  <span id="color">
-                    <img src="image/Element/Pyro.png" alt="" id="element">  
-                    <img src="image/Character/all/Yanfei.png" alt="" id="four-star">
-                  </span>
-                  <span id="text">
-                    <h1 class="charname">Yanfei</h1>
-                  </span>
-                </span>
-              </span>
-            </span>
-
-            <span id="Character" class="Yaoyao Polearm Dendro Polearm_Dendro_Four four_star" onclick="select_Yaoyao()">
-              <span id="4-star">
-                <span class="box displaychar" id="element-Dendro Character">
-                  <span id="color">
-                    <img src="image/Element/Dendro.png" alt="" id="element">  
-                    <img src="image/Character/all/Yaoyao.png" alt="" id="four-star">
-                  </span>
-                  <span id="text">
-                    <h1 class="charname">Yaoyao</h1>
-                  </span>
-                </span>
-              </span>
-            </span>
-
-            <span id="Character" class="Yelan Bow Hydro Bow_Hydro_Five five_star" onclick="select_Yelan()">
-              <span id="5-star">
-                <span class="box displaychar" id="element-Hydro Character">
-                  <span id="color">
-                    <img src="image/Element/Hydro.png" alt="" id="element">  
-                    <img src="image/Character/all/Yelan.png" alt="" id="five-star">
-                  </span>
-                  <span id="text">
-                    <h1 class="charname">Yelan</h1>
-                  </span>
-                </span>
-              </span>
-            </span>
-
-            <span id="Character" class="Yoimiya Bow Pyro Bow_Pyro_Five five_star" onclick="select_Yoimiya()">
-              <span id="5-star">
-                <span class="box displaychar" id="element-Pyro Character">
-                  <span id="color">
-                    <img src="image/Element/Pyro.png" alt="" id="element">  
-                    <img src="image/Character/all/Yoimiya.png" alt="" id="five-star">
-                  </span>
-                  <span id="text">
-                    <h1 class="charname">Yoimiya</h1>
-                  </span>
-                </span>
-              </span>
-            </span>
-
-            <span id="Character" class="Yunjin Polearm Geo Polearm_Geo_Four four_star" onclick="select_Yunjin()">
-              <span id="4-star">
-                <span class="box displaychar" id="element-Geo Character">
-                  <span id="color">
-                    <img src="image/Element/Geo.png" alt="" id="element">  
-                    <img src="image/Character/all/Yunjin.png" alt="" id="four-star">
-                  </span>
-                  <span id="text">
-                    <h1 class="charname">Yunjin</h1>
-                  </span>
-                </span>
-              </span>
-            </span>
-
-            <span id="Character" class="Zhongli Polearm Geo Polearm_Geo_Five five_star" onclick="select_Zhongli()">
-              <span id="5-star">
-                <span class="box displaychar" id="element-Geo Character">
-                  <span id="color">
-                    <img src="image/Element/Geo.png" alt="" id="element">  
-                    <img src="image/Character/all/Zhongli.png" alt="" id="five-star">
-                  </span>
-                  <span id="text">
-                    <h1 class="charname">Zhongli</h1>
-                  </span>
-                </span>
-              </span>
-            </span>
-
-          </div>
-
-          <span class="displayboss">
-            <button onclick="dispboss()">
-              <h1>Boss</h1>
-              <span class="boss-caret-right" style="display: none;"><i class="fa-solid fa-caret-right"></i></span>
-              <span class="boss-caret-down"><i class="fa-sharp fa-solid fa-caret-down"></i></span>
-            </button>
           </span>
 
-          <span class="selectall_boss">
-            <button onclick="selectbossall()">
-              <h1>select all</h1>
-            </button>
+          <span id="Character" class="Aloy Bow Cryo Bow_Cryo_Five five_star" onclick="select_Aloy()">
+            <span id="5-star">
+              <span class="box displaychar" id="element-cryo Character">
+                <span id="color">
+                  <img src="image/Element/Cryo.png" alt="" id="element">
+                  <img src="image/Character/all/Aloy.png" alt="" id="five-star">
+                </span>
+                <span id="text">
+                  <h1 class="charname">Aloy</h1>
+                </span>
+              </span>
+            </span>
           </span>
 
-          <span class="unselectall_boss" style="display: none">
-            <button onclick="unselectbossall()">
-              <h1>unselect all</h1>
-            </button>
+          <span id="Character" class="Amber Bow Pyro Bow_Pyro_Four four_star" onclick="select_Amber()">
+            <span id="4-star">
+              <span class="box displaychar" id="element-pyro Character">
+                <span id="color">
+                  <img src="image/Element/Pyro.png" alt="" id="element">
+                  <img src="image/Character/all/Amber.png" alt="" id="four-star">
+                </span>
+                <span id="text">
+                  <h1 class="charname">Amber</h1>
+                </span>
+              </span>
+            </span>
           </span>
 
-          <div class="Boss">
-            <!--Boss-->
-            
-            <span class="boss Anemo_Hypotasis box color disboss" onclick="select_Anemo_Hypotasis()">
-              <img src="image/Boss/Anemo Hypotasis.png" alt="">
-              <h1 class="text bossname">Anemo Hypotasis</h1>
+          <span id="Character" class="Arataki_Itto Claymore Geo Claymore_Geo_Five five_star"
+            onclick="select_Arataki_Itto()">
+            <span id="5-star">
+              <span class="box displaychar" id="element-geo Character">
+                <span id="color">
+                  <img src="image/Element/Geo.png" alt="" id="element">
+                  <img src="image/Character/all/Arataki Itto.png" alt="" id="five-star">
+                </span>
+                <span id="text">
+                  <h1 class="charname">Arataki Itto</h1>
+                </span>
+              </span>
             </span>
-
-            <span class="boss Cryo_Hypotasis box color disboss" onclick="select_Cryo_Hypotasis()">
-              <img src="image/Boss/Cryo Hypotasis.png" alt="">
-              <h1 class="text bossname">Cryo Hypotasis</h1>
-            </span>
-
-            <span class="boss Dendro_Hypotasis box color disboss" onclick="select_Dendro_Hypotasis()">
-              <img src="image/Boss/Dendro Hypotasis.png" alt="">
-              <h1 class="text bossname">Dendro Hypotasis</h1>
-            </span>
-
-            <span class="boss Electro_Hypotasis box color disboss" onclick="select_Electro_Hypotasis()">
-              <img src="image/Boss/Electro Hypotasis.png" alt="">
-              <h1 class="text bossname">Electro Hypotasis</h1>
-            </span>
-
-            <span class="boss Geo_Hypotasis box color disboss" onclick="select_Geo_Hypotasis()">
-              <img src="image/Boss/Geo Hypotasis.png" alt="">
-              <h1 class="text bossname">Geo Hypotasis</h1>
-            </span>
-
-            <span class="boss Hydro_Hypotasis box color disboss" onclick="select_Hydro_Hypotasis()">
-              <img src="image/Boss/Hydro Hypotasis.png" alt="">
-              <h1 class="text bossname">Hydro Hypotasis</h1>
-            </span>
-
-            <span class="boss Pyro_Hypotasis box color disboss" onclick="select_Pyro_Hypotasis()">
-              <img src="image/Boss/Pyro Hypotasis.png" alt="">
-              <h1 class="text bossname">Pyro Hypotasis</h1>
-            </span>
-
-            <span class="boss Cryo_Regisvine box color disboss" onclick="select_Cryo_Regisvine()">
-              <img src="image/Boss/Cryo Regisvine.png" alt="">
-              <h1 class="text bossname">Cryo Regisvine</h1>
-            </span>
-
-            <span class="boss Electro_Regisvine box color disboss" onclick="select_Electro_Regisvine()">
-              <img src="image/Boss/Electro Regisvine.png" alt="">
-              <h1 class="text bossname">Electro Regisvine</h1>
-            </span>
-
-            <span class="boss Pyro_Regisvine box color disboss" onclick="select_Pyro_Regisvine()">
-              <img src="image/Boss/Pyro Regisvine.png" alt="">
-              <h1 class="text bossname">Pyro Regisvine</h1>
-            </span>
-
-            <span class="boss Oceanid box color disboss" onclick="select_Oceanid()">
-              <img src="image/Boss/Oceanid.png" alt="">
-              <h1 class="text bossname">Oceanid</h1>
-            </span>
-
-            <span class="boss Primo_Geovishap box color disboss" onclick="select_Primo_Geovishap()">
-              <img src="image/Boss/Primo Geovishap.png" alt="">
-              <h1 class="text bossname">Primo Geovishap</h1>
-            </span>
-
-            <span class="boss Golden_Wolflord box color disboss" onclick="select_Golden_Wolflord()">
-              <img src="image/Boss/Golden Wolflord.png" alt="">
-              <h1 class="text bossname">Golden Wolflord</h1>
-            </span>
-
-            <span class="boss Bathysmal_Vishap box color disboss" onclick="select_Bathysmal_Vishap()">
-              <img src="image/Boss/Bathysmal Vishap.png" alt="">
-              <h1 class="text bossname">Bathysmal Vishap</h1>
-            </span>
-
-            <span class="boss Thunder_Manifestation box color disboss" onclick="select_Thunder_Manifestation()">
-              <img src="image/Boss/Thunder.png" alt="">
-              <h1 class="text bossname">Thunder</h1>
-            </span>
-
-            <span class="boss Iniquitous_Baptist box color disboss" onclick="select_Iniquitous_Baptist()">
-              <img src="image/Boss/Iniquitous Baptist.png" alt="">
-              <h1 class="text bossname">Iniquitous Baptist</h1>
-            </span>
-
-            <span class="boss Jadeplume box color disboss" onclick="select_Jadeplume()">
-              <img src="image/Boss/Jadeplume.png" alt="">
-              <h1 class="text bossname">Jadeplume</h1>
-            </span>
-
-            <span class="boss Setekh_Wenut box color disboss" onclick="select_Setekh_Wenut()">
-              <img src="image/Boss/Setekh Wenut.png" alt="">
-              <h1 class="text bossname">Setekh Wenut</h1>
-            </span>
-
-            <span class="boss Maguu_Kenki box color disboss" onclick="select_Maguu_Kenki()">
-              <img src="image/Boss/Maguu Kenki.png" alt="">
-              <h1 class="text bossname">Maguu Kenki</h1>
-            </span>
-
-            <span class="boss Aeonblight_Drake box color disboss" onclick="select_Aeonblight_Drake()">
-              <img src="image/Boss/Aeonblight Drake.png" alt="">
-              <h1 class="text bossname">Aeonblight Drake</h1>
-            </span>
-
-            <span class="boss Algorithm box color disboss" onclick="select_Algorithm()">
-              <img src="image/Boss/Algorithm.png" alt="">
-              <h1 class="text bossname">Algorithm</h1>
-            </span>
-
-            <span class="boss Perpetual box color disboss" onclick="select_Perpetual()">
-              <img src="image/Boss/Perpetual.png" alt="">
-              <h1 class="text bossname">Perpetual</h1>
-            </span>
-
-            <span class="boss Ruin_Serpent box color disboss" onclick="select_Ruin_Serpent()">
-              <img src="image/Boss/Ruin Serpent.png" alt="">
-              <h1 class="text bossname">Ruin Serpent</h1>
-            </span>
-
-            <span class="boss Lupus_Boreas box color disboss" onclick="select_Lupus_Boreas()">
-              <img src="image/Boss/Lupus Boreas.png" alt="">
-              <h1 class="text bossname">Lupus Boreas</h1>
-            </span>
-
-            <span class="boss Stormterror box color disboss" onclick="select_Stormterror()">
-              <img src="image/Boss/Stormterror.png" alt="">
-              <h1 class="text bossname">Stormterror</h1>
-            </span>
-
-            <span class="boss Azhdaha box color disboss" onclick="select_Azhdaha()">
-              <img src="image/Boss/Azhdaha.png" alt="">
-              <h1 class="text bossname">Azhdaha</h1>
-            </span>
-
-            <span class="boss Childe box color disboss" onclick="select_Childe()">
-              <img src="image/Boss/Childe.png" alt="">
-              <h1 class="text bossname">Childe</h1>
-            </span>
-
-            <span class="boss La_Signora box color disboss" onclick="select_La_Signora()">
-              <img src="image/Boss/La Signora.png" alt="">
-              <h1 class="text bossname">La Signora</h1>
-            </span>
-
-            <span class="boss Magatsu_Mitake box color disboss" onclick="select_Magatsu_Mitake()">
-              <img src="image/Boss/Magatsu Mitake.png" alt="">
-              <h1 class="text bossname">Magatsu Mitake</h1>
-            </span>
-
-            <span class="boss Shouki_no_Kami box color disboss" onclick="select_Shouki_no_Kami()">
-              <img src="image/Boss/Shouki no Kami.png" alt="">
-              <h1 class="text bossname">Shouki no Kami</h1>
-            </span>
-
-            <span class="boss Warden_of_Oasis box color disboss" onclick="select_Warden_of_Oasis()">
-              <img src="image/Boss/Warden of Oasis.png" alt="">
-              <h1 class="text bossname">Warden of Oasis</h1>
-            </span>
-
-          </div>
-            
-          <span class="return" style="display: none">
-            <button onclick="Return()"><h1>
-              <i class="fa-solid fa-arrow-right-from-bracket fa-rotate-180"></i>
-              Return</h1></button>
           </span>
 
-          <span class="random_again" style="display: none">
-            <button onclick="start_random()"><h1>
-              <i class="fa-solid fa-rotate-left"></i>
-              Random again</h1></button>
+          <span id="Character" class="Baizhu Catalyst Dendro Catalyst_Dendro_Five five_star" onclick="select_Baizhu()">
+            <span id="5-star">
+              <span class="box displaychar" id="element-Dendro Character">
+                <span id="color">
+                  <img src="image/Element/Dendro.png" alt="" id="element">
+                  <img src="image/Character/all/Baizhu.png" alt="" id="five-star">
+                </span>
+                <span id="text">
+                  <h1 class="charname">Baizhu</h1>
+                </span>
+              </span>
+            </span>
           </span>
 
-          <div class="Random" style="display: none;">
-
-            <span class="start_random btn">
-              <button onclick="start_random()" class="">
-                <h1>
-                  <i class="fa-solid fa-play"></i>
-                  Start Random</h1>
-              </button>
+          <span id="Character" class="Barbara Catalyst Hydro Catalyst_Hydro_Four four_star" onclick="select_Barbara()">
+            <span id="4-star">
+              <span class="box displaychar" id="element-Hydro Character">
+                <span id="color">
+                  <img src="image/Element/Hydro.png" alt="" id="element">
+                  <img src="image/Character/all/Barbara.png" alt="" id="four-star">
+                </span>
+                <span id="text">
+                  <h1 class="charname">Barbara</h1>
+                </span>
+              </span>
             </span>
+          </span>
 
-            <span class="section_random" style="display: none;">
-
-              <span class="random charfist box">
-                <img src="image/Character/all/black.png" alt="" class="ranchar bg f" id="charf">
-                <img src="image/Element/" alt="" class="element f" id="elementf">  
-                  <h1 id="name_text_first"></h1>
+          <span id="Character" class="Beidou Claymore Electro Claymore_Electro_Four four_star"
+            onclick="select_Beidou()">
+            <span id="4-star">
+              <span class="box displaychar" id="element-Electro Character">
+                <span id="color">
+                  <img src="image/Element/Electro.png" alt="" id="element">
+                  <img src="image/Character/all/Beidou.png" alt="" id="four-star">
+                </span>
+                <span id="text">
+                  <h1 class="charname">Beidou</h1>
+                </span>
               </span>
-
-              <span class="random charsecond box">
-                <img src="image/Character/all/black.png" alt="" class="ranchar bg s" id="chars">
-                <img src="image/Element/" alt="" class="element s" id="elements">  
-                <h1 id="name_text_second"></h1>
-              </span>
-
-              <span class="random charthrid box">
-                <img src="image/Character/all/black.png" alt="" class="ranchar bg th" id="charth">
-                <img src="image/Element/" alt="" class="element th" id="elementth">  
-                <h1 id="name_text_thrid"></h1>
-              </span>
-
-              <span class="random charfourth box">
-                <img src="image/Character/all/black.png" alt="" class="ranchar bg fth" id="charfth">
-                <img src="image/Element/" alt="" class="element fth" id="elementfth">  
-                <h1 id="name_text_fourth"></h1>
-              </span>
-
-              <span class="random ranboss box">
-                <img src="image/Character/all/black.png" alt="" class="bossbg f" id="bossf">
-                <h1 id="name_text_boss"></h1>
-              </span>
-
             </span>
-          </div>
+          </span>
+
+          <span id="Character" class="Bennett Sword Pyro Sword_Pyro_Four four_star" onclick="select_Bennett()">
+            <span id="4-star">
+              <span class="box displaychar" id="element-Pyro Character">
+                <span id="color">
+                  <img src="image/Element/Pyro.png" alt="" id="element">
+                  <img src="image/Character/all/Bennett.png" alt="" id="four-star">
+                </span>
+                <span id="text">
+                  <h1 class="charname">Bennett</h1>
+                </span>
+              </span>
+            </span>
+          </span>
+
+          <span id="Character" class="Candace Polearm Hydro Polearm_Hydro_Four four_star" onclick="select_Candace()">
+            <span id="4-star">
+              <span class="box displaychar" id="element-Hydro Character">
+                <span id="color">
+                  <img src="image/Element/Hydro.png" alt="" id="element">
+                  <img src="image/Character/all/Candace.png" alt="" id="four-star">
+                </span>
+                <span id="text">
+                  <h1 class="charname">Candace</h1>
+                </span>
+              </span>
+            </span>
+          </span>
+
+          <span id="Character" class="Chongyun Claymore Cryo Claymore_Cryo_Four four_star" onclick="select_Chongyun()">
+            <span id="4-star">
+              <span class="box displaychar" id="element-Cryo Character">
+                <span id="color">
+                  <img src="image/Element/Cryo.png" alt="" id="element">
+                  <img src="image/Character/all/Chongyun.png" alt="" id="four-star">
+                </span>
+                <span id="text">
+                  <h1 class="charname">Chongyun</h1>
+                </span>
+              </span>
+            </span>
+          </span>
+
+          <span id="Character" class="Collei Bow Dendro Bow_Dendro_Four four_star" onclick="select_Collei()">
+            <span id="4-star">
+              <span class="box displaychar" id="element-Dendro Character">
+                <span id="color">
+                  <img src="image/Element/Dendro.png" alt="" id="element">
+                  <img src="image/Character/all/Collei.png" alt="" id="four-star">
+                </span>
+                <span id="text">
+                  <h1 class="charname">Collei</h1>
+                </span>
+              </span>
+            </span>
+          </span>
+
+          <span id="Character" class="Cyno Polearm Electro Polearm_Electro_Five five_star" onclick="select_Cyno()">
+            <span id="5-star">
+              <span class="box displaychar" id="element-Electro Character">
+                <span id="color">
+                  <img src="image/Element/Electro.png" alt="" id="element">
+                  <img src="image/Character/all/Cyno.png" alt="" id="five-star">
+                </span>
+                <span id="text">
+                  <h1 class="charname">Cyno</h1>
+                </span>
+              </span>
+            </span>
+          </span>
+
+          <span id="Character" class="Dehya Claymore Pyro Claymore_Pyro_Five five_star" onclick="select_Dehya()">
+            <span id="5-star">
+              <span class="box displaychar" id="element-Pyro Character">
+                <span id="color">
+                  <img src="image/Element/Pyro.png" alt="" id="element">
+                  <img src="image/Character/all/Dehya.png" alt="" id="five-star">
+                </span>
+                <span id="text">
+                  <h1 class="charname">Dehya</h1>
+                </span>
+              </span>
+            </span>
+          </span>
+
+          <span id="Character" class="Diluc Claymore Pyro Claymore_Pyro_Five five_star" onclick="select_Diluc()">
+            <span id="5-star">
+              <span class="box displaychar" id="element-Pyro Character">
+                <span id="color">
+                  <img src="image/Element/Pyro.png" alt="" id="element">
+                  <img src="image/Character/all/Diluc.png" alt="" id="five-star">
+                </span>
+                <span id="text">
+                  <h1 class="charname">Diluc</h1>
+                </span>
+              </span>
+            </span>
+          </span>
+
+          <span id="Character" class="Diona Bow Cryo Bow_Cryo_Four four_star" onclick="select_Diona()">
+            <span id="4-star">
+              <span class="box displaychar" id="element-Pyro Character">
+                <span id="color">
+                  <img src="image/Element/Cryo.png" alt="" id="element">
+                  <img src="image/Character/all/Diona.png" alt="" id="four-star">
+                </span>
+                <span id="text">
+                  <h1 class="charname">Diona</h1>
+                </span>
+              </span>
+            </span>
+          </span>
+
+          <span id="Character" class="Dori Claymore Electro Claymore_Electro_Four four_star" onclick="select_Dori()">
+            <span id="4-star">
+              <span class="box displaychar" id="element-Electro Character">
+                <span id="color">
+                  <img src="image/Element/Electro.png" alt="" id="element">
+                  <img src="image/Character/all/Dori.png" alt="" id="four-star">
+                </span>
+                <span id="text">
+                  <h1 class="charname">Dori</h1>
+                </span>
+              </span>
+            </span>
+          </span>
+
+          <span id="Character" class="Eula Claymore Cryo Claymore_Cryo_Five five_star" onclick="select_Eula()">
+            <span id="5-star">
+              <span class="box displaychar" id="element-Cryo Character">
+                <span id="color">
+                  <img src="image/Element/Cryo.png" alt="" id="element">
+                  <img src="image/Character/all/Eula.png" alt="" id="five-star">
+                </span>
+                <span id="text">
+                  <h1 class="charname">Eula</h1>
+                </span>
+              </span>
+            </span>
+          </span>
+
+          <span id="Character" class="Faruzan Bow Anemo Bow_Anemo_Four four_star" onclick="select_Faruzan()">
+            <span id="4-star">
+              <span class="box displaychar" id="element-Anemo Character">
+                <span id="color">
+                  <img src="image/Element/Anemo.png" alt="" id="element">
+                  <img src="image/Character/all/Faruzan.png" alt="" id="four-star">
+                </span>
+                <span id="text">
+                  <h1 class="charname">Faruzan</h1>
+                </span>
+              </span>
+            </span>
+          </span>
+
+          <span id="Character" class="Fischl Bow Electro Bow_Electro_Four four_star" onclick="select_Fischl()">
+            <span id="4-star">
+              <span class="box displaychar" id="element-Electro Character">
+                <span id="color">
+                  <img src="image/Element/Electro.png" alt="" id="element">
+                  <img src="image/Character/all/Fischl.png" alt="" id="four-star">
+                </span>
+                <span id="text">
+                  <h1 class="charname">Fischl</h1>
+                </span>
+              </span>
+            </span>
+          </span>
+
+          <span id="Character" class="Freminet Claymore Cryo Claymore_Cryo_Four four_star" onclick="select_Freminet()">
+            <span id="5-star">
+              <span class="box displaychar" id="element-Cryo Character">
+                <span id="color">
+                  <img src="image/Element/Cryo.png" alt="" id="element">
+                  <img src="image/Character/all/Freminet.png" alt="" id="four-star">
+                </span>
+                <span id="text">
+                  <h1 class="charname">Freminet</h1>
+                </span>
+              </span>
+            </span>
+          </span>
+
+          <span id="Character" class="Ganyu Bow Cryo Bow_Cryo_Five five_star" onclick="select_Ganyu()">
+            <span id="5-star">
+              <span class="box displaychar" id="element-Cryo Character">
+                <span id="color">
+                  <img src="image/Element/Cryo.png" alt="" id="element">
+                  <img src="image/Character/all/Ganyu.png" alt="" id="five-star">
+                </span>
+                <span id="text">
+                  <h1 class="charname">Ganyu</h1>
+                </span>
+              </span>
+            </span>
+          </span>
+
+          <span id="Character" class="Gorou Bow Geo Bow_Geo_Four four_star" onclick="select_Gorou()">
+            <span id="4-star">
+              <span class="box displaychar" id="element-Geo Character">
+                <span id="color">
+                  <img src="image/Element/Geo.png" alt="" id="element">
+                  <img src="image/Character/all/Gorou.png" alt="" id="four-star">
+                </span>
+                <span id="text">
+                  <h1 class="charname">Gorou</h1>
+                </span>
+              </span>
+            </span>
+          </span>
+
+          <span id="Character" class="Hutao Polearm Pyro Polearm_Pyro_Five five_star" onclick="select_Hutao()">
+            <span id="5-star">
+              <span class="box displaychar" id="element-Pyro Character">
+                <span id="color">
+                  <img src="image/Element/Pyro.png" alt="" id="element">
+                  <img src="image/Character/all/Hutao.png" alt="" id="five-star">
+                </span>
+                <span id="text">
+                  <h1 class="charname">Hutao</h1>
+                </span>
+              </span>
+            </span>
+          </span>
+
+          <span id="Character" class="Jean Sword Anemo Sword_Anemo_Five five_star" onclick="select_Jean()">
+            <span id="5-star">
+              <span class="box displaychar" id="element-Anemo Character">
+                <span id="color">
+                  <img src="image/Element/Anemo.png" alt="" id="element">
+                  <img src="image/Character/all/Jean.png" alt="" id="five-star">
+                </span>
+                <span id="text">
+                  <h1 class="charname">Jean</h1>
+                </span>
+              </span>
+            </span>
+          </span>
+
+          <span id="Character" class="Kaeya Sword Cryo Sword_Cryo_Four four_star" onclick="select_Kaeya()">
+            <span id="4-star">
+              <span class="box displaychar" id="element-Cryo Character">
+                <span id="color">
+                  <img src="image/Element/Cryo.png" alt="" id="element">
+                  <img src="image/Character/all/Kaeya.png" alt="" id="four-star">
+                </span>
+                <span id="text">
+                  <h1 class="charname">Kaeya</h1>
+                </span>
+              </span>
+            </span>
+          </span>
+
+          <span id="Character" class="Kaveh Claymore Dendro Claymore_Dendro_Four four_star" onclick="select_Kaveh()">
+            <span id="4-star">
+              <span class="box displaychar" id="element-Dendro Character">
+                <span id="color">
+                  <img src="image/Element/Dendro.png" alt="" id="element">
+                  <img src="image/Character/all/Kaveh.png" alt="" id="four-star">
+                </span>
+                <span id="text">
+                  <h1 class="charname">Kaveh</h1>
+                </span>
+              </span>
+            </span>
+          </span>
+
+          <span id="Character" class="Ayaka Sword Cryo Sword_Cryo_Five five_star" onclick="select_Ayaka()">
+            <span id="5-star">
+              <span class="box displaychar" id="element-Cryo Character">
+                <span id="color">
+                  <img src="image/Element/Cryo.png" alt="" id="element">
+                  <img src="image/Character/all/Ayaka.png" alt="" id="five-star">
+                </span>
+                <span id="text">
+                  <h1 class="charname">Ayaka</h1>
+                </span>
+              </span>
+            </span>
+          </span>
+
+          <span id="Character" class="Ayato Sword Hydro Sword_Hydro_Five five_star" onclick="select_Ayato()">
+            <span id="5-star">
+              <span class="box displaychar" id="element-Hydro Character">
+                <span id="color">
+                  <img src="image/Element/Hydro.png" alt="" id="element">
+                  <img src="image/Character/all/Ayato.png" alt="" id="five-star">
+                </span>
+                <span id="text">
+                  <h1 class="charname">Ayato</h1>
+                </span>
+              </span>
+            </span>
+          </span>
+
+          <span id="Character" class="Kazuha Sword Anemo Sword_Anemo_Five five_star" onclick="select_Kazuha()">
+            <span id="5-star">
+              <span class="box displaychar" id="element-Anemo Character">
+                <span id="color">
+                  <img src="image/Element/Anemo.png" alt="" id="element">
+                  <img src="image/Character/all/Kazuha.png" alt="" id="five-star">
+                </span>
+                <span id="text">
+                  <h1 class="charname">Kazuha</h1>
+                </span>
+              </span>
+            </span>
+          </span>
+
+          <span id="Character" class="Keqing Sword Electro Sword_Electro_Five five_star" onclick="select_Keqing()">
+            <span id="5-star">
+              <span class="box displaychar" id="element-Electro Character">
+                <span id="color">
+                  <img src="image/Element/Electro.png" alt="" id="element">
+                  <img src="image/Character/all/Keqing.png" alt="" id="five-star">
+                </span>
+                <span id="text">
+                  <h1 class="charname">Keqing</h1>
+                </span>
+              </span>
+            </span>
+          </span>
+
+          <span id="Character" class="Kirara Sword Dendro Sword_Dendro_Four four_star" onclick="select_Kirara()">
+            <span id="4-star">
+              <span class="box displaychar" id="element-Dendro Character">
+                <span id="color">
+                  <img src="image/Element/Dendro.png" alt="" id="element">
+                  <img src="image/Character/all/Kirara.png" alt="" id="four-star">
+                </span>
+                <span id="text">
+                  <h1 class="charname">Kirara</h1>
+                </span>
+              </span>
+            </span>
+          </span>
+
+          <span id="Character" class="Klee Catalyst Pyro Catalyst_Pyro_Five five_star" onclick="select_Klee()">
+            <span id="5-star">
+              <span class="box displaychar" id="element-Pyro Character">
+                <span id="color">
+                  <img src="image/Element/Pyro.png" alt="" id="element">
+                  <img src="image/Character/all/Klee.png" alt="" id="five-star">
+                </span>
+                <span id="text">
+                  <h1 class="charname">Klee</h1>
+                </span>
+              </span>
+            </span>
+          </span>
+
+          <span id="Character" class="Kujou_Sara Bow Electro Bow_Electro_Four four_star" onclick="select_Kujou_Sara()">
+            <span id="4-star">
+              <span class="box displaychar" id="element-Electro Character">
+                <span id="color">
+                  <img src="image/Element/Electro.png" alt="" id="element">
+                  <img src="image/Character/all/Kujou Sara.png" alt="" id="four-star">
+                </span>
+                <span id="text">
+                  <h1 class="charname">Kujou Sara</h1>
+                </span>
+              </span>
+            </span>
+          </span>
+
+          <span id="Character" class="Kuki_Shinobu Sword Electro Sword_Electro_Four four_star"
+            onclick="select_Kuki_Shinobu()">
+            <span id="4-star">
+              <span class="box displaychar" id="element-Electro Character">
+                <span id="color">
+                  <img src="image/Element/Electro.png" alt="" id="element">
+                  <img src="image/Character/all/Kuki Shinobu.png" alt="" id="four-star">
+                </span>
+                <span id="text">
+                  <h1 class="charname">Kuki Shinobu</h1>
+                </span>
+              </span>
+            </span>
+          </span>
+
+          <span id="Character" class="Layla Sword Cryo Sword_Cryo_Four four_star" onclick="select_Layla()">
+            <span id="4-star">
+              <span class="box displaychar" id="element-Cryo Character">
+                <span id="color">
+                  <img src="image/Element/Cryo.png" alt="" id="element">
+                  <img src="image/Character/all/Layla.png" alt="" id="four-star">
+                </span>
+                <span id="text">
+                  <h1 class="charname">Layla</h1>
+                </span>
+              </span>
+            </span>
+          </span>
+
+          <span id="Character" class="Lisa Catalyst Electro Catalyst_Electro_Four four_star" onclick="select_Lisa()">
+            <span id="4-star">
+              <span class="box displaychar" id="element-Electro Character">
+                <span id="color">
+                  <img src="image/Element/Electro.png" alt="" id="element">
+                  <img src="image/Character/all/Lisa.png" alt="" id="four-star">
+                </span>
+                <span id="text">
+                  <h1 class="charname">Lisa</h1>
+                </span>
+              </span>
+            </span>
+          </span>
+
+          <span id="Character" class="Lynette Sword Anemo Sword_Anemo_Four four_star" onclick="select_Lynette()">
+            <span id="4-star">
+              <span class="box displaychar" id="element-Anemo Character">
+                <span id="color">
+                  <img src="image/Element/Anemo.png" alt="" id="element">
+                  <img src="image/Character/all/Lynette.png" alt="" id="four-star">
+                </span>
+                <span id="text">
+                  <h1 class="charname">Lynette</h1>
+                </span>
+              </span>
+            </span>
+          </span>
+
+          <span id="Character" class="Lyney Bow Pyro Bow_Pyro_Five five_star" onclick="select_Lyney()">
+            <span id="4-star">
+              <span class="box displaychar" id="element-Pyro Character">
+                <span id="color">
+                  <img src="image/Element/Pyro.png" alt="" id="element">
+                  <img src="image/Character/all/Lyney.png" alt="" id="five-star">
+                </span>
+                <span id="text">
+                  <h1 class="charname">Lyney</h1>
+                </span>
+              </span>
+            </span>
+          </span>
+
+          <span id="Character" class="Mika Polearm Cryo Polearm_Cryo_Four four_star" onclick="select_Mika()">
+            <span id="4-star">
+              <span class="box displaychar" id="element-Cryo Character">
+                <span id="color">
+                  <img src="image/Element/Cryo.png" alt="" id="element">
+                  <img src="image/Character/all/Mika.png" alt="" id="four-star">
+                </span>
+                <span id="text">
+                  <h1 class="charname">Mika</h1>
+                </span>
+              </span>
+            </span>
+          </span>
+
+          <span id="Character" class="Mona Catalyst Hydro Catalyst_Hydro_Five five_star" onclick="select_Mona()">
+            <span id="5-star">
+              <span class="box displaychar" id="element-Hydro Character">
+                <span id="color">
+                  <img src="image/Element/Hydro.png" alt="" id="element">
+                  <img src="image/Character/all/Mona.png" alt="" id="five-star">
+                </span>
+                <span id="text">
+                  <h1 class="charname">Mona</h1>
+                </span>
+              </span>
+            </span>
+          </span>
+
+          <span id="Character" class="Nahida Catalyst Dendro Catalyst_Dendro_Five five_star" onclick="select_Nahida()">
+            <span id="5-star">
+              <span class="box displaychar" id="element-Dendro Character">
+                <span id="color">
+                  <img src="image/Element/Dendro.png" alt="" id="element">
+                  <img src="image/Character/all/Nahida.png" alt="" id="five-star">
+                </span>
+                <span id="text">
+                  <h1 class="charname">Nahida</h1>
+                </span>
+              </span>
+            </span>
+          </span>
+
+          <span id="Character" class="Nilou Sword Hydro Sword_Hydro_Five five_star" onclick="select_Nilou()">
+            <span id="5-star">
+              <span class="box displaychar" id="element-Hydro Character">
+                <span id="color">
+                  <img src="image/Element/Hydro.png" alt="" id="element">
+                  <img src="image/Character/all/Nilou.png" alt="" id="five-star">
+                </span>
+                <span id="text">
+                  <h1 class="charname">Nilou</h1>
+                </span>
+              </span>
+            </span>
+          </span>
+
+          <span id="Character" class="Ningguang Catalyst Geo Catalyst_Geo_Four four_star" onclick="select_Ningguang()">
+            <span id="4-star">
+              <span class="box displaychar" id="element-Geo Character">
+                <span id="color">
+                  <img src="image/Element/Geo.png" alt="" id="element">
+                  <img src="image/Character/all/Ningguang.png" alt="" id="four-star">
+                </span>
+                <span id="text">
+                  <h1 class="charname">Ningguang</h1>
+                </span>
+              </span>
+            </span>
+          </span>
+
+          <span id="Character" class="Noelle Claymore Geo Claymore_Geo_Four four_star" onclick="select_Noelle()">
+            <span id="4-star">
+              <span class="box displaychar" id="element-Geo Character">
+                <span id="color">
+                  <img src="image/Element/Geo.png" alt="" id="element">
+                  <img src="image/Character/all/Noelle.png" alt="" id="four-star">
+                </span>
+                <span id="text">
+                  <h1 class="charname">Noelle</h1>
+                </span>
+              </span>
+            </span>
+          </span>
+
+          <span id="Character" class="Qiqi Sword Cryo Sword_Cryo_Five five_star" onclick="select_Qiqi()">
+            <span id="5-star">
+              <span class="box displaychar" id="element-Cryo Character">
+                <span id="color">
+                  <img src="image/Element/Cryo.png" alt="" id="element">
+                  <img src="image/Character/all/Qiqi.png" alt="" id="five-star">
+                </span>
+                <span id="text">
+                  <h1 class="charname">Qiqi</h1>
+                </span>
+              </span>
+            </span>
+          </span>
+
+          <span id="Character" class="Raiden Polearm Electro Polearm_Electro_Five five_star" onclick="select_Raiden()">
+            <span id="5-star">
+              <span class="box displaychar" id="element-Electro Character">
+                <span id="color">
+                  <img src="image/Element/Electro.png" alt="" id="element">
+                  <img src="image/Character/all/Raiden.png" alt="" id="five-star">
+                </span>
+                <span id="text">
+                  <h1 class="charname">Raiden</h1>
+                </span>
+              </span>
+            </span>
+          </span>
+
+          <span id="Character" class="Razor Claymore Electro Claymore_Electro_Four four_star" onclick="select_Razor()">
+            <span id="4-star">
+              <span class="box displaychar" id="element-Electro Character">
+                <span id="color">
+                  <img src="image/Element/Electro.png" alt="" id="element">
+                  <img src="image/Character/all/Razor.png" alt="" id="four-star">
+                </span>
+                <span id="text">
+                  <h1 class="charname">Razor</h1>
+                </span>
+              </span>
+            </span>
+          </span>
+
+          <span id="Character" class="Rosaria Polearm Cryo Polearm_Cryo_Four four_star" onclick="select_Rosaria()">
+            <span id="4-star">
+              <span class="box displaychar" id="element-Cryo Character">
+                <span id="color">
+                  <img src="image/Element/Cryo.png" alt="" id="element">
+                  <img src="image/Character/all/Rosaria.png" alt="" id="four-star">
+                </span>
+                <span id="text">
+                  <h1 class="charname">Rosaria</h1>
+                </span>
+              </span>
+            </span>
+          </span>
+
+          <span id="Character" class="Kokomi Catalyst Hydro Catalyst_Hydro_Five five_star" onclick="select_Kokomi()">
+            <span id="5-star">
+              <span class="box displaychar" id="element-Hydro Character">
+                <span id="color">
+                  <img src="image/Element/Hydro.png" alt="" id="element">
+                  <img src="image/Character/all/Kokomi.png" alt="" id="five-star">
+                </span>
+                <span id="text">
+                  <h1 class="charname">Kokomi</h1>
+                </span>
+              </span>
+            </span>
+          </span>
+
+          <span id="Character" class="Sayu Claymore Anemo Claymore_Anemo_Four four_star" onclick="select_Sayu()">
+            <span id="4-star">
+              <span class="box displaychar" id="element-Anemo Character">
+                <span id="color">
+                  <img src="image/Element/Anemo.png" alt="" id="element">
+                  <img src="image/Character/all/Sayu.png" alt="" id="four-star">
+                </span>
+                <span id="text">
+                  <h1 class="charname">Sayu</h1>
+                </span>
+              </span>
+            </span>
+          </span>
+
+          <span id="Character" class="Shenhe Polearm Cryo Polearm_Cryo_Five five_star" onclick="select_Shenhe()">
+            <span id="5-star">
+              <span class="box displaychar" id="element-Cryo Character">
+                <span id="color">
+                  <img src="image/Element/Cryo.png" alt="" id="element">
+                  <img src="image/Character/all/Shenhe.png" alt="" id="five-star">
+                </span>
+                <span id="text">
+                  <h1 class="charname">Shenhe</h1>
+                </span>
+              </span>
+            </span>
+          </span>
+
+          <span id="Character" class="Heizou Catalyst Anemo Catalyst_Anemo_Four four_star" onclick="select_Heizou()">
+            <span id="4-star">
+              <span class="box displaychar" id="element-Anemo Character">
+                <span id="color">
+                  <img src="image/Element/Anemo.png" alt="" id="element">
+                  <img src="image/Character/all/Heizou.png" alt="" id="four-star">
+                </span>
+                <span id="text">
+                  <h1 class="charname">Heizou</h1>
+                </span>
+              </span>
+            </span>
+          </span>
+
+          <span id="Character" class="Sucrose Catalyst Anemo Catalyst_Anemo_Four four_star" onclick="select_Sucrose()">
+            <span id="4-star">
+              <span class="box displaychar" id="element-Anemo Character">
+                <span id="color">
+                  <img src="image/Element/Anemo.png" alt="" id="element">
+                  <img src="image/Character/all/Sucrose.png" alt="" id="four-star">
+                </span>
+                <span id="text">
+                  <h1 class="charname">Sucrose</h1>
+                </span>
+              </span>
+            </span>
+          </span>
+
+          <span id="Character" class="Tartaglia Bow Hydro Bow_Hydro_Five five_star" onclick="select_Tartaglia()">
+            <span id="5-star">
+              <span class="box displaychar" id="element-Hydro Character">
+                <span id="color">
+                  <img src="image/Element/Hydro.png" alt="" id="element">
+                  <img src="image/Character/all/Tartaglia.png" alt="" id="five-star">
+                </span>
+                <span id="text">
+                  <h1 class="charname">Tartaglia</h1>
+                </span>
+              </span>
+            </span>
+          </span>
+
+          <span id="Character" class="Thoma Polearm Pyro Polearm_Pyro_Four four_star" onclick="select_Thoma()">
+            <span id="4-star">
+              <span class="box displaychar" id="element-Pyro Character">
+                <span id="color">
+                  <img src="image/Element/Pyro.png" alt="" id="element">
+                  <img src="image/Character/all/Thoma.png" alt="" id="four-star">
+                </span>
+                <span id="text">
+                  <h1 class="charname">Thoma</h1>
+                </span>
+              </span>
+            </span>
+          </span>
+
+          <span id="Character" class="Tighnari Bow Dendro Bow_Dendro_Five five_star" onclick="select_Tighnari()">
+            <span id="5-star">
+              <span class="box displaychar" id="element-Dendro Character">
+                <span id="color">
+                  <img src="image/Element/Dendro.png" alt="" id="element">
+                  <img src="image/Character/all/Tighnari.png" alt="" id="five-star">
+                </span>
+                <span id="text">
+                  <h1 class="charname">Tighnari</h1>
+                </span>
+              </span>
+            </span>
+          </span>
+
+          <span id="Character" class="Venti Bow Anemo Bow_Anemo_Five five_star" onclick="select_Venti()">
+            <span id="5-star">
+              <span class="box displaychar" id="element-Anemo Character">
+                <span id="color">
+                  <img src="image/Element/Anemo.png" alt="" id="element">
+                  <img src="image/Character/all/Venti.png" alt="" id="five-star">
+                </span>
+                <span id="text">
+                  <h1 class="charname">Venti</h1>
+                </span>
+              </span>
+            </span>
+          </span>
+
+          <span id="Character" class="Wanderer Catalyst Anemo Catalyst_Anemo_Five five_star"
+            onclick="select_Wanderer()">
+            <span id="5-star">
+              <span class="box displaychar" id="element-Anemo Character">
+                <span id="color">
+                  <img src="image/Element/Anemo.png" alt="" id="element">
+                  <img src="image/Character/all/Wanderer.png" alt="" id="five-star">
+                </span>
+                <span id="text">
+                  <h1 class="charname">Wanderer</h1>
+                </span>
+              </span>
+            </span>
+          </span>
+
+          <span id="Character" class="Xiangling Polearm Pyro Polearm_Pyro_Four four_star" onclick="select_Xiangling()">
+            <span id="4-star">
+              <span class="box displaychar" id="element-Pyro Character">
+                <span id="color">
+                  <img src="image/Element/Pyro.png" alt="" id="element">
+                  <img src="image/Character/all/Xiangling.png" alt="" id="four-star">
+                </span>
+                <span id="text">
+                  <h1 class="charname">Xiangling</h1>
+                </span>
+              </span>
+            </span>
+          </span>
+
+          <span id="Character" class="Xiao Polearm Anemo Polearm_Anemo_Five five_star" onclick="select_Xiao()">
+            <span id="5-star">
+              <span class="box displaychar" id="element-Anemo Character">
+                <span id="color">
+                  <img src="image/Element/Anemo.png" alt="" id="element">
+                  <img src="image/Character/all/Xiao.png" alt="" id="five-star">
+                </span>
+                <span id="text">
+                  <h1 class="charname">Xiao</h1>
+                </span>
+              </span>
+            </span>
+          </span>
+
+          <span id="Character" class="Xingqiu Sword Hydro Sword_Hydro_Four four_star" onclick="select_Xingqiu()">
+            <span id="4-star">
+              <span class="box displaychar" id="element-Hydro Character">
+                <span id="color">
+                  <img src="image/Element/Hydro.png" alt="" id="element">
+                  <img src="image/Character/all/Xingqiu.png" alt="" id="four-star">
+                </span>
+                <span id="text">
+                  <h1 class="charname">Xingqiu</h1>
+                </span>
+              </span>
+            </span>
+          </span>
+
+          <span id="Character" class="Xinyan Claymore Pyro Claymore_Pyro_Four four_star" onclick="select_Xinyan()">
+            <span id="4-star">
+              <span class="box displaychar" id="element-Pyro Character">
+                <span id="color">
+                  <img src="image/Element/Pyro.png" alt="" id="element">
+                  <img src="image/Character/all/Xinyan.png" alt="" id="four-star">
+                </span>
+                <span id="text">
+                  <h1 class="charname">Xinyan</h1>
+                </span>
+              </span>
+            </span>
+          </span>
+
+          <span id="Character" class="Yae_miko Catalyst Electro Catalyst_Electro_Five five_star"
+            onclick="select_Yae_miko()">
+            <span id="5-star">
+              <span class="box displaychar" id="element-Electro Character">
+                <span id="color">
+                  <img src="image/Element/Electro.png" alt="" id="element">
+                  <img src="image/Character/all/Yae Miko.png" alt="" id="five-star">
+                </span>
+                <span id="text">
+                  <h1 class="charname">Yae Miko</h1>
+                </span>
+              </span>
+            </span>
+          </span>
+
+          <span id="Character" class="Yanfei Catalyst Pyro Catalyst_Pyro_Four four_star" onclick="select_Yanfei()">
+            <span id="4-star">
+              <span class="box displaychar" id="element-Pyro Character">
+                <span id="color">
+                  <img src="image/Element/Pyro.png" alt="" id="element">
+                  <img src="image/Character/all/Yanfei.png" alt="" id="four-star">
+                </span>
+                <span id="text">
+                  <h1 class="charname">Yanfei</h1>
+                </span>
+              </span>
+            </span>
+          </span>
+
+          <span id="Character" class="Yaoyao Polearm Dendro Polearm_Dendro_Four four_star" onclick="select_Yaoyao()">
+            <span id="4-star">
+              <span class="box displaychar" id="element-Dendro Character">
+                <span id="color">
+                  <img src="image/Element/Dendro.png" alt="" id="element">
+                  <img src="image/Character/all/Yaoyao.png" alt="" id="four-star">
+                </span>
+                <span id="text">
+                  <h1 class="charname">Yaoyao</h1>
+                </span>
+              </span>
+            </span>
+          </span>
+
+          <span id="Character" class="Yelan Bow Hydro Bow_Hydro_Five five_star" onclick="select_Yelan()">
+            <span id="5-star">
+              <span class="box displaychar" id="element-Hydro Character">
+                <span id="color">
+                  <img src="image/Element/Hydro.png" alt="" id="element">
+                  <img src="image/Character/all/Yelan.png" alt="" id="five-star">
+                </span>
+                <span id="text">
+                  <h1 class="charname">Yelan</h1>
+                </span>
+              </span>
+            </span>
+          </span>
+
+          <span id="Character" class="Yoimiya Bow Pyro Bow_Pyro_Five five_star" onclick="select_Yoimiya()">
+            <span id="5-star">
+              <span class="box displaychar" id="element-Pyro Character">
+                <span id="color">
+                  <img src="image/Element/Pyro.png" alt="" id="element">
+                  <img src="image/Character/all/Yoimiya.png" alt="" id="five-star">
+                </span>
+                <span id="text">
+                  <h1 class="charname">Yoimiya</h1>
+                </span>
+              </span>
+            </span>
+          </span>
+
+          <span id="Character" class="Yunjin Polearm Geo Polearm_Geo_Four four_star" onclick="select_Yunjin()">
+            <span id="4-star">
+              <span class="box displaychar" id="element-Geo Character">
+                <span id="color">
+                  <img src="image/Element/Geo.png" alt="" id="element">
+                  <img src="image/Character/all/Yunjin.png" alt="" id="four-star">
+                </span>
+                <span id="text">
+                  <h1 class="charname">Yunjin</h1>
+                </span>
+              </span>
+            </span>
+          </span>
+
+          <span id="Character" class="Zhongli Polearm Geo Polearm_Geo_Five five_star" onclick="select_Zhongli()">
+            <span id="5-star">
+              <span class="box displaychar" id="element-Geo Character">
+                <span id="color">
+                  <img src="image/Element/Geo.png" alt="" id="element">
+                  <img src="image/Character/all/Zhongli.png" alt="" id="five-star">
+                </span>
+                <span id="text">
+                  <h1 class="charname">Zhongli</h1>
+                </span>
+              </span>
+            </span>
+          </span>
+
         </div>
-      </section>
-    </main>
 
-    <footer class="footer">
+        <span class="displayboss">
+          <button onclick="dispboss()">
+            <h1>Boss</h1>
+            <span class="boss-caret-right" style="display: none;"><i class="fa-solid fa-caret-right"></i></span>
+            <span class="boss-caret-down"><i class="fa-sharp fa-solid fa-caret-down"></i></span>
+          </button>
+        </span>
 
-      <span class="grid-footer">
+        <span class="selectall_boss">
+          <button onclick="selectbossall()">
+            <h1>select all</h1>
+          </button>
+        </span>
 
-        <span class="about">
+        <span class="unselectall_boss" style="display: none">
+          <button onclick="unselectbossall()">
+            <h1>unselect all</h1>
+          </button>
+        </span>
 
-          <span>
-            About me
-          </span>
-          <span class="icon_footer discord">
-            <a href="https://discordapp.com/users/460779806754209792" target="_blank" class="discord">
-              <i class="fa-brands fa-discord"></i>
-                Discord
-            </a>
-          </span>
+        <div class="Boss">
+          <!--Boss-->
 
-          <span class="icon_footer youtube">
-            <a href="https://www.youtube.com/@kiyang101" target="_blank" class="youtube">
-              <i class="fa-brands fa-youtube"></i>
-                Youtube
-            </a>
-          </span>
-
-          <span class="icon_footer kiyang ">
-            <a href="https://www.kiyang.net" target="_blank" class="kiyang">
-              Kiyang.net
-            </a>
-            
+          <span class="boss Anemo_Hypotasis box color disboss" onclick="select_Anemo_Hypotasis()">
+            <img src="image/Boss/Anemo Hypotasis.png" alt="">
+            <h1 class="text bossname">Anemo Hypotasis</h1>
           </span>
 
-          <ul>
-            <li>
-              <!-- Copyright -->
-              <!-- <i class="fa-regular fa-copyright"></i> -->
-              <!-- 2023 |--> Made by Kiyang <!-- All rights reserved. -->
+          <span class="boss Cryo_Hypotasis box color disboss" onclick="select_Cryo_Hypotasis()">
+            <img src="image/Boss/Cryo Hypotasis.png" alt="">
+            <h1 class="text bossname">Cryo Hypotasis</h1>
+          </span>
 
-              <span class="icon_footer github ">
-                <a href="https://github.com/Kiyang101/Genshin-Random" target="_blank" class="github">
-                  <i class="fa-brands fa-github"></i>
-                  Github
-                </a>
-              </span>
+          <span class="boss Dendro_Hypotasis box color disboss" onclick="select_Dendro_Hypotasis()">
+            <img src="image/Boss/Dendro Hypotasis.png" alt="">
+            <h1 class="text bossname">Dendro Hypotasis</h1>
+          </span>
 
-            </li>
-          </ul>
+          <span class="boss Electro_Hypotasis box color disboss" onclick="select_Electro_Hypotasis()">
+            <img src="image/Boss/Electro Hypotasis.png" alt="">
+            <h1 class="text bossname">Electro Hypotasis</h1>
+          </span>
+
+          <span class="boss Geo_Hypotasis box color disboss" onclick="select_Geo_Hypotasis()">
+            <img src="image/Boss/Geo Hypotasis.png" alt="">
+            <h1 class="text bossname">Geo Hypotasis</h1>
+          </span>
+
+          <span class="boss Hydro_Hypotasis box color disboss" onclick="select_Hydro_Hypotasis()">
+            <img src="image/Boss/Hydro Hypotasis.png" alt="">
+            <h1 class="text bossname">Hydro Hypotasis</h1>
+          </span>
+
+          <span class="boss Pyro_Hypotasis box color disboss" onclick="select_Pyro_Hypotasis()">
+            <img src="image/Boss/Pyro Hypotasis.png" alt="">
+            <h1 class="text bossname">Pyro Hypotasis</h1>
+          </span>
+
+          <span class="boss Cryo_Regisvine box color disboss" onclick="select_Cryo_Regisvine()">
+            <img src="image/Boss/Cryo Regisvine.png" alt="">
+            <h1 class="text bossname">Cryo Regisvine</h1>
+          </span>
+
+          <span class="boss Electro_Regisvine box color disboss" onclick="select_Electro_Regisvine()">
+            <img src="image/Boss/Electro Regisvine.png" alt="">
+            <h1 class="text bossname">Electro Regisvine</h1>
+          </span>
+
+          <span class="boss Pyro_Regisvine box color disboss" onclick="select_Pyro_Regisvine()">
+            <img src="image/Boss/Pyro Regisvine.png" alt="">
+            <h1 class="text bossname">Pyro Regisvine</h1>
+          </span>
+
+          <span class="boss Oceanid box color disboss" onclick="select_Oceanid()">
+            <img src="image/Boss/Oceanid.png" alt="">
+            <h1 class="text bossname">Oceanid</h1>
+          </span>
+
+          <span class="boss Primo_Geovishap box color disboss" onclick="select_Primo_Geovishap()">
+            <img src="image/Boss/Primo Geovishap.png" alt="">
+            <h1 class="text bossname">Primo Geovishap</h1>
+          </span>
+
+          <span class="boss Golden_Wolflord box color disboss" onclick="select_Golden_Wolflord()">
+            <img src="image/Boss/Golden Wolflord.png" alt="">
+            <h1 class="text bossname">Golden Wolflord</h1>
+          </span>
+
+          <span class="boss Bathysmal_Vishap box color disboss" onclick="select_Bathysmal_Vishap()">
+            <img src="image/Boss/Bathysmal Vishap.png" alt="">
+            <h1 class="text bossname">Bathysmal Vishap</h1>
+          </span>
+
+          <span class="boss Thunder_Manifestation box color disboss" onclick="select_Thunder_Manifestation()">
+            <img src="image/Boss/Thunder.png" alt="">
+            <h1 class="text bossname">Thunder</h1>
+          </span>
+
+          <span class="boss Iniquitous_Baptist box color disboss" onclick="select_Iniquitous_Baptist()">
+            <img src="image/Boss/Iniquitous Baptist.png" alt="">
+            <h1 class="text bossname">Iniquitous Baptist</h1>
+          </span>
+
+          <span class="boss Jadeplume box color disboss" onclick="select_Jadeplume()">
+            <img src="image/Boss/Jadeplume.png" alt="">
+            <h1 class="text bossname">Jadeplume</h1>
+          </span>
+
+          <span class="boss Setekh_Wenut box color disboss" onclick="select_Setekh_Wenut()">
+            <img src="image/Boss/Setekh Wenut.png" alt="">
+            <h1 class="text bossname">Setekh Wenut</h1>
+          </span>
+
+          <span class="boss Maguu_Kenki box color disboss" onclick="select_Maguu_Kenki()">
+            <img src="image/Boss/Maguu Kenki.png" alt="">
+            <h1 class="text bossname">Maguu Kenki</h1>
+          </span>
+
+          <span class="boss Aeonblight_Drake box color disboss" onclick="select_Aeonblight_Drake()">
+            <img src="image/Boss/Aeonblight Drake.png" alt="">
+            <h1 class="text bossname">Aeonblight Drake</h1>
+          </span>
+
+          <span class="boss Algorithm box color disboss" onclick="select_Algorithm()">
+            <img src="image/Boss/Algorithm.png" alt="">
+            <h1 class="text bossname">Algorithm</h1>
+          </span>
+
+          <span class="boss Perpetual box color disboss" onclick="select_Perpetual()">
+            <img src="image/Boss/Perpetual.png" alt="">
+            <h1 class="text bossname">Perpetual</h1>
+          </span>
+
+          <span class="boss Ruin_Serpent box color disboss" onclick="select_Ruin_Serpent()">
+            <img src="image/Boss/Ruin Serpent.png" alt="">
+            <h1 class="text bossname">Ruin Serpent</h1>
+          </span>
+
+          <span class="boss Lupus_Boreas box color disboss" onclick="select_Lupus_Boreas()">
+            <img src="image/Boss/Lupus Boreas.png" alt="">
+            <h1 class="text bossname">Lupus Boreas</h1>
+          </span>
+
+          <span class="boss Stormterror box color disboss" onclick="select_Stormterror()">
+            <img src="image/Boss/Stormterror.png" alt="">
+            <h1 class="text bossname">Stormterror</h1>
+          </span>
+
+          <span class="boss Azhdaha box color disboss" onclick="select_Azhdaha()">
+            <img src="image/Boss/Azhdaha.png" alt="">
+            <h1 class="text bossname">Azhdaha</h1>
+          </span>
+
+          <span class="boss Childe box color disboss" onclick="select_Childe()">
+            <img src="image/Boss/Childe.png" alt="">
+            <h1 class="text bossname">Childe</h1>
+          </span>
+
+          <span class="boss La_Signora box color disboss" onclick="select_La_Signora()">
+            <img src="image/Boss/La Signora.png" alt="">
+            <h1 class="text bossname">La Signora</h1>
+          </span>
+
+          <span class="boss Magatsu_Mitake box color disboss" onclick="select_Magatsu_Mitake()">
+            <img src="image/Boss/Magatsu Mitake.png" alt="">
+            <h1 class="text bossname">Magatsu Mitake</h1>
+          </span>
+
+          <span class="boss Shouki_no_Kami box color disboss" onclick="select_Shouki_no_Kami()">
+            <img src="image/Boss/Shouki no Kami.png" alt="">
+            <h1 class="text bossname">Shouki no Kami</h1>
+          </span>
+
+          <span class="boss Warden_of_Oasis box color disboss" onclick="select_Warden_of_Oasis()">
+            <img src="image/Boss/Warden of Oasis.png" alt="">
+            <h1 class="text bossname">Warden of Oasis</h1>
+          </span>
+
+        </div>
+
+        <span class="return" style="display: none">
+          <button onclick="Return()">
+            <h1>
+              <i class="fa-solid fa-arrow-right-from-bracket fa-rotate-180"></i>
+              Return
+            </h1>
+          </button>
+        </span>
+
+        <span class="random_again" style="display: none">
+          <button onclick="start_random()">
+            <h1>
+              <i class="fa-solid fa-rotate-left"></i>
+              Random again
+            </h1>
+          </button>
+        </span>
+
+        <div class="Random" style="display: none;">
+
+          <span class="start_random btn">
+            <button onclick="start_random()" class="">
+              <h1>
+                <i class="fa-solid fa-play"></i>
+                Start Random
+              </h1>
+            </button>
+          </span>
+
+          <span class="section_random" style="display: none;">
+
+            <span class="random charfist box">
+              <img src="image/Character/all/black.png" alt="" class="ranchar bg f" id="charf">
+              <img src="image/Element/" alt="" class="element f" id="elementf">
+              <h1 id="name_text_first"></h1>
+            </span>
+
+            <span class="random charsecond box">
+              <img src="image/Character/all/black.png" alt="" class="ranchar bg s" id="chars">
+              <img src="image/Element/" alt="" class="element s" id="elements">
+              <h1 id="name_text_second"></h1>
+            </span>
+
+            <span class="random charthrid box">
+              <img src="image/Character/all/black.png" alt="" class="ranchar bg th" id="charth">
+              <img src="image/Element/" alt="" class="element th" id="elementth">
+              <h1 id="name_text_thrid"></h1>
+            </span>
+
+            <span class="random charfourth box">
+              <img src="image/Character/all/black.png" alt="" class="ranchar bg fth" id="charfth">
+              <img src="image/Element/" alt="" class="element fth" id="elementfth">
+              <h1 id="name_text_fourth"></h1>
+            </span>
+
+            <span class="random ranboss box">
+              <img src="image/Character/all/black.png" alt="" class="bossbg f" id="bossf">
+              <h1 id="name_text_boss"></h1>
+            </span>
+
+          </span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+
+    <span class="grid-footer">
+
+      <span class="about">
+
+        <span>
+          About me
+        </span>
+        <span class="icon_footer discord">
+          <a href="https://discordapp.com/users/460779806754209792" target="_blank" class="discord">
+            <i class="fa-brands fa-discord"></i>
+            Discord
+          </a>
+        </span>
+
+        <span class="icon_footer youtube">
+          <a href="https://www.youtube.com/@kiyang101" target="_blank" class="youtube">
+            <i class="fa-brands fa-youtube"></i>
+            Youtube
+          </a>
+        </span>
+
+        <span class="icon_footer kiyang ">
+          <a href="https://www.kiyang.net" target="_blank" class="kiyang">
+            Kiyang.net
+          </a>
 
         </span>
-        
+
+        <ul>
+          <li>
+            <!-- Copyright -->
+            <!-- <i class="fa-regular fa-copyright"></i> -->
+            <!-- 2023 |--> Made by Kiyang <!-- All rights reserved. -->
+
+            <span class="icon_footer github ">
+              <a href="https://github.com/Kiyang101/Genshin-Random" target="_blank" class="github">
+                <i class="fa-brands fa-github"></i>
+                Github
+              </a>
+            </span>
+
+          </li>
+        </ul>
+
       </span>
 
-    </footer>
+    </span>
 
-    <script src="js/display.js"></script>
-    <script src="js/search.js"></script>
-    <script src="js/Select.js"></script>
-    <script src="js/Random.js"></script>
-    <script src="js/Filter.js"></script>
-    <script src="js/ArrayAndVariable.js"></script>
-    <script src="https://kit.fontawesome.com/0b7f1a7922.js" crossorigin="anonymous"></script>  </body>
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  </footer>
+
+  <script src="js/display.js"></script>
+  <script src="js/search.js"></script>
+  <script src="js/Select.js"></script>
+  <script src="js/Random.js"></script>
+  <script src="js/Filter.js"></script>
+  <script src="js/ArrayAndVariable.js"></script>
+  <script src="https://kit.fontawesome.com/0b7f1a7922.js" crossorigin="anonymous"></script>
+</body>
 
 </html>

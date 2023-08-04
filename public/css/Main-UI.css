@@ -1,9 +1,10 @@
-html{
+html {
     height: 100%;
     padding-top: 2%;
 }
-body{
-    font-family: 'Roboto', sans-serif;    
+
+body {
+    font-family: 'Roboto', sans-serif;
     background: #212A3E;
     margin: 0;
     padding: 0;
@@ -11,7 +12,8 @@ body{
     min-height: 100%;
     padding-bottom: 6.74rem;
 }
-main.main{
+
+main.main {
     height: 100%;
     background-color: #AEE2FF;
     border-radius: 10px;
@@ -19,11 +21,11 @@ main.main{
     padding-bottom: 1%;
 }
 
-main p{
+main p {
     cursor: default;
 }
 
-.head h1{
+.head h1 {
     text-align: center;
     color: rgb(0, 0, 0);
     font-size: 35px;
@@ -32,12 +34,12 @@ main p{
     cursor: default;
 }
 
-#title{
+#title {
     text-align: center;
     font-size: 22px;
 }
 
-.menu div#select{
+.menu div#select {
     /* border: 1px solid rgb(0, 0, 0); */
     border-radius: 10px;
     background-color: #AEE2FF;
@@ -47,19 +49,18 @@ main p{
     padding-bottom: 1%;
     padding-right: 0;
     padding-left: 0;
-    box-shadow: 5px 5px 32px 2px rgba(0,0,0,0.4);
+    box-shadow: 5px 5px 32px 2px rgba(0, 0, 0, 0.4);
 
 }
 
-.menu div#select header h1#h1{
+.menu div#select header h1#h1 {
     font-size: 2.5rem;
     margin-bottom: 1.5%;
     cursor: default;
 }
 
-.menu div#select header button{
+.menu div#select header button {
     font-size: 25px;
-    margin-top: px;
     margin-left: 0px;
     margin-right: 0px;
     margin-bottom: 10px;
@@ -67,16 +68,16 @@ main p{
     cursor: default;
 }
 
-.menu div#select header button.menu{
+.menu div#select header button.menu {
     display: inline-block;
 }
 
-.menu div#select header h1#h1{
+.menu div#select header h1#h1 {
     margin-top: 10px;
     text-align: center;
 }
 
-.menu div#select header button#buttonchar{
+.menu div#select header button#buttonchar {
     display: inline-block;
     border: 1.3px solid black;
     border-radius: 10px;
@@ -86,10 +87,10 @@ main p{
     text-align: left;
     cursor: pointer;
     color: white;
-    background-color: DodgerBlue ;
+    background-color: DodgerBlue;
 }
 
-.menu div#select header button#buttonboss{
+.menu div#select header button#buttonboss {
     display: inline-block;
     border: 2px solid CornflowerBlue;
     border-radius: 20px;
@@ -101,10 +102,10 @@ main p{
     text-align: left;
     cursor: pointer;
     color: white;
-    background-color: DodgerBlue ;
+    background-color: DodgerBlue;
 }
 
-.menu div ul li{
+.menu div ul li {
     font-size: 25px;
     margin-left: 0px;
     margin-right: 0px;
@@ -112,26 +113,26 @@ main p{
     cursor: default;
 }
 
-.menu div#select header{
+.menu div#select header {
     border-bottom: 1px solid rgb(0, 0, 0);
     border-radius: 0px;
     padding-top: 0;
     padding-right: 0;
     padding-left: 0;
-} 
+}
 
-.menu div#select header ul.element img{
+.menu div#select header ul.element img {
     width: 40px;
     height: 40px;
     margin-left: 0;
     margin-top: px;
 }
 
-.menu div#select header ul.element{
-    display:inline-flex;
+.menu div#select header ul.element {
+    display: inline-flex;
 }
 
-.menu div#select header button.filter{
+.menu div#select header button.filter {
     display: inline-block;
     /* border: 2px solid CornflowerBlue; */
     border: none;
@@ -142,22 +143,22 @@ main p{
     text-align: left;
     cursor: pointer;
     color: white;
-    background-color: #2CD3E1 ;
+    background-color: #2CD3E1;
     padding-right: 50px;
     margin-right: 0px;
     transition: all .2s ease-in-out;
 }
 
-button.filter:hover{
+button.filter:hover {
     box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
 
-button.filter span{
+button.filter span {
     font-size: 1.25rem;
     margin-left: 30px;
 }
 
-.menu div#select header button.random{
+.menu div#select header button.random {
     display: inline-block;
     border: none;
     border-radius: 30px;
@@ -167,27 +168,28 @@ button.filter span{
     text-align: left;
     cursor: pointer;
     color: white;
-    background-color: #2CD3E1 ;
+    background-color: #2CD3E1;
     padding-right: 3%;
     padding-left: 3%;
     margin-right: 1%;
     transition: all .2s ease-in-out;
 }
-.menu div#select header button.random:hover{
+
+.menu div#select header button.random:hover {
     background-color: #00FFAB;
     box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
 
-button.filter span{
+button.filter span {
     font-size: 1.25rem;
 }
 
-.search{
+.search {
     margin-left: 1%;
     display: inline-block;
 }
 
-.search_input{
+.search_input {
     all: unset;
     border: 1px solid #2CD3E1;
     border-radius: 10px;
@@ -195,14 +197,16 @@ button.filter span{
     font-size: 1.25rem;
     transition: all .1s ease-in-out;
 }
-.search_input:focus{
+
+.search_input:focus {
     box-shadow: 0px 0px 8px 5px #95BDFF;
 }
-.search_input::placeholder{
+
+.search_input::placeholder {
     color: #212A3E;
 }
 
-.note{
+.note {
     display: inline;
     color: snow;
     background-color: red;
@@ -217,7 +221,7 @@ button.filter span{
     z-index: 100;
 }
 
-.displaycharacter button{
+.displaycharacter button {
     color: #e2eff1;
     background-color: #2CD3E1;
 }
