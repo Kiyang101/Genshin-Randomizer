@@ -2,8 +2,8 @@ let csw = true;
 let bsw = true;
 let ransw = false;
 
-function dischar(){
-    if (csw==true){
+function dischar() {
+    if (csw == true) {
         document.querySelector(".char-caret-right").style.cssText = "display: ;"
         document.querySelector(".char-caret-down").style.cssText = "display: none;"
         document.querySelector("div.char").style.cssText = "display: none;"
@@ -12,16 +12,16 @@ function dischar(){
         csw = false;
         return
     }
-    if (csw==false){
-        if (Character.length == CharCheck.length){
+    if (csw == false) {
+        if (Character.length == CharCheck.length) {
             document.querySelector(".selectall_char").style.cssText = "display: none;"
             document.querySelector(".unselectall_char").style.cssText = "display: ;"
-        }else{
+        } else {
             document.querySelector(".selectall_char").style.cssText = "display: ;"
         }
-        if(Character.length > 0){
+        if (Character.length > 0) {
             document.querySelector(".unselectall_char").style.cssText = "display: ;"
-        }else{
+        } else {
             document.querySelector(".unselectall_char").style.cssText = "display: none;"
         }
         document.querySelector(".char-caret-right").style.cssText = "display: none;"
@@ -31,8 +31,8 @@ function dischar(){
     }
 }
 
-function dispboss(){
-    if (bsw==true){
+function dispboss() {
+    if (bsw == true) {
         document.querySelector(".boss-caret-right").style.cssText = "display: ;"
         document.querySelector(".boss-caret-down").style.cssText = "display: none;"
         document.querySelector("div.Boss").style.cssText = "display: none;"
@@ -41,16 +41,16 @@ function dispboss(){
         bsw = false;
         return
     }
-    if (bsw==false){
-        if (Boss.length == Countboss.length){
+    if (bsw == false) {
+        if (Boss.length == Countboss.length) {
             document.querySelector(".selectall_boss").style.cssText = "display: none;"
             document.querySelector(".unselectall_boss").style.cssText = "display: ;"
-        }else{
+        } else {
             document.querySelector(".selectall_boss").style.cssText = "display: ;"
         }
-        if(Boss.length > 0){
+        if (Boss.length > 0) {
             document.querySelector(".unselectall_boss").style.cssText = "display: ;"
-        }else{
+        } else {
             document.querySelector(".unselectall_boss").style.cssText = "display: none;"
         }
         document.querySelector(".boss-caret-right").style.cssText = "display: none;"
@@ -62,17 +62,17 @@ function dispboss(){
     }
 }
 
-function Random(){
-    if (Character.length < 5 ){
+function Random() {
+    if (Character.length < 5) {
         alert("You'd better choose more than 4 characters");
         return
-    }else{
-       if (Boss.length < 2 ){
+    } else {
+        if (Boss.length < 2) {
             alert("You'd better choose more than 1 Boss");
             return
-        } 
+        }
     }
-    if (ransw == false){
+    if (ransw == false) {
         document.querySelector("div.Random").style.cssText = "display: ;"
         document.querySelector(".char-caret-right").style.cssText = "display: ;"
         document.querySelector(".char-caret-down").style.cssText = "display: none;"
@@ -97,7 +97,7 @@ function Random(){
         return
     }
 
-    if (ransw == true){
+    if (ransw == true) {
         document.querySelector("div.Random").style.cssText = "display: none;"
         document.querySelector(".char-caret-right").style.cssText = "display: none;"
         document.querySelector(".char-caret-down").style.cssText = "display: ;"
@@ -110,26 +110,26 @@ function Random(){
         document.querySelector(".filter").style.cssText = "pointer-events: visible;"
         document.querySelector(".search_input").disabled = false;
 
-        if (Boss.length == Countboss.length){
+        if (Boss.length == Countboss.length) {
             document.querySelector(".selectall_boss").style.cssText = "display: none;"
             document.querySelector(".unselectall_boss").style.cssText = "display: ;"
-        }else{
+        } else {
             document.querySelector(".selectall_boss").style.cssText = "display: ;"
         }
-        if(Boss.length > 0){
+        if (Boss.length > 0) {
             document.querySelector(".unselectall_boss").style.cssText = "display: ;"
-        }else{
+        } else {
             document.querySelector(".unselectall_boss").style.cssText = "display: none;"
         }
-        if (Character.length == CharCheck.length){
+        if (Character.length == CharCheck.length) {
             document.querySelector(".selectall_char").style.cssText = "display: none;"
             document.querySelector(".unselectall_char").style.cssText = "display: ;"
-        }else{
+        } else {
             document.querySelector(".selectall_char").style.cssText = "display: ;"
         }
-        if(Character.length > 0){
+        if (Character.length > 0) {
             document.querySelector(".unselectall_char").style.cssText = "display: ;"
-        }else{
+        } else {
             document.querySelector(".unselectall_char").style.cssText = "display: none;"
         }
 
@@ -140,7 +140,7 @@ function Random(){
     }
 }
 
-function Return(){
+function Return() {
     document.querySelector("div.Random").style.cssText = "display: none;"
     document.querySelector(".char-caret-right").style.cssText = "display: none;"
     document.querySelector(".char-caret-down").style.cssText = "display: ;"
@@ -158,26 +158,26 @@ function Return(){
     document.querySelector(".random_again").style.cssText = "display: none;"
     document.querySelector(".search_input").disabled = false;
 
-    if (Boss.length == Countboss.length){
+    if (Boss.length == Countboss.length) {
         document.querySelector(".selectall_boss").style.cssText = "display: none;"
         document.querySelector(".unselectall_boss").style.cssText = "display: ;"
-    }else{
+    } else {
         document.querySelector(".selectall_boss").style.cssText = "display: ;"
     }
-    if(Boss.length > 0){
+    if (Boss.length > 0) {
         document.querySelector(".unselectall_boss").style.cssText = "display: ;"
-    }else{
+    } else {
         document.querySelector(".unselectall_boss").style.cssText = "display: none;"
     }
-    if (Character.length == CharCheck.length){
+    if (Character.length == CharCheck.length) {
         document.querySelector(".selectall_char").style.cssText = "display: none;"
         document.querySelector(".unselectall_char").style.cssText = "display: ;"
-    }else{
+    } else {
         document.querySelector(".selectall_char").style.cssText = "display: ;"
     }
-    if(Character.length > 0){
+    if (Character.length > 0) {
         document.querySelector(".unselectall_char").style.cssText = "display: ;"
-    }else{
+    } else {
         document.querySelector(".unselectall_char").style.cssText = "display: none;"
     }
 
@@ -191,74 +191,74 @@ const namechar = document.getElementsByClassName("charname");
 const displayboss = document.getElementsByClassName("disboss");
 const nameboss = document.getElementsByClassName("bossname");
 
-function selectcharall(){
+function selectcharall() {
     document.querySelector(".selectall_char").style.cssText = "display: none;"
     document.querySelector(".unselectall_char").style.cssText = "display: ;"
-  
-    for(displaychar of displays){
+
+    for (displaychar of displays) {
         displaychar.style.cssText = Borders;
     }
 
     Character.length = 0;
-    Character.splice(0,Character.length);
+    Character.splice(0, Character.length);
 
-    for(charname of namechar){
+    for (charname of namechar) {
         Character[Character.length] = `${charname.innerHTML}`;
     }
 
-    for (let i = 0; i < Countchar.length; i++){
+    for (let i = 0; i < Countchar.length; i++) {
         eval('count_' + Countchar[i] + ' = true;');
     }
 }
 
-function unselectcharall(){
+function unselectcharall() {
     document.querySelector(".selectall_char").style.cssText = "display: ;"
     document.querySelector(".unselectall_char").style.cssText = "display: none;"
 
-    for(displaychar of displays){
+    for (displaychar of displays) {
         displaychar.style.cssText = "";
     }
 
-    for (let i = 0; i < Countchar.length; i++){
+    for (let i = 0; i < Countchar.length; i++) {
         eval('count_' + Countchar[i] + ' = false;');
     }
 
     Character.length = 0;
-    Character.splice(0,Character.length);
+    Character.splice(0, Character.length);
 }
 
-function selectbossall(){
+function selectbossall() {
     document.querySelector(".selectall_boss").style.cssText = "display: none;"
     document.querySelector(".unselectall_boss").style.cssText = "display: ;"
-    
-    for(disboss of displayboss){
+
+    for (disboss of displayboss) {
         disboss.style.cssText = Borders;
     }
 
     Boss.length = 0;
-    Boss.splice(0,Boss.length);
+    Boss.splice(0, Boss.length);
 
-    for(bossname of nameboss){
+    for (bossname of nameboss) {
         Boss[Boss.length] = `${bossname.innerHTML}`;
     }
 
-    for (let i = 0; i < Countboss.length; i++){
+    for (let i = 0; i < Countboss.length; i++) {
         eval('count_' + Countboss[i] + ' = true;');
     }
 }
 
-function unselectbossall(){
+function unselectbossall() {
     document.querySelector(".selectall_boss").style.cssText = "display: ;"
     document.querySelector(".unselectall_boss").style.cssText = "display: none;"
-    
-    for(disboss of displayboss){
+
+    for (disboss of displayboss) {
         disboss.style.cssText = "";
     }
 
-    for (let i = 0; i < Countboss.length; i++){
+    for (let i = 0; i < Countboss.length; i++) {
         eval('count_' + Countboss[i] + ' = false;');
     }
 
     Boss.length = 0;
-    Boss.splice(0,Boss.length);
+    Boss.splice(0, Boss.length);
 }

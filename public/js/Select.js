@@ -1547,6 +1547,42 @@ function select_Nahida() {
   }
 }
 
+function select_Neuvillette() {
+  if (count_Neuvillette == false) {
+    document.querySelector(".char .Neuvillette .box").style.cssText = Borders
+    count_Neuvillette = true;
+    Character[Character.length] = "Neuvillette";
+    if (Character.length == CharCheck.length) {
+      document.querySelector(".selectall_char").style.cssText = "display: none;"
+      document.querySelector(".unselectall_char").style.cssText = "display: ;"
+    }
+    if (Character.length > 0) {
+      document.querySelector(".unselectall_char").style.cssText = "display: ;"
+    } else {
+      document.querySelector(".unselectall_char").style.cssText = "display: none;"
+    }
+    return
+  }
+  if (count_Neuvillette == true) {
+    document.querySelector(".char .Neuvillette .box").style.border = "";
+    count_Neuvillette = false;
+    let index = Character.indexOf("Neuvillette");
+    Character.splice(index, 1);
+    if (Character.length == CharCheck.length) {
+      document.querySelector(".selectall_char").style.cssText = "display: none;"
+      document.querySelector(".unselectall_char").style.cssText = "display: ;"
+    } else {
+      document.querySelector(".selectall_char").style.cssText = "display: ;"
+    }
+    if (Character.length > 0) {
+      document.querySelector(".unselectall_char").style.cssText = "display: ;"
+    } else {
+      document.querySelector(".unselectall_char").style.cssText = "display: none;"
+    }
+    return
+  }
+}
+
 function select_Nilou() {
   if (count_Nilou == false) {
     document.querySelector(".char .Nilou .box").style.cssText = Borders
@@ -2143,6 +2179,42 @@ function select_Wanderer() {
     document.querySelector(".char .Wanderer .box").style.border = "";
     count_Wanderer = false;
     let index = Character.indexOf("Wanderer");
+    Character.splice(index, 1);
+    if (Character.length == CharCheck.length) {
+      document.querySelector(".selectall_char").style.cssText = "display: none;"
+      document.querySelector(".unselectall_char").style.cssText = "display: ;"
+    } else {
+      document.querySelector(".selectall_char").style.cssText = "display: ;"
+    }
+    if (Character.length > 0) {
+      document.querySelector(".unselectall_char").style.cssText = "display: ;"
+    } else {
+      document.querySelector(".unselectall_char").style.cssText = "display: none;"
+    }
+    return
+  }
+}
+
+function select_Wriothesley() {
+  if (count_Wriothesley == false) {
+    document.querySelector(".char .Wriothesley .box").style.cssText = Borders
+    count_Wriothesley = true;
+    Character[Character.length] = "Wriothesley";
+    if (Character.length == CharCheck.length) {
+      document.querySelector(".selectall_char").style.cssText = "display: none;"
+      document.querySelector(".unselectall_char").style.cssText = "display: ;"
+    }
+    if (Character.length > 0) {
+      document.querySelector(".unselectall_char").style.cssText = "display: ;"
+    } else {
+      document.querySelector(".unselectall_char").style.cssText = "display: none;"
+    }
+    return
+  }
+  if (count_Wriothesley == true) {
+    document.querySelector(".char .Wriothesley .box").style.border = "";
+    count_Wriothesley = false;
+    let index = Character.indexOf("Wriothesley");
     Character.splice(index, 1);
     if (Character.length == CharCheck.length) {
       document.querySelector(".selectall_char").style.cssText = "display: none;"
@@ -3419,6 +3491,79 @@ function select_Ruin_Serpent() {
     return
   }
 }
+
+function select_Icewind_Suite() {
+  if (count_Icewind_Suite == false) {
+    document.querySelector(".boss.Icewind_Suite.box").style.cssText = Borders
+    count_Icewind_Suite = true;
+    Boss[Boss.length] = "Icewind Suite";
+    if (Boss.length == Countboss.length) {
+      document.querySelector(".selectall_boss").style.cssText = "display: none;"
+      document.querySelector(".unselectall_boss").style.cssText = "display: ;"
+    }
+    if (Boss.length > 0) {
+      document.querySelector(".unselectall_boss").style.cssText = "display: ;"
+    } else {
+      document.querySelector(".unselectall_boss").style.cssText = "display: none;"
+    }
+    return
+  }
+  if (count_Icewind_Suite == true) {
+    document.querySelector(".boss.Icewind_Suite.box").style.border = "";
+    count_Icewind_Suite = false;
+    let index = Boss.indexOf("Icewind Suite");
+    Boss.splice(index, 1);
+    if (Boss.length == Countboss.length) {
+      document.querySelector(".selectall_boss").style.cssText = "display: none;"
+      document.querySelector(".unselectall_boss").style.cssText = "display: ;"
+    } else {
+      document.querySelector(".selectall_boss").style.cssText = "display: ;"
+    }
+    if (Boss.length > 0) {
+      document.querySelector(".unselectall_boss").style.cssText = "display: ;"
+    } else {
+      document.querySelector(".unselectall_boss").style.cssText = "display: none;"
+    }
+    return
+  }
+}
+
+function select_Emperor() {
+  if (count_Emperor_of_Fire_and_Iron == false) {
+    document.querySelector(".boss.Emperor.box").style.cssText = Borders
+    count_Emperor_of_Fire_and_Iron = true;
+    Boss[Boss.length] = "Emperor";
+    if (Boss.length == Countboss.length) {
+      document.querySelector(".selectall_boss").style.cssText = "display: none;"
+      document.querySelector(".unselectall_boss").style.cssText = "display: ;"
+    }
+    if (Boss.length > 0) {
+      document.querySelector(".unselectall_boss").style.cssText = "display: ;"
+    } else {
+      document.querySelector(".unselectall_boss").style.cssText = "display: none;"
+    }
+    return
+  }
+  if (count_Emperor_of_Fire_and_Iron == true) {
+    document.querySelector(".boss.Emperor.box").style.border = "";
+    count_Emperor_of_Fire_and_Iron = false;
+    let index = Boss.indexOf("Emperor");
+    Boss.splice(index, 1);
+    if (Boss.length == Countboss.length) {
+      document.querySelector(".selectall_boss").style.cssText = "display: none;"
+      document.querySelector(".unselectall_boss").style.cssText = "display: ;"
+    } else {
+      document.querySelector(".selectall_boss").style.cssText = "display: ;"
+    }
+    if (Boss.length > 0) {
+      document.querySelector(".unselectall_boss").style.cssText = "display: ;"
+    } else {
+      document.querySelector(".unselectall_boss").style.cssText = "display: none;"
+    }
+    return
+  }
+}
+
 
 function select_Lupus_Boreas() {
   if (count_Lupus_Boreas == false) {

@@ -4,11 +4,11 @@ const Character = [];
 const Elements = ["Anemo", "Dendro", "Electro", "Geo", "Hydro"];
 
 const listAnemo = ["Faruzan", "Jean", "Kazuha", "Sayu", "Heizou", "Sucrose", "Venti", "Wanderer", "Xiao", "Lynette"];
-const listCryo = ["Aloy", "Chongyun", "Diona", "Eula", "Ganyu", "Kaeya", "Ayaka", "Layla", "Mika", "Qiqi", "Rosaria", "Shenhe", "Freminet"];
+const listCryo = ["Aloy", "Chongyun", "Diona", "Eula", "Ganyu", "Kaeya", "Ayaka", "Layla", "Mika", "Qiqi", "Rosaria", "Shenhe", "Freminet","Wriothesley"];
 const listDendro = ["Alhaitham", "Baizhu", "Collei", "Kaveh", "Kirara", "Nahida", "Tighnari", "Yaoyao"];
 const listElectro = ["Beidou", "Cyno", "Dori", "Fischl", "Keqing", "Kujou Sara", "Kuki Shinobu", "Lisa", "Raiden", "Razor", "Yae Miko"];
 const listGeo = ["Albedo", "Arataki Itto", "Gorou", "Ningguang", "Noelle", "Yunjin", "Zhongli"];
-const listHydro = ["Barbara", "Candace", "Ayato", "Mona", "Nilou", "Kokomi", "Tartaglia", "Xingqiu", "Yelan"];
+const listHydro = ["Barbara", "Candace", "Ayato", "Mona", "Nilou", "Kokomi", "Tartaglia", "Xingqiu", "Yelan", "Neuvillette"];
 const listPyro = ["Amber", "Bennett", "Dehya", "Diluc", "Hutao", "Klee", "Thoma", "Xiangling", "Xinyan", "Yanfei", "Yoimiya", "Lyney"];
 
 const FourStar = ["Amber", "Barbara", "Beidou", "Bennett", "Candace", "Chongyun", "Collei", "Diona", "Dori", "Faruzan", "Fischl",
@@ -18,7 +18,7 @@ const FourStar = ["Amber", "Barbara", "Beidou", "Bennett", "Candace", "Chongyun"
 
 const FiveStar = ["Albedo", "Alhaitham", "Aloy", "Arataki Itto", "Baizhu", "Cyno", "Dehya", "Diluc", "Eula", "Ganyu", "Hutao",
     "Jean", "Ayaka", "Ayato", "Kazuha", "Keqing", "Klee", "Mona", "Nahida", "Nilou", "Qiqi", "Raiden",
-    "Kokomi", "Shenhe", "Tartaglia", "Tighnari", "Venti", "Wanderer", "Xiao", "Yae Miko", "Yelan", "Yoimiya", "Zhongli", "Lyney"
+    "Kokomi", "Shenhe", "Tartaglia", "Tighnari", "Venti", "Wanderer", "Xiao", "Yae Miko", "Yelan", "Yoimiya", "Zhongli", "Lyney", "Neuvillette", "Wriothesley"
 ];
 
 const Countchar = ["Amber", "Barbara", "Beidou", "Bennett", "Candace", "Chongyun", "Collei", "Diona", "Dori", "Faruzan", "Fischl",
@@ -26,12 +26,12 @@ const Countchar = ["Amber", "Barbara", "Beidou", "Bennett", "Candace", "Chongyun
     "Rosaria", "Sayu", "Heizou", "Sucrose", "Thoma", "Xiangling", "Xingqiu", "Xinyan", "Yanfei", "Yaoyao", "Yunjin", "Lynette", "Freminet", "Aether", "Albedo",
     "Alhaitham", "Aloy", "Arataki_Itto", "Baizhu", "Cyno", "Dehya", "Diluc", "Eula", "Ganyu", "Hutao", "Jean", "Ayaka", "Ayato",
     "Kazuha", "Keqing", "Klee", "Mona", "Nahida", "Nilou", "Qiqi", "Raiden", "Kokomi", "Shenhe", "Tartaglia", "Tighnari", "Venti",
-    "Wanderer", "Xiao", "Yae_miko", "Yelan", "Yoimiya", "Zhongli", "Lyney"
+    "Wanderer", "Xiao", "Yae_miko", "Yelan", "Yoimiya", "Zhongli", "Lyney", "Neuvillette", "Wriothesley"
 ];
 
 const Countboss = ["Anemo_Hypotasis", "Cryo_Hypotasis", "Dendro_Hypotasis", "Electro_Hypotasis", "Geo_Hypotasis", "Hydro_Hypotasis", "Pyro_Hypotasis", "Cryo_Regisvine", "Electro_Regisvine", "Pyro_Regisvine",
     "Oceanid", "Primo_Geovishap", "Golden_Wolflord", "Bathysmal_Vishap", "Thunder_Manifestation", "Iniquitous_Baptist", "Jadeplume_Terrorshroom", "Setekh_Wenut", "Maguu_Kenki", "Aeonblight_Drake", "Algorithm",
-    "Perpetual_Mechanical_Array", "Ruin_Serpent", "Lupus_Boreas", "Stormterror", "Azhdaha", "Childe", "La_Signora", "Magatsu_Mitake", "Shouki_no_Kami", "Warden_of_Oasis"
+    "Perpetual_Mechanical_Array", "Ruin_Serpent", "Lupus_Boreas", "Stormterror", "Azhdaha", "Childe", "La_Signora", "Magatsu_Mitake", "Shouki_no_Kami", "Warden_of_Oasis", "Icewind_Suite", "Emperor_of_Fire_and_Iron"
 ];
 
 const CharCheck = ["Amber", "Barbara", "Beidou", "Bennett", "Candace", "Chongyun", "Collei", "Diona", "Dori", "Faruzan", "Fischl",
@@ -39,7 +39,7 @@ const CharCheck = ["Amber", "Barbara", "Beidou", "Bennett", "Candace", "Chongyun
     "Rosaria", "Sayu", "Shikanoin Heizou", "Sucrose", "Thoma", "Xiangling", "Xingqiu", "Xinyan", "Yanfei", "Yaoyao", "Yunjin", "Lynette", "Freminet", "Aether traveler mc Lumine", "Albedo",
     "Alhaitham", "Aloy", "Arataki Itto", "Baizhu", "Cyno", "Dehya", "Diluc", "Eula", "Ganyu", "Hu tao Hutao", "Jean", "Kamisato Ayaka", "Kamisato Ayato",
     "Kaedehara Kazuha", "Keqing", "Klee", "Mona", "Nahida", "Nilou", "Qiqi", "Raiden Shogun", "Sangonomiya Kokomi", "Shenhe", "Tartaglia Childe", "Tighnari", "Venti",
-    "Wanderer Scaramouche", "Xiao", "Yae Miko", "Yelan", "Yoimiya", "Zhongli", "Lyney"
+    "Wanderer Scaramouche", "Xiao", "Yae Miko", "Yelan", "Yoimiya", "Zhongli", "Lyney", "Neuvillette", "Wriothesley"
 ];
 
 //Select
@@ -88,6 +88,7 @@ let count_Lyney = false
 let count_Mika = false;
 let count_Mona = false;
 let count_Nahida = false;
+let count_Neuvillette = false;
 let count_Nilou = false;
 let count_Ningguang = false;
 let count_Noelle = false;
@@ -105,6 +106,7 @@ let count_Thoma = false;
 let count_Tighnari = false;
 let count_Venti = false;
 let count_Wanderer = false;
+let count_Wriothesley = false;
 let count_Xiangling = false;
 let count_Xiao = false;
 let count_Xingqiu = false;
@@ -140,6 +142,8 @@ let count_Aeonblight_Drake = false;
 let count_Algorithm = false;
 let count_Perpetual_Mechanical_Array = false;
 let count_Ruin_Serpent = false;
+let count_Icewind_Suite = false;
+let count_Emperor_of_Fire_and_Iron = false;
 let count_Lupus_Boreas = false;
 let count_Stormterror = false;
 let count_Azhdaha = false;
